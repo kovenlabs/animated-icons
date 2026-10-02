@@ -1,0 +1,167 @@
+---
+title: Installation
+description: Three ways in. Copy the source with the shadcn CLI, install the package, or copy the files by hand.
+---
+
+## Pick a way
+
+|                    | shadcn registry                                  | npm package                                   | By hand                       |
+| ------------------ | ------------------------------------------------ | --------------------------------------------- | ----------------------------- |
+| You get            | the source, in `components/animated-icons/`      | one dependency, `@kovenlabs/animated-icons`   | the source, wherever you want |
+| Edit the icons     | yes, they're your files                          | no (make your own with `createAnimatedIcon`)  | yes                           |
+| Global defaults    | edit `config.ts`                                 | `<AnimatedIconsProvider>` at your root        | edit `config.ts`              |
+| Color variables    | added to `globals.css` for you                   | add three lines yourself                      | add three lines yourself      |
+| Updates            | re-run `add --overwrite`                         | bump the version                              | re-copy                       |
+| Bundle             | only what you added                              | tree-shaken: only what you import             | only what you copied          |
+
+Pick **the registry** if you treat icons as part of your design system and want to tweak them. Pick
+**the package** if you just want to use them and update with your other dependencies.
+
+## shadcn registry
+
+### 1. Point the CLI at the registry
+
+Add the `@kovenlabs` namespace to your `components.json`, once:
+
+<SiteCode
+  lang="json"
+  title="components.json"
+  code={`{
+  "registries": {
+    "@kovenlabs": "{site}/r/{name}.json"
+  }
+}`}
+/>
+
+### 2. Add icons
+
+One icon:
+
+```npm
+npx shadcn add @kovenlabs/bell
+```
+
+Several at once:
+
+```npm
+npx shadcn add @kovenlabs/bell @kovenlabs/loader @kovenlabs/mail
+```
+
+**Everything**, all icons in one command:
+
+```npm
+npx shadcn add @kovenlabs/all
+```
+
+Only the core (factory, provider, `config.ts`, color variables), for building your own icons:
+
+```npm
+npx shadcn add @kovenlabs/animated-icons
+```
+
+Every icon depends on the core, so the first `add` installs it automatically, along with `motion`.
+
+### Without a namespace
+
+You can skip step 1 and pass the item's URL directly:
+
+<SiteCode lang="bash" code="npx shadcn add {site}/r/bell.json" />
+
+The icon's dependency on the core is a full URL too, so nothing else needs configuring.
+
+### What you get
+
+```
+components/animated-icons/
+├─ config.ts          ← app-wide defaults, edit freely
+├─ lib/               ← factory, provider, resolution, corners, parts
+└─ icons/
+   ├─ bell.tsx
+   └─ loader.tsx
+```
+
+The CLI also adds `--icon-primary`, `--icon-secondary` and `--icon-accent` to your `globals.css`, pointing at
+your shadcn tokens. See [Colors](/docs/colors).
+
+```tsx
+import { BellIcon } from '@/components/animated-icons/icons/bell';
+
+<BellIcon />;
+```
+
+### Updating
+
+The files are yours, so the CLI won't touch them unless you ask. Re-add with `--overwrite` to take the
+latest version (your edits to those files are replaced):
+
+```npm
+npx shadcn add @kovenlabs/bell --overwrite
+```
+
+## npm package
+
+```npm
+npm install @kovenlabs/animated-icons motion
+```
+
+Import from the package root, or from a single icon's path. Both tree-shake, so you only ship the icons you use:
+
+```tsx
+import { BellIcon, MailIcon } from '@kovenlabs/animated-icons';
+import { RocketIcon } from '@kovenlabs/animated-icons/icons/rocket';
+```
+
+### Colors
+
+Add the three slots to your `globals.css`. Point them at whatever tokens you like:
+
+```css title="globals.css"
+:root {
+  --icon-primary: var(--foreground);
+  --icon-secondary: var(--muted-foreground);
+  --icon-accent: var(--primary);
+}
+```
+
+If you skip this step, every slot falls back to `currentColor`, so icons still render, in one color.
+
+### Global defaults
+
+With the package there's no `config.ts` to edit. Put a provider at your root instead. It takes the same
+options:
+
+```tsx title="app/layout.tsx"
+import { AnimatedIconsProvider } from '@kovenlabs/animated-icons';
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <AnimatedIconsProvider trigger="hover" corners="round">
+          {children}
+        </AnimatedIconsProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+### Server components
+
+Icons are client components (each file starts with `"use client"`), so you can render them straight from a
+React Server Component. Only `Icon.meta` is unavailable there: on the server an icon import is a client
+reference without statics.
+
+## By hand
+
+Every registry item is plain JSON with the file contents inside, so you can copy them without the CLI:
+
+1. Open `/r/animated-icons.json` (the core) and copy each file in `files` to the path given by its `target`.
+2. Do the same for each icon you want, from `/r/<name>.json`. The catalog's **Source** tab shows the same code.
+3. Install `motion`, and add the color variables (as in the package section above).
+
+## Requirements
+
+- React 19
+- `motion` 12 or newer
+- Tailwind v4 and shadcn/ui tokens are recommended for the color slots, but not required

@@ -1,0 +1,72 @@
+---
+title: Configuration
+description: Global defaults, scoped providers, per-icon overrides, and which one wins.
+---
+
+## Precedence
+
+The more specific setting wins:
+
+```
+props  >  per-icon config  >  icon's own defaults  >  global config  >  built-ins
+```
+
+| Level               | Where                                                     | Example                                        |
+| ------------------- | --------------------------------------------------------- | ---------------------------------------------- |
+| Built-ins           | the library                                               | `trigger: "hover"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2` |
+| Global config       | `config.ts` (registry) or the root provider (npm)         | `trigger: "click"`                             |
+| Icon's own defaults | the icon definition                                       | loader: `auto`, `interval: 0`                  |
+| Per-icon config     | `icons.<name>` in `config.ts` or a provider               | `icons: { loader: { trigger: "hover" } }`      |
+| Props               | the instance                                              | `<LoaderIcon trigger="manual" />`              |
+
+**Why do an icon's own defaults beat global config?** They're the behavior an icon needs to make sense.
+A loader that waits for hover is useless, and a typing bubble only reads as typing while it keeps going.
+Setting `trigger: "hover"` globally shouldn't break them. If you really want it, say so per icon.
+
+## Global: `config.ts`
+
+```ts title="components/animated-icons/config.ts"
+export default defineIconConfig({
+  trigger: 'hover',
+  interval: 1000,
+  speed: 1,
+  reducedMotion: 'respect',
+  corners: 'round', // "round" | "bevel" | "sharp"
+  cornerRadius: 2.5,
+  icons: {
+    bell: { variant: 'shake' }, // variant names are typed per installed icon
+    rocket: { speed: 0.75, colors: { accent: 'chart-1' } },
+  },
+});
+```
+
+`config.ts` has no global `colors` key on purpose. The theme owns color, so global colors live in
+[CSS](/docs/colors).
+
+<Callout title="Why speed and not duration?">
+  Each icon is tuned to its own duration: a bell ring at 700ms, a check draw at 600ms. A global
+  `duration` would flatten all of them, so the global knob is a `speed` multiplier. A per-instance
+  `duration` prop is still available.
+</Callout>
+
+## Scoped: `<AnimatedIconsProvider>`
+
+It takes the same shape as `config.ts`, plus `colors`. Providers nest, and each one only overrides what
+it sets:
+
+```tsx
+<AnimatedIconsProvider speed={1.5} colors={{ accent: 'destructive' }}>
+  <Hero />
+  <AnimatedIconsProvider icons={{ message: { variant: 'pop' } }}>
+    <Chat />
+  </AnimatedIconsProvider>
+</AnimatedIconsProvider>
+```
+
+With the npm package, a provider at your root is your global config.
+
+## Reduced motion
+
+By default, icons don't animate when the user prefers reduced motion. They stay in their finished, still
+drawing. Opt out per level with `reducedMotion: "ignore"`, for example on a loader that has to show
+progress.

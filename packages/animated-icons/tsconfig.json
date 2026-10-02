@@ -1,0 +1,4 @@
+{
+  "extends": "@kovenlabs/typescript-config/react-library.json",
+  "include": ["src", "tests", "vitest.config.ts"]
+}

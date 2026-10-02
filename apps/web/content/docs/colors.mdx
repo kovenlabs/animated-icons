@@ -1,0 +1,68 @@
+---
+title: Colors
+description: Three slots, piped from your theme, with a cascade for the slots you leave out.
+---
+
+## Slots
+
+Icons paint with three CSS variables. The registry adds them to your `globals.css`, pointing at shadcn
+tokens:
+
+```css title="globals.css"
+:root {
+  --icon-primary: var(--foreground);
+  --icon-secondary: var(--muted-foreground);
+  --icon-accent: var(--primary);
+}
+.dark {
+  --icon-accent: var(--chart-1); /* optional: anything theme-aware */
+}
+```
+
+One-color icons use `primary`, two-color icons add `accent`, and three-color icons use all three. The
+[icons page](/docs/icons) lists what each slot paints.
+
+## Overriding
+
+```tsx
+// a token name resolves to its variable: "destructive" → var(--destructive)
+<MailIcon colors={{ primary: 'foreground', secondary: 'chart-2', accent: 'destructive' }} />
+
+// any CSS color passes through
+<MailIcon colors={{ accent: '#facc15' }} />
+
+// a subtree
+<AnimatedIconsProvider colors={{ accent: 'chart-4' }}>…</AnimatedIconsProvider>
+
+// plain CSS, on an icon or any ancestor
+<div className="[--icon-accent:var(--destructive)]">…</div>
+```
+
+A bare name becomes `var(--name, name)`, so CSS keywords like `"red"` still work through the fallback.
+
+## The cascade
+
+**A slot you leave out takes the nearest slot above it** (`primary → secondary → accent`). It never
+cascades upward:
+
+| You pass                       | primary | secondary | accent |
+| ------------------------------ | ------- | --------- | ------ |
+| `{ primary: A }`               | A       | A         | A      |
+| `{ primary: A, secondary: B }` | A       | B         | B      |
+| `{ primary: A, accent: C }`    | A       | A         | C      |
+| `{ accent: C }`                | theme   | theme     | C      |
+
+So one color paints the whole icon, and recoloring only the accent leaves the rest of the theme alone.
+
+The CSS fallbacks follow the same order: if your theme defines only `--icon-primary`, every slot uses it.
+
+<Callout type="warn">
+  A `className` override like `[--icon-primary:red]` is literal and doesn't cascade, because your
+  `globals.css` already defines the other two slots. Use the `colors` prop when you want the cascade.
+</Callout>
+
+## Precedence
+
+From weakest to strongest: `globals.css` → provider `colors` → per-icon config `colors` → the `colors`
+prop → an inline `style` var. Provider colors cascade as CSS variables (through a
+`display: contents` wrapper), so a `className` var on one icon inside still wins over its provider.

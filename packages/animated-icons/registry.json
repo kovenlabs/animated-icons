@@ -1,0 +1,1279 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "kovenlabs",
+  "homepage": "https://animated-icons.vercel.app",
+  "items": [
+    {
+      "name": "animated-icons",
+      "type": "registry:lib",
+      "title": "Animated Icons core",
+      "description": "Config, provider and icon factory shared by every animated icon. Adds --icon-primary/secondary/accent to your theme.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "src/lib/context.tsx",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/context.tsx"
+        },
+        {
+          "path": "src/lib/create-icon.tsx",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/create-icon.tsx"
+        },
+        {
+          "path": "src/lib/motion.ts",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/motion.ts"
+        },
+        {
+          "path": "src/lib/parts.ts",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/parts.ts"
+        },
+        {
+          "path": "src/lib/player.ts",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/player.ts"
+        },
+        {
+          "path": "src/lib/resolve.ts",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/resolve.ts"
+        },
+        {
+          "path": "src/lib/round.ts",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/round.ts"
+        },
+        {
+          "path": "src/lib/shape.tsx",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/shape.tsx"
+        },
+        {
+          "path": "src/lib/types.ts",
+          "type": "registry:lib",
+          "target": "components/animated-icons/lib/types.ts"
+        },
+        {
+          "path": "src/config.ts",
+          "type": "registry:file",
+          "target": "components/animated-icons/config.ts"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "color-icon-primary": "var(--icon-primary)",
+          "color-icon-secondary": "var(--icon-secondary)",
+          "color-icon-accent": "var(--icon-accent)"
+        },
+        "light": {
+          "icon-primary": "var(--foreground)",
+          "icon-secondary": "var(--muted-foreground)",
+          "icon-accent": "var(--primary)"
+        }
+      }
+    },
+    {
+      "name": "all",
+      "type": "registry:item",
+      "title": "All animated icons",
+      "description": "Every icon in the set (70), plus the core.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/alert-triangle.json",
+        "https://animated-icons.vercel.app/r/arrow-right.json",
+        "https://animated-icons.vercel.app/r/arrow-up-right.json",
+        "https://animated-icons.vercel.app/r/battery.json",
+        "https://animated-icons.vercel.app/r/bell-off.json",
+        "https://animated-icons.vercel.app/r/bell.json",
+        "https://animated-icons.vercel.app/r/bookmark.json",
+        "https://animated-icons.vercel.app/r/calendar.json",
+        "https://animated-icons.vercel.app/r/camera.json",
+        "https://animated-icons.vercel.app/r/cart.json",
+        "https://animated-icons.vercel.app/r/check.json",
+        "https://animated-icons.vercel.app/r/chevron-down.json",
+        "https://animated-icons.vercel.app/r/clock.json",
+        "https://animated-icons.vercel.app/r/cloud-upload.json",
+        "https://animated-icons.vercel.app/r/cloud.json",
+        "https://animated-icons.vercel.app/r/copy.json",
+        "https://animated-icons.vercel.app/r/credit-card.json",
+        "https://animated-icons.vercel.app/r/download.json",
+        "https://animated-icons.vercel.app/r/external-link.json",
+        "https://animated-icons.vercel.app/r/eye.json",
+        "https://animated-icons.vercel.app/r/file-search.json",
+        "https://animated-icons.vercel.app/r/file-text.json",
+        "https://animated-icons.vercel.app/r/file.json",
+        "https://animated-icons.vercel.app/r/filter.json",
+        "https://animated-icons.vercel.app/r/folder-plus.json",
+        "https://animated-icons.vercel.app/r/folder.json",
+        "https://animated-icons.vercel.app/r/gift.json",
+        "https://animated-icons.vercel.app/r/heart.json",
+        "https://animated-icons.vercel.app/r/home.json",
+        "https://animated-icons.vercel.app/r/hourglass.json",
+        "https://animated-icons.vercel.app/r/image.json",
+        "https://animated-icons.vercel.app/r/key.json",
+        "https://animated-icons.vercel.app/r/link.json",
+        "https://animated-icons.vercel.app/r/loader.json",
+        "https://animated-icons.vercel.app/r/lock.json",
+        "https://animated-icons.vercel.app/r/log-out.json",
+        "https://animated-icons.vercel.app/r/mail-check.json",
+        "https://animated-icons.vercel.app/r/mail.json",
+        "https://animated-icons.vercel.app/r/map-pin.json",
+        "https://animated-icons.vercel.app/r/menu.json",
+        "https://animated-icons.vercel.app/r/message-text.json",
+        "https://animated-icons.vercel.app/r/message.json",
+        "https://animated-icons.vercel.app/r/messages.json",
+        "https://animated-icons.vercel.app/r/mic.json",
+        "https://animated-icons.vercel.app/r/monitor.json",
+        "https://animated-icons.vercel.app/r/moon.json",
+        "https://animated-icons.vercel.app/r/pause.json",
+        "https://animated-icons.vercel.app/r/pencil.json",
+        "https://animated-icons.vercel.app/r/phone.json",
+        "https://animated-icons.vercel.app/r/play.json",
+        "https://animated-icons.vercel.app/r/plus.json",
+        "https://animated-icons.vercel.app/r/refresh.json",
+        "https://animated-icons.vercel.app/r/rocket.json",
+        "https://animated-icons.vercel.app/r/search.json",
+        "https://animated-icons.vercel.app/r/send.json",
+        "https://animated-icons.vercel.app/r/settings.json",
+        "https://animated-icons.vercel.app/r/shield-check.json",
+        "https://animated-icons.vercel.app/r/shield.json",
+        "https://animated-icons.vercel.app/r/smartphone.json",
+        "https://animated-icons.vercel.app/r/star.json",
+        "https://animated-icons.vercel.app/r/sun.json",
+        "https://animated-icons.vercel.app/r/trash.json",
+        "https://animated-icons.vercel.app/r/upload.json",
+        "https://animated-icons.vercel.app/r/user-plus.json",
+        "https://animated-icons.vercel.app/r/user.json",
+        "https://animated-icons.vercel.app/r/users.json",
+        "https://animated-icons.vercel.app/r/volume.json",
+        "https://animated-icons.vercel.app/r/wifi.json",
+        "https://animated-icons.vercel.app/r/x.json",
+        "https://animated-icons.vercel.app/r/zap.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "alert-triangle",
+      "type": "registry:component",
+      "title": "Alert Triangle icon",
+      "description": "2 colors: triangle (primary), exclamation mark (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/alert-triangle.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/alert-triangle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right",
+      "type": "registry:component",
+      "title": "Arrow Right icon",
+      "description": "1 color.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/arrow-right.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/arrow-right.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-right",
+      "type": "registry:component",
+      "title": "Arrow Up Right icon",
+      "description": "1 color.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/arrow-up-right.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/arrow-up-right.tsx"
+        }
+      ]
+    },
+    {
+      "name": "battery",
+      "type": "registry:component",
+      "title": "Battery icon",
+      "description": "Sparks thrown off to the left of the bolt. */ const SPARKS = [\"M13 2.5l1 1\", \"M11.5 6h2\"] /** 3 colors: shell (primary), bolt and sparks (secondary), level (accent). Charges on its own.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/battery.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/battery.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bell-off",
+      "type": "registry:component",
+      "title": "Bell Off icon",
+      "description": "* The `bell`, cut 2px clear of the slash: a 6px band along the slash masks it out. The band is a `slash` part too, so it draws on, pops and fades with the slash, and the bell only ever moves behind it. / function Drawing() { const mask = `bell-off-${useId().replace(/[^\\w-]/g, \"\")}` // drawn in its own component (for the mask id), so it shapes its corners from context return useShapedDrawing( <> <mask id={mask} maskUnits=\"userSpaceOnUse\" x=\"-4\" y=\"-4\" width=\"32\" height=\"32\"> <rect x=\"-4\" y=\"-4\" width=\"32\" height=\"32\" fill=\"#fff\" stroke=\"none\" /> <path data-part=\"slash\" d={SLASH} stroke=\"#000\" strokeWidth={6} style={pivot(\"50% 50%\")} /> </mask> <g mask={`url(#${mask})`}> <g data-part=\"bell\" style={pivot(\"50% 0%\")}> <path d=\"M12 2v3\" /> {/* a trapezoid: flat crown, straight flanks, flared lip */} <path d=\"M8 5h8l1.5 10 2.5 3H4l2.5-3z\" /> <path d=\"M10 21h4\" /> </g> </g> <path data-part=\"slash\" d={SLASH} stroke={slot.accent} style={pivot(\"50% 50%\")} /> </> ) } /** 2 colors: bell (primary), slash (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bell-off.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bell-off.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bell",
+      "type": "registry:component",
+      "title": "Bell icon",
+      "description": "2 colors: body (primary), clapper and sound waves (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bell.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bell.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bookmark",
+      "type": "registry:component",
+      "title": "Bookmark icon",
+      "description": "A ribbon with a V notch cut into its tail. */ const BOOKMARK = \"M6 3h12v18l-6-5-6 5z\" /** At rest the fill sits inside the ribbon at 45%, 2px clear of every edge. The ribbon is star-shaped around this pivot, so every scale of it between that and full size stays inside the outline. / const FILL = { ...pivot(\"50% 35%\"), transform: \"scale(0.45)\" } /** The flood rises behind the outline, clipped to the ribbon, so it fills the notch exactly. Drawn in its own component (for the clip id), so it shapes its corners from context. / function Drawing() { const clip = `bookmark-${useId().replace(/[^\\w-]/g, \"\")}` return useShapedDrawing( <g data-part=\"bookmark\" style={pivot(\"50% 0%\")}> <clipPath id={clip}> <path d={BOOKMARK} /> </clipPath> <path data-part=\"fill\" d={BOOKMARK} fill={slot.accent} stroke=\"none\" style={FILL} /> {/* wider than the ribbon, so its own corners stay outside the clip */} <g clipPath={`url(#${clip})`}> <rect data-part=\"flood\" x=\"4\" y=\"2\" width=\"16\" height=\"20\" fill={slot.accent} stroke=\"none\" style={{ opacity: 0 }} /> </g> <path d={BOOKMARK} /> </g>, ) } /** 2 colors: outline (primary), fill (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bookmark.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bookmark.tsx"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Calendar icon",
+      "description": "3 colors: frame (primary), binder rings (secondary), highlighted day (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/calendar.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/calendar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "camera",
+      "type": "registry:component",
+      "title": "Camera icon",
+      "description": "3 colors: body (primary), lens (secondary), flash (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/camera.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/camera.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cart",
+      "type": "registry:component",
+      "title": "Cart icon",
+      "description": "3 colors: frame (primary), wheels (secondary), item (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cart.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "check",
+      "type": "registry:component",
+      "title": "Check icon",
+      "description": "A short burst in the empty top-left corner, aimed at the tick's elbow. */ const RAYS = [\"M9 3v2\", \"M4.5 4.5 6 6\", \"M3 9h2\"] /** 1 color. The rays only exist in motion.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/check.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/check.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevron-down",
+      "type": "registry:component",
+      "title": "Chevron Down icon",
+      "description": "1 color.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/chevron-down.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/chevron-down.tsx"
+        }
+      ]
+    },
+    {
+      "name": "clock",
+      "type": "registry:component",
+      "title": "Clock icon",
+      "description": "2 colors: face (primary), hands and alarm lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/clock.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/clock.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cloud-upload",
+      "type": "registry:component",
+      "title": "Cloud Upload icon",
+      "description": "2 colors: cloud (primary), arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cloud-upload.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cloud-upload.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cloud",
+      "type": "registry:component",
+      "title": "Cloud icon",
+      "description": "Each drop's x, just under the cloud's flat base, in the order they fall: middle, left, right. */ const DROPS = [12, 8, 16] /** 2 colors: cloud (primary), rain drops (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cloud.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cloud.tsx"
+        }
+      ]
+    },
+    {
+      "name": "copy",
+      "type": "registry:component",
+      "title": "Copy icon",
+      "description": "2 colors: back sheet (primary), front sheet (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/copy.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/copy.tsx"
+        }
+      ]
+    },
+    {
+      "name": "credit-card",
+      "type": "registry:component",
+      "title": "Credit Card icon",
+      "description": "2 colors: card (primary), stripe and chip (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/credit-card.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/credit-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "download",
+      "type": "registry:component",
+      "title": "Download icon",
+      "description": "2 colors: tray (primary), arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/download.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/download.tsx"
+        }
+      ]
+    },
+    {
+      "name": "external-link",
+      "type": "registry:component",
+      "title": "External Link icon",
+      "description": "2 colors: box (primary), arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/external-link.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/external-link.tsx"
+        }
+      ]
+    },
+    {
+      "name": "eye",
+      "type": "registry:component",
+      "title": "Eye icon",
+      "description": "2 colors: outline (primary), pupil (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/eye.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/eye.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file-search",
+      "type": "registry:component",
+      "title": "File Search icon",
+      "description": "2 colors: page (primary), lens (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/file-search.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/file-search.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file-text",
+      "type": "registry:component",
+      "title": "File Text icon",
+      "description": "A short heading over two body lines, each 2px clear of the page, the fold and each other. */ const LINES = [ { part: \"line-1\", d: \"M8 10h2\" }, { part: \"line-2\", d: \"M8 14h6\" }, { part: \"line-3\", d: \"M8 18h4\" }, ] as const /** Each line fades out with the others, then draws on left to right, one after the other. Hidden while its stroke is too short to read: a square cap paints a dot at length 0. / const typeLine = (start: number, end: number) => ({ opacity: { values: [1, 0, 0, 1, 1], times: [0, 0.15, start, start + 0.01, 1] }, pathLength: { values: [1, 1, 0, 1, 1], times: [0, start - 0.01, start, end, 1] }, }) /** 2 colors: page (primary), text lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/file-text.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/file-text.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file",
+      "type": "registry:component",
+      "title": "File icon",
+      "description": "2 colors: page (primary), folded corner (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/file.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/file.tsx"
+        }
+      ]
+    },
+    {
+      "name": "filter",
+      "type": "registry:component",
+      "title": "Filter icon",
+      "description": "A 2px drop, 2px clear of the spout's mouth (which ends at y 16). */ const DROP = { x: 11, y: 19, width: 2, height: 2 } as const /** 2 colors: funnel (primary), drops (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/filter.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/filter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "folder-plus",
+      "type": "registry:component",
+      "title": "Folder Plus icon",
+      "description": "The badge plus (6 wide), centred low in the body. Local: `badgeGlyph.plus` types its centre as the badge's literal 18, 6. */ const PLUS = \"M12 10v6M9 13h6\" /** 2 colors: folder (primary), plus (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/folder-plus.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/folder-plus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "folder",
+      "type": "registry:component",
+      "title": "Folder icon",
+      "description": "2 colors: folder (primary), sheet (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/folder.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/folder.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gift",
+      "type": "registry:component",
+      "title": "Gift icon",
+      "description": "3 colors: box and lid (primary), ribbon (secondary), bow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/gift.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/gift.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heart",
+      "type": "registry:component",
+      "title": "Heart icon",
+      "description": "A faceted heart: 45° flanks, flat-topped lobes, a right-angled notch and point. */ const HEART = \"M12 20.5 3 11.5v-4L6.5 4h2L12 7.5 15.5 4h2L21 7.5v4Z\" const PARTICLES = radial(6, 8, -90) /** A few square sparks drift out from the heart and fade. */ function sparkle({ animate, seconds }: VariantContext, delay: number) { return PARTICLES.map(({ x, y }, i) => animate( `[data-particle=\"${i}\"]`, { x: [0, x], y: [0, y], opacity: [0, 1, 0], scale: [0.6, 1, 0.6] }, { duration: seconds * 0.7, delay, ease: \"easeOut\" }, ), ) } /** 2 colors: outline (primary), fill and particles (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/heart.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/heart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "type": "registry:component",
+      "title": "Home icon",
+      "description": "2 colors: house (primary), door and smoke (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/home.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/home.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hourglass",
+      "type": "registry:component",
+      "title": "Hourglass icon",
+      "description": "2 colors: glass (primary), sand (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/hourglass.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/hourglass.tsx"
+        }
+      ]
+    },
+    {
+      "name": "image",
+      "type": "registry:component",
+      "title": "Image icon",
+      "description": "* Two 45° peaks with a valley between, run on past both sides of the frame so the range can pan without its ends showing. At rest it meets the frame's sides at (3, 17) and (21, 17). / const RIDGE = \"M-1 21l10-10 5 5 3-3 7 7\" /** Everything below the ridge raised 2px (1.4px square to its 45° flanks): the sun disappears behind it just before it would touch the mountains' stroke, so it sets into the valley without crossing a line. / const BEHIND = \"M-1 19 9 9l5 5 3-3 7 7V25H-1Z\" /** Two masks: the mountains are cut at the frame's inner edge (they pan under it, never across it), and the sun is hidden behind the ridge. Both stay put; only the parts inside them move. / function Drawing() { const id = useId().replace(/[^\\w-]/g, \"\") const range = `image-range-${id}` const sky = `image-sky-${id}` // drawn in its own component (for the mask ids), so it shapes its corners from context return useShapedDrawing( <> <mask id={range} maskUnits=\"userSpaceOnUse\" x=\"-4\" y=\"-4\" width=\"32\" height=\"32\"> <rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" fill=\"#fff\" stroke=\"none\" /> </mask> <mask id={sky} maskUnits=\"userSpaceOnUse\" x=\"-4\" y=\"-4\" width=\"32\" height=\"32\"> <rect x=\"-4\" y=\"-4\" width=\"32\" height=\"32\" fill=\"#fff\" stroke=\"none\" /> <path d={BEHIND} fill=\"#000\" stroke=\"none\" /> </mask> <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" /> <g mask={`url(#${range})`}> <path data-part=\"mountains\" d={RIDGE} stroke={slot.secondary} /> </g> <g mask={`url(#${sky})`}> {/* the sun is round, so it gets a true circle */} <circle data-part=\"sun\" cx=\"14\" cy=\"8\" r=\"2\" fill={slot.accent} stroke=\"none\" style={pivot(\"50% 50%\")} /> </g> </>, ) } /** 3 colors: frame (primary), mountains (secondary), sun (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/image.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/image.tsx"
+        }
+      ]
+    },
+    {
+      "name": "key",
+      "type": "registry:component",
+      "title": "Key icon",
+      "description": "* The key is drawn lying flat (bow left, bit hanging below the shaft) and the whole drawing is laid on the diagonal, so its moves stay simple in its own frame: `x` slides along the shaft, `scaleY` turns it over around the shaft. Its box is 1.5..21.5 × 7.5..16.5; the bow's centre (6, 12) sits at 22.5% 50%. / const BOW = pivot(\"22.5% 50%\") /** 2 colors: key (primary), bit (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/key.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/key.tsx"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:component",
+      "title": "Link icon",
+      "description": "* The chain runs along the diagonal, bottom-left to top-right. Points are given in chain coordinates: `a` along the chain, `b` across it, in steps of √2 so every corner lands on the half-pixel grid. / const at = (a: number, b: number): Point => [2 + a + b, 12.5 + b - a] const box = (a0: number, a1: number, b0: number, b1: number) => [at(a0, b0), at(a1, b0), at(a1, b1), at(a0, b1)] const outline = (points: Point[]) => `M${points.map(([x, y]) => `${x} ${y}`).join(\"L\")}Z` /** Two square-cornered links, 6 wide (8.5px) so a strand fits through each with 2px to spare. The front link is offset half a width across and 3.5 along, so each one's end sits inside the other's loop. / const BACK = box(0, 7, 0, 6) const FRONT = box(3.5, 10.5, 3, 9) /** Where a strand passes under the other link, the other link carries a mask band that cuts it 1.5px clear either side (a weave break: 2px would leave the corners only stubs). The band moves with the link on top, so the break follows it through any pull. `under` is the across-coordinate of the strand being cut; `over` the along-coordinate of the edge on top. / const GAP = 2.5 / Math.SQRT2 // 1px of stroke + 1.5px of clearance, in chain steps const band = (over: number, under: number) => box(over - GAP, over + GAP, under - 1.25, under + 1.25) /** The back link's far end crosses over the front link's near strand... */ const OVER_FRONT = band(7, 3) /** ...and the front link's near end crosses over the back link's far strand: over, then under, they interlock. */ const OVER_BACK = band(3.5, 6) /** The joint, the middle of the overlap: both links bend about it. */ const JOINT = at(5.25, 4.5) /** A pivot at the joint, relative to a shape's own box (motion transforms SVG parts about their fill-box). */ function aboutJoint(points: Point[]) { const xs = points.map(([x]) => x) const ys = points.map(([, y]) => y) const [x0, y0] = [Math.min(...xs), Math.min(...ys)] const pct = (v: number, min: number, size: number) => `${(((v - min) / size) * 100).toFixed(2)}%` return pivot(`${pct(JOINT[0], x0, Math.max(...xs) - x0)} ${pct(JOINT[1], y0, Math.max(...ys) - y0)}`) } const points = (shape: Point[]) => shape.map(([x, y]) => `${x},${y}`).join(\" \") function Drawing() { const id = useId().replace(/[^\\w-]/g, \"\") const [cutBack, cutFront] = [`link-back-${id}`, `link-front-${id}`] const mask = (name: string, cutter: Point[], part: string) => ( <mask id={name} maskUnits=\"userSpaceOnUse\" x=\"-4\" y=\"-4\" width=\"32\" height=\"32\"> <rect x=\"-4\" y=\"-4\" width=\"32\" height=\"32\" fill=\"#fff\" stroke=\"none\" /> {/* a polygon, not a path: the band is a mask, its corners must stay exactly as drawn */} <polygon data-part={part} points={points(cutter)} fill=\"#000\" stroke=\"none\" style={aboutJoint(cutter)} /> </mask> ) // drawn in its own component (for the mask ids), so it shapes its corners from context return useShapedDrawing( <> {mask(cutBack, OVER_BACK, \"front\")} {mask(cutFront, OVER_FRONT, \"back\")} {/* the masks stay put on the outer groups; the links move inside them */} <g mask={`url(#${cutBack})`}> <path data-part=\"back\" d={outline(BACK)} style={aboutJoint(BACK)} /> </g> <g mask={`url(#${cutFront})`}> <path data-part=\"front\" d={outline(FRONT)} stroke={slot.accent} style={aboutJoint(FRONT)} /> </g> </>, ) } /** Along the chain, in pixels: one step of `a` is (1, -1). */ const tug = (steps: number[]) => ({ x: steps, y: steps.map((s) => -s) }) /** 2 colors: one link each, back (primary) and front (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/link.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/link.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loader",
+      "type": "registry:component",
+      "title": "Loader icon",
+      "description": "8 square-capped spokes; the trailing ones fade so the ring reads as turning clockwise. */ const SPOKES = Array.from({ length: 8 }, (_, i) => ({ angle: i * 45, opacity: (10 - ((8 - i) % 8)) / 10 })) /** 1 color. Loops forever with no rest by default: a loader that waits for hover is useless.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/loader.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/loader.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lock",
+      "type": "registry:component",
+      "title": "Lock icon",
+      "description": "2 colors: body (primary), shackle and keyhole (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/lock.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/lock.tsx"
+        }
+      ]
+    },
+    {
+      "name": "log-out",
+      "type": "registry:component",
+      "title": "Log Out icon",
+      "description": "2 colors: door frame (primary), arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/log-out.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/log-out.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mail-check",
+      "type": "registry:component",
+      "title": "Mail Check icon",
+      "description": "* The `mail` envelope with its top-right corner open, opened a little wider than for the dot badge: the check is wider than the badge square, so the top edge and the flap stop 2px short of it. / const ENVELOPE = \"M11 5H3v14h18v-9\" const FLAP = \"M3 5l9 7 2.25-1.75\" /** 3 colors: envelope (primary), flap (secondary), check (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/mail-check.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/mail-check.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mail",
+      "type": "registry:component",
+      "title": "Mail icon",
+      "description": "3 colors: envelope (primary), flap (secondary), badge (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/mail.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/mail.tsx"
+        }
+      ]
+    },
+    {
+      "name": "map-pin",
+      "type": "registry:component",
+      "title": "Map Pin icon",
+      "description": "The head is round, so it is a true arc; two straight flanks leave it on its tangents to a sharp point. */ const HEAD = { cx: 12, cy: 9.5, r: 6.5 } const TIP = 20 const SPREAD = Math.acos(HEAD.r / (TIP - HEAD.cy)) const TX = fmt(HEAD.r * Math.sin(SPREAD)) const TY = fmt(HEAD.cy + HEAD.r * Math.cos(SPREAD)) const PIN = `M12 ${TIP}L${fmt(12 - TX)} ${TY}A${HEAD.r} ${HEAD.r} 0 1 1 ${fmt(12 + TX)} ${TY}Z` /** The ping: a wider arc over the head, ending 25° below its middle so it never reaches the flanks. */ const RING_R = 8.5 const DROP = (25 * Math.PI) / 180 const RX = fmt(RING_R * Math.cos(DROP)) const RY = fmt(HEAD.cy + RING_R * Math.sin(DROP)) const RING = `M${fmt(12 - RX)} ${RY}A${RING_R} ${RING_R} 0 1 1 ${fmt(12 + RX)} ${RY}` /** Grows from the head's centre: its box runs from the arc's top to its ends. */ const RING_PIVOT = `50% ${fmt((RING_R / (RY - (HEAD.cy - RING_R))) * 100)}%` /** 2 colors: pin (primary), dot and ping (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/map-pin.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/map-pin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:component",
+      "title": "Menu icon",
+      "description": "2 colors: top and bottom lines (primary), middle line (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/menu.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "message-text",
+      "type": "registry:component",
+      "title": "Message Text icon",
+      "description": "Two text lines, a long one over a short one, 2px clear of the bubble and of each other. */ const LINES = [ { part: \"line-1\", d: \"M7 8h10\" }, { part: \"line-2\", d: \"M7 12h6\" }, ] as const /** Each line fades out with the other, then draws on left to right, one after the other. Hidden while its stroke is too short to read: a square cap paints a dot at length 0. / const typeLine = (start: number, end: number) => ({ opacity: { values: [1, 0, 0, 1, 1], times: [0, 0.15, start, start + 0.01, 1] }, pathLength: { values: [1, 1, 0, 1, 1], times: [0, start - 0.01, start, end, 1] }, }) /** 2 colors: bubble (primary), text lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/message-text.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/message-text.tsx"
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "type": "registry:component",
+      "title": "Message icon",
+      "description": "2 colors: bubble (primary), dots (accent). \"Typing\" only reads as typing while it keeps going, so it loops in view.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/message.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/message.tsx"
+        }
+      ]
+    },
+    {
+      "name": "messages",
+      "type": "registry:component",
+      "title": "Messages icon",
+      "description": "The reply, in front (top-right, tail right): wide enough for three dots 2px clear of its sides. */ const REPLY = bubble(6, 2, 16, 8, \"right\") /** The first message behind it (bottom-left, tail left): its tail stays clear of the reply and rakes like the reply's. */ const BACK = bubble(2, 6, 16, 9) /** The reply grows from the tip of its tail: (19, 14) in its 16 × 12 box. */ const REPLY_PIVOT = pivot(\"81.25% 100%\") /** One typing beat: a dot dims and lifts 1px (its bubble is too short for the 2px hop of `message`). */ const TYPE = { opacity: [1, 0.35, 1], y: [0, -1, 0] } /** The back bubble is masked by a 6px band around the reply, so its lines stop 2px short of the reply's stroke. The band is a `reply` part too: it moves and scales with the reply, so whatever the reply covers mid-animation is exactly what the back bubble loses, and nothing ever crosses. / function Drawing() { const mask = `messages-${useId().replace(/[^\\w-]/g, \"\")}` // drawn in its own component (for the mask id), so it shapes its corners from context return useShapedDrawing( <> <mask id={mask} maskUnits=\"userSpaceOnUse\" x=\"-4\" y=\"-4\" width=\"32\" height=\"32\"> <rect x=\"-4\" y=\"-4\" width=\"32\" height=\"32\" fill=\"#fff\" stroke=\"none\" /> {/* the band's mitered tail tip cuts the back bubble's bottom edge parallel to the reply's tail */} <path data-part=\"reply\" d={REPLY} fill=\"#000\" stroke=\"#000\" strokeWidth={6} style={REPLY_PIVOT} /> </mask> {/* the mask stays put on the outer group; the bubble moves inside it, behind the reply */} <g mask={`url(#${mask})`}> <path data-part=\"back\" d={BACK} /> </g> <g data-part=\"reply\" stroke={slot.secondary} style={REPLY_PIVOT}> <path d={REPLY} /> <g fill={slot.accent} stroke=\"none\"> {dots(14, 6).map(({ x, y }) => ( <rect key={x} data-part=\"dot\" x={x} y={y} width=\"2\" height=\"2\" style={pivot(\"50% 50%\")} /> ))} </g> </g> </> ) } /** 3 colors: first message (primary), reply (secondary), typing dots (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/messages.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/messages.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mic",
+      "type": "registry:component",
+      "title": "Mic icon",
+      "description": "Pulse ticks either side of the capsule, above the cradle: a diagonal and a level one per side. */ const TICKS = [ { d: \"M5 3.5 3.5 2\", origin: \"100% 100%\" }, { d: \"M5 8H3\", origin: \"100% 50%\" }, { d: \"M19 3.5l1.5-1.5\", origin: \"0% 100%\" }, { d: \"M19 8h2\", origin: \"0% 50%\" }, ] /** 2 colors: capsule + stand (primary), level + pulse ticks (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/mic.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/mic.tsx"
+        }
+      ]
+    },
+    {
+      "name": "monitor",
+      "type": "registry:component",
+      "title": "Monitor icon",
+      "description": "The screen's inside: the frame is 2..22 × 3..16, so its stroke's inner edge sits at 3..21 × 4..15. */ const SCREEN = { x: 3, y: 4, width: 18, height: 11 } /** Two lines of text, 2 clear of the frame and of each other. */ const LINES = [ { part: \"line-1\", d: \"M6 7h12\" }, { part: \"line-2\", d: \"M6 11h7\" }, ] as const /** The content and the glow sit inside a clip of the screen's inner edge, so content scrolling off the screen slips under the frame instead of crossing its stroke. / function Drawing() { const clip = `monitor-${useId().replace(/[^\\w-]/g, \"\")}` // drawn in its own component (for the clip id), so it shapes its corners from context return useShapedDrawing( <> <clipPath id={clip}> <rect {...SCREEN} /> </clipPath> <path d=\"M2 3h20v13H2Z\" /> {/* a two-legged neck standing on a flat foot */} <path d=\"M10 16v5M14 16v5M7 21h10\" /> <g clipPath={`url(#${clip})`}> <rect data-part=\"glow\" {...SCREEN} fill={slot.accent} fillOpacity={0.2} stroke=\"none\" style={flash()} /> <g data-part=\"content\" stroke={slot.accent} style={pivot(\"50% 50%\")}> {LINES.map(({ part, d }) => ( <path key={part} data-part={part} d={d} /> ))} </g> </g> </>, ) } /** 2 colors: screen + stand (primary), screen content and glow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/monitor.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/monitor.tsx"
+        }
+      ]
+    },
+    {
+      "name": "moon",
+      "type": "registry:component",
+      "title": "Moon icon",
+      "description": "* A crescent from two true arcs (a moon is round): three quarters of a circle round (12, 12), then back through the bite, a circle round (15, 9) through the same two horns. / const CRESCENT = \"M12 3A9 9 0 1 0 21 12A6.708 6.708 0 1 1 12 3Z\" /** A four-pointed star in the bite, and a small diamond star above it, clear of both horns. */ const STARS = [\"M17 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z\", \"M20.5 2 22 3.5 20.5 5 19 3.5z\"] /** 2 colors: moon (primary), stars (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/moon.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/moon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "type": "registry:component",
+      "title": "Pause icon",
+      "description": "Left edges of the two 5-wide bars: their strokes stand 2px apart. */ const BARS = [5, 14] /** 2 colors: bar outlines (primary), bar fills (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pause.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pause.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pencil",
+      "type": "registry:component",
+      "title": "Pencil icon",
+      "description": "2 colors: body (primary), tip and the line it writes (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pencil.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pencil.tsx"
+        }
+      ]
+    },
+    {
+      "name": "phone",
+      "type": "registry:component",
+      "title": "Phone icon",
+      "description": "* A faceted handset, symmetric about the anti-diagonal: earpiece top-left, mouthpiece bottom-right, a stepped inner edge and a three-facet outer back. / const HANDSET = \"M3 3h5l2 5-2.5 2.5 6 6L16 14l5 2v5h-5l-7-3-3-3-3-7Z\" /** Two octagonal quarter-waves around (14, 10), 4 apart, in the corner the handset leaves open. */ const WAVES = [\"M14 6h1.5l2.5 2.5V10\", \"M14 2h3.5l4.5 4.5V10\"] /** 2 colors: handset (primary), ring waves (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/phone.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/phone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "play",
+      "type": "registry:component",
+      "title": "Play icon",
+      "description": "A right-pointing triangle: a flat back edge and a single point. */ const TRIANGLE = \"M6 4v16l13-8Z\" /** The fill sits under the outline, behind a mask whose window wipes from the back edge toward the point. The window is the only thing that moves, so the fill never changes shape. / function Drawing() { const mask = `play-${useId().replace(/[^\\w-]/g, \"\")}` // drawn in its own component (for the mask id), so it shapes its corners from context return useShapedDrawing( <> <mask id={mask} maskUnits=\"userSpaceOnUse\" x=\"-4\" y=\"-4\" width=\"32\" height=\"32\"> <rect data-part=\"wipe\" x=\"5\" y=\"2\" width=\"15\" height=\"20\" fill=\"#fff\" stroke=\"none\" style={pivot(\"0% 50%\")} /> </mask> <g data-part=\"play\" style={pivot(\"40% 50%\")}> <g mask={`url(#${mask})`}> <path d={TRIANGLE} fill={slot.accent} stroke=\"none\" /> </g> <path d={TRIANGLE} /> </g> </>, ) } /** 2 colors: outline (primary), fill (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/play.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/play.tsx"
+        }
+      ]
+    },
+    {
+      "name": "plus",
+      "type": "registry:component",
+      "title": "Plus icon",
+      "description": "Fades an arm out, then draws it from the centre between `from` and `to` (fractions of the cycle). */ const drawOn = (from: number, to: number) => ({ keyframes: { opacity: [1, 0, 0, 1, 1, 1], pathLength: [1, 1, 0, 0.15, 1, 1] }, times: [0, 0.15, from, from + 0.06, to, 1], }) /** 1 color. Each bar is drawn as two arms from the centre, so it can grow outward.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/plus.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/plus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "refresh",
+      "type": "registry:component",
+      "title": "Refresh icon",
+      "description": "1 color: two arrows chasing each other round an octagon.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/refresh.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/refresh.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rocket",
+      "type": "registry:component",
+      "title": "Rocket icon",
+      "description": "Smoke squares either side of the flame tip. */ const PUFFS = [7, 15] as const const puff = { opacity: [0, 0.8, 0], scale: [0.5, 1, 1.3], y: [0, 2] } /** 3 colors: hull (primary), fins and smoke (secondary), flame (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/rocket.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/rocket.tsx"
+        }
+      ]
+    },
+    {
+      "name": "search",
+      "type": "registry:component",
+      "title": "Search icon",
+      "description": "2 colors: lens and handle (primary), glint and scan line (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/search.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/search.tsx"
+        }
+      ]
+    },
+    {
+      "name": "send",
+      "type": "registry:component",
+      "title": "Send icon",
+      "description": "2 colors: plane (primary), fold line (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/send.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/send.tsx"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "type": "registry:component",
+      "title": "Settings icon",
+      "description": "Eight parallel-sided teeth on a polygonal body, all straight segments. */ const GEAR = \"M10.4 5.4V3h3.2v2.4l1.94.8 1.69-1.7 2.27 2.27-1.7 1.69.8 1.94H21v3.2h-2.4l-.8 1.94 1.7 1.69-2.27 2.27-1.69-1.7-1.94.8V21h-3.2v-2.4l-1.94-.8-1.69 1.7-2.27-2.27 1.7-1.69-.8-1.94H3v-3.2h2.4l.8-1.94-1.7-1.69L6.77 4.5l1.69 1.7z\" /** 2 colors: gear (primary), hub (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/settings.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/settings.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shield-check",
+      "type": "registry:component",
+      "title": "Shield Check icon",
+      "description": "2 colors: shield (primary), check (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shield-check.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shield-check.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shield",
+      "type": "registry:component",
+      "title": "Shield icon",
+      "description": "2 colors: shield (primary), centre line and shine (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shield.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shield.tsx"
+        }
+      ]
+    },
+    {
+      "name": "smartphone",
+      "type": "registry:component",
+      "title": "Smartphone icon",
+      "description": "Buzz ticks either side of the body, 2 clear of it. */ const BUZZ = [\"M3 9v6\", \"M21 9v6\"] /** 2 colors: body (primary), home bar, notification and screen light (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/smartphone.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/smartphone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "star",
+      "type": "registry:component",
+      "title": "Star icon",
+      "description": "Five mitered points; the box centre sits a little above the star's own centre. */ const STAR = \"M12 4.5 14.5 9.5 20 10 16 14 17 19.5 12 17 7 19.5 8 14 4 10 9.5 9.5Z\" /** Small diamonds that only exist in motion. */ const SPARKLES = [\"M4 2.5 5.5 4 4 5.5 2.5 4z\", \"M20 2.5 21.5 4 20 5.5 18.5 4z\", \"M12 19.5 13.5 21 12 22.5 10.5 21z\"] /** 2 colors: outline (primary), fill and sparkles (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/star.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/star.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sun",
+      "type": "registry:component",
+      "title": "Sun icon",
+      "description": "One ray, 8 to 10 out from the centre, turned into place: cardinal rays first, then the diagonals. */ const RAY = \"M12 2v2\" const CARDINAL = [0, 90, 180, 270] const DIAGONAL = [45, 135, 225, 315] /** 2 colors: disc (primary), rays (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/sun.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/sun.tsx"
+        }
+      ]
+    },
+    {
+      "name": "trash",
+      "type": "registry:component",
+      "title": "Trash icon",
+      "description": "3 colors: can (primary), lid and handle (secondary), inner lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/trash.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/trash.tsx"
+        }
+      ]
+    },
+    {
+      "name": "upload",
+      "type": "registry:component",
+      "title": "Upload icon",
+      "description": "2 colors: tray (primary), arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/upload.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/upload.tsx"
+        }
+      ]
+    },
+    {
+      "name": "user-plus",
+      "type": "registry:component",
+      "title": "User Plus icon",
+      "description": "2 colors: user (primary), plus (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/user-plus.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/user-plus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "type": "registry:component",
+      "title": "User icon",
+      "description": "2 colors: shoulders (primary), head (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/user.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/user.tsx"
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "type": "registry:component",
+      "title": "Users icon",
+      "description": "3 colors: front shoulders (primary), back user (secondary), front head (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/users.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/users.tsx"
+        }
+      ]
+    },
+    {
+      "name": "volume",
+      "type": "registry:component",
+      "title": "Volume icon",
+      "description": "Sound waves are curves, so they are true arcs, centred just right of the cone's mouth (11.5, 12). */ const WAVES = [\"M15.5 9a5 5 0 0 1 0 6\", \"M17.86 5.64a9 9 0 0 1 0 12.72\"] /** 2 colors: speaker (primary), sound waves (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/volume.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/volume.tsx"
+        }
+      ]
+    },
+    {
+      "name": "wifi",
+      "type": "registry:component",
+      "title": "Wifi icon",
+      "description": "The arcs' shared centre, the middle of the dot. */ const CY = 20 const fmt = (n: number) => String(Math.round(n * 1000) / 1000) /** A true arc of radius r over the dot, a quarter turn wide (45° either side of straight up). */ function arc(r: number) { const d = r * Math.SQRT1_2 return `M${fmt(12 - d)} ${fmt(CY - d)}A${r} ${r} 0 0 1 ${fmt(12 + d)} ${fmt(CY - d)}` } /** Inner to outer, 4.5 apart so the gaps stay 2.5 clear. */ const ARCS = [ { part: \"arc-1\", d: arc(5) }, { part: \"arc-2\", d: arc(9.5) }, { part: \"arc-3\", d: arc(14) }, ] as const const sel = (part: string) => `[data-part=${part}]` /** A dimmed bar: still there, just not lit. */ const DIM = 0.2 /** 2 colors: arcs (primary), dot (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/wifi.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/wifi.tsx"
+        }
+      ]
+    },
+    {
+      "name": "x",
+      "type": "registry:component",
+      "title": "X icon",
+      "description": "1 color.",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/x.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/x.tsx"
+        }
+      ]
+    },
+    {
+      "name": "zap",
+      "type": "registry:component",
+      "title": "Zap icon",
+      "description": "A flat-topped bolt from straight segments: a wide upper blade, a step, a long point down to the left. */ const BOLT = \"M12 2h5l-4 8h6L9 22l2-9H5z\" /** Sparks in the four empty corners, each drawn from its inner end outward (the end it scales from). */ const SPARKS = [ { d: \"M5 5 3 3\", origin: \"100% 100%\" }, { d: \"M19.5 4.5 21 3\", origin: \"0% 100%\" }, { d: \"M19 19l2 2\", origin: \"0% 0%\" }, { d: \"M4.5 19.5 3 21\", origin: \"100% 0%\" }, ] /** 2 colors: bolt (primary), sparks (accent).",
+      "registryDependencies": [
+        "https://animated-icons.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/zap.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/zap.tsx"
+        }
+      ]
+    }
+  ]
+}

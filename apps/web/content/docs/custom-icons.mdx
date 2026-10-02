@@ -1,0 +1,134 @@
+---
+title: Custom icons
+description: Build your own icon with createAnimatedIcon.
+---
+
+An icon is a definition: its drawing, its variants and, optionally, the defaults it needs. Triggers,
+looping, restarts, reduced motion, config and colors all come from the factory.
+
+```tsx title="components/animated-icons/icons/bell.tsx"
+'use client';
+
+import { createAnimatedIcon } from '../lib/create-icon';
+import { blink, flash, pivot, slot } from '../lib/motion';
+
+declare module '../lib/types' {
+  interface IconVariants {
+    bell: 'ring' | 'shake'; // makes the variant typed in props and config.ts
+  }
+}
+
+export const BellIcon = createAnimatedIcon({
+  name: 'bell',
+  category: 'communication',
+  keywords: ['notification', 'alert', 'alarm'], // for search
+  slots: { primary: 'body', accent: 'clapper + sound waves' }, // the slots it uses, and what they paint
+  defaultVariant: 'ring',
+  // defaults: { trigger: 'auto', interval: 0 },
+  variants: {
+    ring: {
+      duration: 700, // ms, before speed
+      run: ({ animate, seconds }) =>
+        Promise.all([
+          animate('[data-part=body]', { rotate: [0, -14, 11, -7, 4, 0] }, { duration: seconds }),
+          animate('[data-part=wave]', blink, { duration: seconds * 0.85, delay: seconds * 0.14 }),
+        ]),
+    },
+    shake: {
+      duration: 500,
+      run: ({ animate, seconds }) =>
+        animate('[data-part=bell]', { x: [0, -1, 1, -1, 1, 0] }, { duration: seconds }),
+    },
+  },
+  render: () => (
+    <>
+      <path data-part="wave" d="…" stroke={slot.accent} style={flash()} />
+      <g data-part="bell">
+        <path data-part="body" d="…" style={pivot('50% 0%')} />
+        <path data-part="clapper" d="…" stroke={slot.accent} />
+      </g>
+    </>
+  ),
+});
+```
+
+## Metadata
+
+`category` and `slots` are required. `category` groups the icon in the catalog. The keys of `slots` are the color slots the icon uses, and they decide how many colors the
+icon has. `keywords` are optional search terms. Both end up on the component as a static `meta`, along
+with the variant names and defaults:
+
+```ts
+BellIcon.meta;
+// { name: 'bell', category: 'communication', keywords: [...], slots: {...}, colors: 2,
+//   variants: ['ring', 'shake'], defaultVariant: 'ring', defaults: undefined }
+```
+
+`meta` is available in client code only. In a React Server Component, an icon import is a client
+reference and carries no statics.
+
+## Families and composites
+
+Shape siblings are separate icons that share a `family`, the way Lucide groups `message-square` and
+`messages-square`:
+
+```tsx
+export const MessagesIcon = createAnimatedIcon({
+  name: 'messages',
+  family: 'message', // named by the base icon; `name` must start with it
+  // ...
+});
+```
+
+Each sibling has its own drawing and its own animations, and installs on its own. The catalog lists a
+family's other shapes on every member's detail panel.
+
+Composites (a conversation, a base icon plus a corner badge, an icon with a slash) are built from the
+shared parts in `lib/parts.ts`. They're drawn at their real size, never scaled, so every stroke stays
+2px:
+
+| Part               | Draws                                                                          |
+| ------------------ | ------------------------------------------------------------------------------ |
+| `bubble(x, y, w, h, tail)` | A square speech bubble with a raked tail. `bubble(3, 4, 18, 12)` is the `message` icon. |
+| `dots(cx, cy, gap)`        | Positions for three 2×2 typing dots.                                    |
+| `BADGE`                    | The top-right badge zone. A base icon that takes a modifier leaves this corner open. |
+| `badgeGlyph.check/plus/minus/x` | Modifier glyphs sized for the badge zone.                          |
+| `SLASH`                    | A diagonal slash for "off" states.                                      |
+
+## The authoring kit (`lib/motion.ts`)
+
+| Export          | What for                                                                         |
+| --------------- | -------------------------------------------------------------------------------- |
+| `slot`          | Stroke/fill values for `primary`, `secondary` and `accent`, with the cascade built in. The SVG root already strokes with `primary`. |
+| `pivot(origin)` | Where a part rotates or scales from, relative to its own bounding box.          |
+| `flash()`       | Style for an accent that only exists in motion: invisible at rest.               |
+| `blink`         | Keyframes that blink an accent in and back out.                                  |
+| `ease`          | `out` (expo), `overshoot` (for landings), `in` (wind-ups), `inOut`.              |
+| `radial(n, d)`  | Evenly spaced points on a circle, for particles.                                 |
+
+## House style: draw sharp, render round
+
+Draw every shape from straight segments with sharp corners. The factory rounds (or bevels) each
+corner's geometry at render time, at the user's `cornerRadius`:
+
+- no hand-rounded corners: no `rx`/`ry`, no arcs used to soften a corner (they'd round twice)
+- polygonal shapes: a bell is a trapezoid, a dot is a small square. Curves only where the object is
+  really round (a lens, a ring).
+- a 24 × 24 grid, drawn inside 2..22, with coordinates on integers or halves so 2px strokes stay crisp
+
+The full guide is `packages/animated-icons/STYLE.md`. `tests/icons.test.tsx` enforces the mechanical
+rules on every icon file automatically: no round caps, joins or rects; every animated part exists; every
+track ends at rest.
+
+## Rules of thumb
+
+- `'use client'` at the top: the factory is a client module.
+- `animate` is scoped to the icon, so `[data-part=…]` selectors never leak into the page.
+- **Start and end every keyframe track at rest.** A cycle that finishes leaves the icon still, and a
+  restart swaps your first keyframe for the current value.
+- One meaningful moving part per variant, plus at most a blink of accent. Keep amplitudes small: about
+  ±14° for a swing, 2–3px for a hop, 1.05–1.2 for a pop.
+- `run` returns a promise (or motion's controls). The next loop waits for it, plus `interval`.
+- A part that slips out of the frame and back sets `clip: true` on its variant. Any variant that moves a
+  part 5px or more must declare `clip`, `false` if it stays inside.
+- Parts that touch at rest move together. Never pass one part through another's stroke.

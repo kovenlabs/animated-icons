@@ -1,0 +1,228 @@
+# Start Task Workflow
+
+## Purpose
+
+Run an existing task **autonomously to completion** — `/resume-task` with the `/goal` philosophy. Reads the task's `progress-tracker.md`, confirms the plan once, then executes every remaining mission without prompting in between: each mission runs in a **subagent** that follows the `tdd` discipline and **updates the progress tracker itself** when done; the parent verifies the work and **commits after every finished mission**.
+
+Use this when the task is already well-defined (it was grilled at creation) and you want to hand execution off and walk away — the task-shaped counterpart of pasting a `goal.md` into `/goal`.
+
+## When to use this instead of `/resume-task`
+
+- **`/start-task`** — the remaining missions are concrete, you trust the roadmap, and you want them executed end-to-end with a commit trail. You review commits, not missions.
+- **`/resume-task`** — you want to stay in the loop and review each mission before moving on.
+
+## Critical Step
+
+**ALWAYS check `.ab-method/structure/index.yaml` FIRST** to find where task documents are stored. Paths are user-configurable.
+
+## Process
+
+### 1. Identify the Task
+
+- If the user passed a task name or a path to its `progress-tracker.md`, use that.
+- Otherwise list folders under `docs/tasks/` and ask which task to start.
+
+### 2. Read the Progress Tracker
+
+Open `docs/tasks/<task>/progress-tracker.md`. From it, identify:
+- Task status and which missions are completed (with their technical summaries)
+- The remaining missions, in order, including any `[pp-x]` parallel-group tags
+- Any `⚠️ UQ-n` markers on remaining missions, and the matching entries in `unresolved-questions.md`
+- Constraints/notes from the original grill-with-docs session
+- The `## Planned` section of `change-map.md` if the task has one — the modules the plan expects this run
+  to land in. Read it, don't edit it: it is the prediction Step 5d measures the run against
+
+**Vagueness gate**: an autonomous run cannot stop to ask questions. If any remaining mission's one-line description is too vague to execute without judgment calls, say so now and grill it (`grill-with-docs`) **before** the run starts — never mid-run.
+
+**An open `UQ-n` is not vagueness — do not stop for it.** A parked question is a *decided* way to proceed: the placeholder was agreed with the user at task creation and recorded in `unresolved-questions.md`. The run builds the black box exactly as recorded and keeps going. Only two things turn a parked question into a stop:
+- The tracker marks a mission `⚠️ UQ-n` but the file has no entry for it (or the entry records no placeholder) — there is nothing to build. Say so and grill it before starting.
+- The entry itself says the placeholder can't carry the mission. Same treatment.
+
+Never resolve an open question on the user's behalf mid-run, and never upgrade a placeholder to a "better" answer because it looked obvious once the code was in front of you. Answering is the user's call; the run's job is to ship the recorded black box and report it.
+
+### 3. Announce the Run — then start immediately, no confirmation
+
+`/start-task` does **not** ask "Proceed?". When invoked, it starts right
+away — the invocation itself is the consent. Show the plan for visibility
+(so the user sees what's about to run and can Esc-interrupt if it's
+wrong), then begin the loop in the same turn:
+
+```
+Starting: <Task Name>
+
+Remaining missions:
+[ ] Mission 3: [Name]
+[ ] Mission 4: [Name] [pp-1]
+[ ] Mission 5: [Name] [pp-1]
+[ ] Mission 6: [Name] ⚠️ UQ-2
+
+Open questions (building on placeholders, not stopping):
+  UQ-2 Refund window fixed or per-merchant? → fixed 30 days (Mission 6)
+
+Running autonomously now:
+- each mission in a subagent (tdd discipline, updates the tracker itself)
+- test suite verified after each mission
+- one commit per mission (one per [pp-x] group)
+- no prompts unless something goes red
+```
+
+Drop the "Open questions" block entirely when nothing is parked — the usual case. When something is, it belongs in the announcement: the user Esc-interrupts here if an answer has since arrived.
+
+Set the task status to `In dev` and proceed straight into Step 4 — do
+not wait for a reply. (The only thing that can pause a run before it
+starts is the Step 2 vagueness gate, and only when a remaining mission is
+too fuzzy to execute without judgment calls.)
+
+### 4. Load the `tdd` Skill — STEP ZERO
+
+Invoke `Skill("tdd")` in the parent context before any mission work. Subagents do the implementing, but you need the playbook loaded to evaluate the summaries they return.
+
+Also read once, for context you'll seed every subagent with (paths from `.ab-method/structure/index.yaml`): `UBIQUITOUS_LANGUAGE.md`, `CONTEXT.md`, `docs/architecture/tech-stack.md` (incl. Testing section — you need the test command for the feedback loop), the patterns docs the task touches, `docs/adr/`. Check `git log --oneline` for the repo's commit message conventions.
+
+### 5. The Loop — Execute Remaining Missions
+
+Walk the remaining missions top to bottom. No user prompts between missions.
+
+#### Sequential mission (untagged)
+
+Spawn **one subagent** for the mission. Its prompt must include:
+
+- The mission's one-line objective plus the relevant constraints/notes from the tracker
+- The instruction to follow the `tdd` red → green discipline: failing test first at a seam the plan agreed, smallest change to green, no refactor step (cleanup is `review-implementation`'s job after the loop)
+- Which architecture/domain docs to read (paths from `.ab-method/structure/index.yaml`) and the prior mission summaries from the tracker
+- If the mission carries `⚠️ UQ-n`: that entry from `unresolved-questions.md` verbatim, plus the instruction to build the **recorded placeholder** behind one named seam marked `TODO(UQ-n)` with a test naming the UQ (`create-task.md` § 9.2b) — never to invent the answer, upgrade the placeholder, or fabricate data around it, and to update the entry's **Marker** line with the paths it wrote
+- The instruction to **update `progress-tracker.md` itself on completion**: check off its mission line and append the technical summary (same format as `create-task.md` § 9.6 — Files / Built / Tests / Patterns / Integrates with / Gotchas, skip empty bullets)
+- To return a tight technical summary as its final message
+
+#### Parallel group (`[pp-x]`)
+
+Follow **Parallel group execution** in `create-task.md` § 9 — all uncompleted missions sharing the tag, one subagent each, spawned in a single message, disjoint files — with **one exception**: group siblings must **NOT** write to `progress-tracker.md` — nor to `unresolved-questions.md` (concurrent writes to the same file conflict). They write detailed output to `docs/tasks/<task>/sub-agents-outputs/mission-N-<slug>.md` and return summaries; the **parent** checks off the group's missions, appends their summaries, and writes any reported `TODO(UQ-n)` seam paths into the matching **Marker** lines after all return.
+
+#### After each mission (or group) — verify, then commit
+
+1. **Verify**: run the test suite (command from `tech-stack.md` Testing section) at the parent level. For groups this is also the merge check.
+2. **Red is a stop sign**: if tests fail, fix forward in the parent context. If you cannot get green, **stop the run** — do not commit broken work, do not start the next mission. Leave the working tree as is and report exactly where and why it stopped (§ 7).
+3. **Commit**: stage the mission's changes plus the tracker update and commit, following the repo's existing message conventions. Reference the mission, e.g.:
+   - `feat(<task-name>): mission 3 — <one-line description>`
+   - `feat(<task-name>): missions 4-5 [pp-1] — <short group description>`
+   One commit per sequential mission; one commit per parallel group.
+
+Then move straight to the next mission.
+
+### 5b. Post-Implementation Review — invoke the `review-implementation` skill (autonomous mode)
+
+Once every mission is green and committed, run the **post-implementation review** on the task's diff
+(the cohesive change across all missions — its commit range). **Invoke the `review-implementation`
+skill in autonomous mode.** It spins up three read-only critics in parallel — `cleaner-architecture`,
+`slop-defender`, `reusability-inspector` — that push back only on real issues (shallow modules the change
+introduced, AI code-slop, reinvented logic). A clean diff produces no findings; that's the normal case.
+
+Because this is an afk run, the skill:
+1. **Auto-applies only `safe-fix` findings** — mechanical, test-covered, no behavior/interface change.
+   The orchestrator (you) applies them one at a time and **re-runs the test suite after each**; a fix that
+   goes red is reverted and downgraded to an open finding. Red is still a stop sign for the *task's own*
+   work, but a reverted review fix is not a failure — it just stays open for the user.
+2. **Commits kept safe fixes** as one `refactor(<task-name>): post-review cleanup` (repo convention). No
+   fixes → no commit.
+3. **Writes `docs/tasks/<task>/review.md`** — every finding, applied (✅) or open (⬜ needs judgment) —
+   next to `progress-tracker.md`, so the user can read exactly what happened and what still wants their
+   call. It writes this file even when all lenses are clean, so the user knows the review ran.
+
+The skill never prompts — anything uncertain stays open rather than being changed. It owns the review
+logic and the `review.md` format; don't duplicate them here.
+
+### 5c. Documentation Sync — invoke the `sync-architecture` skill (autonomous mode)
+
+After the review, run **documentation sync** on the same task diff so the architecture docs don't silently
+drift. **Invoke the `sync-architecture` skill in autonomous mode.** It spins up one read-only detector that
+finds what the change introduced that the docs don't yet capture — new endpoints, patterns, dependencies,
+domain terms, ADR-worthy decisions — each routed to the exact doc (via `/update-architecture`'s routing
+table). A task that introduced nothing doc-worthy produces no deltas; that's the normal case.
+
+Because this is an afk run, the skill:
+1. **Applies only `safe-add` findings** — append-only additions (a new Entry Points line, a new dependency,
+   a new pattern subsection, a new glossary term) that follow the "add, don't rewrite" rule. Docs are
+   prose, so there's no test to re-run — but existing content is never rewritten or deleted.
+2. **Commits the additions** as one `docs(<task-name>): sync architecture docs` (repo convention). Nothing
+   to add → no commit.
+3. **Leaves every `needs-judgment` finding for the user** — prose deprecation, domain reshapes, and ADR
+   candidates are recorded (in the task's `review.md` under an **Architecture sync** heading, or the run
+   report) and pointed at `/domain-model` / `/update-architecture`, never applied autonomously.
+
+The skill never prompts and never writes an ADR or deprecates prose on its own — that keeps the docs live
+without filling them with noise. It owns the detection + routing logic; don't duplicate it here.
+
+### 5d. Actual Change Map + Drift — invoke the `change-map` skill (autonomous mode)
+
+**Last in the post-implementation phase**, once the review and doc-sync commits are in, **invoke the
+`change-map` skill** in its *actual* pass. Both earlier steps commit changes of their own, so the task's
+diff isn't final until they're done — mapping before them describes a diff that no longer exists.
+
+The skill derives the map from the task's commit range (first mission commit's parent .. HEAD), appends
+`## Actual` and `## Drift` to `docs/tasks/<task>/change-map.md` — never touching the `## Planned` section
+written at plan time — and commits it as `docs(<task>): change map` (repo convention).
+
+Because this is an afk run, the skill:
+1. **Never prompts.** It reports; it does not act on what it finds. No code edit, no doc edit, no reshaped
+   plan — those belong to `/improve-codebase-architecture`, `/domain-model`, or `/extend-task`.
+2. **Puts every drift line in the final report** (§ 6). An afk user must not discover that the run reached
+   four modules the plan never mentioned by reading a file they didn't know exists.
+3. **Never back-fills a `## Planned` section** for a task that has none. Such a task simply records
+   `no planned map — nothing to compare`; a prediction reverse-engineered from the diff would poison every
+   drift computation that reads the file later.
+
+A task that landed where its plan said produces one line of drift — the common outcome for a well-grilled
+task, and worth saying out loud rather than omitting.
+
+### 6. On Full Completion
+
+Set the task status to `Completed` in the tracker (include it in the final mission's commit, or a final `chore` commit if needed). Report:
+
+```
+Task completed: <Task Name>
+Missions run: 3, 4-5 [pp-1], 6
+Commits: <n> (<short hashes>)
+Tests: <command> green
+Review: docs/tasks/<task>/review.md — <k> safe fixes applied, <m> open for you
+Change map: docs/tasks/<task>/change-map.md — 4 modules planned, 5 touched
+  drift: platform/audit unplanned — mission 2 made every charge write an audit row
+         billing/invoice unplanned seam — it now reads charges through billing/charge
+Black boxes: UQ-2 refund window → fixed 30 days, src/billing/refund.ts:14
+             (docs/tasks/<task>/unresolved-questions.md — answer it, then /extend-task)
+```
+
+Drift never blocks completion either — it is a finding, not a failure. But it is the one thing an afk user
+cannot reconstruct from the commit log, so every drift line goes in the report; drop the block entirely
+when the change landed exactly where it was planned.
+
+Open questions never block completion — the placeholders are deliberate, tested, and recorded. But an afk user must not discover them by accident: list every still-open `UQ-n` the run built on, with its seam's path, in the final report. Omit the line when there are none.
+
+### 7. On Failure — Stop Loudly, Never Plough On
+
+If a mission subagent fails, tests stay red, or a merge conflict can't be resolved cleanly:
+
+- Stop the run immediately. **Never commit red work** and never start the next mission on top of a broken state.
+- Leave the working tree for inspection; completed missions' commits are already safe.
+- Report precisely: which mission, what failed (with the failing output), what was attempted.
+- The tracker keeps the truth: finished missions are checked off with summaries; the failed one stays unchecked. The user fixes or re-grills, then re-runs `/start-task` (or drops to `/resume-task` to finish interactively).
+
+## Key Principles
+
+- **No confirmation — starts on invocation** — `/start-task` announces the plan and begins immediately; it does not ask "Proceed?". Invoking it *is* the consent for every commit the run makes. The only pre-run pause is the vagueness gate (Step 2), and only for a genuinely fuzzy mission
+- **Executor, not producer** — `/start-task` does not define or reshape missions; that's `/create-task` and `/extend-task`. The vagueness gate is the only place grilling happens, and only before the run
+- **Every mission in a subagent** — the subagent runs tdd and updates the tracker itself; the parent verifies and commits
+- **Commit after each mission** — green tests are the gate; one commit per mission, one per `[pp-x]` group
+- **Map before completion** — after the review and doc sync, `change-map`'s actual pass derives the task's real blast radius from its commit range and diffs it against the map drawn at plan time. Drift is reported and routed, never acted on, and never blocks the run
+- **Review before completion** — after the last green mission, `review-implementation` runs in autonomous mode: safe fixes auto-applied (tests-green-gated, own commit), everything written to `review.md` for the afk user; open findings are never silently changed
+- **A black box is not a blocker** — an open `⚠️ UQ-n` mission builds the placeholder recorded in `unresolved-questions.md` and the run continues. The run never answers a parked question, never "improves" a placeholder, and never hides one: every open UQ it built on goes in the final report
+- **Red stops the run** — exactly like a `/goal` feedback loop: a failing check takes priority over progress
+- **Tracker is the single source of truth** — same as every task workflow; subagent updates for sequential missions, parent updates for parallel groups
+
+## Remember
+
+- Check `.ab-method/structure/index.yaml` for paths
+- `Skill("tdd")` in the parent first, every run
+- Seed each subagent with: docs paths, prior mission summaries, constraints, the tracker-update instruction, and the disjoint-files boundary for groups
+- Parallel group siblings never touch the tracker — the parent merges their summaries
+- Follow the repo's commit conventions (`git log --oneline` before the first commit)
+- Stopped runs resume with `/start-task` again — the tracker carries everything forward

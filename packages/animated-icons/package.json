@@ -1,0 +1,95 @@
+{
+  "name": "@kovenlabs/animated-icons",
+  "version": "0.1.0-alpha.0",
+  "description": "Animated React icons with 1\u20133 color slots that read from your shadcn/ui theme.",
+  "license": "MIT",
+  "author": "Kovenlabs",
+  "homepage": "https://animated-icons.vercel.app",
+  "bugs": {
+    "url": "https://github.com/kovenlabs/animated-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kovenlabs/animated-icons",
+    "directory": "packages/animated-icons"
+  },
+  "keywords": [
+    "icons",
+    "animated-icons",
+    "react",
+    "react-icons",
+    "motion",
+    "framer-motion",
+    "shadcn",
+    "shadcn-ui",
+    "svg",
+    "tailwind"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "registry.json",
+    "LICENSE",
+    "STYLE.md",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./icons/*": "./src/icons/*.tsx",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./icons/*": {
+        "types": "./dist/icons/*.d.ts",
+        "import": "./dist/icons/*.js"
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "registry:build": "node scripts/generate.mjs && shadcn build registry.json --output ../../apps/web/public/r",
+    "lint": "eslint",
+    "generate": "node scripts/generate.mjs",
+    "build": "tsup && tsc -p tsconfig.build.json && node scripts/fix-dist-extensions.mjs && node scripts/check-dist.mjs",
+    "check:package": "rm -rf .pack && pnpm pack --pack-destination .pack >/dev/null && publint --pack pnpm && attw .pack/*.tgz --profile esm-only"
+  },
+  "peerDependencies": {
+    "motion": "^13.0.0",
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@eslint/js": "^10.0.1",
+    "@kovenlabs/typescript-config": "workspace:*",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "jsdom": "^30.1.1",
+    "motion": "^13.5.0",
+    "publint": "^0.3.25",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "shadcn": "^4.21.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.0",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

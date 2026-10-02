@@ -1,0 +1,50 @@
+// Writes the static logo SVGs (favicons, README, docs) from the same geometry as <LogoMark>,
+// rounded by the library's own corner code so they match the live mark exactly.
+// Run: pnpm --filter web brand
+import { mkdirSync, writeFileSync } from "node:fs"
+import { dirname, resolve } from "node:path"
+import { fileURLToPath } from "node:url"
+
+import { rectPath, roundPath } from "../../../packages/animated-icons/src/lib/round.ts"
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "../../..")
+
+// keep in sync with components/brand/logo.tsx
+const CANVAS = "M13 3H3v18h18V11"
+const TRAIL = ["M7.5 16.5l2-2", "M11.5 12.5l2-2"]
+const BADGE = rectPath(16.5, 2.5, 5, 5)
+const BRAND = { accent: "#2563eb", trail: "#10b981", ink: "#0a0a0a", paper: "#fafafa" }
+
+const round = (d: string) => roundPath(d, 2, "round")
+
+function svg({ trail, background }: { trail: boolean; background?: boolean }) {
+  // a favicon tile gets 3 units of breathing room around the 24 grid
+  const viewBox = background ? "-3 -3 30 30" : "0 0 24 24"
+  const pad = background ? `<rect x="-3" y="-3" width="30" height="30" fill="${BRAND.ink}"/>` : ""
+  const ink = background ? BRAND.paper : BRAND.ink
+  // without a background the ink follows the viewer's color scheme
+  const scheme = background
+    ? ""
+    : `<style>.ink{stroke:${BRAND.ink}}@media (prefers-color-scheme:dark){.ink{stroke:${BRAND.paper}}}</style>`
+  return [
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">`,
+    scheme,
+    pad,
+    `<path class="ink" d="${round(CANVAS)}" stroke="${ink}"/>`,
+    trail ? TRAIL.map((d) => `<path d="${d}" stroke="${BRAND.trail}"/>`).join("") : "",
+    `<path d="${round(BADGE)}" fill="${BRAND.accent}" stroke="none"/>`,
+    `</svg>`,
+  ].join("")
+}
+
+const files: Record<string, string> = {
+  "apps/web/public/logo.svg": svg({ trail: true }),
+  // favicons: no trail (noise at 16px), on a solid tile so they read on any tab color
+  "apps/web/app/icon.svg": svg({ trail: false, background: true }),
+}
+
+for (const [path, content] of Object.entries(files)) {
+  mkdirSync(dirname(resolve(root, path)), { recursive: true })
+  writeFileSync(resolve(root, path), `${content}\n`)
+}
+console.log(`wrote ${Object.keys(files).join(", ")}`)

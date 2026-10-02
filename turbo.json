@@ -1,0 +1,42 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build",
+        "^registry:build"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**"
+      ]
+    },
+    "registry:build": {
+      "inputs": [
+        "registry.json",
+        "src/**",
+        "scripts/**"
+      ],
+      "outputs": [
+        "../../apps/web/public/r/**",
+        "registry.json",
+        "src/icons/index.ts"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {},
+    "typecheck": {
+      "dependsOn": [
+        "^typecheck"
+      ]
+    },
+    "test": {
+      "outputs": []
+    }
+  }
+}

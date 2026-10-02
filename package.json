@@ -1,0 +1,23 @@
+{
+  "name": "animated-icons",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "registry:build": "turbo run registry:build",
+    "changeset": "changeset",
+    "version-packages": "changeset version && pnpm install --lockfile-only",
+    "release": "pnpm --filter @kovenlabs/animated-icons build && pnpm --filter @kovenlabs/animated-icons check:package && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "turbo": "^2.11.6"
+  },
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,38 @@
+---
+title: Introduction
+description: Animated icons that read their colors from your shadcn/ui theme.
+---
+
+Every icon is drawn with up to three **color slots**: `primary`, `secondary` and `accent`. Each slot is
+a CSS variable that points at one of your shadcn/ui tokens, so icons follow your theme and dark mode
+without JavaScript.
+
+Every icon also has its own **variants**. A bell can `ring`, `shake` or `jump`; a message bubble can
+show `typing`, `pop` or `wiggle`. Variant names are typed per icon.
+
+```tsx
+import { BellIcon } from '@/components/animated-icons/icons/bell';
+
+<BellIcon />                                          // theme colors, plays on hover
+<BellIcon variant="shake" trigger="auto" interval={2000} />
+<BellIcon colors={{ accent: 'destructive' }} />       // a token name or any CSS color
+<BellIcon className="size-8 [--icon-accent:var(--chart-4)]" />
+```
+
+## What you get
+
+- **1–3 colors per icon**, from your theme. A missing slot falls back to the slot above it.
+- **Per-icon variants**, type-checked in props and in your global config.
+- **Five triggers**: `hover`, `auto`, `click`, `inView` and `manual` (through a ref), plus a controlled
+  `animate` prop.
+- **Defaults at four levels**: global config, scoped providers, per-icon overrides and props. The most
+  specific one wins.
+- **Interruptible playback**: re-triggering mid-animation restarts from the current pose, with no snap.
+- **Reduced motion** respected by default.
+
+<Cards>
+  <Card title="Browse the icons" href="/icons" />
+  <Card title="Installation" href="/docs/installation" />
+  <Card title="Usage" href="/docs/usage" />
+  <Card title="Icons" href="/docs/icons" />
+</Cards>

@@ -1,0 +1,95 @@
+---
+title: Usage
+description: Variants, triggers, timing and imperative control.
+---
+
+## Props
+
+| Prop            | Type                                                   | Default         | Notes                                                    |
+| --------------- | ------------------------------------------------------ | --------------- | -------------------------------------------------------- |
+| `variant`       | per-icon union, e.g. `"ring" \| "shake" \| "jump"`     | icon's default  | Typed per icon                                           |
+| `trigger`       | `"hover" \| "auto" \| "click" \| "inView" \| "manual" \| "none"` | `"hover"` | `inView` loops while half the icon is visible; `none` is static |
+| `duration`      | `number` (ms)                                          | icon's tuning   | Absolute: beats `speed`                                  |
+| `speed`         | `number`                                               | `1`             | Multiplier on the icon's tuned duration                  |
+| `interval`      | `number` (ms)                                          | `1000`          | Rest **between** loops                                   |
+| `animate`       | `boolean`                                              | –               | Controlled mode: `true` loops, `false` stops             |
+| `colors`        | `{ primary?, secondary?, accent? }`                    | theme           | See [Colors](/docs/colors)                               |
+| `reducedMotion` | `"respect" \| "ignore"`                                | `"respect"`     |                                                          |
+| `corners`       | `"round" \| "bevel" \| "sharp"`                        | `"round"`       | Corner geometry, see below                               |
+| `cornerRadius`  | `number`                                               | `2`             | How far each corner reaches, in grid units               |
+| `size`          | `number \| string`                                     | `24`            | `className="size-8"` works too                           |
+
+Every other SVG prop (`className`, `style`, `aria-label`, …) is passed through. Icons are decorative
+(`aria-hidden`) unless you give them an `aria-label`.
+
+## Triggers
+
+```tsx
+<BellIcon />                          // hover: one cycle per pointer enter
+<BellIcon trigger="click" />          // one cycle per click
+<BellIcon trigger="auto" interval={2000} />   // loops from mount, 2s rest between cycles
+<MessageIcon trigger="inView" />      // loops while on screen
+<BellIcon animate={hasUnread} />      // controlled
+<BellIcon trigger="manual" />         // only plays when you call ref.play()
+<BellIcon trigger="none" />           // static: never animates
+```
+
+`none` keeps an icon completely still. Nothing plays it: not hover, not the ref, not `animate`. Use it for
+dense tables, print views, or a "reduce animations" setting in your app. Set it globally (`trigger: "none"`
+in `config.ts` or on a provider) to freeze every icon, or per icon (`icons: { loader: { trigger: "none" } }`).
+
+Re-triggering while a cycle is running **restarts it from the current pose**. The running animations
+stop where they are and the new cycle starts from there, so a fast hover in-out-in never snaps.
+
+## Hovering a parent
+
+Use `trigger="manual"` and the ref, so a whole button plays the icon:
+
+```tsx
+const bell = useRef<AnimatedIconHandle>(null);
+
+<Button onMouseEnter={() => bell.current?.play()}>
+  <BellIcon ref={bell} trigger="manual" /> Notifications
+</Button>
+```
+
+| Method    | Does                                                                    |
+| --------- | ----------------------------------------------------------------------- |
+| `play()`  | One cycle; restarts if one is running. Returns a promise for its end.   |
+| `start()` | Loop, with `interval` rest between cycles.                              |
+| `stop()`  | Stop looping. The running cycle finishes, so it never freezes mid-pose. |
+
+## Timing
+
+`speed` scales the icon's own tuning and keeps each variant's rhythm. `duration` sets an absolute
+length for one instance:
+
+```tsx
+<RocketIcon speed={1.5} />        // 50% faster than its tuning
+<RocketIcon duration={1200} />    // exactly 1.2s, whatever the speed
+```
+
+## Corners
+
+Every icon is drawn from straight segments. At render time, `corners` reshapes the geometry itself:
+each corner between two straight segments becomes a curve, a straight cut, or stays as drawn. Caps
+and joins follow.
+
+| `corners` | Geometry                                   | Caps / joins     |
+| --------- | ------------------------------------------ | ---------------- |
+| `round`   | every corner curved; small squares become dots (default) | round / round |
+| `bevel`   | every corner cut; small squares become octagons | square / bevel |
+| `sharp`   | exactly as drawn                           | square / miter   |
+
+`cornerRadius` (default `2`, in 24-grid units) sets how far each corner reaches. A corner never takes
+more than half of a side (a third for `bevel`), so short segments stay intact.
+
+```tsx
+<BellIcon />                                  // round, radius 2
+<BellIcon corners="round" cornerRadius={3} /> // softer
+<BellIcon corners="sharp" />                  // as drawn
+<AnimatedIconsProvider corners="bevel">{/* a whole subtree */}</AnimatedIconsProvider>
+```
+
+Real curves (a lens, a ring) are left as drawn. Icons that draw inside their own component (for a mask
+id, say) shape it with `useShapedDrawing()`.
