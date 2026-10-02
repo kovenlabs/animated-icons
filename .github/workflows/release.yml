@@ -24,7 +24,8 @@ jobs:
           node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org
-      - run: npm install -g npm@latest
+      # Node 24's bundled npm (11.6+) is enough, trusted publishing included. Don't upgrade to npm@latest:
+      # newer npm rejects the pnpm-only flags (--no-git-checks) that `changeset publish` passes through pnpm.
       - run: pnpm install --frozen-lockfile
       # pending changesets: open/update the "Version packages" PR.
       # once that PR lands: publish (pnpm publish applies publishConfig, so dist ships, not src).
