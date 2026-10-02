@@ -27,7 +27,18 @@ pnpm --filter @kovenlabs/animated-icons publish --tag alpha --access public
 ```
 
 Then on npmjs.com → the package → Settings → **Trusted publishing**: add GitHub Actions, repo
-`kovenlabs/animated-icons`, workflow `release.yml`. From then on the workflow publishes.
+`kovenlabs/animated-icons`, workflow `release.yml`. Finally, turn the workflow on (it's gated off until now, so
+pushes don't fail trying to publish without npm access):
+
+```bash
+gh variable set RELEASE_ENABLED --body true --repo kovenlabs/animated-icons
+```
+
+Also enable *Settings → Actions → General → Allow GitHub Actions to create and approve pull requests*, so it can
+open the version PR. From then on the workflow publishes.
+
+Changesets v3 keeps prerelease state in `.changeset/pre.json` and applied changesets in `.changeset/pre/`. It pairs
+with `changesets/action@v2`; v1 can't read that layout.
 
 ## Before every release
 

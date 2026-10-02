@@ -13,6 +13,9 @@ permissions:
 
 jobs:
   release:
+    # off until the first version is published by hand and npm trusted publishing is set up (RELEASING.md),
+    # so pushes to main don't fail trying to publish without npm access
+    if: vars.RELEASE_ENABLED == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,13 +29,14 @@ jobs:
       - run: npm install -g npm@latest
       - run: pnpm install --frozen-lockfile
       # pending changesets: open/update the "Version packages" PR.
-      # merged: publish (pnpm publish applies publishConfig, so dist ships, not src).
-      - uses: changesets/action@v1
+      # once that PR lands: publish (pnpm publish applies publishConfig, so dist ships, not src).
+      # changesets/action v2 goes with @changesets/cli v3; v1 reads v3's .changeset/pre/ folder as a broken changeset.
+      - uses: changesets/action@v2
         with:
-          version: pnpm version-packages
-          publish: pnpm release
-          title: "Version packages"
-          commit: "chore: version packages"
+          version-script: pnpm version-packages
+          publish-script: pnpm release
+          pr-title: "Version packages"
+          commit-message: "chore: version packages"
+          create-github-releases: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: "true"
