@@ -66,3 +66,17 @@ The CSS fallbacks follow the same order: if your theme defines only `--icon-prim
 From weakest to strongest: `globals.css` → provider `colors` → per-icon config `colors` → the `colors`
 prop → an inline `style` var. Provider colors cascade as CSS variables (through a
 `display: contents` wrapper), so a `className` var on one icon inside still wins over its provider.
+
+## With Tailwind CSS
+
+Nothing to configure: the icons ship no CSS and no class names, so Tailwind needs no `@source` or `content`
+entry for them. Your own classes work on icons as usual:
+
+```tsx
+<BellIcon className="size-6" />                                   // sizing, spacing…
+<BellIcon className="[--icon-accent:var(--chart-2)]" />           // recolor one icon
+<section className="[--icon-accent:var(--destructive)]">…</section> // recolor a section
+```
+
+Without the `--icon-*` variables, slots fall back to `currentColor`, so a `text-*` utility colors the whole
+icon. The [Next.js guide](/docs/nextjs) shows the full setup.

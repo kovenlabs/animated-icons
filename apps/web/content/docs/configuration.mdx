@@ -63,7 +63,21 @@ it sets:
 </AnimatedIconsProvider>
 ```
 
-With the npm package, a provider at your root is your global config.
+### With the npm package
+
+There's no `config.ts` to edit, so a provider at your root is your global config. Spread a typed config
+object into it:
+
+```tsx title="app/layout.tsx"
+import { AnimatedIconsProvider, defineIconConfig } from '@kovenlabs/animated-icons';
+
+const iconConfig = defineIconConfig({ trigger: 'hover', corners: 'round', icons: { bell: { variant: 'shake' } } });
+
+// inside <body>:
+<AnimatedIconsProvider {...iconConfig}>{children}</AnimatedIconsProvider>
+```
+
+It works in a server `layout.tsx`. The [Next.js guide](/docs/nextjs) walks through the whole setup.
 
 ## Reduced motion
 

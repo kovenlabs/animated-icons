@@ -1,0 +1,226 @@
+---
+title: Next.js guide
+description: From create-next-app to animated icons with the npm package, end to end.
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+
+This guide builds a small Next.js (App Router) app with the **npm package**: colors from your theme, one
+global config, icons in server and client components, and the patterns you'll reach for most. Every snippet
+here is checked against a fresh Next.js 16 + Tailwind v4 app.
+
+Prefer owning the source? The [shadcn registry](/docs/installation#shadcn-registry) installs the same icons
+as files in your project; everything below works the same way, except the imports and where the config lives.
+
+<Steps>
+<Step>
+
+### Create the app
+
+```npm
+npx create-next-app@latest my-app
+```
+
+Accept TypeScript, Tailwind and the App Router. If you use shadcn/ui, run `npx shadcn init` now; it's
+optional, but it gives the icons theme tokens to read.
+
+</Step>
+<Step>
+
+### Install
+
+```npm
+npm install @kovenlabs/animated-icons@alpha motion
+```
+
+`motion` is the animation engine (a peer dependency). The package ships no CSS and no Tailwind classes, so
+there's nothing to add to your Tailwind config: no `@source`, no `content` entries for `node_modules`.
+
+</Step>
+<Step>
+
+### Give the icons their colors
+
+Icons paint with three CSS variables. Add them to `app/globals.css`, below your Tailwind import.
+
+With **shadcn/ui**, point them at your tokens; dark mode then follows automatically, because `.dark`
+already redefines those tokens:
+
+```css title="app/globals.css"
+@import "tailwindcss";
+
+:root {
+  --icon-primary: var(--foreground);
+  --icon-secondary: var(--muted-foreground);
+  --icon-accent: var(--primary);
+}
+```
+
+**Without shadcn**, use any colors, and add a dark-mode override:
+
+```css title="app/globals.css"
+:root {
+  --icon-primary: #0a0a0a;
+  --icon-secondary: #737373;
+  --icon-accent: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --icon-primary: #fafafa;
+  }
+}
+```
+
+Skip this step and every slot falls back to `currentColor`: icons render in one color, and
+`className="text-primary"` (or any `text-*` utility) colors them. See [Colors](/docs/colors) for the cascade.
+
+</Step>
+<Step>
+
+### Set global defaults
+
+With the package, your global config is a provider at the root. `defineIconConfig` is optional, but it
+type-checks the options, including each icon's variant names:
+
+```ts title="lib/icons.ts"
+import { defineIconConfig } from '@kovenlabs/animated-icons';
+
+export const iconConfig = defineIconConfig({
+  trigger: 'hover', // the default: play on hover
+  speed: 1,
+  corners: 'round', // "round" | "bevel" | "sharp"
+  icons: {
+    bell: { variant: 'shake' }, // a typo here is a type error
+  },
+});
+```
+
+```tsx title="app/layout.tsx"
+import { AnimatedIconsProvider } from '@kovenlabs/animated-icons';
+
+import { iconConfig } from '@/lib/icons';
+import './globals.css';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <AnimatedIconsProvider {...iconConfig}>{children}</AnimatedIconsProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+`layout.tsx` stays a server component; the provider is a client component and takes plain options, so this
+just works. All options are in [Configuration](/docs/configuration).
+
+</Step>
+<Step>
+
+### Use icons in a page
+
+Icons are client components (`"use client"` is built in), so you can render them straight from a server
+component. Style them with Tailwind like any element:
+
+```tsx title="app/page.tsx"
+import { BellIcon, LoaderIcon, MailIcon, MessagesIcon } from '@kovenlabs/animated-icons';
+
+export default function Page() {
+  return (
+    <main className="flex items-center gap-6 p-10">
+      <BellIcon className="size-8" />                          {/* hover it */}
+      <MailIcon className="size-8" colors={{ accent: 'destructive' }} />
+      <MessagesIcon className="size-8" trigger="inView" />     {/* loops while on screen */}
+      <LoaderIcon className="size-5" />                        {/* loops on its own */}
+    </main>
+  );
+}
+```
+
+Run `npm run dev` and hover them.
+
+</Step>
+</Steps>
+
+## Patterns
+
+### Hover a whole button, not just the icon
+
+Use `trigger="manual"` and play the icon from the button. This needs a client component:
+
+```tsx title="components/notifications-button.tsx"
+'use client';
+
+import { BellIcon, type AnimatedIconHandle } from '@kovenlabs/animated-icons';
+import { useRef } from 'react';
+
+export function NotificationsButton() {
+  const bell = useRef<AnimatedIconHandle>(null);
+  return (
+    <button onMouseEnter={() => bell.current?.play()} className="inline-flex items-center gap-2">
+      <BellIcon ref={bell} trigger="manual" className="size-4" />
+      Notifications
+    </button>
+  );
+}
+```
+
+### Drive an icon from state
+
+The `animate` prop loops while `true` and stops (gracefully) when `false`:
+
+```tsx title="components/inbox-status.tsx"
+'use client';
+
+import { MailIcon } from '@kovenlabs/animated-icons';
+import { useState } from 'react';
+
+export function InboxStatus() {
+  const [unread, setUnread] = useState(3);
+  return (
+    <button onClick={() => setUnread(0)} className="inline-flex items-center gap-2">
+      <MailIcon animate={unread > 0} interval={1500} variant="notify" />
+      {unread > 0 ? `${unread} unread` : 'All caught up'}
+    </button>
+  );
+}
+```
+
+### Recolor with Tailwind
+
+```tsx
+<BellIcon className="size-6 [--icon-accent:var(--chart-2)]" />    {/* one icon */}
+
+<section className="[--icon-accent:var(--destructive)]">           {/* everything inside */}
+  …
+</section>
+```
+
+The `colors` prop does the same per icon, and the provider's `colors` option per subtree.
+
+### Keep a section static
+
+Dense tables or "reduce animations" settings: `trigger: "none"` keeps icons still, whatever triggers them.
+
+```tsx
+<AnimatedIconsProvider trigger="none">
+  <DataTable />
+</AnimatedIconsProvider>
+```
+
+### Soften or sharpen every icon
+
+```tsx
+<AnimatedIconsProvider corners="round" cornerRadius={3}>{children}</AnimatedIconsProvider>
+```
+
+## Troubleshooting
+
+| Symptom | Cause |
+| --- | --- |
+| Icons are all one color (black or white) | The `--icon-*` variables aren't defined; they fall back to `currentColor`. Add them to `globals.css` (step 3). |
+| Nothing animates on hover | The trigger is `none` somewhere above (a provider), or your OS asks for reduced motion (icons respect it by default; `reducedMotion: "ignore"` opts out). |
+| A typo in a variant compiles | Import types from the package root, and use `defineIconConfig` for the config object. |
+| `Icon.meta` is `undefined` | You read it in a server component, where an icon import is a client reference. Read it in a client component. |
