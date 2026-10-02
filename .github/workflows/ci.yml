@@ -7,7 +7,11 @@ on:
 
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  # cancel superseded PR runs, but never a run on main: it may be in the middle of publishing
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
 
 jobs:
   check:
@@ -37,3 +41,40 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter web exec playwright install --with-deps chromium
       - run: pnpm --filter web e2e
+
+  release:
+    # only after every check above passes, only for pushes to main, and only while releases are switched on
+    # (the RELEASE_ENABLED repo variable)
+    needs: [check, motion]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.RELEASE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # version commits and tags
+      pull-requests: write # the "Version packages" PR
+      id-token: write # provenance attestations (and trusted publishing, if set up later)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      # Node 24's bundled npm (11.6+) is enough, trusted publishing included. Don't upgrade to npm@latest:
+      # newer npm rejects the pnpm-only flags (--no-git-checks) that `changeset publish` passes through pnpm.
+      - run: pnpm install --frozen-lockfile
+      # pending changesets: open/update the "Version packages" PR.
+      # once that PR lands: publish (pnpm publish applies publishConfig, so dist ships, not src).
+      # changesets/action v2 goes with @changesets/cli v3; v1 reads v3's .changeset/pre/ folder as a broken changeset.
+      - uses: changesets/action@v2
+        with:
+          version-script: pnpm version-packages
+          publish-script: pnpm release
+          pr-title: "Version packages"
+          commit-message: "chore: version packages"
+          create-github-releases: true
+        env:
+          # a granular npm token (write access to the package, bypass 2FA), stored as a repo secret.
+          # setup-node's .npmrc reads it from NODE_AUTH_TOKEN.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: "true"

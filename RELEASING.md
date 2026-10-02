@@ -11,7 +11,8 @@ pnpm changeset        # pick the bump, describe the change; commit the generated
 
 ## Publishing
 
-On `main`, the Release workflow keeps a **"Version packages"** PR open with the next version and changelog.
+On `main`, the `release` job of the CI workflow (`.github/workflows/ci.yml`) runs only after every check passes
+and keeps a **"Version packages"** PR open with the next version and changelog.
 Merging it publishes to npm with provenance and creates the GitHub release. Always publish with **pnpm**:
 `publishConfig` swaps `exports` from `src` to `dist`, and plain `npm publish` would ship the TypeScript source.
 
@@ -32,7 +33,7 @@ gh secret set NPM_TOKEN --repo kovenlabs/animated-icons    # paste the new token
 Then revoke the old token on npmjs.com.
 
 **Moving to token-free publishing later:** enable 2FA on the npm account, add a trusted publisher (npmjs.com → the
-package → Settings → Trusted publishing → GitHub Actions, `kovenlabs/animated-icons`, `release.yml`, allow
+package → Settings → Trusted publishing → GitHub Actions, `kovenlabs/animated-icons`, `ci.yml`, allow
 `npm publish`), delete the `NPM_TOKEN` secret, and revoke the token. The workflow already has `id-token: write`.
 
 Changesets v3 keeps prerelease state in `.changeset/pre.json` and applied changesets in `.changeset/pre/`. It pairs
