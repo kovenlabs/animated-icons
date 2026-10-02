@@ -4,7 +4,7 @@
   "description": "Animated React icons with 1\u20133 color slots that read from your shadcn/ui theme.",
   "license": "MIT",
   "author": "Kovenlabs",
-  "homepage": "https://animated-icons.vercel.app",
+  "homepage": "https://animated-icons-nu.vercel.app",
   "bugs": {
     "url": "https://github.com/kovenlabs/animated-icons/issues"
   },

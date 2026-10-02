@@ -36,7 +36,7 @@ Then add the three color slots to your CSS (they fall back to `currentColor` wit
 ```
 
 Prefer owning the source? Every icon is also in a shadcn registry: `npx shadcn add @kovenlabs/bell`, or the whole
-set with `@kovenlabs/all`. The docs compare all the ways in: https://animated-icons.vercel.app/docs/installation
+set with `@kovenlabs/all`. The docs compare all the ways in: https://animated-icons-nu.vercel.app/docs/installation
 
 ## Highlights
 
@@ -52,7 +52,7 @@ Requires React 19 and `motion` 13.
 
 ## Links
 
-- Docs and catalog: https://animated-icons.vercel.app
+- Docs and catalog: https://animated-icons-nu.vercel.app
 - Issues: https://github.com/kovenlabs/animated-icons/issues
 
 MIT
