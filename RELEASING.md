@@ -12,30 +12,28 @@ pnpm changeset        # pick the bump, describe the change; commit the generated
 ## Publishing
 
 On `main`, the Release workflow keeps a **"Version packages"** PR open with the next version and changelog.
-Merging it publishes to npm with provenance (trusted publishing, no token). Always publish with **pnpm**:
+Merging it publishes to npm with provenance and creates the GitHub release. Always publish with **pnpm**:
 `publishConfig` swaps `exports` from `src` to `dist`, and plain `npm publish` would ship the TypeScript source.
 
-## The very first publish (once, by hand)
+The workflow runs only while the `RELEASE_ENABLED` repo variable is `"true"`, and it needs
+*Settings → Actions → General → Allow GitHub Actions to create and approve pull requests* for the version PR.
 
-npm's trusted publishing is configured per package, so the package has to exist first:
+## npm authentication
 
-```bash
-npm login                                   # your account, 2FA
-pnpm --filter @kovenlabs/animated-icons build
-pnpm --filter @kovenlabs/animated-icons check:package
-pnpm --filter @kovenlabs/animated-icons publish --tag alpha --access public
-```
-
-Then on npmjs.com → the package → Settings → **Trusted publishing**: add GitHub Actions, repo
-`kovenlabs/animated-icons`, workflow `release.yml`. Finally, turn the workflow on (it's gated off until now, so
-pushes don't fail trying to publish without npm access):
+The workflow publishes with a **granular access token** (write access to `@kovenlabs/animated-icons`, bypass 2FA)
+stored as the `NPM_TOKEN` repo secret. npm caps how long write tokens live, so when releases start failing with
+401/403, create a new token on npmjs.com and replace the secret (in your own terminal, so it never lands anywhere
+else):
 
 ```bash
-gh variable set RELEASE_ENABLED --body true --repo kovenlabs/animated-icons
+gh secret set NPM_TOKEN --repo kovenlabs/animated-icons    # paste the new token when prompted
 ```
 
-Also enable *Settings → Actions → General → Allow GitHub Actions to create and approve pull requests*, so it can
-open the version PR. From then on the workflow publishes.
+Then revoke the old token on npmjs.com.
+
+**Moving to token-free publishing later:** enable 2FA on the npm account, add a trusted publisher (npmjs.com → the
+package → Settings → Trusted publishing → GitHub Actions, `kovenlabs/animated-icons`, `release.yml`, allow
+`npm publish`), delete the `NPM_TOKEN` secret, and revoke the token. The workflow already has `id-token: write`.
 
 Changesets v3 keeps prerelease state in `.changeset/pre.json` and applied changesets in `.changeset/pre/`. It pairs
 with `changesets/action@v2`; v1 can't read that layout.
