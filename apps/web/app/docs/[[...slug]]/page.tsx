@@ -10,6 +10,7 @@ import {
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
+import { pageMetadata, SITE_DESCRIPTION } from '@/lib/seo';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { getPageImageUrl, getPageMarkdownUrl, gitConfig } from '@/lib/shared';
 
@@ -53,11 +54,10 @@ export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): P
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  return {
+  return pageMetadata({
     title: page.data.title,
-    description: page.data.description,
-    openGraph: {
-      images: getPageImageUrl(page).url,
-    },
-  };
+    description: page.data.description ?? SITE_DESCRIPTION,
+    path: page.url,
+    image: { url: getPageImageUrl(page).url, alt: `${page.data.title} · Animated Icons docs` },
+  });
 }
