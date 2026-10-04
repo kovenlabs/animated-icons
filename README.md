@@ -46,13 +46,9 @@ pnpm build            # generates the barrel + registry, then builds the site
 
 ### Adding an icon
 
-1. Draw it in `packages/animated-icons/src/icons/<name>.tsx` with `createAnimatedIcon`, following
-   [`STYLE.md`](packages/animated-icons/STYLE.md) (sharp: square caps, mitered corners, no rounded shapes).
-2. `pnpm --filter @kovenlabs/animated-icons generate` regenerates the barrel export and the registry item.
-3. `pnpm test`: `tests/icons.test.tsx` picks the new file up automatically and checks the style,
-   the metadata, that every animated part exists, and that every track ends at rest.
-
-The catalog discovers it from the package's exports. No other wiring.
+One file in `packages/animated-icons/src/icons/<name>.tsx`, drawn to [`STYLE.md`](packages/animated-icons/STYLE.md):
+the tests, the exports, the registry and the catalog pick it up with no other wiring. The full process
+(naming, family, category, motion, checks, changeset) is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 

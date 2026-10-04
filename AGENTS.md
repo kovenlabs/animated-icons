@@ -70,6 +70,11 @@ Architecture vocabulary (module, interface, depth, seam, adapter, leverage,
 locality, the deletion test) has one source: the `codebase-design` skill.
 <!-- ab-method:end -->
 
+## Icons
+
+Adding or changing an icon: use the `new-icon` skill (`.agents/skills/new-icon/SKILL.md`) and follow
+`packages/animated-icons/STYLE.md`. Contributor-facing version: `CONTRIBUTING.md`.
+
 <!-- BEGIN:turborepo-agent-rules -->
 
 # This is NOT the Turborepo you know
