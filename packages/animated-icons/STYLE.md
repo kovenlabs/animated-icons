@@ -55,3 +55,14 @@ enforces the mechanical ones on every file in `src/icons/` automatically.
 `name` (= file name, kebab-case), `category` (see `IconCategory`), `keywords` (≥ 3 synonyms),
 `slots`, `defaultVariant`, `variants`, and `defaults` only when the icon needs them to make sense
 (a loader loops). Export exactly one component named `<PascalName>Icon`.
+
+- **Families link shape siblings.** An icon that extends another icon's name (`bell-off` → `bell`,
+  `cloud-lightning` → `cloud`) or shares its first name segment with another icon (`git-branch`,
+  `git-merge`) sets `family` to that segment; the base icon's family defaults to its own name. The
+  catalog shows an icon's family together, and the guard test fails on an unlinked sibling. Name a new
+  icon so it lands in the right family (`file-search`, not `search-file`); objects that only share a
+  theme (`bar-chart`, `pie-chart`) are grouped by `category` instead.
+- **Category.** Pick the closest existing `IconCategory`. Add a new one only for a group of several
+  icons, in `src/lib/types.ts` (the catalog's filter picks it up by itself).
+- **Don't duplicate.** Check `src/icons/` first: a new idea for an existing object is a new variant,
+  not a new icon.

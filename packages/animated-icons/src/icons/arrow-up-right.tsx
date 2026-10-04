@@ -12,6 +12,7 @@ declare module "../lib/types" {
 /** 1 color. */
 export const ArrowUpRightIcon = createAnimatedIcon({
   name: "arrow-up-right",
+  family: "arrow",
   category: "arrows",
   keywords: ["diagonal", "northeast", "launch", "go", "open", "trending up"],
   slots: { primary: "arrow" },

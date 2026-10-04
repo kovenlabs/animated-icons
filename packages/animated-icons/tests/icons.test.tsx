@@ -48,6 +48,21 @@ it("finds icons", () => {
   expect(icons.length).toBeGreaterThan(0)
 })
 
+// Shape siblings are linked so the catalog can show them together: an icon whose name extends another
+// icon's name (bell-off → bell) or shares its first segment with another icon (git-branch, git-merge)
+// belongs to that segment's family.
+it("links related shapes into a family", () => {
+  const names = icons.map(({ file }) => file)
+  const unlinked = icons.flatMap(({ file, components }) => {
+    const segment = file.split("-")[0]!
+    if (segment === file) return []
+    const related = names.some((other) => other !== file && (other === segment || other.startsWith(`${segment}-`)))
+    const family = components[0]?.[1].meta.family
+    return related && family !== segment ? [`${file} (family "${family}", expected "${segment}")`] : []
+  })
+  expect(unlinked, `unlinked siblings: ${unlinked.join(", ")}`).toEqual([])
+})
+
 describe.each(icons)("$file", ({ file, components }) => {
   it("exports exactly one icon, named after its file", () => {
     expect(components).toHaveLength(1)
