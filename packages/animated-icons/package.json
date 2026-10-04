@@ -1,6 +1,6 @@
 {
   "name": "@kovenlabs/animated-icons",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Animated React icons with 1\u20133 color slots that read from your shadcn/ui theme.",
   "license": "MIT",
   "author": "Kovenlabs",
