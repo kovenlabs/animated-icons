@@ -1,0 +1,11 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "typecheck": {
+      // `next typegen` and `next build` both write .next/; run in parallel, the build can clear
+      // .next/types while typegen is writing it (ENOENT .next/types/validator.ts). Type-check after.
+      "dependsOn": ["$TURBO_EXTENDS$", "build"]
+    }
+  }
+}
