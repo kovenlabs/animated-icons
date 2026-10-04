@@ -8,6 +8,9 @@ import { useEffect, useRef } from "react"
 
 import { icons } from "@/lib/catalog"
 
+/** Quarter speed: every variant stays on screen 4× as long, so slow CI screenshots can't skip a short one. */
+const SPEED = 0.25
+
 const tiles = icons.flatMap((Icon) =>
   Icon.meta.variants.map((variant) => ({ Icon, variant, id: `${Icon.meta.name}/${variant}` })),
 )
@@ -29,6 +32,7 @@ function Harness() {
           <Icon
             variant={variant}
             size={40}
+            speed={SPEED}
             trigger="manual"
             ref={(handle) => {
               if (handle) refs.current.set(id, handle)
