@@ -22,21 +22,28 @@ export const FilterIcon = createAnimatedIcon({
   slots: { primary: "funnel", accent: "drops" },
   defaultVariant: "drip",
   variants: {
-    // the drop falls away and fades; a new one swells at the spout's mouth, with a quicker one
-    // falling through in between. Drops live only below the neck, never inside the funnel
+    // the funnel gives a small squeeze and the drop falls out through the bottom of the frame; a new
+    // one swells at the spout's mouth, with quicker ones falling through in between. Drops live only
+    // below the neck, never inside the funnel
     drip: {
       duration: 1000,
+      clip: true,
       run: ({ animate, seconds }) =>
         Promise.all([
           animate(
+            "[data-part=funnel]",
+            { scaleX: [1, 0.94, 1], scaleY: [1, 1.03, 1] },
+            { duration: seconds * 0.4, times: [0, 0.4, 1], ease: "easeInOut" },
+          ),
+          animate(
             "[data-part=drop]",
-            { y: [0, 2.5, 0, 0], opacity: [1, 0, 0, 1], scale: [1, 1, 0, 1] },
-            { duration: seconds, times: [0, 0.35, 0.36, 1], ease: ["easeIn", "linear", "easeOut"] },
+            { y: [0, 6, 0, 0], opacity: [1, 0, 0, 1], scale: [1, 1, 0, 1] },
+            { duration: seconds, times: [0, 0.45, 0.46, 1], ease: ["easeIn", "linear", "easeOut"] },
           ),
           animate(
             "[data-part=fall]",
-            { y: [0, 2.5], opacity: [0, 1, 0], scale: [0.5, 1, 1] },
-            { duration: seconds * 0.35, delay: stagger(seconds * 0.2, { startDelay: seconds * 0.3 }), ease: "easeIn" },
+            { y: [0, 6], opacity: [0, 1, 0], scale: [0.5, 1, 1] },
+            { duration: seconds * 0.4, delay: stagger(seconds * 0.2, { startDelay: seconds * 0.3 }), ease: "easeIn" },
           ),
         ]),
     },
