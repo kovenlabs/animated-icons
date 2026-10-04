@@ -17,12 +17,11 @@ test("every icon variant visibly moves", async ({ page }) => {
   const shot = async () => PNG.sync.read(await page.screenshot({ fullPage: true }))
   const rest = await shot()
   await page.evaluate(() => (window as unknown as { __play: () => void }).__play())
+  // sample continuously (a full-page shot takes ~60ms) rather than at a few fixed times: with hundreds
+  // of tiles playing at once, a short variant (a 500ms pop) could fall between sparse samples
   const started = Date.now()
   const frames: PNG[] = []
-  for (const at of [60, 160, 280, 420, 600, 850, 1300]) {
-    await page.waitForTimeout(Math.max(0, at - (Date.now() - started)))
-    frames.push(await shot())
-  }
+  while (Date.now() - started < 1500) frames.push(await shot())
 
   const changed = (a: PNG, b: PNG, { x, y, w, h }: (typeof tiles)[number]) => {
     let n = 0
