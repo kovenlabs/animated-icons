@@ -5,53 +5,53 @@ import { pivot } from "../lib/motion"
 
 declare module "../lib/types" {
   interface IconVariants {
-    "chevron-down": "bounce" | "flip" | "drop"
+    "chevron-left": "bounce" | "flip" | "slide"
   }
 }
 
 /** 1 color. */
-export const ChevronDownIcon = createAnimatedIcon({
-  name: "chevron-down",
+export const ChevronLeftIcon = createAnimatedIcon({
+  name: "chevron-left",
   family: "chevron",
   category: "arrows",
-  keywords: ["expand", "dropdown", "open", "more", "caret", "disclosure", "down"],
+  keywords: ["back", "previous", "prev", "caret", "collapse", "left", "return"],
   slots: { primary: "chevron" },
   defaultVariant: "bounce",
   variants: {
-    // knocks downward twice, the second time softer
+    // knocks to the left twice, the second time softer
     bounce: {
       duration: 700,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=chevron]",
-          { y: [0, 3, 0, 1.5, 0] },
+          { x: [0, -3, 0, -1.5, 0] },
           { duration: seconds, times: [0, 0.3, 0.55, 0.75, 1], ease: "easeInOut" },
         ),
     },
-    // folds over to point up, holds a beat, folds back: open, then closed
+    // folds over to point the other way, holds a beat, folds back
     flip: {
       duration: 800,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=chevron]",
-          { scaleY: [1, -1, -1, 1] },
+          { scaleX: [1, -1, -1, 1] },
           { duration: seconds, times: [0, 0.35, 0.65, 1], ease: "easeInOut" },
         ),
     },
-    // slips out through the bottom edge, back in from the top
-    drop: {
+    // slips out through the left edge, back in from the other side
+    slide: {
       clip: true,
       duration: 650,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=chevron]",
-          { y: [0, 7, -7, 0], opacity: [1, 0, 0, 1] },
+          { x: [0, -7, 7, 0], opacity: [1, 0, 0, 1] },
           { duration: seconds, times: [0, 0.45, 0.55, 1], ease: "easeInOut" },
         ),
     },
   },
   render: () => (
     // a right-angled chevron, centred on the grid
-    <path data-part="chevron" d="M6 9l6 6 6-6" style={pivot("50% 50%")} />
+    <path data-part="chevron" d="M15 6l-6 6 6 6" style={pivot("50% 50%")} />
   ),
 })
