@@ -19,7 +19,7 @@ const GUSTS = [
 ]
 
 /** 1 color: gusts. */
-export const WindIcon = createAnimatedIcon({
+export const Wind = createAnimatedIcon({
   name: "wind",
   category: "weather",
   keywords: ["air", "breeze", "gust", "weather", "blow", "windy", "fan", "ventilation"],

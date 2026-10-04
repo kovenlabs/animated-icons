@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: cloud (primary), arrow (accent). */
-export const CloudUploadIcon = createAnimatedIcon({
+export const CloudUpload = createAnimatedIcon({
   name: "cloud-upload",
   family: "cloud",
   category: "actions",

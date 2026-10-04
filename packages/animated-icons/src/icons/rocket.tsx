@@ -17,7 +17,7 @@ const PUFFS = [7, 15] as const
 const puff = { opacity: [0, 0.8, 0], scale: [0.5, 1, 1.3], y: [0, 2] }
 
 /** 3 colors: hull (primary), fins and smoke (secondary), flame (accent). */
-export const RocketIcon = createAnimatedIcon({
+export const Rocket = createAnimatedIcon({
   name: "rocket",
   category: "actions",
   keywords: ["launch", "ship", "deploy", "startup", "boost", "fast"],

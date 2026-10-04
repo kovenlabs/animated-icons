@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const DROPS = [12, 8, 16]
 
 /** 2 colors: cloud (primary), rain drops (accent). */
-export const CloudIcon = createAnimatedIcon({
+export const Cloud = createAnimatedIcon({
   name: "cloud",
   category: "weather",
   keywords: ["weather", "cloudy", "overcast", "storage", "online", "sky", "rain"],

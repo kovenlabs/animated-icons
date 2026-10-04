@@ -14,9 +14,10 @@ const RIGHT = "M12 7l3-2h7v13h-7l-3 2"
 const LEFT = "M12 7 9 5H2v13h7l3 2"
 
 /** 2 colors: pages (primary), spine and turning page (accent). */
-export const BookOpenIcon = createAnimatedIcon({
+export const BookOpen = createAnimatedIcon({
   name: "book-open",
-  category: "text",
+  family: "book",
+  category: "education",
   keywords: ["read", "reading", "course", "lesson", "library", "documentation", "study", "education"],
   slots: { primary: "pages", accent: "spine + turning page" },
   defaultVariant: "flip",

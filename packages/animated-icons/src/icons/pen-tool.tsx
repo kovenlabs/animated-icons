@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: nib and holder (primary), slit and anchor hole (accent). */
-export const PenToolIcon = createAnimatedIcon({
+export const PenTool = createAnimatedIcon({
   name: "pen-tool",
   category: "design",
   keywords: ["vector", "bezier", "path", "anchor point", "illustrator", "nib", "draw"],

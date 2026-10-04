@@ -17,7 +17,7 @@ description: Variants, triggers, timing and imperative control.
 | `reducedMotion` | `"respect" \| "ignore"`                                | `"respect"`     |                                                          |
 | `corners`       | `"round" \| "bevel" \| "sharp"`                        | `"round"`       | Corner geometry, see below                               |
 | `cornerRadius`  | `number`                                               | `2`             | How far each corner reaches, in grid units               |
-| `size`          | `number \| string`                                     | `24`            | `className="size-8"` works too                           |
+| `size`          | `number \| string`                                     | `24`            | Also settable globally (provider / `config.ts`); a `className` size wins |
 
 Every other SVG prop (`className`, `style`, `aria-label`, …) is passed through. Icons are decorative
 (`aria-hidden`) unless you give them an `aria-label`.
@@ -25,13 +25,13 @@ Every other SVG prop (`className`, `style`, `aria-label`, …) is passed through
 ## Triggers
 
 ```tsx
-<BellIcon />                          // hover: one cycle per pointer enter
-<BellIcon trigger="click" />          // one cycle per click
-<BellIcon trigger="auto" interval={2000} />   // loops from mount, 2s rest between cycles
-<MessageIcon trigger="inView" />      // loops while on screen
-<BellIcon animate={hasUnread} />      // controlled
-<BellIcon trigger="manual" />         // only plays when you call ref.play()
-<BellIcon trigger="none" />           // static: never animates
+<Bell />                          // hover: one cycle per pointer enter
+<Bell trigger="click" />          // one cycle per click
+<Bell trigger="auto" interval={2000} />   // loops from mount, 2s rest between cycles
+<Message trigger="inView" />      // loops while on screen
+<Bell animate={hasUnread} />      // controlled
+<Bell trigger="manual" />         // only plays when you call ref.play()
+<Bell trigger="none" />           // static: never animates
 ```
 
 `none` keeps an icon completely still. Nothing plays it: not hover, not the ref, not `animate`. Use it for
@@ -49,7 +49,7 @@ Use `trigger="manual"` and the ref, so a whole button plays the icon:
 const bell = useRef<AnimatedIconHandle>(null);
 
 <Button onMouseEnter={() => bell.current?.play()}>
-  <BellIcon ref={bell} trigger="manual" /> Notifications
+  <Bell ref={bell} trigger="manual" /> Notifications
 </Button>
 ```
 
@@ -65,8 +65,8 @@ const bell = useRef<AnimatedIconHandle>(null);
 length for one instance:
 
 ```tsx
-<RocketIcon speed={1.5} />        // 50% faster than its tuning
-<RocketIcon duration={1200} />    // exactly 1.2s, whatever the speed
+<Rocket speed={1.5} />        // 50% faster than its tuning
+<Rocket duration={1200} />    // exactly 1.2s, whatever the speed
 ```
 
 ## Corners
@@ -85,9 +85,9 @@ and joins follow.
 more than half of a side (a third for `bevel`), so short segments stay intact.
 
 ```tsx
-<BellIcon />                                  // round, radius 2
-<BellIcon corners="round" cornerRadius={3} /> // softer
-<BellIcon corners="sharp" />                  // as drawn
+<Bell />                                  // round, radius 2
+<Bell corners="round" cornerRadius={3} /> // softer
+<Bell corners="sharp" />                  // as drawn
 <AnimatedIconsProvider corners="bevel">{/* a whole subtree */}</AnimatedIconsProvider>
 ```
 

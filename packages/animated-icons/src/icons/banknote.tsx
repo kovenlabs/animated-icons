@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: note (primary), emblem and corner dots (accent). */
-export const BanknoteIcon = createAnimatedIcon({
+export const Banknote = createAnimatedIcon({
   name: "banknote",
   category: "finance",
   keywords: ["money", "cash", "bill", "payment", "currency", "note", "pay", "salary"],

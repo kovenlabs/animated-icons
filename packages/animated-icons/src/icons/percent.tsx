@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: slash (primary), dots (accent). */
-export const PercentIcon = createAnimatedIcon({
+export const Percent = createAnimatedIcon({
   name: "percent",
   category: "finance",
   keywords: ["discount", "sale", "rate", "interest", "percentage", "tax", "offer", "promo"],

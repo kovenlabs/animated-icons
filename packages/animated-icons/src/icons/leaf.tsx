@@ -16,7 +16,7 @@ declare module "../lib/types" {
 const LEAF = "M6 18 5 11l3-3.5L20 4l-3.5 12L13 19z"
 
 /** 2 colors: leaf and stem (primary), midrib (accent). */
-export const LeafIcon = createAnimatedIcon({
+export const Leaf = createAnimatedIcon({
   name: "leaf",
   category: "nature",
   keywords: ["nature", "plant", "eco", "green", "organic", "environment", "spring", "vegan"],

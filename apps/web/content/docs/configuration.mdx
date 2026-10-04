@@ -13,11 +13,11 @@ props  >  per-icon config  >  icon's own defaults  >  global config  >  built-in
 
 | Level               | Where                                                     | Example                                        |
 | ------------------- | --------------------------------------------------------- | ---------------------------------------------- |
-| Built-ins           | the library                                               | `trigger: "hover"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2` |
+| Built-ins           | the library                                               | `trigger: "hover"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2`, `size: 24` |
 | Global config       | `config.ts` (registry) or the root provider (npm)         | `trigger: "click"`                             |
 | Icon's own defaults | the icon definition                                       | loader: `auto`, `interval: 0`                  |
 | Per-icon config     | `icons.<name>` in `config.ts` or a provider               | `icons: { loader: { trigger: "hover" } }`      |
-| Props               | the instance                                              | `<LoaderIcon trigger="manual" />`              |
+| Props               | the instance                                              | `<Loader trigger="manual" />`              |
 
 **Why do an icon's own defaults beat global config?** They're the behavior an icon needs to make sense.
 A loader that waits for hover is useless, and a typing bubble only reads as typing while it keeps going.
@@ -33,6 +33,7 @@ export default defineIconConfig({
   reducedMotion: 'respect',
   corners: 'round', // "round" | "bevel" | "sharp"
   cornerRadius: 2.5,
+  size: 20, // px, or any CSS length: '1.25em'
   icons: {
     bell: { variant: 'shake' }, // variant names are typed per installed icon
     rocket: { speed: 0.75, colors: { accent: 'chart-1' } },

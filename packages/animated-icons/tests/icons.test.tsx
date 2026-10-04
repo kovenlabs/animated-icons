@@ -53,12 +53,16 @@ it("finds icons", () => {
 // belongs to that segment's family.
 it("links related shapes into a family", () => {
   const names = icons.map(({ file }) => file)
+  const siblingOf = (file: string, base: string) =>
+    names.some((other) => other !== file && (other === base || other.startsWith(`${base}-`)))
   const unlinked = icons.flatMap(({ file, components }) => {
     const segment = file.split("-")[0]!
     if (segment === file) return []
-    const related = names.some((other) => other !== file && (other === segment || other.startsWith(`${segment}-`)))
+    // a plural joins its singular's family when that exists: chevrons-left belongs with chevron-down
+    const singular = segment.replace(/s$/, "")
+    const base = singular !== segment && siblingOf(file, singular) ? singular : segment
     const family = components[0]?.[1].meta.family
-    return related && family !== segment ? [`${file} (family "${family}", expected "${segment}")`] : []
+    return siblingOf(file, base) && family !== base ? [`${file} (family "${family}", expected "${base}")`] : []
   })
   expect(unlinked, `unlinked siblings: ${unlinked.join(", ")}`).toEqual([])
 })
@@ -68,7 +72,7 @@ describe.each(icons)("$file", ({ file, components }) => {
     expect(components).toHaveLength(1)
     const [exportName, Icon] = components[0]!
     expect(Icon.meta.name).toBe(file)
-    expect(exportName).toBe(`${toPascal(file)}Icon`)
+    expect(exportName).toBe(toPascal(file))
   })
 
   const [, Icon] = components[0] ?? []

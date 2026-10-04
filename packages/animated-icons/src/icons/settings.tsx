@@ -14,7 +14,7 @@ const GEAR =
   "M10.4 5.4V3h3.2v2.4l1.94.8 1.69-1.7 2.27 2.27-1.7 1.69.8 1.94H21v3.2h-2.4l-.8 1.94 1.7 1.69-2.27 2.27-1.69-1.7-1.94.8V21h-3.2v-2.4l-1.94-.8-1.69 1.7-2.27-2.27 1.7-1.69-.8-1.94H3v-3.2h2.4l.8-1.94-1.7-1.69L6.77 4.5l1.69 1.7z"
 
 /** 2 colors: gear (primary), hub (accent). */
-export const SettingsIcon = createAnimatedIcon({
+export const Settings = createAnimatedIcon({
   name: "settings",
   category: "actions",
   keywords: ["gear", "cog", "preferences", "options", "configure", "setup"],

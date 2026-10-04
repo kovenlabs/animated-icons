@@ -21,7 +21,7 @@ const SPARKS = [
 ]
 
 /** 2 colors: bolt (primary), sparks (accent). */
-export const ZapIcon = createAnimatedIcon({
+export const Zap = createAnimatedIcon({
   name: "zap",
   category: "status",
   keywords: ["lightning", "bolt", "power", "energy", "electric", "flash", "fast", "charge"],

@@ -18,7 +18,7 @@ const BUTTONS = [
 ] as const
 
 /** 3 colors: body (primary), d-pad (secondary), buttons (accent). */
-export const GamepadIcon = createAnimatedIcon({
+export const Gamepad = createAnimatedIcon({
   name: "gamepad",
   category: "gaming",
   keywords: ["game", "controller", "joystick", "play", "console", "gaming", "esports"],

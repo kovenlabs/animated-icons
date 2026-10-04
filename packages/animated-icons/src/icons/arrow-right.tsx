@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. */
-export const ArrowRightIcon = createAnimatedIcon({
+export const ArrowRight = createAnimatedIcon({
   name: "arrow-right",
   family: "arrow",
   category: "arrows",

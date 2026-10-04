@@ -12,7 +12,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: bubble (primary), dots (accent). "Typing" only reads as typing while it keeps going, so it loops in view. */
-export const MessageIcon = createAnimatedIcon({
+export const Message = createAnimatedIcon({
   name: "message",
   category: "communication",
   keywords: ["chat", "comment", "conversation", "typing", "reply", "support"],

@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: envelope (primary), flap (secondary), badge (accent). */
-export const MailIcon = createAnimatedIcon({
+export const Mail = createAnimatedIcon({
   name: "mail",
   category: "communication",
   keywords: ["email", "inbox", "envelope", "letter", "send", "unread"],

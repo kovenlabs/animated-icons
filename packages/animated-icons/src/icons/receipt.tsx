@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: paper (primary), printed lines (accent). */
-export const ReceiptIcon = createAnimatedIcon({
+export const Receipt = createAnimatedIcon({
   name: "receipt",
   category: "commerce",
   keywords: ["invoice", "bill", "purchase", "order", "transaction", "payment", "checkout", "expense"],

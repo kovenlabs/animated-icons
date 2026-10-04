@@ -19,7 +19,7 @@ const SPLASH = [
 ]
 
 /** 2 colors: drop (primary), shine and splash (accent). */
-export const DropletIcon = createAnimatedIcon({
+export const Droplet = createAnimatedIcon({
   name: "droplet",
   category: "nature",
   keywords: ["water", "drop", "liquid", "rain", "humidity", "fluid", "hydrate", "ink"],

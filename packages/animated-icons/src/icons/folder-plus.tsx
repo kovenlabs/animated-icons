@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const PLUS = "M12 10v6M9 13h6"
 
 /** 2 colors: folder (primary), plus (accent). */
-export const FolderPlusIcon = createAnimatedIcon({
+export const FolderPlus = createAnimatedIcon({
   name: "folder-plus",
   family: "folder",
   category: "files",

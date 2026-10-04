@@ -27,7 +27,7 @@ function sparkle({ animate, seconds }: VariantContext, delay: number) {
 }
 
 /** 2 colors: outline (primary), fill and particles (accent). */
-export const HeartIcon = createAnimatedIcon({
+export const Heart = createAnimatedIcon({
   name: "heart",
   category: "actions",
   keywords: ["like", "favorite", "love", "save", "health", "wishlist"],

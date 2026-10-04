@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. */
-export const XIcon = createAnimatedIcon({
+export const X = createAnimatedIcon({
   name: "x",
   category: "actions",
   keywords: ["close", "cancel", "dismiss", "remove", "delete", "cross", "exit"],

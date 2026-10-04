@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: body and wheels (primary), headlight, beams and speed lines (accent). */
-export const CarIcon = createAnimatedIcon({
+export const Car = createAnimatedIcon({
   name: "car",
   category: "transport",
   keywords: ["vehicle", "auto", "drive", "ride", "taxi", "parking", "road"],

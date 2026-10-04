@@ -26,10 +26,10 @@ One-color icons use `primary`, two-color icons add `accent`, and three-color ico
 
 ```tsx
 // a token name resolves to its variable: "destructive" → var(--destructive)
-<MailIcon colors={{ primary: 'foreground', secondary: 'chart-2', accent: 'destructive' }} />
+<Mail colors={{ primary: 'foreground', secondary: 'chart-2', accent: 'destructive' }} />
 
 // any CSS color passes through
-<MailIcon colors={{ accent: '#facc15' }} />
+<Mail colors={{ accent: '#facc15' }} />
 
 // a subtree
 <AnimatedIconsProvider colors={{ accent: 'chart-4' }}>…</AnimatedIconsProvider>
@@ -73,8 +73,8 @@ Nothing to configure: the icons ship no CSS and no class names, so Tailwind need
 entry for them. Your own classes work on icons as usual:
 
 ```tsx
-<BellIcon className="size-6" />                                   // sizing, spacing…
-<BellIcon className="[--icon-accent:var(--chart-2)]" />           // recolor one icon
+<Bell className="size-6" />                                   // sizing, spacing…
+<Bell className="[--icon-accent:var(--chart-2)]" />           // recolor one icon
 <section className="[--icon-accent:var(--destructive)]">…</section> // recolor a section
 ```
 

@@ -16,7 +16,7 @@ const FLAME = "M12 2l4.5 5.5L19 12v4l-3 4-4 2-4-2-3-4v-4l2-3 2.5 2.5Z"
 const CORE = "M12 12.5l2.5 3.5v1.5L12 19l-2.5-1.5V16Z"
 
 /** 2 colors: flame (primary), core (accent). */
-export const FlameIcon = createAnimatedIcon({
+export const Flame = createAnimatedIcon({
   name: "flame",
   category: "nature",
   keywords: ["fire", "hot", "burn", "trending", "popular", "streak", "heat", "energy"],

@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: pig (primary), coin (accent). */
-export const PiggyBankIcon = createAnimatedIcon({
+export const PiggyBank = createAnimatedIcon({
   name: "piggy-bank",
   category: "finance",
   keywords: ["savings", "save", "money", "deposit", "budget", "bank", "coin", "piggy"],

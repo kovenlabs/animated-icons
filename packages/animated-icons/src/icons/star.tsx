@@ -18,7 +18,7 @@ const STAR = "M12 4.5 14.5 9.5 20 10 16 14 17 19.5 12 17 7 19.5 8 14 4 10 9.5 9.
 const SPARKLES = ["M4 2.5 5.5 4 4 5.5 2.5 4z", "M20 2.5 21.5 4 20 5.5 18.5 4z", "M12 19.5 13.5 21 12 22.5 10.5 21z"]
 
 /** 2 colors: outline (primary), fill and sparkles (accent). */
-export const StarIcon = createAnimatedIcon({
+export const Star = createAnimatedIcon({
   name: "star",
   category: "status",
   keywords: ["favorite", "rating", "bookmark", "featured", "review", "starred"],

@@ -1,7 +1,7 @@
 import * as library from "@kovenlabs/animated-icons"
 import type { Metadata } from "next"
 
-/** Icons the package exports (every icon is `<Name>Icon`), counted by export name so it also works on the server. */
+/** Icons the package exports, counted by their `<Name>Icon` alias (each icon is also exported as `<Name>`) so it also works on the server. */
 export const ICON_COUNT = Object.keys(library).filter((name) => /^[A-Z]\w*Icon$/.test(name)).length
 
 export const SITE_NAME = "Animated Icons"

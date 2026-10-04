@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: box (primary), arrow (accent). */
-export const ExternalLinkIcon = createAnimatedIcon({
+export const ExternalLink = createAnimatedIcon({
   name: "external-link",
   category: "navigation",
   keywords: ["open in new tab", "new window", "link out", "external", "leave site", "popout"],

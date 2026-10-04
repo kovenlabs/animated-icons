@@ -20,7 +20,7 @@ const DOTS = [
 ] as const
 
 /** 2 colors: palette (primary), paint dots (accent). */
-export const PaletteIcon = createAnimatedIcon({
+export const Palette = createAnimatedIcon({
   name: "palette",
   category: "design",
   keywords: ["paint", "color", "colour", "theme", "art", "swatches", "appearance"],

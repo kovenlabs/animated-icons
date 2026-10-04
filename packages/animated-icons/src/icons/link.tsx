@@ -85,7 +85,7 @@ function Drawing() {
 const tug = (steps: number[]) => ({ x: steps, y: steps.map((s) => -s) })
 
 /** 2 colors: one link each, back (primary) and front (accent). */
-export const LinkIcon = createAnimatedIcon({
+export const Link = createAnimatedIcon({
   name: "link",
   category: "actions",
   keywords: ["chain", "url", "hyperlink", "connect", "attach", "join", "permalink"],

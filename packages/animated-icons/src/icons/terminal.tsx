@@ -12,7 +12,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: window and prompt (primary), cursor line (accent). */
-export const TerminalIcon = createAnimatedIcon({
+export const Terminal = createAnimatedIcon({
   name: "terminal",
   category: "development",
   keywords: ["console", "shell", "command line", "cli", "bash", "prompt", "command"],

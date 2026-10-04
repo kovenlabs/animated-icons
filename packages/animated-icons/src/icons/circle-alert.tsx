@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: ring (primary), exclamation mark (accent). */
-export const CircleAlertIcon = createAnimatedIcon({
+export const CircleAlert = createAnimatedIcon({
   name: "circle-alert",
   family: "circle",
   category: "status",

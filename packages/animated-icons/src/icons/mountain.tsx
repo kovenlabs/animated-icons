@@ -37,7 +37,7 @@ function Drawing() {
   )
 }
 
-export const MountainIcon = createAnimatedIcon({
+export const Mountain = createAnimatedIcon({
   name: "mountain",
   category: "nature",
   keywords: ["peak", "landscape", "hiking", "outdoors", "summit", "alps", "terrain", "travel"],

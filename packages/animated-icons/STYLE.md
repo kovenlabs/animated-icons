@@ -54,11 +54,14 @@ enforces the mechanical ones on every file in `src/icons/` automatically.
 
 `name` (= file name, kebab-case), `category` (see `IconCategory`), `keywords` (≥ 3 synonyms),
 `slots`, `defaultVariant`, `variants`, and `defaults` only when the icon needs them to make sense
-(a loader loops). Export exactly one component named `<PascalName>Icon`.
+(a loader loops). Export exactly one component, named `<PascalName>` (`bell.tsx` → `Bell`). The
+package barrel adds a `<PascalName>Icon` alias automatically, for users whose names collide; never
+export it yourself.
 
 - **Families link shape siblings.** An icon that extends another icon's name (`bell-off` → `bell`,
   `cloud-lightning` → `cloud`) or shares its first name segment with another icon (`git-branch`,
-  `git-merge`) sets `family` to that segment; the base icon's family defaults to its own name. The
+  `git-merge`) sets `family` to that segment; the base icon's family defaults to its own name. A plural
+  joins its singular's family (`chevrons-left` → `chevron`). The
   catalog shows an icon's family together, and the guard test fails on an unlinked sibling. Name a new
   icon so it lands in the right family (`file-search`, not `search-file`); objects that only share a
   theme (`bar-chart`, `pie-chart`) are grouped by `category` instead.

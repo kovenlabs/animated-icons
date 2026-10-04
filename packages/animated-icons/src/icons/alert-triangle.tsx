@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: triangle (primary), exclamation mark (accent). */
-export const AlertTriangleIcon = createAnimatedIcon({
+export const AlertTriangle = createAnimatedIcon({
   name: "alert-triangle",
   category: "status",
   keywords: ["warning", "caution", "danger", "error", "attention", "hazard"],

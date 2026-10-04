@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const BOLT = "M13 10l-3 6h4l-3 6"
 
 /** 2 colors: cloud (primary), bolt (accent). */
-export const CloudLightningIcon = createAnimatedIcon({
+export const CloudLightning = createAnimatedIcon({
   name: "cloud-lightning",
   family: "cloud",
   category: "weather",

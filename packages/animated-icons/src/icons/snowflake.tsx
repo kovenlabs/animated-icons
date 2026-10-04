@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const ARMS = [0, 60, 120, 180, 240, 300]
 
 /** 2 colors: arms (primary), branch tips (accent). */
-export const SnowflakeIcon = createAnimatedIcon({
+export const Snowflake = createAnimatedIcon({
   name: "snowflake",
   category: "weather",
   keywords: ["snow", "winter", "cold", "frost", "freeze", "ice", "christmas", "air conditioning"],

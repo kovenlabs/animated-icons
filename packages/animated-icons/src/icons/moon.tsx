@@ -21,7 +21,7 @@ const CRESCENT = "M12 3A9 9 0 1 0 21 12A6.708 6.708 0 1 1 12 3Z"
 const STARS = ["M17 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z", "M20.5 2 22 3.5 20.5 5 19 3.5z"]
 
 /** 2 colors: moon (primary), stars (accent). */
-export const MoonIcon = createAnimatedIcon({
+export const Moon = createAnimatedIcon({
   name: "moon",
   category: "weather",
   keywords: ["night", "dark mode", "crescent", "sleep", "evening", "theme", "lunar"],

@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const mark = (x: number) => `M${x} 5h7v7l-2 7h-4l2-7h-3z`
 
 /** 2 colors: opening mark (primary), closing mark (accent). */
-export const QuoteIcon = createAnimatedIcon({
+export const Quote = createAnimatedIcon({
   name: "quote",
   category: "text",
   keywords: ["quote", "quotation", "blockquote", "citation", "testimonial", "speech", "cite"],

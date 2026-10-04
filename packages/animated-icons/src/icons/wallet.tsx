@@ -39,7 +39,7 @@ function Drawing() {
 }
 
 /** 3 colors: wallet (primary), clasp (secondary), card (accent). */
-export const WalletIcon = createAnimatedIcon({
+export const Wallet = createAnimatedIcon({
   name: "wallet",
   category: "finance",
   keywords: ["money", "payment", "purse", "balance", "funds", "cash", "billfold", "pay"],

@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: tray (primary), arrow (accent). */
-export const UploadIcon = createAnimatedIcon({
+export const Upload = createAnimatedIcon({
   name: "upload",
   category: "actions",
   keywords: ["send", "import", "publish", "share", "arrow up", "attach"],

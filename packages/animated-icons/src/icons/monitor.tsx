@@ -49,7 +49,7 @@ function Drawing() {
 }
 
 /** 2 colors: screen + stand (primary), screen content and glow (accent). */
-export const MonitorIcon = createAnimatedIcon({
+export const Monitor = createAnimatedIcon({
   name: "monitor",
   category: "devices",
   keywords: ["screen", "display", "desktop", "computer", "pc", "imac"],

@@ -1,7 +1,5 @@
 "use client"
 
-import { stagger } from "motion/react"
-
 import { createAnimatedIcon } from "../lib/create-icon"
 import { pivot, slot } from "../lib/motion"
 
@@ -19,7 +17,7 @@ const DAYS = [
 ] as const
 
 /** 3 colors: frame (primary), binder rings (secondary), highlighted day (accent). */
-export const CalendarIcon = createAnimatedIcon({
+export const Calendar = createAnimatedIcon({
   name: "calendar",
   category: "time",
   keywords: ["date", "schedule", "event", "month", "planner", "agenda"],
@@ -46,19 +44,15 @@ export const CalendarIcon = createAnimatedIcon({
           { duration: seconds, times: [0, 0.3, 0.65, 1], ease: "easeOut" },
         ),
     },
-    // the binder rings hop one after the other, like a nudge
+    // a reminder nudge: the whole calendar rocks on its centre, like a desk alarm going off
     remind: {
-      duration: 550,
+      duration: 700,
       run: ({ animate, seconds }) =>
-        animate(
-          "[data-part=ring]",
-          { y: [0, -2, 0] },
-          { duration: seconds * 0.75, delay: stagger(seconds * 0.25), ease: "easeInOut" },
-        ),
+        animate("[data-part=calendar]", { rotate: [0, -6, 6, -4, 2, 0] }, { duration: seconds, ease: "easeInOut" }),
     },
   },
   render: () => (
-    <>
+    <g data-part="calendar" style={pivot("50% 50%")}>
       <rect x="3" y="4" width="18" height="18" />
       <path d="M3 10h18" />
       <g stroke={slot.secondary}>
@@ -73,6 +67,6 @@ export const CalendarIcon = createAnimatedIcon({
         </g>
         <rect data-part="day" x="14" y="14" width="4" height="4" fill={slot.accent} stroke="none" style={pivot("50% 50%")} />
       </g>
-    </>
+    </g>
   ),
 })

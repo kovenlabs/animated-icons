@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: card (primary), stripe and chip (accent). */
-export const CreditCardIcon = createAnimatedIcon({
+export const CreditCard = createAnimatedIcon({
   name: "credit-card",
   category: "commerce",
   keywords: ["payment", "card", "pay", "checkout", "debit", "billing", "purchase"],

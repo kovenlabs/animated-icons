@@ -32,7 +32,7 @@ const sel = (part: string) => `[data-part=${part}]`
 const DIM = 0.2
 
 /** 2 colors: arcs (primary), dot (accent). */
-export const WifiIcon = createAnimatedIcon({
+export const Wifi = createAnimatedIcon({
   name: "wifi",
   category: "devices",
   keywords: ["wireless", "signal", "internet", "network", "connection", "hotspot", "online"],

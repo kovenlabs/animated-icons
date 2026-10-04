@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: window frame (primary), panel edge (secondary), toggle chevron (accent). */
-export const SidebarIcon = createAnimatedIcon({
+export const Sidebar = createAnimatedIcon({
   name: "sidebar",
   category: "layout",
   keywords: ["panel", "drawer", "side panel", "navigation", "collapse", "expand", "layout"],

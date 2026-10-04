@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color: airliner and contrails. */
-export const PlaneIcon = createAnimatedIcon({
+export const Plane = createAnimatedIcon({
   name: "plane",
   category: "transport",
   keywords: ["flight", "airplane", "travel", "airport", "trip", "aviation", "fly"],

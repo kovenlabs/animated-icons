@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: back sheet (primary), front sheet (accent). */
-export const CopyIcon = createAnimatedIcon({
+export const Copy = createAnimatedIcon({
   name: "copy",
   category: "actions",
   keywords: ["duplicate", "clone", "clipboard", "paste", "replicate", "pages"],

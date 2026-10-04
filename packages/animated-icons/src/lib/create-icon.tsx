@@ -108,7 +108,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
     duration,
     animate: controlled,
     colors,
-    size = 24,
+    size,
     ref,
     style,
     onPointerEnter,
@@ -124,6 +124,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
       reducedMotion,
       corners,
       cornerRadius,
+      size,
       duration,
     })
 
@@ -209,8 +210,8 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
         <svg
           ref={scope}
           xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
+          width={options.size}
+          height={options.size}
           viewBox="0 0 24 24"
           fill="none"
           stroke={slot.primary}
@@ -244,7 +245,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
     )
   }
 
-  AnimatedIcon.displayName = `${toPascal(definition.name)}Icon`
+  AnimatedIcon.displayName = toPascal(definition.name)
 
   const meta: IconMeta<V> = {
     name: definition.name,

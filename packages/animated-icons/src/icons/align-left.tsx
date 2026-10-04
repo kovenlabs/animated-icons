@@ -20,7 +20,7 @@ const LINES = [
 ] as const
 
 /** 1 color. */
-export const AlignLeftIcon = createAnimatedIcon({
+export const AlignLeft = createAnimatedIcon({
   name: "align-left",
   category: "text",
   keywords: ["align left", "text align", "left align", "paragraph", "alignment", "format", "flush left"],

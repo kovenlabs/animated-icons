@@ -29,7 +29,7 @@ const RING = `M${fmt(12 - RX)} ${RY}A${RING_R} ${RING_R} 0 1 1 ${fmt(12 + RX)} $
 const RING_PIVOT = `50% ${fmt((RING_R / (RY - (HEAD.cy - RING_R))) * 100)}%`
 
 /** 2 colors: pin (primary), dot and ping (accent). */
-export const MapPinIcon = createAnimatedIcon({
+export const MapPin = createAnimatedIcon({
   name: "map-pin",
   category: "navigation",
   keywords: ["location", "place", "marker", "address", "map", "gps", "destination"],

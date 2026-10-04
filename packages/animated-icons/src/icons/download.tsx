@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: tray (primary), arrow (accent). */
-export const DownloadIcon = createAnimatedIcon({
+export const Download = createAnimatedIcon({
   name: "download",
   category: "actions",
   keywords: ["save", "export", "fetch", "get", "arrow down", "install"],

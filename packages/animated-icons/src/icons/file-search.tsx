@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: page (primary), lens (accent). */
-export const FileSearchIcon = createAnimatedIcon({
+export const FileSearch = createAnimatedIcon({
   name: "file-search",
   family: "file",
   category: "files",

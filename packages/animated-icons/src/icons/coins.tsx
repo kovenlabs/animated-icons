@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const coin = (y: number) => `M6 ${y}h12l2 2-2 2H6l-2-2z`
 
 /** 2 colors: stack (primary), top coin (accent). */
-export const CoinsIcon = createAnimatedIcon({
+export const Coins = createAnimatedIcon({
   name: "coins",
   category: "finance",
   keywords: ["money", "savings", "cash", "change", "stack", "currency", "earnings", "deposit"],

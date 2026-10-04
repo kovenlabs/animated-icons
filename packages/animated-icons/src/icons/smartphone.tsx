@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const BUZZ = ["M3 9v6", "M21 9v6"]
 
 /** 2 colors: body (primary), home bar, notification and screen light (accent). */
-export const SmartphoneIcon = createAnimatedIcon({
+export const Smartphone = createAnimatedIcon({
   name: "smartphone",
   category: "devices",
   keywords: ["phone", "mobile", "cell", "iphone", "android", "device", "vibrate"],

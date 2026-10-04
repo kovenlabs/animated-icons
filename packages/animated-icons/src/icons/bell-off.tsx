@@ -40,7 +40,7 @@ function Drawing() {
 }
 
 /** 2 colors: bell (primary), slash (accent). */
-export const BellOffIcon = createAnimatedIcon({
+export const BellOff = createAnimatedIcon({
   name: "bell-off",
   family: "bell",
   category: "communication",

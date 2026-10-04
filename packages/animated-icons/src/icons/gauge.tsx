@@ -18,7 +18,7 @@ const SCALE = "M4.206 18.5A9 9 0 0 1 18.364 7.636"
 const ZONE = "M20.457 10.922A9 9 0 0 1 19.794 18.5"
 
 /** 3 colors: dial (primary), red zone (secondary), needle + hub (accent). */
-export const GaugeIcon = createAnimatedIcon({
+export const Gauge = createAnimatedIcon({
   name: "gauge",
   category: "charts",
   keywords: ["speedometer", "meter", "dashboard", "performance", "speed", "level", "dial", "kpi"],

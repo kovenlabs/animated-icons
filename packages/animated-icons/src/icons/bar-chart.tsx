@@ -22,7 +22,7 @@ const BARS = [
 const sel = (part: string) => `[data-part=${part}]`
 
 /** 2 colors: axes (primary), bars (accent). */
-export const BarChartIcon = createAnimatedIcon({
+export const BarChart = createAnimatedIcon({
   name: "bar-chart",
   category: "charts",
   keywords: ["chart", "graph", "statistics", "analytics", "column chart", "report", "metrics", "data"],

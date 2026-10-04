@@ -38,7 +38,7 @@ function Drawing() {
 }
 
 /** 2 colors: outline (primary), fill (accent). */
-export const PlayIcon = createAnimatedIcon({
+export const Play = createAnimatedIcon({
   name: "play",
   category: "media",
   keywords: ["start", "resume", "video", "audio", "player", "media", "run"],

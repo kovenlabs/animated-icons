@@ -24,6 +24,8 @@ export interface Behavior {
   corners: Corners
   /** How far each rounded or beveled corner reaches, in grid units (the drawing is 24 wide). */
   cornerRadius: number
+  /** Width and height of the icon box: px as a number, or any CSS length. A `className` size (`size-6`) still wins. */
+  size: number | string
 }
 
 /**
@@ -87,6 +89,7 @@ export type IconCategory =
   | "commerce"
   | "design"
   | "development"
+  | "education"
   | "devices"
   | "files"
   | "finance"
@@ -115,8 +118,11 @@ export interface IconDefinition<V extends string> {
   slots: Partial<Record<ColorSlot, string>>
   defaultVariant: NoInfer<V>
   variants: Record<V, VariantDefinition>
-  /** Behaviour this icon needs to make sense, e.g. a loader loops. Beats global config, loses to per-icon config and props. */
-  defaults?: Partial<Behavior>
+  /**
+   * Behaviour this icon needs to make sense, e.g. a loader loops. Beats global config, loses to per-icon config and
+   * props. Never `size`: an icon must not override the size you set globally.
+   */
+  defaults?: Partial<Omit<Behavior, "size">>
   /** The SVG children. Colour parts with `var(--icon-<slot>)` and tag animated parts with `data-part`. */
   render: () => React.ReactNode
 }
@@ -136,7 +142,7 @@ export interface IconMeta<V extends string = string> {
   colors: number
   variants: V[]
   defaultVariant: V
-  defaults?: Partial<Behavior>
+  defaults?: Partial<Omit<Behavior, "size">>
 }
 
 export interface AnimatedIconHandle {
@@ -161,6 +167,5 @@ export type AnimatedIconProps<V extends string = string> = Partial<Behavior> & {
   /** Controlled mode: `true` loops, `false` stops. Overrides `trigger`. */
   animate?: boolean
   colors?: IconColors
-  size?: number | string
   ref?: React.Ref<AnimatedIconHandle>
 } & Omit<React.SVGProps<SVGSVGElement>, "ref" | "children" | "colors">

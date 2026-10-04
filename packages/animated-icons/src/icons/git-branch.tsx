@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: trunk and its commit (primary), branch and its tip (accent). */
-export const GitBranchIcon = createAnimatedIcon({
+export const GitBranch = createAnimatedIcon({
   name: "git-branch",
   family: "git",
   category: "development",

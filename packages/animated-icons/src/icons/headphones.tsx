@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const BARS = ["M10 16v4", "M14 14v6"]
 
 /** 2 colors: headband (primary), ear cups and sound bars (accent). */
-export const HeadphonesIcon = createAnimatedIcon({
+export const Headphones = createAnimatedIcon({
   name: "headphones",
   category: "media",
   keywords: ["audio", "music", "listen", "sound", "podcast", "headset", "earphones"],

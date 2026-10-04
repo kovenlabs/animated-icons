@@ -18,7 +18,7 @@ export const INSTALL_ALL = "npx shadcn add @kovenlabs/all"
 
 /** The JSX for an icon as currently customized, with only the props that differ from defaults. */
 export function usageSnippet(meta: IconMeta, variant: string, { colors, size, speed, trigger, corners, cornerRadius }: Customization) {
-  const component = `${pascal(meta.name)}Icon`
+  const component = pascal(meta.name)
   const props: string[] = []
   if (variant !== meta.defaultVariant) props.push(`variant="${variant}"`)
   if (trigger !== "default") props.push(`trigger="${trigger}"`)

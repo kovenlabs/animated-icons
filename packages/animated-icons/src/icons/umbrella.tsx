@@ -19,7 +19,7 @@ const DROPS = [
 ]
 
 /** 2 colors: umbrella (primary), rain drops (accent). */
-export const UmbrellaIcon = createAnimatedIcon({
+export const Umbrella = createAnimatedIcon({
   name: "umbrella",
   category: "weather",
   keywords: ["rain", "weather", "protection", "insurance", "shelter", "cover", "wet", "safe"],

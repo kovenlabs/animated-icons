@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: outline (primary), pupil (accent). */
-export const EyeIcon = createAnimatedIcon({
+export const Eye = createAnimatedIcon({
   name: "eye",
   category: "security",
   keywords: ["view", "visible", "show", "watch", "preview", "reveal", "visibility"],

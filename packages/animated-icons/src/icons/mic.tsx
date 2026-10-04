@@ -20,7 +20,7 @@ const TICKS = [
 ]
 
 /** 2 colors: capsule + stand (primary), level + pulse ticks (accent). */
-export const MicIcon = createAnimatedIcon({
+export const Mic = createAnimatedIcon({
   name: "mic",
   category: "media",
   keywords: ["microphone", "record", "voice", "audio", "dictate", "podcast", "speak"],

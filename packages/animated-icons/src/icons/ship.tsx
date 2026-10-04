@@ -44,7 +44,7 @@ function Drawing() {
 }
 
 /** 2 colors: ship (primary), waves (accent). */
-export const ShipIcon = createAnimatedIcon({
+export const Ship = createAnimatedIcon({
   name: "ship",
   category: "transport",
   keywords: ["boat", "ferry", "cruise", "sea", "shipping", "cargo", "maritime"],

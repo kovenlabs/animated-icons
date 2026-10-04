@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: can (primary), lid and handle (secondary), inner lines (accent). */
-export const TrashIcon = createAnimatedIcon({
+export const Trash = createAnimatedIcon({
   name: "trash",
   category: "actions",
   keywords: ["delete", "remove", "bin", "garbage", "discard", "rubbish", "waste"],

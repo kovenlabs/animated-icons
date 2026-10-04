@@ -18,7 +18,7 @@ declare module '../lib/types' {
   }
 }
 
-export const BellIcon = createAnimatedIcon({
+export const Bell = createAnimatedIcon({
   name: 'bell',
   category: 'communication',
   keywords: ['notification', 'alert', 'alarm'], // for search
@@ -59,7 +59,7 @@ icon has. `keywords` are optional search terms. Both end up on the component as 
 with the variant names and defaults:
 
 ```ts
-BellIcon.meta;
+Bell.meta;
 // { name: 'bell', category: 'communication', keywords: [...], slots: {...}, colors: 2,
 //   variants: ['ring', 'shake'], defaultVariant: 'ring', defaults: undefined }
 ```
@@ -73,7 +73,7 @@ Shape siblings are separate icons that share a `family`, the way Lucide groups `
 `messages-square`:
 
 ```tsx
-export const MessagesIcon = createAnimatedIcon({
+export const Messages = createAnimatedIcon({
   name: 'messages',
   family: 'message', // named by the base icon; `name` must start with it
   // ...

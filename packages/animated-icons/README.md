@@ -10,13 +10,13 @@ Animated React icons with one to three color slots that read from your shadcn/ui
 animations, and you can configure them globally, per subtree or per instance.
 
 ```tsx
-import { BellIcon } from "@kovenlabs/animated-icons"
+import { Bell } from "@kovenlabs/animated-icons"
 
-<BellIcon />                                       // theme colors, plays on hover
-<BellIcon variant="shake" trigger="auto" />        // its own variants, typed per icon
-<BellIcon colors={{ accent: "destructive" }} />    // a token name or any CSS color
-<BellIcon corners="sharp" />                       // round (default), bevel or sharp geometry
-<BellIcon trigger="none" />                        // static
+<Bell />                                       // theme colors, plays on hover
+<Bell variant="shake" trigger="auto" />        // its own variants, typed per icon
+<Bell colors={{ accent: "destructive" }} />    // a token name or any CSS color
+<Bell corners="sharp" />                       // round (default), bevel or sharp geometry
+<Bell trigger="none" />                        // static
 ```
 
 ## Install

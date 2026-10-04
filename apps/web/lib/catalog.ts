@@ -7,9 +7,11 @@ export type CatalogIcon = ComponentType<AnimatedIconProps> & { meta: IconMeta }
 const isIcon = (value: unknown): value is CatalogIcon =>
   typeof value === "function" && "meta" in value
 
-/** Every icon the package exports, discovered by its `meta`: a new icon shows up with no wiring. */
-export const icons: CatalogIcon[] = (Object.values(library) as unknown[])
-  .filter(isIcon)
+/**
+ * Every icon the package exports, discovered by its `meta`: a new icon shows up with no wiring. Each icon is
+ * exported twice (`Bell` and its alias `BellIcon`), so keep one entry per component.
+ */
+export const icons: CatalogIcon[] = [...new Set((Object.values(library) as unknown[]).filter(isIcon))]
   .sort((a, b) => a.meta.name.localeCompare(b.meta.name))
 
 export const iconsByName = new Map(icons.map((icon) => [icon.meta.name, icon]))

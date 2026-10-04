@@ -20,7 +20,7 @@ const TICKS = [
 ] as const
 
 /** 2 colors: ruler (primary), ticks (accent). */
-export const RulerIcon = createAnimatedIcon({
+export const Ruler = createAnimatedIcon({
   name: "ruler",
   category: "design",
   keywords: ["measure", "dimensions", "size", "length", "scale", "units", "guides"],

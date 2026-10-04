@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: handle (primary), ferrule (secondary), bristles and the paint they lay down (accent). */
-export const BrushIcon = createAnimatedIcon({
+export const Brush = createAnimatedIcon({
   name: "brush",
   category: "design",
   keywords: ["paint", "paintbrush", "art", "draw", "style", "format painter", "decorate"],

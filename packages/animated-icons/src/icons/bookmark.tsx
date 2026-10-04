@@ -43,7 +43,7 @@ function Drawing() {
 }
 
 /** 2 colors: outline (primary), fill (accent). */
-export const BookmarkIcon = createAnimatedIcon({
+export const Bookmark = createAnimatedIcon({
   name: "bookmark",
   category: "actions",
   keywords: ["save", "favorite", "read later", "bookmarks", "keep", "saved", "tag"],

@@ -48,7 +48,7 @@ const easeInOut = (t: number) => (t < 0.5 ? 4 * t ** 3 : 1 - (-2 * t + 2) ** 3 /
 const POSES = Array.from({ length: FRAMES + 1 }, (_, i) => MERIDIANS.map((m) => m + STEP * easeInOut(i / FRAMES)))
 
 /** 2 colors: sphere and equator (primary), meridians (accent). */
-export const GlobeIcon = createAnimatedIcon({
+export const Globe = createAnimatedIcon({
   name: "globe",
   category: "navigation",
   keywords: ["world", "earth", "international", "language", "web", "planet", "global"],

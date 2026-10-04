@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const STAR = "M12 5.8 12.8 7.8 14.9 7.9 13.2 9.2 13.8 11.2 12 10.1 10.2 11.2 10.8 9.2 9.2 7.9 11.2 7.8Z"
 
 /** 3 colors: medal (primary), ribbon (secondary), star (accent). */
-export const AwardIcon = createAnimatedIcon({
+export const Award = createAnimatedIcon({
   name: "award",
   category: "social",
   keywords: ["medal", "badge", "achievement", "prize", "certificate", "rosette", "honor"],

@@ -18,7 +18,7 @@ const ENVELOPE = "M11 5H3v14h18v-9"
 const FLAP = "M3 5l9 7 2.25-1.75"
 
 /** 3 colors: envelope (primary), flap (secondary), check (accent). */
-export const MailCheckIcon = createAnimatedIcon({
+export const MailCheck = createAnimatedIcon({
   name: "mail-check",
   family: "mail",
   category: "communication",

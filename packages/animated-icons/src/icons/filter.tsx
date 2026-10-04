@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const DROP = { x: 11, y: 19, width: 2, height: 2 } as const
 
 /** 2 colors: funnel (primary), drops (accent). */
-export const FilterIcon = createAnimatedIcon({
+export const Filter = createAnimatedIcon({
   name: "filter",
   category: "actions",
   keywords: ["funnel", "sort", "refine", "narrow", "search filter", "facets"],

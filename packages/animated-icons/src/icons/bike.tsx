@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const HUBS = [6, 18] as const
 
 /** 2 colors: frame (primary), wheels and spokes (accent). */
-export const BikeIcon = createAnimatedIcon({
+export const Bike = createAnimatedIcon({
   name: "bike",
   category: "transport",
   keywords: ["bicycle", "cycling", "ride", "cycle", "commute", "sport", "pedal"],

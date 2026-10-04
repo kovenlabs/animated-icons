@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: cab, chassis and wheels (primary), cargo box (accent). */
-export const TruckIcon = createAnimatedIcon({
+export const Truck = createAnimatedIcon({
   name: "truck",
   category: "transport",
   keywords: ["delivery", "shipping", "lorry", "freight", "logistics", "dispatch", "van"],

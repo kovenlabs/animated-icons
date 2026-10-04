@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color: two arrows chasing each other round an octagon. */
-export const RefreshIcon = createAnimatedIcon({
+export const Refresh = createAnimatedIcon({
   name: "refresh",
   category: "actions",
   keywords: ["reload", "sync", "update", "retry", "rotate", "repeat"],

@@ -8,7 +8,7 @@ const STEPS = [
   },
   {
     label: "2 · use",
-    code: `<BellIcon />\n<BellIcon variant="shake" trigger="auto" />\n<BellIcon colors={{ accent: "destructive" }} />`,
+    code: `<Bell />\n<Bell variant="shake" trigger="auto" />\n<Bell colors={{ accent: "destructive" }} />`,
     note: "Hover, click, auto, in view, or drive it yourself through a ref.",
   },
   {

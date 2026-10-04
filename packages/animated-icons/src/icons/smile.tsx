@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color: face, eyes and mouth (primary). */
-export const SmileIcon = createAnimatedIcon({
+export const Smile = createAnimatedIcon({
   name: "smile",
   category: "social",
   keywords: ["happy", "emoji", "face", "emotion", "reaction", "feedback", "satisfied"],

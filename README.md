@@ -8,9 +8,9 @@ Animated icons with 1–3 color slots, read from your shadcn/ui tokens. Each ico
 variants. Configure them globally, per subtree or per instance.
 
 ```tsx
-<BellIcon />                                       // theme colors, plays on hover
-<BellIcon variant="shake" trigger="auto" interval={2000} />
-<BellIcon colors={{ accent: "destructive" }} />    // a token name or any CSS color
+<Bell />                                       // theme colors, plays on hover
+<Bell variant="shake" trigger="auto" interval={2000} />
+<Bell colors={{ accent: "destructive" }} />    // a token name or any CSS color
 ```
 
 ## Install

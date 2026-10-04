@@ -84,9 +84,9 @@ The CLI also adds `--icon-primary`, `--icon-secondary` and `--icon-accent` to yo
 your shadcn tokens. See [Colors](/docs/colors).
 
 ```tsx
-import { BellIcon } from '@/components/animated-icons/icons/bell';
+import { Bell } from '@/components/animated-icons/icons/bell';
 
-<BellIcon />;
+<Bell />;
 ```
 
 ### Updating
@@ -107,9 +107,21 @@ npm install @kovenlabs/animated-icons motion
 Import from the package root, or from a single icon's path. Both tree-shake, so you only ship the icons you use:
 
 ```tsx
-import { BellIcon, MailIcon } from '@kovenlabs/animated-icons';
-import { RocketIcon } from '@kovenlabs/animated-icons/icons/rocket';
+import { Bell, Mail } from '@kovenlabs/animated-icons';
+import { Rocket } from '@kovenlabs/animated-icons/icons/rocket';
 ```
+
+Icons are named after what they show: `Bell`, `Calendar`, `Link`. When a name collides with something
+else in your file (shadcn/ui's `Calendar`, next/link's `Link`), the package root also exports every icon
+with an `Icon` suffix, so you don't have to rename on import:
+
+```tsx
+import { Calendar } from '@/components/ui/calendar';
+import { CalendarIcon } from '@kovenlabs/animated-icons';
+```
+
+With the shadcn registry, the file exports the plain name; rename it on import if you need to
+(`import { Calendar as CalendarIcon } from '@/components/animated-icons/icons/calendar'`).
 
 ### Colors
 

@@ -9,7 +9,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. */
-export const ChevronsUpDownIcon = createAnimatedIcon({
+export const ChevronsUpDown = createAnimatedIcon({
   name: "chevrons-up-down",
   family: "chevron",
   category: "arrows",
@@ -26,13 +26,13 @@ export const ChevronsUpDownIcon = createAnimatedIcon({
           animate("[data-part=down]", { y: [0, 2, 0] }, { duration: seconds, ease: "easeInOut" }),
         ]),
     },
-    // the chevrons press toward the middle and spring back
+    // the chevrons press toward the middle and spring back; 1px each, so their arm ends stay apart
     collapse: {
       duration: 650,
       run: ({ animate, seconds }) =>
         Promise.all([
-          animate("[data-part=up]", { y: [0, 2, -0.5, 0] }, { duration: seconds, ease: "easeInOut" }),
-          animate("[data-part=down]", { y: [0, -2, 0.5, 0] }, { duration: seconds, ease: "easeInOut" }),
+          animate("[data-part=up]", { y: [0, 1, -0.5, 0] }, { duration: seconds, ease: "easeInOut" }),
+          animate("[data-part=down]", { y: [0, -1, 0.5, 0] }, { duration: seconds, ease: "easeInOut" }),
         ]),
     },
     // one after the other: up nudges up, then down nudges down

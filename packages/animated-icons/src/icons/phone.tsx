@@ -21,7 +21,7 @@ const HANDSET = "M3 3h5l2 5-2.5 2.5 6 6L16 14l5 2v5h-5l-7-3-3-3-3-7Z"
 const WAVES = ["M14 6h1.5l2.5 2.5V10", "M14 2h3.5l4.5 4.5V10"]
 
 /** 2 colors: handset (primary), ring waves (accent). */
-export const PhoneIcon = createAnimatedIcon({
+export const Phone = createAnimatedIcon({
   name: "phone",
   category: "communication",
   keywords: ["call", "telephone", "ring", "contact", "dial", "handset", "incoming call"],

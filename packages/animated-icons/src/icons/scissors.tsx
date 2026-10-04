@@ -20,7 +20,7 @@ const LOWER_PIVOT = pivot("56.25% 43.75%")
 const SHUT = 15
 
 /** 2 colors: blades (primary), finger rings (accent). */
-export const ScissorsIcon = createAnimatedIcon({
+export const Scissors = createAnimatedIcon({
   name: "scissors",
   category: "design",
   keywords: ["cut", "snip", "trim", "clip", "shears", "crop", "craft"],

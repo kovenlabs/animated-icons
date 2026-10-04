@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: locomotive (primary), headlights and beams (accent). */
-export const TrainIcon = createAnimatedIcon({
+export const Train = createAnimatedIcon({
   name: "train",
   category: "transport",
   keywords: ["railway", "metro", "subway", "locomotive", "transit", "commute", "tram"],

@@ -39,6 +39,7 @@ describe("resolveIconOptions", () => {
       reducedMotion: "respect",
       corners: "round",
       cornerRadius: 2,
+      size: 24,
       variant: "ring",
       duration: 600,
     })
@@ -67,6 +68,14 @@ describe("resolveIconOptions", () => {
     const perIcon = mergeConfig(global, { icons: { bell: { corners: "bevel" } } })
     expect(resolveIconOptions(bell, perIcon, {}).corners).toBe("bevel")
     expect(resolveIconOptions(bell, perIcon, { corners: "sharp" }).corners).toBe("sharp")
+  })
+
+  it("resolves size like any other setting: props > per-icon > global > built-in 24", () => {
+    const global = mergeConfig(root, { size: 20 })
+    expect(resolveIconOptions(bell, global, {}).size).toBe(20)
+    const perIcon = mergeConfig(global, { icons: { bell: { size: "1.5em" } } })
+    expect(resolveIconOptions(bell, perIcon, {}).size).toBe("1.5em")
+    expect(resolveIconOptions(bell, perIcon, { size: 16 }).size).toBe(16)
   })
 
   it("scales the variant's tuned duration by speed", () => {

@@ -12,7 +12,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: lower layers (primary), top layer (accent). */
-export const LayersIcon = createAnimatedIcon({
+export const Layers = createAnimatedIcon({
   name: "layers",
   category: "design",
   keywords: ["stack", "layer", "levels", "arrange", "depth", "z-index", "overlay"],

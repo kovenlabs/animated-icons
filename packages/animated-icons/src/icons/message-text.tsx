@@ -26,7 +26,7 @@ const typeLine = (start: number, end: number) => ({
 })
 
 /** 2 colors: bubble (primary), text lines (accent). */
-export const MessageTextIcon = createAnimatedIcon({
+export const MessageText = createAnimatedIcon({
   name: "message-text",
   family: "message",
   category: "communication",

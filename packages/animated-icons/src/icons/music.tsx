@@ -12,7 +12,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: stems and beam (primary), note heads (accent). */
-export const MusicIcon = createAnimatedIcon({
+export const Music = createAnimatedIcon({
   name: "music",
   category: "media",
   keywords: ["song", "audio", "note", "melody", "playlist", "sound", "tune"],

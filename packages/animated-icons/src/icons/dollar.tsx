@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color: dollar sign (primary). */
-export const DollarIcon = createAnimatedIcon({
+export const Dollar = createAnimatedIcon({
   name: "dollar",
   category: "finance",
   keywords: ["money", "currency", "usd", "price", "cost", "payment", "cash", "dollar sign"],

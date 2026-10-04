@@ -18,7 +18,7 @@ const SLICE = "M12 12V3A9 9 0 0 1 21 12Z"
 const BODY = "M19.794 16.5A9 9 0 1 1 7.5 4.206"
 
 /** 2 colors: pie (primary), slice (accent). */
-export const PieChartIcon = createAnimatedIcon({
+export const PieChart = createAnimatedIcon({
   name: "pie-chart",
   category: "charts",
   keywords: ["chart", "pie", "donut", "share", "proportion", "percentage", "analytics", "breakdown"],

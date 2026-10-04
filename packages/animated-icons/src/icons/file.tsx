@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: page (primary), folded corner (accent). */
-export const FileIcon = createAnimatedIcon({
+export const File = createAnimatedIcon({
   name: "file",
   category: "files",
   keywords: ["document", "page", "paper", "blank file", "new file", "sheet"],

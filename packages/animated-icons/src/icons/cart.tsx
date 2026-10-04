@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: frame (primary), wheels (secondary), item (accent). */
-export const CartIcon = createAnimatedIcon({
+export const Cart = createAnimatedIcon({
   name: "cart",
   category: "commerce",
   keywords: ["shopping", "basket", "checkout", "buy", "store", "add to cart"],

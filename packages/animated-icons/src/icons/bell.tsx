@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: body (primary), clapper and sound waves (accent). */
-export const BellIcon = createAnimatedIcon({
+export const Bell = createAnimatedIcon({
   name: "bell",
   category: "communication",
   keywords: ["notification", "alert", "alarm", "reminder", "ring", "subscribe"],

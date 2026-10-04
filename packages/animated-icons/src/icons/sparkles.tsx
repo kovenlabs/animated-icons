@@ -12,7 +12,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: large sparkle (primary), small sparkles (accent). */
-export const SparklesIcon = createAnimatedIcon({
+export const Sparkles = createAnimatedIcon({
   name: "sparkles",
   category: "social",
   keywords: ["magic", "ai", "new", "shine", "stars", "special", "generate"],

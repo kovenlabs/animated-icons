@@ -241,6 +241,49 @@ describe("createAnimatedIcon", () => {
     expect(svg()).toHaveAttribute("overflow", "hidden")
   })
 
+  describe("size", () => {
+    it("defaults to 24 and follows the provider, per-icon config, then the prop", () => {
+      const { Icon } = stubIcon()
+      const { rerender } = render(<Icon data-testid="icon" />)
+      expect(svg()).toHaveAttribute("width", "24")
+      rerender(
+        <AnimatedIconsProvider size={20}>
+          <Icon data-testid="icon" />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("width", "20")
+      expect(svg()).toHaveAttribute("height", "20")
+      rerender(
+        <AnimatedIconsProvider size={20} icons={{ stub: { size: "1.5em" } }}>
+          <Icon data-testid="icon" />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("width", "1.5em")
+      rerender(
+        <AnimatedIconsProvider size={20} icons={{ stub: { size: "1.5em" } }}>
+          <Icon data-testid="icon" size={16} />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("width", "16")
+    })
+
+    it("ignores a blank, negative or non-finite size and falls through to the next level", () => {
+      const { Icon } = stubIcon()
+      const { rerender } = render(
+        <AnimatedIconsProvider size={20}>
+          <Icon data-testid="icon" size="" />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("width", "20")
+      rerender(
+        <AnimatedIconsProvider size={Number.NaN}>
+          <Icon data-testid="icon" size={-4} />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("width", "24")
+    })
+  })
+
   it("is decorative unless labelled", () => {
     const { Icon } = stubIcon()
     const { rerender } = render(<Icon data-testid="icon" />)

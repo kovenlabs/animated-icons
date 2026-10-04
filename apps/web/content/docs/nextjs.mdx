@@ -125,15 +125,15 @@ Icons are client components (`"use client"` is built in), so you can render them
 component. Style them with Tailwind like any element:
 
 ```tsx title="app/page.tsx"
-import { BellIcon, LoaderIcon, MailIcon, MessagesIcon } from '@kovenlabs/animated-icons';
+import { Bell, Loader, Mail, Messages } from '@kovenlabs/animated-icons';
 
 export default function Page() {
   return (
     <main className="flex items-center gap-6 p-10">
-      <BellIcon className="size-8" />                          {/* hover it */}
-      <MailIcon className="size-8" colors={{ accent: 'destructive' }} />
-      <MessagesIcon className="size-8" trigger="inView" />     {/* loops while on screen */}
-      <LoaderIcon className="size-5" />                        {/* loops on its own */}
+      <Bell className="size-8" />                          {/* hover it */}
+      <Mail className="size-8" colors={{ accent: 'destructive' }} />
+      <Messages className="size-8" trigger="inView" />     {/* loops while on screen */}
+      <Loader className="size-5" />                        {/* loops on its own */}
     </main>
   );
 }
@@ -153,14 +153,14 @@ Use `trigger="manual"` and play the icon from the button. This needs a client co
 ```tsx title="components/notifications-button.tsx"
 'use client';
 
-import { BellIcon, type AnimatedIconHandle } from '@kovenlabs/animated-icons';
+import { Bell, type AnimatedIconHandle } from '@kovenlabs/animated-icons';
 import { useRef } from 'react';
 
 export function NotificationsButton() {
   const bell = useRef<AnimatedIconHandle>(null);
   return (
     <button onMouseEnter={() => bell.current?.play()} className="inline-flex items-center gap-2">
-      <BellIcon ref={bell} trigger="manual" className="size-4" />
+      <Bell ref={bell} trigger="manual" className="size-4" />
       Notifications
     </button>
   );
@@ -174,14 +174,14 @@ The `animate` prop loops while `true` and stops (gracefully) when `false`:
 ```tsx title="components/inbox-status.tsx"
 'use client';
 
-import { MailIcon } from '@kovenlabs/animated-icons';
+import { Mail } from '@kovenlabs/animated-icons';
 import { useState } from 'react';
 
 export function InboxStatus() {
   const [unread, setUnread] = useState(3);
   return (
     <button onClick={() => setUnread(0)} className="inline-flex items-center gap-2">
-      <MailIcon animate={unread > 0} interval={1500} variant="notify" />
+      <Mail animate={unread > 0} interval={1500} variant="notify" />
       {unread > 0 ? `${unread} unread` : 'All caught up'}
     </button>
   );
@@ -191,7 +191,7 @@ export function InboxStatus() {
 ### Recolor with Tailwind
 
 ```tsx
-<BellIcon className="size-6 [--icon-accent:var(--chart-2)]" />    {/* one icon */}
+<Bell className="size-6 [--icon-accent:var(--chart-2)]" />    {/* one icon */}
 
 <section className="[--icon-accent:var(--destructive)]">           {/* everything inside */}
   …
@@ -214,6 +214,15 @@ Dense tables or "reduce animations" settings: `trigger: "none"` keeps icons stil
 
 ```tsx
 <AnimatedIconsProvider corners="round" cornerRadius={3}>{children}</AnimatedIconsProvider>
+```
+
+### One size everywhere
+
+`size` works the same way: set it once and every icon without its own `size` prop follows. It takes px or
+any CSS length, and a CSS size from a class (`className="size-6"`) still wins:
+
+```tsx
+<AnimatedIconsProvider size={20}>{children}</AnimatedIconsProvider>
 ```
 
 ## Troubleshooting

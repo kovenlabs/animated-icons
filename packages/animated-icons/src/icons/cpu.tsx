@@ -23,7 +23,7 @@ const SIDES: Array<{ side: string; pins: string[]; out: Record<string, number[]>
 ]
 
 /** 2 colors: chip and pins (primary), core (accent). */
-export const CpuIcon = createAnimatedIcon({
+export const Cpu = createAnimatedIcon({
   name: "cpu",
   category: "development",
   keywords: ["processor", "chip", "microchip", "hardware", "computing", "performance", "silicon"],

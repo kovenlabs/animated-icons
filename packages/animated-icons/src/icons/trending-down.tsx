@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. */
-export const TrendingDownIcon = createAnimatedIcon({
+export const TrendingDown = createAnimatedIcon({
   name: "trending-down",
   family: "trending",
   category: "charts",

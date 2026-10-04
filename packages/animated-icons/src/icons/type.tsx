@@ -17,7 +17,7 @@ const STROKES = [
 ] as const
 
 /** 2 colors: letter (primary), text caret (accent). */
-export const TypeIcon = createAnimatedIcon({
+export const Type = createAnimatedIcon({
   name: "type",
   category: "text",
   keywords: ["text", "font", "typography", "typeface", "letter", "caret", "write"],

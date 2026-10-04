@@ -14,7 +14,7 @@ declare module "../lib/types" {
 const puff = { opacity: [0, 1, 0], scale: [0.6, 1.4, 1.8], x: [0, 2], y: [0, -4] }
 
 /** 2 colors: house (primary), door and smoke (accent). */
-export const HomeIcon = createAnimatedIcon({
+export const Home = createAnimatedIcon({
   name: "home",
   category: "navigation",
   keywords: ["house", "start", "main", "dashboard", "homepage", "back home"],

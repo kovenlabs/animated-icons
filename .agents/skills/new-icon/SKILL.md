@@ -54,7 +54,7 @@ before drawing. This skill is the process around it.
 Copy the structure of a neighbour (`bell.tsx`, `filter.tsx`, `hourglass.tsx`):
 `"use client"`; the `declare module "../lib/types"` `IconVariants` augmentation with the variant names;
 a doc comment `/** N colors: body (primary), … (accent). */`; one export
-`<PascalName>Icon = createAnimatedIcon({ name, family?, category, keywords (6–8 real search terms),
+`<PascalName> = createAnimatedIcon({ name, family?, category, keywords (6–8 real search terms),
 slots, defaultVariant, defaults?, variants, render })`.
 
 ## 5. Check it

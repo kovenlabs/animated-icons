@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: folder (primary), sheet (accent). */
-export const FolderIcon = createAnimatedIcon({
+export const Folder = createAnimatedIcon({
   name: "folder",
   category: "files",
   keywords: ["directory", "files", "documents", "archive", "project", "storage"],

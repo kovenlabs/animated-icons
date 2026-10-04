@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const PINE = "M12 2l4 6h-2l4 5h-2l4 5H4l4-5H6l4-5H8z"
 
 /** 1 color: tree. */
-export const TreeIcon = createAnimatedIcon({
+export const Tree = createAnimatedIcon({
   name: "tree",
   category: "nature",
   keywords: ["pine", "forest", "nature", "christmas", "evergreen", "park", "outdoors", "wood"],

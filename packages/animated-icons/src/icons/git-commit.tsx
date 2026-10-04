@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. The solid core only exists in motion. */
-export const GitCommitIcon = createAnimatedIcon({
+export const GitCommit = createAnimatedIcon({
   name: "git-commit",
   family: "git",
   category: "development",

@@ -25,7 +25,7 @@ const row = (part: string, y: number, style: React.CSSProperties) => (
 )
 
 /** 2 colors: lines (primary), bullets (accent). */
-export const ListIcon = createAnimatedIcon({
+export const List = createAnimatedIcon({
   name: "list",
   category: "layout",
   keywords: ["list", "bullets", "items", "unordered list", "rows", "feed", "todo"],

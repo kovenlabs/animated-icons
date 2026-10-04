@@ -23,7 +23,7 @@ const LEGS = [
 ] as const
 
 /** 2 colors: body and head (primary), legs and antennae (accent). */
-export const BugIcon = createAnimatedIcon({
+export const Bug = createAnimatedIcon({
   name: "bug",
   category: "development",
   keywords: ["debug", "error", "issue", "defect", "insect", "beetle", "report bug"],

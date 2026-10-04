@@ -44,7 +44,7 @@ the shadcn registry and the catalog all pick it up automatically.
    The motion has to be visible at 40px: CI fails variants that barely move.
 6. **Copy the file structure** of a neighbour like `bell.tsx` or `filter.tsx`: `"use client"`, the
    `IconVariants` declaration, a `/** N colors: … */` comment, and one `createAnimatedIcon({ … })`
-   export named `<PascalName>Icon`.
+   export named `<PascalName>` (the package adds a `<PascalName>Icon` alias by itself).
 
 [Lucide](https://lucide.dev) is a good reference for what an object should look like, but redraw it.
 Don't copy its paths: they're curve-based, and ours are drawn from straight segments.

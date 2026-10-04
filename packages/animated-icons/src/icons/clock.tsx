@@ -12,7 +12,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: face (primary), hands and alarm lines (accent). */
-export const ClockIcon = createAnimatedIcon({
+export const Clock = createAnimatedIcon({
   name: "clock",
   category: "time",
   keywords: ["time", "watch", "hour", "schedule", "pending", "history", "alarm"],

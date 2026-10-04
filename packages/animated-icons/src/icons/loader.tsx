@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const SPOKES = Array.from({ length: 8 }, (_, i) => ({ angle: i * 45, opacity: (10 - ((8 - i) % 8)) / 10 }))
 
 /** 1 color. Loops forever with no rest by default: a loader that waits for hover is useless. */
-export const LoaderIcon = createAnimatedIcon({
+export const Loader = createAnimatedIcon({
   name: "loader",
   category: "status",
   keywords: ["spinner", "loading", "progress", "wait", "busy", "pending"],

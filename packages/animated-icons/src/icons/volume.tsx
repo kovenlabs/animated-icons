@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const WAVES = ["M15.5 9a5 5 0 0 1 0 6", "M17.86 5.64a9 9 0 0 1 0 12.72"]
 
 /** 2 colors: speaker (primary), sound waves (accent). */
-export const VolumeIcon = createAnimatedIcon({
+export const Volume = createAnimatedIcon({
   name: "volume",
   category: "media",
   keywords: ["sound", "audio", "speaker", "loud", "volume up", "unmute"],

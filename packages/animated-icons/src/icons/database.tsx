@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: drum (primary), middle ring (accent). */
-export const DatabaseIcon = createAnimatedIcon({
+export const Database = createAnimatedIcon({
   name: "database",
   category: "development",
   keywords: ["storage", "db", "sql", "server", "data", "records", "table", "backend"],

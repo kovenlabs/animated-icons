@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: top and bottom lines (primary), middle line (accent). */
-export const MenuIcon = createAnimatedIcon({
+export const Menu = createAnimatedIcon({
   name: "menu",
   category: "navigation",
   keywords: ["hamburger", "navigation", "sidebar", "drawer", "lines", "options"],

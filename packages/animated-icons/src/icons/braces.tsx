@@ -16,7 +16,7 @@ declare module "../lib/types" {
 const DOTS = dots(12, 12, 3.5)
 
 /** 1 color. The dots only exist in motion. */
-export const BracesIcon = createAnimatedIcon({
+export const Braces = createAnimatedIcon({
   name: "braces",
   category: "development",
   keywords: ["curly brackets", "json", "object", "code", "block", "scope", "syntax"],

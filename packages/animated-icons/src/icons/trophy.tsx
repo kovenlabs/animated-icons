@@ -18,7 +18,7 @@ const STAR = "M12 5.3 12.8 7.2 14.9 7.4 13.2 8.7 13.8 10.7 12 9.6 10.2 10.7 10.8
 const SPARKLES = ["M3.5 12 5 13.5 3.5 15 2 13.5Z", "M20.5 12 22 13.5 20.5 15 19 13.5Z"]
 
 /** 2 colors: cup, handles and base (primary), star and sparkles (accent). */
-export const TrophyIcon = createAnimatedIcon({
+export const Trophy = createAnimatedIcon({
   name: "trophy",
   category: "social",
   keywords: ["award", "winner", "prize", "champion", "achievement", "cup", "victory"],

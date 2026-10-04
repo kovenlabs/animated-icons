@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: plane (primary), fold line (accent). */
-export const SendIcon = createAnimatedIcon({
+export const Send = createAnimatedIcon({
   name: "send",
   category: "communication",
   keywords: ["paper plane", "submit", "message", "dispatch", "deliver", "share", "post"],

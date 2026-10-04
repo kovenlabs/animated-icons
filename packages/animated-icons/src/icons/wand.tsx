@@ -22,7 +22,7 @@ const SPARKLES = [
 const ALL_SPARKLES = SPARKLES.map(({ part }) => `[data-part=${part}]`).join(", ")
 
 /** 3 colors: stick (primary), tip (secondary), sparkles (accent). */
-export const WandIcon = createAnimatedIcon({
+export const Wand = createAnimatedIcon({
   name: "wand",
   category: "design",
   keywords: ["magic", "sparkles", "auto", "enhance", "generate", "ai", "wizard"],

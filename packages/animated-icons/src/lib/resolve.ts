@@ -17,9 +17,10 @@ export const BUILT_IN: Behavior = {
   reducedMotion: "respect",
   corners: "round",
   cornerRadius: 2,
+  size: 24,
 }
 
-const BEHAVIOR_KEYS = ["trigger", "interval", "speed", "reducedMotion", "corners", "cornerRadius"] as const
+const BEHAVIOR_KEYS = ["trigger", "interval", "speed", "reducedMotion", "corners", "cornerRadius", "size"] as const
 
 function defined<T extends object>(value: T): Partial<T> {
   return Object.fromEntries(Object.entries(value).filter(([, v]) => v !== undefined)) as Partial<T>
@@ -45,7 +46,14 @@ interface IconMeta {
   name: string
   defaultVariant: string
   variants: Record<string, { duration: number }>
-  defaults?: Partial<Behavior>
+  defaults?: Partial<Omit<Behavior, "size">>
+}
+
+/** A size worth using: a finite, non-negative number or a non-blank CSS length. Anything else counts as unset. */
+function validSize(size: unknown): number | string | undefined {
+  if (typeof size === "number") return Number.isFinite(size) && size >= 0 ? size : undefined
+  if (typeof size === "string") return size.trim() ? size : undefined
+  return undefined
 }
 
 interface InstanceProps extends Partial<Behavior> {
@@ -59,6 +67,7 @@ export interface ResolvedIconOptions {
   reducedMotion: ReducedMotion
   corners: Corners
   cornerRadius: number
+  size: number | string
   variant: string
   /** ms */
   duration: number
@@ -67,7 +76,8 @@ export interface ResolvedIconOptions {
 /** Precedence, specific beats general: props > per-icon config > icon's own defaults > global config > built-ins. */
 export function resolveIconOptions(icon: IconMeta, config: ResolvedConfig, props: InstanceProps): ResolvedIconOptions {
   const own = config.icons[icon.name] ?? {}
-  const pick = <K extends keyof Behavior>(key: K): Behavior[K] => props[key] ?? own[key] ?? icon.defaults?.[key] ?? config[key]
+  const pick = <K extends Exclude<keyof Behavior, "size">>(key: K): Behavior[K] =>
+    props[key] ?? own[key] ?? icon.defaults?.[key] ?? config[key]
 
   const requested = props.variant ?? own.variant
   const variant = requested && requested in icon.variants ? requested : icon.defaultVariant
@@ -79,6 +89,8 @@ export function resolveIconOptions(icon: IconMeta, config: ResolvedConfig, props
     reducedMotion: pick("reducedMotion"),
     corners: pick("corners"),
     cornerRadius: pick("cornerRadius"),
+    // icons have no say in their size; a bad value at any level falls through to the next
+    size: validSize(props.size) ?? validSize(own.size) ?? validSize(config.size) ?? BUILT_IN.size,
     variant,
     duration: props.duration ?? tuned / pick("speed"),
   }

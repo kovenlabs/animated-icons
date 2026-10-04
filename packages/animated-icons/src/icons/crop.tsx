@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color: the two crop marks. */
-export const CropIcon = createAnimatedIcon({
+export const Crop = createAnimatedIcon({
   name: "crop",
   category: "design",
   keywords: ["trim", "cut", "resize", "frame", "aspect ratio", "image edit", "selection"],

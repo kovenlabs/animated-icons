@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: frame (primary), column dividers (accent). */
-export const ColumnsIcon = createAnimatedIcon({
+export const Columns = createAnimatedIcon({
   name: "columns",
   category: "layout",
   keywords: ["columns", "split", "panes", "table", "layout", "grid", "three columns"],

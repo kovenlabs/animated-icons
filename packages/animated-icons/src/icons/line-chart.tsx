@@ -27,7 +27,7 @@ const RIDE_Y = POINTS.map(([, y]) => y - Y0)
 const RIDE_TIMES = [0, 4 / 12, 7 / 12, 1]
 
 /** 2 colors: axes (primary), line and marker (accent). */
-export const LineChartIcon = createAnimatedIcon({
+export const LineChart = createAnimatedIcon({
   name: "line-chart",
   category: "charts",
   keywords: ["chart", "graph", "trend", "analytics", "statistics", "time series", "growth", "report"],

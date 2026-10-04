@@ -23,6 +23,8 @@ export default defineIconConfig({
   // the shapes' corners: "round" (curved), "bevel" (cut) or "sharp" (as drawn)
   corners: "round",
   cornerRadius: 2,
+  // the icon box: px as a number or any CSS length ("1.25em"); a className size still wins
+  size: 24,
   // Per-icon overrides. They beat each icon's own defaults (the loader loops,
   // the message bubble types while in view...) and lose only to props.
   icons: {

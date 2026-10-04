@@ -17,7 +17,7 @@ declare module "../lib/types" {
 const BOW = pivot("22.5% 50%")
 
 /** 2 colors: key (primary), bit (accent). */
-export const KeyIcon = createAnimatedIcon({
+export const Key = createAnimatedIcon({
   name: "key",
   category: "security",
   keywords: ["password", "access", "unlock", "credentials", "login", "auth", "secret"],

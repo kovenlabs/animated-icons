@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const RAYS = ["M9 3v2", "M4.5 4.5 6 6", "M3 9h2"]
 
 /** 1 color. The rays only exist in motion. */
-export const CheckIcon = createAnimatedIcon({
+export const Check = createAnimatedIcon({
   name: "check",
   category: "status",
   keywords: ["done", "success", "complete", "confirm", "tick", "ok", "valid"],

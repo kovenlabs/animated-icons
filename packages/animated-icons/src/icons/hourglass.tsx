@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: glass (primary), sand (accent). */
-export const HourglassIcon = createAnimatedIcon({
+export const Hourglass = createAnimatedIcon({
   name: "hourglass",
   category: "time",
   keywords: ["timer", "wait", "sand", "time", "loading", "countdown", "pending"],

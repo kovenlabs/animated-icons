@@ -1,11 +1,11 @@
 "use client"
 
 import {
-  AlertTriangleIcon,
-  BellIcon,
-  CalendarIcon,
-  MailIcon,
-  StarIcon,
+  AlertTriangle,
+  Bell,
+  Calendar,
+  Mail,
+  Star,
   type AnimatedIconHandle,
   type Corners,
   type IconColors,
@@ -42,7 +42,7 @@ function ColorsDemo() {
   const colors = PALETTES.find((p) => p.label === palette)?.colors
   return (
     <>
-      <MailIcon size={96} colors={colors} trigger="auto" interval={1600} />
+      <Mail size={96} colors={colors} trigger="auto" interval={1600} />
       <div className="w-full max-w-xs">
         <Segmented label="Palette" options={PALETTES.map((p) => p.label)} value={palette} onChange={setPalette} />
       </div>
@@ -64,7 +64,7 @@ function VariantsDemo() {
   return (
     <>
       <span onPointerEnter={() => void bell.current?.play()}>
-        <BellIcon key={variant} ref={bell} size={96} variant={variant} trigger="manual" />
+        <Bell key={variant} ref={bell} size={96} variant={variant} trigger="manual" />
       </span>
       <div className="w-full max-w-xs">
         <Segmented label="variant" options={BELL_VARIANTS} value={variant} onChange={setVariant} />
@@ -81,7 +81,7 @@ function CornersDemo() {
   return (
     <>
       <div className="flex items-center gap-6">
-        {[AlertTriangleIcon, StarIcon, CalendarIcon].map((Icon, i) => (
+        {[AlertTriangle, Star, Calendar].map((Icon, i) => (
           <Icon key={i} size={64} corners={corners} cornerRadius={radius} />
         ))}
       </div>

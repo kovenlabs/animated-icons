@@ -56,7 +56,7 @@ function Drawing() {
 }
 
 /** 3 colors: first message (primary), reply (secondary), typing dots (accent). */
-export const MessagesIcon = createAnimatedIcon({
+export const Messages = createAnimatedIcon({
   name: "messages",
   family: "message",
   category: "communication",

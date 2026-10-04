@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: trunk and its head commit (primary), incoming branch and its tip (accent). */
-export const GitMergeIcon = createAnimatedIcon({
+export const GitMerge = createAnimatedIcon({
   name: "git-merge",
   family: "git",
   category: "development",

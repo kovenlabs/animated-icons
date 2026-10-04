@@ -16,7 +16,7 @@ const drawOn = (from: number, to: number) => ({
 })
 
 /** 1 color. Each bar is drawn as two arms from the centre, so it can grow outward. */
-export const PlusIcon = createAnimatedIcon({
+export const Plus = createAnimatedIcon({
   name: "plus",
   category: "actions",
   keywords: ["add", "new", "create", "insert", "more", "increase"],

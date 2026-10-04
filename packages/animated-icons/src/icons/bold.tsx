@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. */
-export const BoldIcon = createAnimatedIcon({
+export const Bold = createAnimatedIcon({
   name: "bold",
   category: "text",
   keywords: ["bold", "strong", "text weight", "format", "emphasis", "typography", "font"],

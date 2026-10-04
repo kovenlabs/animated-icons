@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: box (primary), packing tape (accent). */
-export const PackageIcon = createAnimatedIcon({
+export const Package = createAnimatedIcon({
   name: "package",
   category: "commerce",
   keywords: ["box", "parcel", "delivery", "shipping", "cardboard", "equipment", "inventory", "supplies"],

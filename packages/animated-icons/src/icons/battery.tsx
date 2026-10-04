@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const SPARKS = ["M13 2.5l1 1", "M11.5 6h2"]
 
 /** 3 colors: shell (primary), bolt and sparks (secondary), level (accent). Charges on its own. */
-export const BatteryIcon = createAnimatedIcon({
+export const Battery = createAnimatedIcon({
   name: "battery",
   category: "devices",
   keywords: ["power", "charge", "energy", "level", "low battery", "electric"],

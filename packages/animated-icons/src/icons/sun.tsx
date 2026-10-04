@@ -15,7 +15,7 @@ const CARDINAL = [0, 90, 180, 270]
 const DIAGONAL = [45, 135, 225, 315]
 
 /** 2 colors: disc (primary), rays (accent). */
-export const SunIcon = createAnimatedIcon({
+export const Sun = createAnimatedIcon({
   name: "sun",
   category: "weather",
   keywords: ["weather", "sunny", "day", "light", "brightness", "light mode", "summer"],

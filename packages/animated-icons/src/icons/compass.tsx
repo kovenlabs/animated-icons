@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: case (primary), south half of the needle (secondary), north half (accent). */
-export const CompassIcon = createAnimatedIcon({
+export const Compass = createAnimatedIcon({
   name: "compass",
   category: "navigation",
   keywords: ["direction", "north", "explore", "navigate", "orientation", "bearing", "discover"],

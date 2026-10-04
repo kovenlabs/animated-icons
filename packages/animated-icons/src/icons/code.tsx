@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: angle brackets (primary), slash (accent). */
-export const CodeIcon = createAnimatedIcon({
+export const Code = createAnimatedIcon({
   name: "code",
   category: "development",
   keywords: ["source", "developer", "programming", "html", "markup", "embed", "snippet", "tag"],

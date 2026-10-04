@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: body (primary), tip and the line it writes (accent). */
-export const PencilIcon = createAnimatedIcon({
+export const Pencil = createAnimatedIcon({
   name: "pencil",
   category: "actions",
   keywords: ["edit", "write", "draw", "compose", "rename", "modify", "pen"],

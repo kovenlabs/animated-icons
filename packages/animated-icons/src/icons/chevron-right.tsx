@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 1 color. */
-export const ChevronRightIcon = createAnimatedIcon({
+export const ChevronRight = createAnimatedIcon({
   name: "chevron-right",
   family: "chevron",
   category: "arrows",

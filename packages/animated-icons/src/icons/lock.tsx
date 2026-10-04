@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: body (primary), shackle and keyhole (accent). */
-export const LockIcon = createAnimatedIcon({
+export const Lock = createAnimatedIcon({
   name: "lock",
   category: "security",
   keywords: ["padlock", "secure", "private", "password", "protected", "unlock", "locked"],

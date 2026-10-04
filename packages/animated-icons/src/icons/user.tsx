@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: shoulders (primary), head (accent). */
-export const UserIcon = createAnimatedIcon({
+export const User = createAnimatedIcon({
   name: "user",
   category: "users",
   keywords: ["person", "profile", "account", "avatar", "member", "people"],

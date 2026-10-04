@@ -27,7 +27,7 @@ function unit(y: number, part: string) {
 }
 
 /** 3 colors: rack units (primary), drive bays (secondary), status lights (accent). */
-export const ServerIcon = createAnimatedIcon({
+export const Server = createAnimatedIcon({
   name: "server",
   category: "development",
   keywords: ["rack", "hosting", "backend", "data center", "database", "infrastructure", "cloud server"],

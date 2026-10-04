@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: first tick (primary), second tick (accent). */
-export const CheckCheckIcon = createAnimatedIcon({
+export const CheckCheck = createAnimatedIcon({
   name: "check-check",
   family: "check",
   category: "status",
@@ -38,11 +38,12 @@ export const CheckCheckIcon = createAnimatedIcon({
           ]),
         ),
     },
-    // the second tick pops in on the first, like a message being read
+    // the second tick pops on the first, like a message being read. It grows from the tip of its short
+    // leg, so the gap to the first tick never narrows and its long leg stays inside the frame
     pop: {
       duration: 550,
       run: ({ animate, seconds }) =>
-        animate("[data-part=second]", { scale: [1, 1.25, 0.95, 1] }, { duration: seconds, ease: ease.out }),
+        animate("[data-part=second]", { scale: [1, 1.15, 0.96, 1] }, { duration: seconds, ease: ease.out }),
     },
     // both lift, then stamp down with a little squash
     stamp: {
@@ -57,9 +58,10 @@ export const CheckCheckIcon = createAnimatedIcon({
   },
   render: () => (
     <g data-part="ticks" style={pivot("50% 100%")}>
-      {/* two parallel ticks; the second's short leg stops 2px clear of the first's long one */}
-      <path data-part="first" d="M2 12l5 5L18 6" style={pivot("40% 100%")} />
-      <path data-part="second" d="M13.5 16.5l1 1L22 10" stroke={slot.accent} style={pivot("20% 100%")} />
+      {/* two parallel ticks; the second sits 2 lower and its 2-unit short leg stops 2px clear of the
+          first's long leg */}
+      <path data-part="first" d="M2 11l5 5L17 6" />
+      <path data-part="second" d="M13 16l2 2 6-6" stroke={slot.accent} style={pivot("0% 67%")} />
     </g>
   ),
 })

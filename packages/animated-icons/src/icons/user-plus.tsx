@@ -11,7 +11,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: user (primary), plus (accent). */
-export const UserPlusIcon = createAnimatedIcon({
+export const UserPlus = createAnimatedIcon({
   name: "user-plus",
   family: "user",
   category: "users",

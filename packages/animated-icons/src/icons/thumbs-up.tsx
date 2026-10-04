@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: hand (primary), cuff and motion lines (accent). */
-export const ThumbsUpIcon = createAnimatedIcon({
+export const ThumbsUp = createAnimatedIcon({
   name: "thumbs-up",
   category: "social",
   keywords: ["like", "approve", "upvote", "good", "agree", "recommend", "yes"],

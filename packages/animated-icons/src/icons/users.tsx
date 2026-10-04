@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: front shoulders (primary), back user (secondary), front head (accent). */
-export const UsersIcon = createAnimatedIcon({
+export const Users = createAnimatedIcon({
   name: "users",
   family: "user",
   category: "users",

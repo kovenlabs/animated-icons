@@ -55,7 +55,7 @@ function Drawing() {
 }
 
 /** 3 colors: frame (primary), mountains (secondary), sun (accent). */
-export const ImageIcon = createAnimatedIcon({
+export const Image = createAnimatedIcon({
   name: "image",
   category: "media",
   keywords: ["picture", "photo", "gallery", "landscape", "media", "thumbnail"],

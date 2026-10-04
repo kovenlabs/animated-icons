@@ -15,7 +15,7 @@ declare module "../lib/types" {
 const BARS = [5, 14]
 
 /** 2 colors: bar outlines (primary), bar fills (accent). */
-export const PauseIcon = createAnimatedIcon({
+export const Pause = createAnimatedIcon({
   name: "pause",
   category: "media",
   keywords: ["hold", "stop", "break", "player", "media", "suspend"],

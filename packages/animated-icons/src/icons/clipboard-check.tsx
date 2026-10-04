@@ -10,9 +10,10 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: board and clip (primary), check (accent). */
-export const ClipboardCheckIcon = createAnimatedIcon({
+export const ClipboardCheck = createAnimatedIcon({
   name: "clipboard-check",
-  category: "status",
+  family: "clipboard",
+  category: "files",
   keywords: ["task", "done", "checklist", "todo", "complete", "attendance", "approved", "review"],
   slots: { primary: "board + clip", accent: "check" },
   defaultVariant: "check",

@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: pole (primary), cloth (accent). */
-export const FlagIcon = createAnimatedIcon({
+export const Flag = createAnimatedIcon({
   name: "flag",
   category: "social",
   keywords: ["report", "milestone", "goal", "finish", "mark", "country", "banner"],

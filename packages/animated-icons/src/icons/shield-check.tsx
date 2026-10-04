@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: shield (primary), check (accent). */
-export const ShieldCheckIcon = createAnimatedIcon({
+export const ShieldCheck = createAnimatedIcon({
   name: "shield-check",
   family: "shield",
   category: "security",

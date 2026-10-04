@@ -26,7 +26,7 @@ const typeLine = (start: number, end: number) => ({
 })
 
 /** 2 colors: page (primary), text lines (accent). */
-export const FileTextIcon = createAnimatedIcon({
+export const FileText = createAnimatedIcon({
   name: "file-text",
   family: "file",
   category: "files",

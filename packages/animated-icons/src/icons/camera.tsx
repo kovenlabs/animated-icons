@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: body (primary), lens (secondary), flash (accent). */
-export const CameraIcon = createAnimatedIcon({
+export const Camera = createAnimatedIcon({
   name: "camera",
   category: "media",
   keywords: ["photo", "picture", "snapshot", "capture", "shoot", "photography"],

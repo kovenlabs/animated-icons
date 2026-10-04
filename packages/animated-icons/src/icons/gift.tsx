@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 3 colors: box and lid (primary), ribbon (secondary), bow (accent). */
-export const GiftIcon = createAnimatedIcon({
+export const Gift = createAnimatedIcon({
   name: "gift",
   category: "commerce",
   keywords: ["present", "reward", "surprise", "birthday", "bonus", "giveaway", "package"],

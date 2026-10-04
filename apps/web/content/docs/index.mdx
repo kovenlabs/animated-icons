@@ -11,12 +11,12 @@ Every icon also has its own **variants**. A bell can `ring`, `shake` or `jump`; 
 show `typing`, `pop` or `wiggle`. Variant names are typed per icon.
 
 ```tsx
-import { BellIcon } from '@/components/animated-icons/icons/bell';
+import { Bell } from '@/components/animated-icons/icons/bell';
 
-<BellIcon />                                          // theme colors, plays on hover
-<BellIcon variant="shake" trigger="auto" interval={2000} />
-<BellIcon colors={{ accent: 'destructive' }} />       // a token name or any CSS color
-<BellIcon className="size-8 [--icon-accent:var(--chart-4)]" />
+<Bell />                                          // theme colors, plays on hover
+<Bell variant="shake" trigger="auto" interval={2000} />
+<Bell colors={{ accent: 'destructive' }} />       // a token name or any CSS color
+<Bell className="size-8 [--icon-accent:var(--chart-4)]" />
 ```
 
 ## What you get

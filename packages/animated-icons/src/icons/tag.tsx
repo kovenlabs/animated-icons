@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const HOLE = pivot("22.2% 22.2%")
 
 /** 2 colors: tag (primary), hole (accent). */
-export const TagIcon = createAnimatedIcon({
+export const Tag = createAnimatedIcon({
   name: "tag",
   category: "commerce",
   keywords: ["price", "label", "sale", "discount", "offer", "pricing", "deal"],

@@ -10,7 +10,7 @@ declare module "../lib/types" {
 }
 
 /** 2 colors: lens and handle (primary), glint and scan line (accent). */
-export const SearchIcon = createAnimatedIcon({
+export const Search = createAnimatedIcon({
   name: "search",
   category: "actions",
   keywords: ["find", "magnifier", "magnifying glass", "lookup", "explore", "filter", "query"],

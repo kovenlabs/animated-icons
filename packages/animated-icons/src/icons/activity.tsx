@@ -13,7 +13,7 @@ declare module "../lib/types" {
 const TRACE = "M2 12h4l3-7 6 14 3-7h4"
 
 /** 1 color. */
-export const ActivityIcon = createAnimatedIcon({
+export const Activity = createAnimatedIcon({
   name: "activity",
   category: "charts",
   keywords: ["pulse", "heartbeat", "health", "monitor", "vitals", "ecg", "signal", "performance"],

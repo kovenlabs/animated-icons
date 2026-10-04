@@ -30,12 +30,13 @@ export function AnimatedIconsProvider({
   reducedMotion,
   corners,
   cornerRadius,
+  size,
   icons,
 }: AnimatedIconsProviderProps) {
   const parent = useIconConfig()
   const value = useMemo(
-    () => mergeConfig(parent, { trigger, interval, speed, reducedMotion, corners, cornerRadius, icons }),
-    [parent, trigger, interval, speed, reducedMotion, corners, cornerRadius, icons],
+    () => mergeConfig(parent, { trigger, interval, speed, reducedMotion, corners, cornerRadius, size, icons }),
+    [parent, trigger, interval, speed, reducedMotion, corners, cornerRadius, size, icons],
   )
 
   const provided = <AnimatedIconsContext.Provider value={value}>{children}</AnimatedIconsContext.Provider>
