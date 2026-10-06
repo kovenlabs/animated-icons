@@ -62,7 +62,7 @@ From `packages/animated-icons`:
 ```bash
 pnpm vitest run tests/icons.test.tsx -t "<name>"   # guard test: metadata, house style, corners, rest, clip, family
 pnpm exec tsc --noEmit -p .
-node scripts/generate.mjs                           # barrel (src/icons/index.ts) + registry.json
+node scripts/generate.mjs                           # barrel (src/icons/index.ts) + registry.json + catalog.json
 ```
 From the repo root:
 ```bash
@@ -80,5 +80,5 @@ registry to whoever integrates.
 ## 6. Ship it
 - `pnpm changeset`: `minor` for new icons, `patch` for a fix to an existing one. Describe it from a
   user's point of view.
-- Commit the icon files, the regenerated `src/icons/index.ts` and `registry.json`, and the changeset.
+- Commit the icon files, the regenerated `src/icons/index.ts`, `registry.json` and `catalog.json`, and the changeset.
 - CI (`check` + `motion`) must pass; the release job then updates the "Version packages" PR.

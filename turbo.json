@@ -21,7 +21,9 @@
       ],
       "outputs": [
         "../../apps/web/public/r/**",
+        "../../apps/web/public/icons.json",
         "registry.json",
+        "catalog.json",
         "src/icons/index.ts"
       ]
     },

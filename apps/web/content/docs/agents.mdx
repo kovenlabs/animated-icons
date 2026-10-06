@@ -1,0 +1,41 @@
+---
+title: AI agents
+description: Let your coding agent pick the icon, variant and trigger for a use case.
+---
+
+Install the `find-animated-icon` skill into your coding agent (Claude Code, Codex, Cursor and others):
+
+```bash
+npx skills add kovenlabs/animated-icons --skill find-animated-icon
+```
+
+Then ask in your own words, for example *"add an icon for unread notifications to the header"*. The
+agent searches the catalog and checks how your project installs the library. It then picks:
+
+- **the icon**, by meaning, including a family sibling that fits the state (`bell-off` for muted)
+- **the variant**, by matching the motion to the moment (a ring for an arrival, a shake for an error)
+- **the trigger**, by where the icon sits (hover on a control, `animate={unread}` for state that needs
+  attention, `inView` on a landing page)
+
+It answers with the JSX in your project's import style. To look icons up yourself, run the skill's
+script directly:
+
+```bash
+node .agents/skills/find-animated-icon/scripts/find-icon.mjs copy to clipboard
+node .agents/skills/find-animated-icon/scripts/find-icon.mjs --show copy
+```
+
+The path depends on your agent: Claude Code installs skills to `.claude/skills/`.
+
+## The catalog
+
+The skill reads a JSON index with every icon's name, component, category, keywords, color slots,
+variants, default variant and family. The npm package ships the index that matches its version:
+
+```ts
+import catalog from "@kovenlabs/animated-icons/catalog.json"
+```
+
+The site serves the latest one:
+
+<SiteCode lang="bash" code="curl {site}/icons.json" />

@@ -31,6 +31,7 @@
     "dist",
     "src",
     "registry.json",
+    "catalog.json",
     "LICENSE",
     "STYLE.md",
     "README.md"
@@ -38,6 +39,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./icons/*": "./src/icons/*.tsx",
+    "./catalog.json": "./catalog.json",
     "./package.json": "./package.json"
   },
   "publishConfig": {
@@ -51,6 +53,7 @@
         "types": "./dist/icons/*.d.ts",
         "import": "./dist/icons/*.js"
       },
+      "./catalog.json": "./catalog.json",
       "./package.json": "./package.json"
     }
   },

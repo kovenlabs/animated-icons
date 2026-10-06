@@ -15,6 +15,7 @@ next-env.d.ts
 npm-debug.log*
 pnpm-debug.log*
 apps/web/public/r
+apps/web/public/icons.json
 .pack
 test-results
 playwright-report

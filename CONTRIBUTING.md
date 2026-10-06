@@ -54,7 +54,7 @@ Don't copy its paths: they're curve-based, and ours are drawn from straight segm
 ```bash
 cd packages/animated-icons
 pnpm vitest run tests/icons.test.tsx -t "<name>"   # house style, metadata, corners, rest pose, clip, family
-node scripts/generate.mjs                           # updates src/icons/index.ts and registry.json
+node scripts/generate.mjs                           # updates src/icons/index.ts, registry.json and catalog.json
 
 cd ../..
 pnpm turbo run lint typecheck test build
@@ -69,7 +69,7 @@ will get review comments.
 
 - Run `pnpm changeset`. Choose `minor` for new icons and `patch` for fixes, and describe the change
   for users. Commit the generated file.
-- Commit the icon file(s) with the regenerated `src/icons/index.ts` and `registry.json`.
+- Commit the icon file(s) with the regenerated `src/icons/index.ts`, `registry.json` and `catalog.json`.
 - Use [Conventional Commits](https://www.conventionalcommits.org) messages (`feat(icons): add piggy-bank`).
 - CI runs lint, typecheck, unit tests, build, package checks and the browser motion test. It must be
   green to merge. Releases are automated after merge, see [`RELEASING.md`](RELEASING.md).

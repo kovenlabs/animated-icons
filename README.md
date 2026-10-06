@@ -26,6 +26,15 @@ pnpm add @kovenlabs/animated-icons motion
 
 All the ways, compared: `/docs/installation`.
 
+## For AI agents
+
+A skill teaches your coding agent to pick the icon, variant and trigger for a use case. It searches the
+catalog (`@kovenlabs/animated-icons/catalog.json`, or `/icons.json` on the site):
+
+```bash
+npx skills add kovenlabs/animated-icons --skill find-animated-icon
+```
+
 ## Repo
 
 Turborepo + pnpm.
@@ -35,6 +44,7 @@ Turborepo + pnpm.
 | `packages/animated-icons`    | The library (`@kovenlabs/animated-icons`), its `registry.json` and `STYLE.md` |
 | `apps/web`                   | The site: landing (`/`), catalog (`/icons`), docs (`/docs`, Fumadocs), brand (`/brand`). Serves the registry at `/r/*.json` |
 | `packages/typescript-config` | Shared tsconfig                                                           |
+| `skills/find-animated-icon`  | The agent skill for end users: search the catalog, pick variant and trigger |
 
 ```bash
 pnpm install
