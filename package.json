@@ -9,7 +9,7 @@
     "typecheck": "turbo run typecheck",
     "registry:build": "turbo run registry:build",
     "changeset": "changeset",
-    "version-packages": "changeset version && pnpm install --lockfile-only",
+    "version-packages": "changeset version && pnpm install --lockfile-only && pnpm --filter @kovenlabs/animated-icons generate",
     "release": "pnpm --filter @kovenlabs/animated-icons build && pnpm --filter @kovenlabs/animated-icons check:package && changeset publish"
   },
   "devDependencies": {
