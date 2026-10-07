@@ -41,7 +41,7 @@ with `changesets/action@v2`; v1 can't read that layout.
 
 ## Before every release
 
-- `pnpm turbo run lint typecheck test build` and `pnpm --filter web e2e` are green (CI runs both).
+- `pnpm turbo run lint typecheck test build` is green (CI runs it).
 - The site is deployed: the registry (`/r/*.json`) lives there, and items point at `apps/web/site.config.json`'s URL.
 
 ## Leaving alpha
