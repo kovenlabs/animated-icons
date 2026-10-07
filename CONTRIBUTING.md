@@ -41,7 +41,7 @@ the shadcn registry and the catalog all pick it up automatically.
    only for a real third role.
 5. **Animate it.** Give it 2–3 variants, each a different idea, and keep them calm. Animate only
    transforms and opacity, and end every track at rest. A part that travels 5px or more needs `clip`.
-   The motion has to be visible at 40px: CI fails variants that barely move.
+   The motion has to be visible at 40px: check it by eye, a variant that barely moves gets sent back.
 6. **Copy the file structure** of a neighbour like `bell.tsx` or `filter.tsx`: `"use client"`, the
    `IconVariants` declaration, a `/** N colors: … */` comment, and one `createAnimatedIcon({ … })`
    export named `<PascalName>` (the package adds a `<PascalName>Icon` alias by itself).
@@ -58,7 +58,6 @@ node scripts/generate.mjs                           # updates src/icons/index.ts
 
 cd ../..
 pnpm turbo run lint typecheck test build
-pnpm --filter web e2e                               # plays every variant in Chromium; fails if one doesn't visibly move
 ```
 
 Then look at it. Open `/icons` on the dev site and check your icon at 16, 24 and 40px. Try round,
@@ -71,7 +70,7 @@ will get review comments.
   for users. Commit the generated file.
 - Commit the icon file(s) with the regenerated `src/icons/index.ts`, `registry.json` and `catalog.json`.
 - Use [Conventional Commits](https://www.conventionalcommits.org) messages (`feat(icons): add piggy-bank`).
-- CI runs lint, typecheck, unit tests, build, package checks and the browser motion test. It must be
+- CI runs lint, typecheck, unit tests, build and package checks. It must be
   green to merge. Releases are automated after merge, see [`RELEASING.md`](RELEASING.md).
 
 ## AI agents

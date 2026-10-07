@@ -126,6 +126,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* animated icons: dark chart-1 is a deep blue that sinks into the background, so keep light mode's orange and teal, lifted for contrast */
+  --icon-secondary: oklch(0.72 0.13 184.704);
+  --icon-accent: oklch(0.75 0.19 41.116);
 }
 
 @layer base {

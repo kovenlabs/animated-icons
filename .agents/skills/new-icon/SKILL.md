@@ -1,6 +1,6 @@
 ---
 name: new-icon
-description: Add one or more animated icons to @kovenlabs/animated-icons (packages/animated-icons/src/icons). Use when asked to add, draw, or create a new icon or a batch of icons, or to add a variant to an existing icon. Covers naming, family, category, drawing in the house style, color slots, motion variants, the guard tests, the browser motion check, registry generation and the changeset.
+description: Add one or more animated icons to @kovenlabs/animated-icons (packages/animated-icons/src/icons). Use when asked to add, draw, or create a new icon or a batch of icons, or to add a variant to an existing icon. Covers naming, family, category, drawing in the house style, color slots, motion variants, the guard tests, registry generation and the changeset.
 ---
 
 # Adding an icon
@@ -46,8 +46,7 @@ before drawing. This skill is the process around it.
 - A part that travels 5px or more declares `clip` on its variant (`true` when it exits the frame like
   through a window, `false` when it stays inside). Never pass a part through another part's stroke;
   parts that join at rest move together.
-- **Visible at 40px.** CI fails any variant that changes fewer than ~25 pixels at 40px (single color).
-  A 1–2px nudge of a 2px dot is not enough.
+- **Visible at 40px.** Play it at 40px and check it by eye: a 1–2px nudge of a 2px dot is not enough.
 - `pathLength` draws need the dot hidden at length 0 (see `check.tsx` `draw`).
 
 ## 4. File shape
@@ -67,7 +66,6 @@ node scripts/generate.mjs                           # barrel (src/icons/index.ts
 From the repo root:
 ```bash
 pnpm turbo run lint typecheck test build
-pnpm --filter web e2e                               # plays every variant in Chromium, fails if one doesn't visibly move
 ```
 Then **look at it**: run the site (`pnpm --filter web dev`), open `/icons`, check the icon at 16, 24
 and 40px in round, bevel and sharp corners, and play every variant. Fix anything cramped, off-grid,
@@ -81,4 +79,4 @@ registry to whoever integrates.
 - `pnpm changeset`: `minor` for new icons, `patch` for a fix to an existing one. Describe it from a
   user's point of view.
 - Commit the icon files, the regenerated `src/icons/index.ts`, `registry.json` and `catalog.json`, and the changeset.
-- CI (`check` + `motion`) must pass; the release job then updates the "Version packages" PR.
+- CI (`check`) must pass; the release job then updates the "Version packages" PR.

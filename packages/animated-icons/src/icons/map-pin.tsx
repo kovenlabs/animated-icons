@@ -31,6 +31,7 @@ const RING_PIVOT = `50% ${fmt((RING_R / (RY - (HEAD.cy - RING_R))) * 100)}%`
 /** 2 colors: pin (primary), dot and ping (accent). */
 export const MapPin = createAnimatedIcon({
   name: "map-pin",
+  family: "map",
   category: "navigation",
   keywords: ["location", "place", "marker", "address", "map", "gps", "destination"],
   slots: { primary: "pin", accent: "dot + ping" },

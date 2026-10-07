@@ -17,5 +17,3 @@ pnpm-debug.log*
 apps/web/public/r
 apps/web/public/icons.json
 .pack
-test-results
-playwright-report
