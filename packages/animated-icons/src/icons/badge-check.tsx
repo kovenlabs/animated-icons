@@ -2,6 +2,7 @@
 
 import { createAnimatedIcon } from "../lib/create-icon"
 import { pivot, slot } from "../lib/motion"
+import { ROSETTE } from "../lib/parts"
 
 declare module "../lib/types" {
   interface IconVariants {
@@ -9,16 +10,10 @@ declare module "../lib/types" {
   }
 }
 
-/**
- * A faceted rosette: eight points on a radius-10 circle, notched 2px in between (radius 8), so it reads
- * as the scalloped seal at any corner style.
- */
-const BADGE =
-  "M12 2 15.061 4.609 19.071 4.929 19.391 8.939 22 12 19.391 15.061 19.071 19.071 15.061 19.391 12 22 8.939 19.391 4.929 19.071 4.609 15.061 2 12 4.609 8.939 4.929 4.929 8.939 4.609Z"
-
 /** 2 colors: badge (primary), check (accent). */
 export const BadgeCheck = createAnimatedIcon({
   name: "badge-check",
+  family: "badge",
   category: "status",
   keywords: ["verified", "approved", "certified", "official", "trusted", "seal", "quality"],
   slots: { primary: "badge", accent: "check" },
@@ -70,7 +65,7 @@ export const BadgeCheck = createAnimatedIcon({
   },
   render: () => (
     <g data-part="seal" style={pivot("50% 50%")}>
-      <path data-part="badge" d={BADGE} style={pivot("50% 50%")} />
+      <path data-part="badge" d={ROSETTE} style={pivot("50% 50%")} />
       {/* the circle-check tick: a short 45° leg, a longer steeper one */}
       <path data-part="check" d="M8 12l3 3 5-6" stroke={slot.accent} style={pivot("40% 100%")} />
     </g>

@@ -12,6 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: door frame (primary), arrow (accent). */
 export const LogOut = createAnimatedIcon({
   name: "log-out",
+  family: "log",
   category: "navigation",
   keywords: ["sign out", "logout", "exit", "leave", "quit", "disconnect"],
   slots: { primary: "door frame", accent: "arrow" },

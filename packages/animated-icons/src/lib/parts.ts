@@ -33,5 +33,12 @@ export const badgeGlyph = {
   x: (cx: number = BADGE.cx, cy: number = BADGE.cy) => `M${cx - 2.5} ${cy - 2.5}l5 5M${cx + 2.5} ${cy - 2.5}l-5 5`,
 }
 
+/**
+ * A faceted rosette filling the frame: eight points on a radius-10 circle, notched 2px in between (radius 8),
+ * so it reads as the scalloped seal at any corner style. The `badge-*` icons are drawn on it.
+ */
+export const ROSETTE =
+  "M12 2 15.061 4.609 19.071 4.929 19.391 8.939 22 12 19.391 15.061 19.071 19.071 15.061 19.391 12 22 8.939 19.391 4.929 19.071 4.609 15.061 2 12 4.609 8.939 4.929 4.929 8.939 4.609Z"
+
 /** A diagonal slash across the whole icon, for "off" states. */
 export const SLASH = "M3 3l18 18"
