@@ -36,6 +36,16 @@ export const ease = {
   inOut: [0.65, 0, 0.35, 1],
 } as const satisfies Record<string, readonly [number, number, number, number]>
 
+/**
+ * Easing for a snap-back segment: holds the previous keyframe and jumps to the next only at the
+ * segment's very end, so no in-between pose is ever drawn. Being a function, it also keeps the track
+ * on motion's frame loop (WAAPI can't run it), so every track that snaps lands on the same frame;
+ * a WAAPI opacity track would otherwise start blending a frame or two before a frame-loop transform
+ * snaps, and the icon flickers as it finishes. Use it for the last segment of a loop whose end pose
+ * looks like rest: `times: [0, 0.999, 1], ease: ["easeInOut", snap]`.
+ */
+export const snap = (progress: number) => (progress < 1 ? 0 : 1)
+
 /** Evenly spaced points on a circle, for particle bursts. */
 export function radial(count: number, distance: number, offsetDeg = 0) {
   return Array.from({ length: count }, (_, i) => {

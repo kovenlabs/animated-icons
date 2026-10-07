@@ -1,7 +1,7 @@
 "use client"
 
 import { createAnimatedIcon } from "../lib/create-icon"
-import { ease, pivot, slot } from "../lib/motion"
+import { ease, pivot, slot, snap } from "../lib/motion"
 
 declare module "../lib/types" {
   interface IconVariants {
@@ -24,7 +24,7 @@ export const Percent = createAnimatedIcon({
         animate(
           "[data-part=percent]",
           { rotate: [0, 180, 0] },
-          { duration: seconds, times: [0, 0.999, 1], ease: ["easeInOut", "linear"] },
+          { duration: seconds, times: [0, 0.999, 1], ease: ["easeInOut", snap] },
         ),
     },
     // the dots pop back in, one after the other

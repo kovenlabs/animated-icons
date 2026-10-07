@@ -1,7 +1,7 @@
 "use client"
 
 import { createAnimatedIcon } from "../lib/create-icon"
-import { ease, flash, pivot, slot } from "../lib/motion"
+import { ease, flash, pivot, slot, snap } from "../lib/motion"
 
 declare module "../lib/types" {
   interface IconVariants {
@@ -62,9 +62,14 @@ export const List = createAnimatedIcon({
       clip: true,
       duration: 900,
       run: ({ animate, seconds }) => {
-        // slide down a slot, hold, then snap back on the last frame
+        // slide down a slot, hold, then snap back on the last frame: `snap` keeps every track on one
+        // frame loop, so the fades can't start blending before the rows jump home
         const shift = [0, ROW_GAP, ROW_GAP, 0]
-        const options = { duration: seconds, times: [0, 0.75, 0.999, 1], ease: "easeInOut" as const }
+        const options = {
+          duration: seconds,
+          times: [0, 0.75, 0.999, 1],
+          ease: ["easeInOut" as const, "linear" as const, snap],
+        }
         return Promise.all([
           animate("[data-part=row-0], [data-part=row-1]", { y: shift }, options),
           animate("[data-part=row-2]", { y: shift, opacity: [1, 0, 0, 1] }, options),
