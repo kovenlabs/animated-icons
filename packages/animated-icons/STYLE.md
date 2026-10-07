@@ -37,6 +37,11 @@ enforces the mechanical ones on every file in `src/icons/` automatically.
   at rest too; an arrival (a badge popping in from `scale: 0`, a tick drawing on) may start from its
   entrance pose. Accents that only exist in motion use `style={flash()}` and the `blink` keyframes,
   and end invisible.
+- **Snap back with `snap`.** A loop whose end pose only *looks* like rest (a list shifted a slot, a
+  half-turned symmetric sign) returns to rest in a last, near-zero segment: `times: [..., 0.999, 1]`
+  with `ease: [..., snap]` on every track that jumps. Never `"linear"` there: a frame that lands inside
+  the segment draws a half-way pose, and an opacity track run by WAAPI starts blending a frame or two
+  before a transform track snaps, so the icon flickers as it finishes.
 - **Square caps paint a dot at `pathLength: 0`.** When a stroke draws on, hide it with `opacity` until
   it starts moving (see `check.tsx` `draw`).
 - Pivot with `pivot("x% y%")` relative to the part's own box (a swinging part pivots at its hinge).

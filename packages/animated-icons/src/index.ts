@@ -1,7 +1,7 @@
 export { AnimatedIconsProvider, useIconConfig } from "./lib/context"
 export type { AnimatedIconsProviderProps } from "./lib/context"
 export { createAnimatedIcon } from "./lib/create-icon"
-export { blink, ease, flash, pivot, radial, slot } from "./lib/motion"
+export { blink, ease, flash, pivot, radial, slot, snap } from "./lib/motion"
 export { BADGE, SLASH, badgeGlyph, bubble, dots } from "./lib/parts"
 export { rectPath, roundPath } from "./lib/round"
 export { useShapedDrawing } from "./lib/shape"

@@ -31,6 +31,24 @@ export function fromCurrent(keyframes: Keyframes): Keyframes {
   )
 }
 
+/**
+ * One easing per keyframe segment. motion runs some values (opacity) on WAAPI and others (SVG transforms,
+ * `pathLength`) on its frame loop. Given `times` and a single `ease`, WAAPI applies that ease to the whole
+ * animation while the frame loop applies it to every segment, so two tracks keyed to the same `times`
+ * drift apart: a line flashes back at full length before it redraws, an arrow is still visible as it
+ * jumps across the frame. Expanding the ease to one per segment makes WAAPI ease each segment too, like
+ * the frame loop and like `times` means. A missing ease becomes motion's keyframe default, `easeInOut`.
+ */
+export function perSegmentEase(keyframes: Keyframes, transition: unknown): unknown {
+  const segments = Math.max(0, ...Object.values(keyframes).map((value) => (Array.isArray(value) ? value.length - 1 : 0)))
+  if (segments < 2) return transition
+  const options = (transition ?? {}) as Record<string, unknown>
+  const { ease } = options
+  // an array of easings is already per segment; a cubic-bezier (four numbers) is one easing
+  if (Array.isArray(ease) && !ease.every((n) => typeof n === "number")) return transition
+  return { ...options, ease: Array.from({ length: segments }, () => ease ?? "easeInOut") }
+}
+
 /** Where a finished cycle leaves each property: its last keyframe. */
 export function restingPose(keyframes: Keyframes): Keyframes {
   return Object.fromEntries(
@@ -172,7 +190,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
                 ? fromCurrent(withPathSpacing(keyframes))
                 : copyKeyframes(withPathSpacing(keyframes))
               : keyframes
-            const controls = animateAny(target, next, transition)
+            const controls = animateAny(target, next, isKeyframes(next) ? perSegmentEase(next, transition) : transition)
             cycle.controls.push(controls)
             return controls
           }) as typeof animate

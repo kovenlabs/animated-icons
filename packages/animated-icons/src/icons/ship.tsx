@@ -3,7 +3,7 @@
 import { useId } from "react"
 
 import { createAnimatedIcon } from "../lib/create-icon"
-import { pivot, slot } from "../lib/motion"
+import { pivot, slot, snap } from "../lib/motion"
 import { useShapedDrawing } from "../lib/shape"
 
 declare module "../lib/types" {
@@ -68,7 +68,7 @@ export const Ship = createAnimatedIcon({
           animate(
             "[data-part=waves]",
             { x: [0, -2 * PERIOD, 0] },
-            { duration: seconds, times: [0, 0.995, 1], ease: ["easeInOut", "linear"] },
+            { duration: seconds, times: [0, 0.995, 1], ease: ["easeInOut", snap] },
           ),
         ]),
     },

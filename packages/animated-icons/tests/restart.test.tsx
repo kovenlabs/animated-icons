@@ -68,8 +68,10 @@ describe("re-triggering mid-animation", () => {
     await flush()
 
     expect(stopSpy).toHaveBeenCalledTimes(1)
-    expect(animateSpy).toHaveBeenNthCalledWith(1, "[data-part=a]", { rotate: [0, 30, 0] }, undefined)
-    expect(animateSpy).toHaveBeenNthCalledWith(2, "[data-part=a]", { rotate: [null, 30, 0] }, undefined)
+    // two segments: the ease is spelled out per segment (`perSegmentEase`), motion's own default
+    const ease = { ease: ["easeInOut", "easeInOut"] }
+    expect(animateSpy).toHaveBeenNthCalledWith(1, "[data-part=a]", { rotate: [0, 30, 0] }, ease)
+    expect(animateSpy).toHaveBeenNthCalledWith(2, "[data-part=a]", { rotate: [null, 30, 0] }, ease)
   })
 
   it("settles the old variant's parts at rest when a restart switches variant", async () => {
@@ -84,7 +86,7 @@ describe("re-triggering mid-animation", () => {
     await flush()
 
     expect(animateSpy).toHaveBeenCalledWith("[data-part=a]", { rotate: 0 }, { duration: 0 })
-    expect(animateSpy).toHaveBeenLastCalledWith("[data-part=b]", { y: [null, 4, 0] }, undefined)
+    expect(animateSpy).toHaveBeenLastCalledWith("[data-part=b]", { y: [null, 4, 0] }, { ease: ["easeInOut", "easeInOut"] })
   })
 
   it("keeps an auto icon alive through StrictMode's simulated unmount", async () => {
