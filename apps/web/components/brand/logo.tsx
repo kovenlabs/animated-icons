@@ -2,11 +2,11 @@
 
 // The product's mark, built with the library's own factory: the logo is the product working.
 // The static SVGs (favicons, README) are generated from this geometry: scripts/build-brand.mts
-import { createAnimatedIcon, ease, pivot, slot } from "@kovenlabs/animated-icons"
+import { createAnimatedIcon, ease, pivot, slot, type AnimatedIconProps } from "@kovenlabs/animated-icons"
 import { stagger } from "motion/react"
 
 /** Fixed brand colors: the identity doesn't follow the theme's accent. Defined in globals.css. */
-export const BRAND_COLORS = { secondary: "brand-trail", accent: "brand-accent" } as const
+export const BRAND_COLORS = { primary: "foreground", secondary: "brand-trail", accent: "brand-accent" } as const
 
 /**
  * Escape: the canvas leaves its top-right corner open, the set's badge idiom, and the accent badge
@@ -29,7 +29,11 @@ export const LogoMark = createAnimatedIcon({
             { x: [-9, 0], y: [9, 0], opacity: [0, 1], scale: [0.6, 1] },
             { duration: seconds * 0.6, ease: ease.overshoot },
           ),
-          animate("[data-part=trail]", { opacity: [1, 0.2, 1] }, { duration: seconds * 0.55, delay: stagger(seconds * 0.12) }),
+          animate(
+            "[data-part=trail]",
+            { opacity: [1, 0.2, 1] },
+            { duration: seconds * 0.55, delay: stagger(seconds * 0.12) },
+          ),
         ]),
     },
     // a quarter turn and a pop (a square looks the same a quarter turn back)
@@ -59,3 +63,11 @@ export const LogoMark = createAnimatedIcon({
     </>
   ),
 })
+
+/**
+ * The mark as the identity: drawn the brand's way whatever icon style the visitor picked for the site.
+ * Pass `colors` for the one-color versions.
+ */
+export function BrandMark(props: AnimatedIconProps<"launch" | "pop">) {
+  return <LogoMark colors={BRAND_COLORS} corners="round" cornerRadius={2} strokeWidth={2} speed={1} {...props} />
+}

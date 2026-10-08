@@ -1,13 +1,15 @@
 import Link from "next/link"
 
-import { BRAND_COLORS, LogoMark } from "./brand/logo"
+import { GITHUB_URL } from "@/lib/site"
+
+import { BRAND_COLORS, BrandMark } from "./brand/logo"
 
 export function SiteFooter() {
   return (
     <footer className="border-t">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div className="flex items-center gap-3">
-          <LogoMark size={20} colors={BRAND_COLORS} />
+          <BrandMark size={20} colors={BRAND_COLORS} />
           <span className="text-sm text-muted-foreground">
             Animated Icons · MIT · built with the library it ships
           </span>
@@ -22,7 +24,7 @@ export function SiteFooter() {
           <Link href="/brand" className="hover:text-foreground">
             Brand
           </Link>
-          <a href="https://github.com/kovenlabs/animated-icons" className="hover:text-foreground">
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
             GitHub
           </a>
         </nav>

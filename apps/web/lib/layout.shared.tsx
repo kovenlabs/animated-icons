@@ -4,7 +4,7 @@ import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared"
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: <span className="font-mono text-sm">docs</span>,
+      title: <span className="dot-headline text-xl">docs</span>,
     },
     // the site header has the theme toggle
     themeSwitch: { enabled: false },

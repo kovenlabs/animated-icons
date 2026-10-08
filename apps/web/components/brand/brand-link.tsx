@@ -4,7 +4,7 @@ import type { AnimatedIconHandle } from "@kovenlabs/animated-icons"
 import Link from "next/link"
 import { useRef } from "react"
 
-import { BRAND_COLORS, LogoMark } from "./logo"
+import { BRAND_COLORS, BrandMark } from "./logo"
 
 /** The header lockup: hovering the whole link (mark + name) launches the badge. */
 export function BrandLink() {
@@ -13,9 +13,9 @@ export function BrandLink() {
     <Link
       href="/"
       onPointerEnter={() => void mark.current?.play()}
-      className="flex items-center gap-2.5 font-semibold tracking-tight"
+      className="flex shrink-0 items-center gap-2.5 font-semibold tracking-tight whitespace-nowrap"
     >
-      <LogoMark ref={mark} trigger="manual" size={24} colors={BRAND_COLORS} aria-label="Animated Icons logo" />
+      <BrandMark ref={mark} trigger="manual" size={24} colors={BRAND_COLORS} aria-label="Animated Icons logo" />
       Animated Icons
     </Link>
   )

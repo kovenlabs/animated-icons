@@ -88,10 +88,14 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* animated icons: the three slots, piped from shadcn tokens */
-  --icon-primary: var(--foreground);
-  --icon-secondary: var(--chart-2);
-  --icon-accent: var(--chart-1);
+  /* animated icons: the three slots, piped from shadcn tokens. The site-wide icon style overrides
+     --icon-* on <html>; --theme-icon-* keep the theme's own values for the "Theme" palette swatch. */
+  --theme-icon-primary: var(--foreground);
+  --theme-icon-secondary: var(--chart-2);
+  --theme-icon-accent: var(--chart-1);
+  --icon-primary: var(--theme-icon-primary);
+  --icon-secondary: var(--theme-icon-secondary);
+  --icon-accent: var(--theme-icon-accent);
 }
 
 .dark {
@@ -128,8 +132,8 @@
   --sidebar-ring: oklch(0.556 0 0);
 
   /* animated icons: dark chart-1 is a deep blue that sinks into the background, so keep light mode's orange and teal, lifted for contrast */
-  --icon-secondary: oklch(0.72 0.13 184.704);
-  --icon-accent: oklch(0.75 0.19 41.116);
+  --theme-icon-secondary: oklch(0.72 0.13 184.704);
+  --theme-icon-accent: oklch(0.75 0.19 41.116);
 }
 
 @layer base {
@@ -165,4 +169,59 @@
 :root {
   --brand-accent: #2563eb;
   --brand-trail: #10b981;
+  /* landing: construction lines, drawn in the brand blue like a drafting sheet */
+  --keyline: var(--brand-accent);
+  --grid-line: color-mix(in oklch, var(--brand-accent) 11%, transparent);
+}
+.dark {
+  --keyline: #60a5fa;
+  --grid-line: color-mix(in oklch, #60a5fa 13%, transparent);
+}
+
+/* landing headline: Doto's dots follow the page's corners control through --rond (0 square, 100 round) */
+.dot-headline {
+  font-family: var(--font-doto);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  font-variation-settings: "ROND" var(--rond, 75);
+  transition: font-variation-settings 450ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot-headline {
+    transition: none;
+  }
+}
+
+/* a drafting stage: the same faint blue grid as the specimen, at icon scale */
+.drafting {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 12px 12px;
+  background-position: center;
+}
+
+/* docs: links and the active page in the keyline blue, the active page marked like a ruler tick */
+.docs-shell {
+  --color-fd-primary: var(--keyline);
+}
+/* the sidebar sits on the page itself, no gray panel; the active page is a blue tick and bold text, no fill */
+.docs-shell #nd-sidebar {
+  background: var(--background);
+}
+.docs-shell #nd-sidebar a[data-active] {
+  border-radius: 0;
+}
+.docs-shell #nd-sidebar a[data-active="true"] {
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  box-shadow: inset 2px 0 0 var(--keyline);
+}
+.docs-shell #nd-sidebar a[data-active="false"]:hover {
+  background: transparent;
+  color: var(--foreground);
+}
+.docs-shell .prose a:not([data-card]) {
+  text-decoration-color: color-mix(in oklch, var(--keyline) 60%, transparent);
 }

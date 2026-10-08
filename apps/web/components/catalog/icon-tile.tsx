@@ -4,6 +4,7 @@ import type { AnimatedIconHandle, Trigger } from "@kovenlabs/animated-icons"
 import { useEffect, useRef } from "react"
 
 import type { CatalogIcon } from "@/lib/catalog"
+import { cn } from "@/lib/utils"
 
 /**
  * A grid cell. Hover-driven icons play when the whole tile is hovered, not just the glyph;
@@ -14,12 +15,14 @@ export function IconTile({
   variant,
   size,
   trigger,
+  selected,
   onOpen,
 }: {
   icon: CatalogIcon
   variant: string
   size: number
   trigger: Trigger | "default"
+  selected: boolean
   onOpen: () => void
 }) {
   const ref = useRef<AnimatedIconHandle>(null)
@@ -40,7 +43,11 @@ export function IconTile({
       type="button"
       onClick={onOpen}
       onPointerEnter={() => hoverDriven && void ref.current?.play()}
-      className="group relative -mt-px -ml-px flex aspect-square flex-col items-center justify-center gap-2 border bg-background p-3 outline-none transition-colors hover:bg-muted focus-visible:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      aria-pressed={selected}
+      className={cn(
+        "group relative -mt-px -ml-px flex aspect-square border flex-col items-center justify-center gap-2 bg-background p-3 outline-none transition-colors hover:bg-muted focus-visible:bg-muted focus-visible:ring-2 focus-visible:ring-[var(--keyline)] focus-visible:ring-inset",
+        selected && "drafting bg-background ring-2 ring-[var(--keyline)] ring-inset hover:bg-background",
+      )}
     >
       <span className="flex flex-1 items-center justify-center">
         <Icon
@@ -51,7 +58,12 @@ export function IconTile({
           trigger={hoverDriven ? "manual" : trigger === "default" ? undefined : trigger}
         />
       </span>
-      <span className="w-full truncate text-center font-mono text-[11px] text-muted-foreground group-hover:text-foreground">
+      <span
+        className={cn(
+          "w-full truncate text-center text-xs text-muted-foreground group-hover:text-foreground",
+          selected && "text-foreground",
+        )}
+      >
         {Icon.meta.name}
       </span>
     </button>

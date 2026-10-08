@@ -1,7 +1,9 @@
-import { Features } from "@/components/landing/features"
 import { Hero } from "@/components/landing/hero"
 import { IconWall } from "@/components/landing/icon-wall"
-import { OwnIt } from "@/components/landing/own-it"
+import { Install } from "@/components/landing/install"
+import { ProjectStatus } from "@/components/landing/project-status"
+import { Triggers } from "@/components/landing/triggers"
+import { TuningBar } from "@/components/landing/tuning-bar"
 import { SiteFooter } from "@/components/site-footer"
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/seo"
 import { GITHUB_URL, SITE_URL } from "@/lib/site"
@@ -28,10 +30,11 @@ export default function LandingPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="flex flex-col">
-        <Hero />
-        <IconWall />
-        <Features />
-        <OwnIt />
+          <Hero status={<ProjectStatus />} />
+          <TuningBar />
+          <IconWall />
+          <Triggers />
+        <Install />
       </main>
       <SiteFooter />
     </>

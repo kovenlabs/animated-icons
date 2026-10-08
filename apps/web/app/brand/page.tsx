@@ -3,7 +3,7 @@
 import type { AnimatedIconHandle } from "@kovenlabs/animated-icons"
 import { useRef } from "react"
 
-import { BRAND_COLORS, LogoMark } from "@/components/brand/logo"
+import { BRAND_COLORS, BrandMark } from "@/components/brand/logo"
 import { CopyButton } from "@/components/catalog/copy-button"
 import { Button } from "@/components/ui/button"
 
@@ -30,7 +30,7 @@ export default function BrandPage() {
 
       <section className="grid gap-px border bg-border md:grid-cols-[2fr_1fr]">
         <div className="icon-stage relative flex aspect-[4/3] items-center justify-center bg-background">
-          <LogoMark ref={hero} size={200} colors={BRAND_COLORS} trigger="hover" aria-label="Animated Icons logo" />
+          <BrandMark ref={hero} size={200} colors={BRAND_COLORS} trigger="hover" aria-label="Animated Icons logo" />
           <div className="absolute right-3 bottom-3 flex gap-2">
             <Button variant="outline" size="sm" onClick={() => void hero.current?.play()}>
               Launch
@@ -43,7 +43,7 @@ export default function BrandPage() {
             <div className="flex items-end gap-5">
               {[64, 32, 24, 16].map((size) => (
                 <div key={size} className="flex flex-col items-center gap-1">
-                  <LogoMark size={size} colors={BRAND_COLORS} />
+                  <BrandMark size={size} colors={BRAND_COLORS} />
                   <span className="font-mono text-[10px] text-muted-foreground">{size}</span>
                 </div>
               ))}
@@ -53,10 +53,10 @@ export default function BrandPage() {
             <h2 className="text-sm font-semibold">Mono &amp; favicon</h2>
             <div className="flex items-center gap-3">
               <span className="flex size-12 items-center justify-center border">
-                <LogoMark size={28} colors={{ primary: "foreground" }} />
+                <BrandMark size={28} colors={{ primary: "foreground" }} />
               </span>
               <span className="flex size-12 items-center justify-center bg-foreground">
-                <LogoMark size={28} colors={{ primary: "background" }} />
+                <BrandMark size={28} colors={{ primary: "background" }} />
               </span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/icon.svg" alt="Favicon" className="size-12" />
@@ -92,7 +92,7 @@ export default function BrandPage() {
           </a>
           <CopyButton
             label="React usage"
-            text={`import { LogoMark } from "@/components/brand/logo"\n\n<LogoMark colors={BRAND_COLORS} />`}
+            text={`import { BrandMark } from "@/components/brand/logo"\n\n<BrandMark />`}
           />
         </div>
       </section>

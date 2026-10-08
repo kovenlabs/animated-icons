@@ -8,7 +8,8 @@ import {
   ViewOptionsPopover,
 } from 'fumadocs-ui/layouts/docs/page';
 import { notFound } from 'next/navigation';
-import { getMDXComponents } from '@/components/mdx';
+import { ExternalAwareLink, getMDXComponents } from '@/components/mdx';
+import { PageMark } from '@/components/docs/page-mark';
 import type { Metadata } from 'next';
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/seo';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
@@ -24,20 +25,26 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
-      <div className="flex flex-row gap-2 items-center border-b pb-6">
-        <MarkdownCopyButton markdownUrl={markdownUrl} />
-        <ViewOptionsPopover
-          markdownUrl={markdownUrl}
-          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/apps/web/content/docs/${page.path}`}
-        />
-      </div>
+      {/* the page header is a drawing board: the title in dot-matrix, the page's icon on its grid */}
+      <header className="drafting flex items-end gap-6 border p-5 sm:p-6">
+        <div className="flex min-w-0 flex-1 flex-col gap-3">
+          <DocsTitle className="dot-headline text-5xl! leading-none sm:text-6xl!">{page.data.title}</DocsTitle>
+          <DocsDescription className="mb-0 text-base text-pretty">{page.data.description}</DocsDescription>
+          <div className="flex flex-row flex-wrap items-center gap-2 pt-1">
+            <MarkdownCopyButton markdownUrl={markdownUrl} />
+            <ViewOptionsPopover
+              markdownUrl={markdownUrl}
+              githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/apps/web/content/docs/${page.path}`}
+            />
+          </div>
+        </div>
+        <PageMark icon={page.data.icon} />
+      </header>
       <DocsBody>
         <MDX
           components={getMDXComponents({
             // this allows you to link to other pages with relative file paths
-            a: createRelativeLink(source, page),
+            a: createRelativeLink(source, page, ExternalAwareLink),
           })}
         />
       </DocsBody>

@@ -10,7 +10,7 @@ const belowSiteHeader = { "--fd-banner-height": "3.5rem" } as CSSProperties
 
 export default function Layout({ children }: LayoutProps<"/docs">) {
   return (
-    <div style={belowSiteHeader}>
+    <div style={belowSiteHeader} className="docs-shell">
       <DocsLayout tree={source.getPageTree()} {...baseOptions()}>
         {children}
       </DocsLayout>
