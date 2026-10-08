@@ -25,3 +25,9 @@ export const aliasWrongVariant = <BellIcon variant="typing" />
 // size is a global/per-icon setting, but an icon's own defaults can't carry it
 defineIconConfig({ size: 20, icons: { bell: { size: "1.25em" } } })
 export const sized = <Bell size={16} />
+
+// strokeWidth works like size: global, per-icon and per-instance, in grid units (a number)
+defineIconConfig({ strokeWidth: 1.5, icons: { bell: { strokeWidth: 2.5 } } })
+export const weighted = <Bell strokeWidth={1} />
+// @ts-expect-error a number in grid units, not a CSS length
+export const lengthStroke = <Bell strokeWidth="1px" />

@@ -17,13 +17,16 @@ export const Bold = createAnimatedIcon({
   slots: { primary: "letter" },
   defaultVariant: "thicken",
   variants: {
-    // the letter swells to a heavier weight, holds, and slims back to its regular stroke
+    // the letter swells to a heavier weight, holds, and slims back to its regular stroke (whatever width it's set to)
     thicken: {
       duration: 800,
-      run: ({ animate, seconds }) =>
+      run: ({ animate, seconds, strokeWidth }) =>
         animate(
           "[data-part=letter]",
-          { strokeWidth: [2, 3.25, 3.25, 2], scale: [1, 1.06, 1.06, 1] },
+          {
+            strokeWidth: [strokeWidth, strokeWidth * 1.625, strokeWidth * 1.625, strokeWidth],
+            scale: [1, 1.06, 1.06, 1],
+          },
           { duration: seconds, times: [0, 0.35, 0.6, 1], ease: ["easeOut", "linear", "easeInOut"] },
         ),
     },

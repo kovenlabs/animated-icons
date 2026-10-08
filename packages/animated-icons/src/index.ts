@@ -16,6 +16,7 @@ export type {
   IconColors,
   IconCategory,
   IconConfig,
+  IconDefaults,
   IconDefinition,
   IconMeta,
   IconName,

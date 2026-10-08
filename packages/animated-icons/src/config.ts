@@ -25,6 +25,8 @@ export default defineIconConfig({
   cornerRadius: 2,
   // the icon box: px as a number or any CSS length ("1.25em"); a className size still wins
   size: 24,
+  // stroke width in grid units (the drawing is 24 wide), so it scales with size
+  strokeWidth: 2,
   // Per-icon overrides. They beat each icon's own defaults (the loader loops,
   // the message bubble types while in view...) and lose only to props.
   icons: {

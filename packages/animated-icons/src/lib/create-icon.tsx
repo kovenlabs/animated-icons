@@ -127,6 +127,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
     animate: controlled,
     colors,
     size,
+    strokeWidth,
     ref,
     style,
     onPointerEnter,
@@ -143,6 +144,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
       corners,
       cornerRadius,
       size,
+      strokeWidth,
       duration,
     })
 
@@ -195,7 +197,11 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
             return controls
           }) as typeof animate
 
-          return definition.variants[options.variant as V].run({ animate: tracked, seconds: options.duration / 1000 })
+          return definition.variants[options.variant as V].run({
+            animate: tracked,
+            seconds: options.duration / 1000,
+            strokeWidth: options.strokeWidth,
+          })
         },
         // stop() commits each value where it is, so the restart picks up from there
         interrupt: () => inFlight.current?.controls.forEach((controls) => controls.stop()),
@@ -233,7 +239,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
           viewBox="0 0 24 24"
           fill="none"
           stroke={slot.primary}
-          strokeWidth={2}
+          strokeWidth={options.strokeWidth}
           // drawings are sharp by design; `corners` softens them by changing how strokes end and meet
           strokeLinecap={STROKE[options.corners].cap}
           strokeLinejoin={STROKE[options.corners].join}

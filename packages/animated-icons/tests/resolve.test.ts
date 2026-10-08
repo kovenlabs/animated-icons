@@ -40,6 +40,7 @@ describe("resolveIconOptions", () => {
       corners: "round",
       cornerRadius: 2,
       size: 24,
+      strokeWidth: 2,
       variant: "ring",
       duration: 600,
     })
@@ -91,6 +92,27 @@ describe("resolveIconOptions", () => {
   it("prefers per-icon speed over global speed", () => {
     const config = mergeConfig(root, { speed: 2, icons: { bell: { speed: 0.5 } } })
     expect(resolveIconOptions(bell, config, {}).duration).toBe(1200)
+  })
+
+  it("resolves strokeWidth like size: props > per-icon > global > built-in 2", () => {
+    const global = mergeConfig(root, { strokeWidth: 1.5 })
+    expect(resolveIconOptions(bell, global, {}).strokeWidth).toBe(1.5)
+    const perIcon = mergeConfig(global, { icons: { bell: { strokeWidth: 2.5 } } })
+    expect(resolveIconOptions(bell, perIcon, {}).strokeWidth).toBe(2.5)
+    expect(resolveIconOptions(bell, perIcon, { strokeWidth: 1 }).strokeWidth).toBe(1)
+  })
+
+  it("ignores a zero, negative or non-finite strokeWidth and falls through to the next level", () => {
+    const global = mergeConfig(root, { strokeWidth: 1.5 })
+    expect(resolveIconOptions(bell, global, { strokeWidth: 0 }).strokeWidth).toBe(1.5)
+    expect(resolveIconOptions(bell, global, { strokeWidth: -1 }).strokeWidth).toBe(1.5)
+    const broken = mergeConfig(root, { strokeWidth: Number.NaN, icons: { bell: { strokeWidth: Infinity } } })
+    expect(resolveIconOptions(bell, broken, {}).strokeWidth).toBe(2)
+  })
+
+  it("never takes strokeWidth from an icon's own defaults", () => {
+    const heavy = { ...bell, defaults: { strokeWidth: 4 } as never }
+    expect(resolveIconOptions(heavy, root, {}).strokeWidth).toBe(2)
   })
 
   it("takes the variant from config, and falls back to the default for unknown names", () => {

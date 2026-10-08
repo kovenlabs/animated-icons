@@ -1,6 +1,7 @@
 ---
 title: Usage
 description: Variants, triggers, timing and imperative control.
+icon: mouse-pointer-click
 ---
 
 ## Props
@@ -18,11 +19,14 @@ description: Variants, triggers, timing and imperative control.
 | `corners`       | `"round" \| "bevel" \| "sharp"`                        | `"round"`       | Corner geometry, see below                               |
 | `cornerRadius`  | `number`                                               | `2`             | How far each corner reaches, in grid units               |
 | `size`          | `number \| string`                                     | `24`            | Also settable globally (provider / `config.ts`); a `className` size wins |
+| `strokeWidth`   | `number`                                               | `2`             | In grid units, so it scales with `size`; also settable globally |
 
 Every other SVG prop (`className`, `style`, `aria-label`, …) is passed through. Icons are decorative
 (`aria-hidden`) unless you give them an `aria-label`.
 
 ## Triggers
+
+<TriggersPreview />
 
 ```tsx
 <Bell />                          // hover: one cycle per pointer enter
@@ -75,6 +79,8 @@ Every icon is drawn from straight segments. At render time, `corners` reshapes t
 each corner between two straight segments becomes a curve, a straight cut, or stays as drawn. Caps
 and joins follow.
 
+<CornersPreview />
+
 | `corners` | Geometry                                   | Caps / joins     |
 | --------- | ------------------------------------------ | ---------------- |
 | `round`   | every corner curved; small squares become dots (default) | round / round |
@@ -89,6 +95,19 @@ more than half of a side (a third for `bevel`), so short segments stay intact.
 <Bell corners="round" cornerRadius={3} /> // softer
 <Bell corners="sharp" />                  // as drawn
 <AnimatedIconsProvider corners="bevel">{/* a whole subtree */}</AnimatedIconsProvider>
+```
+
+## Stroke width
+
+`strokeWidth` (default `2`) is in the same 24-grid units as the drawing, so a weight looks the same at
+every size. Like `size`, it's yours to set: an icon's own defaults never change it. Widths from `1` to
+`3` keep every gap in the set open (the slash of a `-off` icon, a sun behind a cloud).
+
+<StrokePreview />
+
+```tsx
+<Bell strokeWidth={1.5} />                              // lighter
+<AnimatedIconsProvider strokeWidth={2.5}>{/* a whole subtree */}</AnimatedIconsProvider>
 ```
 
 Real curves (a lens, a ring) are left as drawn. Icons that draw inside their own component (for a mask

@@ -284,6 +284,51 @@ describe("createAnimatedIcon", () => {
     })
   })
 
+  describe("strokeWidth", () => {
+    it("defaults to 2 and follows the provider, per-icon config, then the prop", () => {
+      const { Icon } = stubIcon()
+      const { rerender } = render(<Icon data-testid="icon" />)
+      expect(svg()).toHaveAttribute("stroke-width", "2")
+      rerender(
+        <AnimatedIconsProvider strokeWidth={1.5}>
+          <Icon data-testid="icon" />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("stroke-width", "1.5")
+      rerender(
+        <AnimatedIconsProvider strokeWidth={1.5} icons={{ stub: { strokeWidth: 2.5 } }}>
+          <Icon data-testid="icon" />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("stroke-width", "2.5")
+      rerender(
+        <AnimatedIconsProvider strokeWidth={1.5} icons={{ stub: { strokeWidth: 2.5 } }}>
+          <Icon data-testid="icon" strokeWidth={1} />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("stroke-width", "1")
+    })
+
+    it("ignores an invalid strokeWidth and falls through to the next level", () => {
+      const { Icon } = stubIcon()
+      render(
+        <AnimatedIconsProvider strokeWidth={3}>
+          <Icon data-testid="icon" strokeWidth={0} />
+        </AnimatedIconsProvider>,
+      )
+      expect(svg()).toHaveAttribute("stroke-width", "3")
+    })
+
+    it("hands the resolved width to the variant", async () => {
+      const { Icon, ring } = stubIcon()
+      const ref = createRef<AnimatedIconHandle>()
+      render(<Icon ref={ref} trigger="manual" strokeWidth={1.25} />)
+      act(() => void ref.current!.play())
+      await flush()
+      expect(ring).toHaveBeenCalledWith(expect.objectContaining({ strokeWidth: 1.25 }))
+    })
+  })
+
   it("is decorative unless labelled", () => {
     const { Icon } = stubIcon()
     const { rerender } = render(<Icon data-testid="icon" />)

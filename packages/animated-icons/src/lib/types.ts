@@ -26,7 +26,12 @@ export interface Behavior {
   cornerRadius: number
   /** Width and height of the icon box: px as a number, or any CSS length. A `className` size (`size-6`) still wins. */
   size: number | string
+  /** Stroke width in grid units (the drawing is 24 wide), so it scales with `size`. Drawn at 2. */
+  strokeWidth: number
 }
+
+/** Settings an icon's own `defaults` may not carry: the size and weight you choose apply to the whole set. */
+export type IconDefaults = Partial<Omit<Behavior, "size" | "strokeWidth">>
 
 /**
  * Icons register their variant names here through module augmentation, so the
@@ -67,6 +72,8 @@ export interface VariantContext {
   animate: ScopedAnimate
   /** Resolved duration in seconds, ready to hand to motion. */
   seconds: number
+  /** The icon's resolved stroke width: a variant that animates a stroke's weight works relative to it. */
+  strokeWidth: number
 }
 
 export interface VariantDefinition {
@@ -120,9 +127,9 @@ export interface IconDefinition<V extends string> {
   variants: Record<V, VariantDefinition>
   /**
    * Behaviour this icon needs to make sense, e.g. a loader loops. Beats global config, loses to per-icon config and
-   * props. Never `size`: an icon must not override the size you set globally.
+   * props. Never `size` or `strokeWidth`: an icon must not override the size or weight you set globally.
    */
-  defaults?: Partial<Omit<Behavior, "size">>
+  defaults?: IconDefaults
   /** The SVG children. Colour parts with `var(--icon-<slot>)` and tag animated parts with `data-part`. */
   render: () => React.ReactNode
 }
@@ -142,7 +149,7 @@ export interface IconMeta<V extends string = string> {
   colors: number
   variants: V[]
   defaultVariant: V
-  defaults?: Partial<Omit<Behavior, "size">>
+  defaults?: IconDefaults
 }
 
 export interface AnimatedIconHandle {
@@ -168,4 +175,4 @@ export type AnimatedIconProps<V extends string = string> = Partial<Behavior> & {
   animate?: boolean
   colors?: IconColors
   ref?: React.Ref<AnimatedIconHandle>
-} & Omit<React.SVGProps<SVGSVGElement>, "ref" | "children" | "colors">
+} & Omit<React.SVGProps<SVGSVGElement>, "ref" | "children" | "colors" | "strokeWidth">

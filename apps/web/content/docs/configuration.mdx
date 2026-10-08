@@ -1,6 +1,7 @@
 ---
 title: Configuration
 description: Global defaults, scoped providers, per-icon overrides, and which one wins.
+icon: sliders
 ---
 
 ## Precedence
@@ -13,7 +14,7 @@ props  >  per-icon config  >  icon's own defaults  >  global config  >  built-in
 
 | Level               | Where                                                     | Example                                        |
 | ------------------- | --------------------------------------------------------- | ---------------------------------------------- |
-| Built-ins           | the library                                               | `trigger: "hover"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2`, `size: 24` |
+| Built-ins           | the library                                               | `trigger: "hover"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2`, `size: 24`, `strokeWidth: 2` |
 | Global config       | `config.ts` (registry) or the root provider (npm)         | `trigger: "click"`                             |
 | Icon's own defaults | the icon definition                                       | loader: `auto`, `interval: 0`                  |
 | Per-icon config     | `icons.<name>` in `config.ts` or a provider               | `icons: { loader: { trigger: "hover" } }`      |
@@ -34,6 +35,7 @@ export default defineIconConfig({
   corners: 'round', // "round" | "bevel" | "sharp"
   cornerRadius: 2.5,
   size: 20, // px, or any CSS length: '1.25em'
+  strokeWidth: 1.75, // grid units, scales with size
   icons: {
     bell: { variant: 'shake' }, // variant names are typed per installed icon
     rocket: { speed: 0.75, colors: { accent: 'chart-1' } },
