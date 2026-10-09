@@ -92,9 +92,9 @@ export function Specimen({
           ))}
         </dl>
 
-        <div className="relative border bg-muted/40">
-          <pre className="overflow-x-auto py-3 pr-28 pl-3 font-mono text-[13px] leading-relaxed">{code}</pre>
-          <CopyButton text={code} label="Copy JSX" className="absolute top-2 right-2" />
+        <div className="flex items-start gap-2 border bg-muted/40 pr-2">
+          <pre className="min-w-0 flex-1 overflow-x-auto py-3 pl-3 font-mono text-[13px] leading-relaxed">{code}</pre>
+          <CopyButton text={code} label="Copy JSX" className="mt-2 shrink-0" />
         </div>
       </figcaption>
     </figure>
