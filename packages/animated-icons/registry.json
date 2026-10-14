@@ -90,19 +90,23 @@
       "name": "all",
       "type": "registry:item",
       "title": "All animated icons",
-      "description": "Every icon in the set (401), plus the core.",
+      "description": "Every icon in the set (600), plus the core.",
       "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/accessibility.json",
         "https://animated-icons-nu.vercel.app/r/activity.json",
         "https://animated-icons-nu.vercel.app/r/airplay.json",
         "https://animated-icons-nu.vercel.app/r/alarm-clock.json",
         "https://animated-icons-nu.vercel.app/r/alarm-smoke.json",
+        "https://animated-icons-nu.vercel.app/r/album.json",
         "https://animated-icons-nu.vercel.app/r/alert-triangle.json",
         "https://animated-icons-nu.vercel.app/r/align-left.json",
         "https://animated-icons-nu.vercel.app/r/ambulance.json",
         "https://animated-icons-nu.vercel.app/r/anchor.json",
         "https://animated-icons-nu.vercel.app/r/antenna.json",
+        "https://animated-icons-nu.vercel.app/r/anvil.json",
         "https://animated-icons-nu.vercel.app/r/aperture.json",
         "https://animated-icons-nu.vercel.app/r/apple.json",
+        "https://animated-icons-nu.vercel.app/r/archive-restore.json",
         "https://animated-icons-nu.vercel.app/r/archive.json",
         "https://animated-icons-nu.vercel.app/r/area-chart.json",
         "https://animated-icons-nu.vercel.app/r/armchair.json",
@@ -116,39 +120,70 @@
         "https://animated-icons-nu.vercel.app/r/arrow-up.json",
         "https://animated-icons-nu.vercel.app/r/at-sign.json",
         "https://animated-icons-nu.vercel.app/r/atom.json",
+        "https://animated-icons-nu.vercel.app/r/audio-lines.json",
         "https://animated-icons-nu.vercel.app/r/award.json",
+        "https://animated-icons-nu.vercel.app/r/axe.json",
         "https://animated-icons-nu.vercel.app/r/axis-3d.json",
+        "https://animated-icons-nu.vercel.app/r/baby.json",
+        "https://animated-icons-nu.vercel.app/r/backpack.json",
+        "https://animated-icons-nu.vercel.app/r/badge-alert.json",
         "https://animated-icons-nu.vercel.app/r/badge-check.json",
+        "https://animated-icons-nu.vercel.app/r/badge-dollar-sign.json",
         "https://animated-icons-nu.vercel.app/r/badge-percent.json",
+        "https://animated-icons-nu.vercel.app/r/balloon.json",
+        "https://animated-icons-nu.vercel.app/r/ban.json",
+        "https://animated-icons-nu.vercel.app/r/banana.json",
+        "https://animated-icons-nu.vercel.app/r/bandage.json",
         "https://animated-icons-nu.vercel.app/r/banknote.json",
         "https://animated-icons-nu.vercel.app/r/bar-chart.json",
         "https://animated-icons-nu.vercel.app/r/barcode.json",
+        "https://animated-icons-nu.vercel.app/r/bath.json",
         "https://animated-icons-nu.vercel.app/r/battery-charging.json",
         "https://animated-icons-nu.vercel.app/r/battery.json",
+        "https://animated-icons-nu.vercel.app/r/bean.json",
+        "https://animated-icons-nu.vercel.app/r/bed.json",
+        "https://animated-icons-nu.vercel.app/r/beer.json",
+        "https://animated-icons-nu.vercel.app/r/bell-dot.json",
         "https://animated-icons-nu.vercel.app/r/bell-off.json",
         "https://animated-icons-nu.vercel.app/r/bell-ring.json",
         "https://animated-icons-nu.vercel.app/r/bell.json",
+        "https://animated-icons-nu.vercel.app/r/biceps-flexed.json",
         "https://animated-icons-nu.vercel.app/r/bike.json",
         "https://animated-icons-nu.vercel.app/r/binary.json",
+        "https://animated-icons-nu.vercel.app/r/binoculars.json",
         "https://animated-icons-nu.vercel.app/r/bird.json",
+        "https://animated-icons-nu.vercel.app/r/birdhouse.json",
         "https://animated-icons-nu.vercel.app/r/bitcoin.json",
         "https://animated-icons-nu.vercel.app/r/blend.json",
         "https://animated-icons-nu.vercel.app/r/blocks.json",
         "https://animated-icons-nu.vercel.app/r/bluetooth.json",
         "https://animated-icons-nu.vercel.app/r/bold.json",
+        "https://animated-icons-nu.vercel.app/r/bolt.json",
         "https://animated-icons-nu.vercel.app/r/bomb.json",
+        "https://animated-icons-nu.vercel.app/r/bone.json",
+        "https://animated-icons-nu.vercel.app/r/book-marked.json",
         "https://animated-icons-nu.vercel.app/r/book-open-check.json",
         "https://animated-icons-nu.vercel.app/r/book-open.json",
         "https://animated-icons-nu.vercel.app/r/bookmark.json",
+        "https://animated-icons-nu.vercel.app/r/boom-box.json",
         "https://animated-icons-nu.vercel.app/r/bot.json",
         "https://animated-icons-nu.vercel.app/r/box.json",
         "https://animated-icons-nu.vercel.app/r/boxes.json",
         "https://animated-icons-nu.vercel.app/r/braces.json",
+        "https://animated-icons-nu.vercel.app/r/brain.json",
+        "https://animated-icons-nu.vercel.app/r/brick-wall.json",
+        "https://animated-icons-nu.vercel.app/r/briefcase-business.json",
         "https://animated-icons-nu.vercel.app/r/briefcase.json",
         "https://animated-icons-nu.vercel.app/r/brush.json",
+        "https://animated-icons-nu.vercel.app/r/bubbles.json",
+        "https://animated-icons-nu.vercel.app/r/bug-play.json",
         "https://animated-icons-nu.vercel.app/r/bug.json",
         "https://animated-icons-nu.vercel.app/r/building.json",
+        "https://animated-icons-nu.vercel.app/r/bus-front.json",
         "https://animated-icons-nu.vercel.app/r/bus.json",
+        "https://animated-icons-nu.vercel.app/r/cable-car.json",
+        "https://animated-icons-nu.vercel.app/r/cable.json",
+        "https://animated-icons-nu.vercel.app/r/cactus.json",
         "https://animated-icons-nu.vercel.app/r/cake.json",
         "https://animated-icons-nu.vercel.app/r/calculator.json",
         "https://animated-icons-nu.vercel.app/r/calendar-check.json",
@@ -159,15 +194,23 @@
         "https://animated-icons-nu.vercel.app/r/calendar.json",
         "https://animated-icons-nu.vercel.app/r/camera.json",
         "https://animated-icons-nu.vercel.app/r/candlestick-chart.json",
+        "https://animated-icons-nu.vercel.app/r/candy-cane.json",
+        "https://animated-icons-nu.vercel.app/r/candy.json",
+        "https://animated-icons-nu.vercel.app/r/car-front.json",
         "https://animated-icons-nu.vercel.app/r/car.json",
+        "https://animated-icons-nu.vercel.app/r/caravan.json",
         "https://animated-icons-nu.vercel.app/r/carrot.json",
         "https://animated-icons-nu.vercel.app/r/cart.json",
         "https://animated-icons-nu.vercel.app/r/cassette-tape.json",
         "https://animated-icons-nu.vercel.app/r/cast.json",
+        "https://animated-icons-nu.vercel.app/r/castle.json",
         "https://animated-icons-nu.vercel.app/r/cat.json",
+        "https://animated-icons-nu.vercel.app/r/cctv.json",
         "https://animated-icons-nu.vercel.app/r/check-check.json",
         "https://animated-icons-nu.vercel.app/r/check.json",
+        "https://animated-icons-nu.vercel.app/r/chef-hat.json",
         "https://animated-icons-nu.vercel.app/r/cherry.json",
+        "https://animated-icons-nu.vercel.app/r/chess-knight.json",
         "https://animated-icons-nu.vercel.app/r/chevron-down.json",
         "https://animated-icons-nu.vercel.app/r/chevron-left.json",
         "https://animated-icons-nu.vercel.app/r/chevron-right.json",
@@ -175,6 +218,7 @@
         "https://animated-icons-nu.vercel.app/r/chevrons-left.json",
         "https://animated-icons-nu.vercel.app/r/chevrons-right.json",
         "https://animated-icons-nu.vercel.app/r/chevrons-up-down.json",
+        "https://animated-icons-nu.vercel.app/r/church.json",
         "https://animated-icons-nu.vercel.app/r/circle-alert.json",
         "https://animated-icons-nu.vercel.app/r/circle-check.json",
         "https://animated-icons-nu.vercel.app/r/circle-dot.json",
@@ -188,18 +232,22 @@
         "https://animated-icons-nu.vercel.app/r/clapperboard.json",
         "https://animated-icons-nu.vercel.app/r/clipboard-check.json",
         "https://animated-icons-nu.vercel.app/r/clipboard-list.json",
+        "https://animated-icons-nu.vercel.app/r/clipboard-paste.json",
         "https://animated-icons-nu.vercel.app/r/clipboard-pen.json",
         "https://animated-icons-nu.vercel.app/r/clock.json",
         "https://animated-icons-nu.vercel.app/r/cloud-drizzle.json",
         "https://animated-icons-nu.vercel.app/r/cloud-fog.json",
+        "https://animated-icons-nu.vercel.app/r/cloud-hail.json",
         "https://animated-icons-nu.vercel.app/r/cloud-lightning.json",
         "https://animated-icons-nu.vercel.app/r/cloud-moon.json",
         "https://animated-icons-nu.vercel.app/r/cloud-rain.json",
         "https://animated-icons-nu.vercel.app/r/cloud-snow.json",
+        "https://animated-icons-nu.vercel.app/r/cloud-sun-rain.json",
         "https://animated-icons-nu.vercel.app/r/cloud-sun.json",
         "https://animated-icons-nu.vercel.app/r/cloud-upload.json",
         "https://animated-icons-nu.vercel.app/r/cloud.json",
         "https://animated-icons-nu.vercel.app/r/clover.json",
+        "https://animated-icons-nu.vercel.app/r/club.json",
         "https://animated-icons-nu.vercel.app/r/code.json",
         "https://animated-icons-nu.vercel.app/r/coffee.json",
         "https://animated-icons-nu.vercel.app/r/coins.json",
@@ -208,16 +256,25 @@
         "https://animated-icons-nu.vercel.app/r/compass.json",
         "https://animated-icons-nu.vercel.app/r/component.json",
         "https://animated-icons-nu.vercel.app/r/cone.json",
+        "https://animated-icons-nu.vercel.app/r/construction.json",
         "https://animated-icons-nu.vercel.app/r/container.json",
         "https://animated-icons-nu.vercel.app/r/contrast.json",
         "https://animated-icons-nu.vercel.app/r/cookie.json",
+        "https://animated-icons-nu.vercel.app/r/cooking-pot.json",
         "https://animated-icons-nu.vercel.app/r/copy.json",
         "https://animated-icons-nu.vercel.app/r/cpu.json",
         "https://animated-icons-nu.vercel.app/r/credit-card.json",
+        "https://animated-icons-nu.vercel.app/r/croissant.json",
         "https://animated-icons-nu.vercel.app/r/crop.json",
+        "https://animated-icons-nu.vercel.app/r/cross.json",
+        "https://animated-icons-nu.vercel.app/r/crown.json",
         "https://animated-icons-nu.vercel.app/r/cuboid.json",
+        "https://animated-icons-nu.vercel.app/r/cup-soda.json",
+        "https://animated-icons-nu.vercel.app/r/currency.json",
         "https://animated-icons-nu.vercel.app/r/cylinder.json",
+        "https://animated-icons-nu.vercel.app/r/database-zap.json",
         "https://animated-icons-nu.vercel.app/r/database.json",
+        "https://animated-icons-nu.vercel.app/r/dessert.json",
         "https://animated-icons-nu.vercel.app/r/diamond.json",
         "https://animated-icons-nu.vercel.app/r/dice.json",
         "https://animated-icons-nu.vercel.app/r/disc.json",
@@ -226,23 +283,37 @@
         "https://animated-icons-nu.vercel.app/r/dollar.json",
         "https://animated-icons-nu.vercel.app/r/door-open.json",
         "https://animated-icons-nu.vercel.app/r/download.json",
+        "https://animated-icons-nu.vercel.app/r/drama.json",
+        "https://animated-icons-nu.vercel.app/r/drill.json",
+        "https://animated-icons-nu.vercel.app/r/drone.json",
         "https://animated-icons-nu.vercel.app/r/droplet.json",
         "https://animated-icons-nu.vercel.app/r/drum.json",
+        "https://animated-icons-nu.vercel.app/r/dumbbell.json",
+        "https://animated-icons-nu.vercel.app/r/ear.json",
+        "https://animated-icons-nu.vercel.app/r/earth.json",
+        "https://animated-icons-nu.vercel.app/r/egg-fried.json",
+        "https://animated-icons-nu.vercel.app/r/egg.json",
         "https://animated-icons-nu.vercel.app/r/ellipsis.json",
         "https://animated-icons-nu.vercel.app/r/eraser.json",
         "https://animated-icons-nu.vercel.app/r/euro.json",
+        "https://animated-icons-nu.vercel.app/r/expand.json",
         "https://animated-icons-nu.vercel.app/r/external-link.json",
+        "https://animated-icons-nu.vercel.app/r/eye-closed.json",
         "https://animated-icons-nu.vercel.app/r/eye-off.json",
         "https://animated-icons-nu.vercel.app/r/eye.json",
         "https://animated-icons-nu.vercel.app/r/factory.json",
+        "https://animated-icons-nu.vercel.app/r/fan.json",
         "https://animated-icons-nu.vercel.app/r/fast-forward.json",
         "https://animated-icons-nu.vercel.app/r/feather.json",
+        "https://animated-icons-nu.vercel.app/r/fence.json",
+        "https://animated-icons-nu.vercel.app/r/ferris-wheel.json",
         "https://animated-icons-nu.vercel.app/r/file-archive.json",
         "https://animated-icons-nu.vercel.app/r/file-audio.json",
         "https://animated-icons-nu.vercel.app/r/file-code.json",
         "https://animated-icons-nu.vercel.app/r/file-cog.json",
         "https://animated-icons-nu.vercel.app/r/file-plus.json",
         "https://animated-icons-nu.vercel.app/r/file-search.json",
+        "https://animated-icons-nu.vercel.app/r/file-spreadsheet.json",
         "https://animated-icons-nu.vercel.app/r/file-text.json",
         "https://animated-icons-nu.vercel.app/r/file-video.json",
         "https://animated-icons-nu.vercel.app/r/file-warning.json",
@@ -251,15 +322,20 @@
         "https://animated-icons-nu.vercel.app/r/filter-x.json",
         "https://animated-icons-nu.vercel.app/r/filter.json",
         "https://animated-icons-nu.vercel.app/r/fingerprint.json",
+        "https://animated-icons-nu.vercel.app/r/fire-extinguisher.json",
         "https://animated-icons-nu.vercel.app/r/fish.json",
         "https://animated-icons-nu.vercel.app/r/flag.json",
+        "https://animated-icons-nu.vercel.app/r/flame-kindling.json",
         "https://animated-icons-nu.vercel.app/r/flame.json",
+        "https://animated-icons-nu.vercel.app/r/flashlight.json",
         "https://animated-icons-nu.vercel.app/r/flask.json",
         "https://animated-icons-nu.vercel.app/r/flower.json",
         "https://animated-icons-nu.vercel.app/r/folder-open.json",
         "https://animated-icons-nu.vercel.app/r/folder-plus.json",
         "https://animated-icons-nu.vercel.app/r/folder-up.json",
         "https://animated-icons-nu.vercel.app/r/folder.json",
+        "https://animated-icons-nu.vercel.app/r/footprints.json",
+        "https://animated-icons-nu.vercel.app/r/forklift.json",
         "https://animated-icons-nu.vercel.app/r/frame.json",
         "https://animated-icons-nu.vercel.app/r/fuel.json",
         "https://animated-icons-nu.vercel.app/r/gamepad.json",
@@ -270,33 +346,55 @@
         "https://animated-icons-nu.vercel.app/r/gift.json",
         "https://animated-icons-nu.vercel.app/r/git-branch.json",
         "https://animated-icons-nu.vercel.app/r/git-commit.json",
+        "https://animated-icons-nu.vercel.app/r/git-compare.json",
         "https://animated-icons-nu.vercel.app/r/git-fork.json",
         "https://animated-icons-nu.vercel.app/r/git-merge.json",
         "https://animated-icons-nu.vercel.app/r/git-pull-request.json",
+        "https://animated-icons-nu.vercel.app/r/glasses.json",
         "https://animated-icons-nu.vercel.app/r/globe.json",
         "https://animated-icons-nu.vercel.app/r/graduation-cap.json",
+        "https://animated-icons-nu.vercel.app/r/grape.json",
         "https://animated-icons-nu.vercel.app/r/grip-vertical.json",
         "https://animated-icons-nu.vercel.app/r/guitar.json",
         "https://animated-icons-nu.vercel.app/r/hammer.json",
         "https://animated-icons-nu.vercel.app/r/hand-coins.json",
+        "https://animated-icons-nu.vercel.app/r/hand-heart.json",
+        "https://animated-icons-nu.vercel.app/r/hand-metal.json",
         "https://animated-icons-nu.vercel.app/r/hand.json",
+        "https://animated-icons-nu.vercel.app/r/handbag.json",
         "https://animated-icons-nu.vercel.app/r/handshake.json",
         "https://animated-icons-nu.vercel.app/r/hard-drive.json",
+        "https://animated-icons-nu.vercel.app/r/hard-hat.json",
         "https://animated-icons-nu.vercel.app/r/hash.json",
+        "https://animated-icons-nu.vercel.app/r/haze.json",
         "https://animated-icons-nu.vercel.app/r/headphones.json",
+        "https://animated-icons-nu.vercel.app/r/headset.json",
+        "https://animated-icons-nu.vercel.app/r/heart-handshake.json",
+        "https://animated-icons-nu.vercel.app/r/heart-pulse.json",
         "https://animated-icons-nu.vercel.app/r/heart.json",
         "https://animated-icons-nu.vercel.app/r/hexagon.json",
         "https://animated-icons-nu.vercel.app/r/highlighter.json",
         "https://animated-icons-nu.vercel.app/r/history.json",
         "https://animated-icons-nu.vercel.app/r/home.json",
+        "https://animated-icons-nu.vercel.app/r/hospital.json",
+        "https://animated-icons-nu.vercel.app/r/hotel.json",
         "https://animated-icons-nu.vercel.app/r/hourglass.json",
+        "https://animated-icons-nu.vercel.app/r/house-plug.json",
+        "https://animated-icons-nu.vercel.app/r/ice-cream-bowl.json",
         "https://animated-icons-nu.vercel.app/r/ice-cream-cone.json",
         "https://animated-icons-nu.vercel.app/r/image.json",
         "https://animated-icons-nu.vercel.app/r/inbox.json",
+        "https://animated-icons-nu.vercel.app/r/indian-rupee.json",
         "https://animated-icons-nu.vercel.app/r/info.json",
+        "https://animated-icons-nu.vercel.app/r/japanese-yen.json",
+        "https://animated-icons-nu.vercel.app/r/joystick.json",
+        "https://animated-icons-nu.vercel.app/r/kanban.json",
         "https://animated-icons-nu.vercel.app/r/key-round.json",
         "https://animated-icons-nu.vercel.app/r/key.json",
         "https://animated-icons-nu.vercel.app/r/keyboard.json",
+        "https://animated-icons-nu.vercel.app/r/lamp-desk.json",
+        "https://animated-icons-nu.vercel.app/r/lamp-floor.json",
+        "https://animated-icons-nu.vercel.app/r/lamp.json",
         "https://animated-icons-nu.vercel.app/r/landmark.json",
         "https://animated-icons-nu.vercel.app/r/languages.json",
         "https://animated-icons-nu.vercel.app/r/laptop.json",
@@ -304,71 +402,111 @@
         "https://animated-icons-nu.vercel.app/r/layers.json",
         "https://animated-icons-nu.vercel.app/r/layout-grid.json",
         "https://animated-icons-nu.vercel.app/r/leaf.json",
+        "https://animated-icons-nu.vercel.app/r/leafy-green.json",
         "https://animated-icons-nu.vercel.app/r/library.json",
         "https://animated-icons-nu.vercel.app/r/lightbulb.json",
         "https://animated-icons-nu.vercel.app/r/line-chart.json",
         "https://animated-icons-nu.vercel.app/r/link-off.json",
         "https://animated-icons-nu.vercel.app/r/link.json",
+        "https://animated-icons-nu.vercel.app/r/list-music.json",
+        "https://animated-icons-nu.vercel.app/r/list-todo.json",
         "https://animated-icons-nu.vercel.app/r/list.json",
+        "https://animated-icons-nu.vercel.app/r/loader-pinwheel.json",
         "https://animated-icons-nu.vercel.app/r/loader.json",
         "https://animated-icons-nu.vercel.app/r/lock-keyhole.json",
         "https://animated-icons-nu.vercel.app/r/lock-open.json",
         "https://animated-icons-nu.vercel.app/r/lock.json",
         "https://animated-icons-nu.vercel.app/r/log-in.json",
         "https://animated-icons-nu.vercel.app/r/log-out.json",
+        "https://animated-icons-nu.vercel.app/r/lollipop.json",
+        "https://animated-icons-nu.vercel.app/r/luggage.json",
+        "https://animated-icons-nu.vercel.app/r/magnet.json",
         "https://animated-icons-nu.vercel.app/r/mail-check.json",
         "https://animated-icons-nu.vercel.app/r/mail-warning.json",
         "https://animated-icons-nu.vercel.app/r/mail.json",
+        "https://animated-icons-nu.vercel.app/r/mailbox.json",
         "https://animated-icons-nu.vercel.app/r/map-pin.json",
         "https://animated-icons-nu.vercel.app/r/map.json",
         "https://animated-icons-nu.vercel.app/r/maximize.json",
+        "https://animated-icons-nu.vercel.app/r/medal.json",
         "https://animated-icons-nu.vercel.app/r/megaphone.json",
+        "https://animated-icons-nu.vercel.app/r/memory-stick.json",
         "https://animated-icons-nu.vercel.app/r/menu.json",
         "https://animated-icons-nu.vercel.app/r/message-off.json",
         "https://animated-icons-nu.vercel.app/r/message-text.json",
         "https://animated-icons-nu.vercel.app/r/message.json",
         "https://animated-icons-nu.vercel.app/r/messages.json",
         "https://animated-icons-nu.vercel.app/r/mic-off.json",
+        "https://animated-icons-nu.vercel.app/r/mic-vocal.json",
         "https://animated-icons-nu.vercel.app/r/mic.json",
         "https://animated-icons-nu.vercel.app/r/microscope.json",
+        "https://animated-icons-nu.vercel.app/r/microwave.json",
+        "https://animated-icons-nu.vercel.app/r/milk.json",
         "https://animated-icons-nu.vercel.app/r/minimize.json",
         "https://animated-icons-nu.vercel.app/r/minus.json",
+        "https://animated-icons-nu.vercel.app/r/monitor-speaker.json",
         "https://animated-icons-nu.vercel.app/r/monitor.json",
+        "https://animated-icons-nu.vercel.app/r/moon-star.json",
         "https://animated-icons-nu.vercel.app/r/moon.json",
+        "https://animated-icons-nu.vercel.app/r/motorbike.json",
         "https://animated-icons-nu.vercel.app/r/mountain-snow.json",
         "https://animated-icons-nu.vercel.app/r/mountain.json",
         "https://animated-icons-nu.vercel.app/r/mouse-pointer-click.json",
         "https://animated-icons-nu.vercel.app/r/mouse.json",
+        "https://animated-icons-nu.vercel.app/r/move.json",
         "https://animated-icons-nu.vercel.app/r/music.json",
         "https://animated-icons-nu.vercel.app/r/navigation.json",
+        "https://animated-icons-nu.vercel.app/r/network.json",
         "https://animated-icons-nu.vercel.app/r/newspaper.json",
+        "https://animated-icons-nu.vercel.app/r/nfc.json",
+        "https://animated-icons-nu.vercel.app/r/notebook-pen.json",
         "https://animated-icons-nu.vercel.app/r/notebook.json",
+        "https://animated-icons-nu.vercel.app/r/nut.json",
+        "https://animated-icons-nu.vercel.app/r/octagon-alert.json",
         "https://animated-icons-nu.vercel.app/r/orbit.json",
+        "https://animated-icons-nu.vercel.app/r/origami.json",
+        "https://animated-icons-nu.vercel.app/r/package-open.json",
         "https://animated-icons-nu.vercel.app/r/package.json",
         "https://animated-icons-nu.vercel.app/r/paint-bucket.json",
         "https://animated-icons-nu.vercel.app/r/paint-roller.json",
+        "https://animated-icons-nu.vercel.app/r/paintbrush.json",
         "https://animated-icons-nu.vercel.app/r/palette.json",
+        "https://animated-icons-nu.vercel.app/r/panda.json",
         "https://animated-icons-nu.vercel.app/r/paperclip.json",
+        "https://animated-icons-nu.vercel.app/r/parking-meter.json",
         "https://animated-icons-nu.vercel.app/r/party-popper.json",
         "https://animated-icons-nu.vercel.app/r/pause.json",
         "https://animated-icons-nu.vercel.app/r/paw-print.json",
         "https://animated-icons-nu.vercel.app/r/pen-tool.json",
+        "https://animated-icons-nu.vercel.app/r/pencil-ruler.json",
         "https://animated-icons-nu.vercel.app/r/pencil.json",
         "https://animated-icons-nu.vercel.app/r/percent.json",
         "https://animated-icons-nu.vercel.app/r/phone-call.json",
+        "https://animated-icons-nu.vercel.app/r/phone-incoming.json",
+        "https://animated-icons-nu.vercel.app/r/phone-missed.json",
         "https://animated-icons-nu.vercel.app/r/phone.json",
         "https://animated-icons-nu.vercel.app/r/piano.json",
+        "https://animated-icons-nu.vercel.app/r/pickaxe.json",
         "https://animated-icons-nu.vercel.app/r/pie-chart.json",
         "https://animated-icons-nu.vercel.app/r/piggy-bank.json",
+        "https://animated-icons-nu.vercel.app/r/pill-bottle.json",
         "https://animated-icons-nu.vercel.app/r/pill.json",
         "https://animated-icons-nu.vercel.app/r/pin-off.json",
         "https://animated-icons-nu.vercel.app/r/pin.json",
         "https://animated-icons-nu.vercel.app/r/pipette.json",
         "https://animated-icons-nu.vercel.app/r/pizza.json",
+        "https://animated-icons-nu.vercel.app/r/plane-landing.json",
+        "https://animated-icons-nu.vercel.app/r/plane-takeoff.json",
         "https://animated-icons-nu.vercel.app/r/plane.json",
         "https://animated-icons-nu.vercel.app/r/play.json",
+        "https://animated-icons-nu.vercel.app/r/plug.json",
         "https://animated-icons-nu.vercel.app/r/plus.json",
         "https://animated-icons-nu.vercel.app/r/podcast.json",
+        "https://animated-icons-nu.vercel.app/r/pointer.json",
+        "https://animated-icons-nu.vercel.app/r/popcorn.json",
+        "https://animated-icons-nu.vercel.app/r/pound-sterling.json",
+        "https://animated-icons-nu.vercel.app/r/power.json",
+        "https://animated-icons-nu.vercel.app/r/presentation.json",
         "https://animated-icons-nu.vercel.app/r/printer.json",
         "https://animated-icons-nu.vercel.app/r/projector.json",
         "https://animated-icons-nu.vercel.app/r/puzzle.json",
@@ -376,15 +514,24 @@
         "https://animated-icons-nu.vercel.app/r/qr-code.json",
         "https://animated-icons-nu.vercel.app/r/quote.json",
         "https://animated-icons-nu.vercel.app/r/rabbit.json",
+        "https://animated-icons-nu.vercel.app/r/radar.json",
+        "https://animated-icons-nu.vercel.app/r/radiation.json",
+        "https://animated-icons-nu.vercel.app/r/radio-receiver.json",
         "https://animated-icons-nu.vercel.app/r/radio-tower.json",
         "https://animated-icons-nu.vercel.app/r/radio.json",
         "https://animated-icons-nu.vercel.app/r/rainbow.json",
+        "https://animated-icons-nu.vercel.app/r/rat.json",
+        "https://animated-icons-nu.vercel.app/r/receipt-text.json",
         "https://animated-icons-nu.vercel.app/r/receipt.json",
+        "https://animated-icons-nu.vercel.app/r/redo.json",
         "https://animated-icons-nu.vercel.app/r/refresh.json",
+        "https://animated-icons-nu.vercel.app/r/refrigerator.json",
+        "https://animated-icons-nu.vercel.app/r/regex.json",
         "https://animated-icons-nu.vercel.app/r/repeat.json",
         "https://animated-icons-nu.vercel.app/r/reply.json",
         "https://animated-icons-nu.vercel.app/r/rewind.json",
         "https://animated-icons-nu.vercel.app/r/rocket.json",
+        "https://animated-icons-nu.vercel.app/r/rocking-chair.json",
         "https://animated-icons-nu.vercel.app/r/rotate-3d.json",
         "https://animated-icons-nu.vercel.app/r/rotate-ccw.json",
         "https://animated-icons-nu.vercel.app/r/route.json",
@@ -392,72 +539,107 @@
         "https://animated-icons-nu.vercel.app/r/rss.json",
         "https://animated-icons-nu.vercel.app/r/ruler.json",
         "https://animated-icons-nu.vercel.app/r/sailboat.json",
+        "https://animated-icons-nu.vercel.app/r/salad.json",
+        "https://animated-icons-nu.vercel.app/r/sandwich.json",
+        "https://animated-icons-nu.vercel.app/r/satellite-dish.json",
         "https://animated-icons-nu.vercel.app/r/satellite.json",
         "https://animated-icons-nu.vercel.app/r/save.json",
         "https://animated-icons-nu.vercel.app/r/scale.json",
+        "https://animated-icons-nu.vercel.app/r/scan-barcode.json",
+        "https://animated-icons-nu.vercel.app/r/scan-eye.json",
         "https://animated-icons-nu.vercel.app/r/scan-face.json",
+        "https://animated-icons-nu.vercel.app/r/scan-heart.json",
         "https://animated-icons-nu.vercel.app/r/scan.json",
         "https://animated-icons-nu.vercel.app/r/school.json",
         "https://animated-icons-nu.vercel.app/r/scissors.json",
         "https://animated-icons-nu.vercel.app/r/search.json",
         "https://animated-icons-nu.vercel.app/r/send.json",
+        "https://animated-icons-nu.vercel.app/r/server-cog.json",
         "https://animated-icons-nu.vercel.app/r/server.json",
         "https://animated-icons-nu.vercel.app/r/settings.json",
         "https://animated-icons-nu.vercel.app/r/shapes.json",
         "https://animated-icons-nu.vercel.app/r/share.json",
         "https://animated-icons-nu.vercel.app/r/shell.json",
         "https://animated-icons-nu.vercel.app/r/shield-alert.json",
+        "https://animated-icons-nu.vercel.app/r/shield-ban.json",
         "https://animated-icons-nu.vercel.app/r/shield-check.json",
         "https://animated-icons-nu.vercel.app/r/shield-off.json",
         "https://animated-icons-nu.vercel.app/r/shield.json",
+        "https://animated-icons-nu.vercel.app/r/ship-wheel.json",
         "https://animated-icons-nu.vercel.app/r/ship.json",
+        "https://animated-icons-nu.vercel.app/r/shirt.json",
         "https://animated-icons-nu.vercel.app/r/shopping-bag.json",
+        "https://animated-icons-nu.vercel.app/r/shopping-basket.json",
+        "https://animated-icons-nu.vercel.app/r/shovel.json",
+        "https://animated-icons-nu.vercel.app/r/shrink.json",
+        "https://animated-icons-nu.vercel.app/r/shrub.json",
         "https://animated-icons-nu.vercel.app/r/shuffle.json",
         "https://animated-icons-nu.vercel.app/r/sidebar.json",
         "https://animated-icons-nu.vercel.app/r/signal.json",
+        "https://animated-icons-nu.vercel.app/r/signature.json",
+        "https://animated-icons-nu.vercel.app/r/signpost.json",
         "https://animated-icons-nu.vercel.app/r/siren.json",
+        "https://animated-icons-nu.vercel.app/r/skateboard.json",
         "https://animated-icons-nu.vercel.app/r/skip-back.json",
         "https://animated-icons-nu.vercel.app/r/skip-forward.json",
         "https://animated-icons-nu.vercel.app/r/skull.json",
         "https://animated-icons-nu.vercel.app/r/sliders.json",
         "https://animated-icons-nu.vercel.app/r/smartphone.json",
+        "https://animated-icons-nu.vercel.app/r/smile-plus.json",
         "https://animated-icons-nu.vercel.app/r/smile.json",
         "https://animated-icons-nu.vercel.app/r/snail.json",
         "https://animated-icons-nu.vercel.app/r/snowflake.json",
+        "https://animated-icons-nu.vercel.app/r/sofa.json",
+        "https://animated-icons-nu.vercel.app/r/soup.json",
+        "https://animated-icons-nu.vercel.app/r/spade.json",
         "https://animated-icons-nu.vercel.app/r/sparkles.json",
         "https://animated-icons-nu.vercel.app/r/speaker.json",
         "https://animated-icons-nu.vercel.app/r/spray-can.json",
         "https://animated-icons-nu.vercel.app/r/sprout.json",
         "https://animated-icons-nu.vercel.app/r/square-check.json",
         "https://animated-icons-nu.vercel.app/r/square-x.json",
+        "https://animated-icons-nu.vercel.app/r/squirrel.json",
         "https://animated-icons-nu.vercel.app/r/stamp.json",
         "https://animated-icons-nu.vercel.app/r/star.json",
         "https://animated-icons-nu.vercel.app/r/stethoscope.json",
+        "https://animated-icons-nu.vercel.app/r/sticker.json",
         "https://animated-icons-nu.vercel.app/r/sticky-note.json",
         "https://animated-icons-nu.vercel.app/r/store.json",
         "https://animated-icons-nu.vercel.app/r/sun-moon.json",
+        "https://animated-icons-nu.vercel.app/r/sun-snow.json",
         "https://animated-icons-nu.vercel.app/r/sun.json",
         "https://animated-icons-nu.vercel.app/r/sunrise.json",
         "https://animated-icons-nu.vercel.app/r/sunset.json",
+        "https://animated-icons-nu.vercel.app/r/swords.json",
+        "https://animated-icons-nu.vercel.app/r/syringe.json",
         "https://animated-icons-nu.vercel.app/r/table.json",
         "https://animated-icons-nu.vercel.app/r/tablet.json",
         "https://animated-icons-nu.vercel.app/r/tag.json",
+        "https://animated-icons-nu.vercel.app/r/target.json",
         "https://animated-icons-nu.vercel.app/r/telescope.json",
+        "https://animated-icons-nu.vercel.app/r/tent-tree.json",
         "https://animated-icons-nu.vercel.app/r/tent.json",
         "https://animated-icons-nu.vercel.app/r/terminal.json",
         "https://animated-icons-nu.vercel.app/r/test-tube.json",
+        "https://animated-icons-nu.vercel.app/r/thermometer-sun.json",
         "https://animated-icons-nu.vercel.app/r/thermometer.json",
         "https://animated-icons-nu.vercel.app/r/thumbs-down.json",
         "https://animated-icons-nu.vercel.app/r/thumbs-up.json",
         "https://animated-icons-nu.vercel.app/r/ticket.json",
+        "https://animated-icons-nu.vercel.app/r/tickets.json",
         "https://animated-icons-nu.vercel.app/r/timer.json",
+        "https://animated-icons-nu.vercel.app/r/toggle.json",
         "https://animated-icons-nu.vercel.app/r/tornado.json",
         "https://animated-icons-nu.vercel.app/r/torus.json",
+        "https://animated-icons-nu.vercel.app/r/tower-control.json",
+        "https://animated-icons-nu.vercel.app/r/toy-brick.json",
         "https://animated-icons-nu.vercel.app/r/tractor.json",
         "https://animated-icons-nu.vercel.app/r/traffic-cone.json",
+        "https://animated-icons-nu.vercel.app/r/train-track.json",
         "https://animated-icons-nu.vercel.app/r/train.json",
         "https://animated-icons-nu.vercel.app/r/tram-front.json",
         "https://animated-icons-nu.vercel.app/r/trash.json",
+        "https://animated-icons-nu.vercel.app/r/tree-palm.json",
         "https://animated-icons-nu.vercel.app/r/tree-pine.json",
         "https://animated-icons-nu.vercel.app/r/tree.json",
         "https://animated-icons-nu.vercel.app/r/trending-down.json",
@@ -469,25 +651,42 @@
         "https://animated-icons-nu.vercel.app/r/type.json",
         "https://animated-icons-nu.vercel.app/r/umbrella.json",
         "https://animated-icons-nu.vercel.app/r/undo.json",
+        "https://animated-icons-nu.vercel.app/r/university.json",
         "https://animated-icons-nu.vercel.app/r/upload.json",
         "https://animated-icons-nu.vercel.app/r/usb.json",
+        "https://animated-icons-nu.vercel.app/r/user-lock.json",
         "https://animated-icons-nu.vercel.app/r/user-plus.json",
         "https://animated-icons-nu.vercel.app/r/user-search.json",
         "https://animated-icons-nu.vercel.app/r/user.json",
         "https://animated-icons-nu.vercel.app/r/users.json",
+        "https://animated-icons-nu.vercel.app/r/utensils.json",
+        "https://animated-icons-nu.vercel.app/r/utility-pole.json",
+        "https://animated-icons-nu.vercel.app/r/variable.json",
         "https://animated-icons-nu.vercel.app/r/vault.json",
         "https://animated-icons-nu.vercel.app/r/video-off.json",
         "https://animated-icons-nu.vercel.app/r/video.json",
+        "https://animated-icons-nu.vercel.app/r/voicemail.json",
+        "https://animated-icons-nu.vercel.app/r/volleyball.json",
         "https://animated-icons-nu.vercel.app/r/volume-x.json",
         "https://animated-icons-nu.vercel.app/r/volume.json",
+        "https://animated-icons-nu.vercel.app/r/vote.json",
+        "https://animated-icons-nu.vercel.app/r/wallet-cards.json",
         "https://animated-icons-nu.vercel.app/r/wallet.json",
+        "https://animated-icons-nu.vercel.app/r/wand-sparkles.json",
         "https://animated-icons-nu.vercel.app/r/wand.json",
+        "https://animated-icons-nu.vercel.app/r/warehouse.json",
+        "https://animated-icons-nu.vercel.app/r/washing-machine.json",
         "https://animated-icons-nu.vercel.app/r/watch.json",
         "https://animated-icons-nu.vercel.app/r/waves.json",
         "https://animated-icons-nu.vercel.app/r/webcam.json",
         "https://animated-icons-nu.vercel.app/r/webhook.json",
+        "https://animated-icons-nu.vercel.app/r/weight.json",
+        "https://animated-icons-nu.vercel.app/r/wheat.json",
         "https://animated-icons-nu.vercel.app/r/wifi.json",
         "https://animated-icons-nu.vercel.app/r/wind.json",
+        "https://animated-icons-nu.vercel.app/r/wine.json",
+        "https://animated-icons-nu.vercel.app/r/workflow.json",
+        "https://animated-icons-nu.vercel.app/r/worm.json",
         "https://animated-icons-nu.vercel.app/r/wrench.json",
         "https://animated-icons-nu.vercel.app/r/x.json",
         "https://animated-icons-nu.vercel.app/r/zap.json",
@@ -495,6 +694,22 @@
         "https://animated-icons-nu.vercel.app/r/zoom-out.json"
       ],
       "files": []
+    },
+    {
+      "name": "accessibility",
+      "type": "registry:component",
+      "title": "Accessibility icon",
+      "description": "2 colors: rider (primary), wheel (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/accessibility.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/accessibility.tsx"
+        }
+      ]
     },
     {
       "name": "activity",
@@ -557,6 +772,22 @@
           "path": "src/icons/alarm-smoke.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/alarm-smoke.tsx"
+        }
+      ]
+    },
+    {
+      "name": "album",
+      "type": "registry:component",
+      "title": "Album icon",
+      "description": "2 colors: sleeve (primary), record (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/album.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/album.tsx"
         }
       ]
     },
@@ -641,6 +872,22 @@
       ]
     },
     {
+      "name": "anvil",
+      "type": "registry:component",
+      "title": "Anvil icon",
+      "description": "2 colors: anvil (primary), sparks and dust (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/anvil.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/anvil.tsx"
+        }
+      ]
+    },
+    {
       "name": "aperture",
       "type": "registry:component",
       "title": "Aperture icon",
@@ -669,6 +916,22 @@
           "path": "src/icons/apple.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/apple.tsx"
+        }
+      ]
+    },
+    {
+      "name": "archive-restore",
+      "type": "registry:component",
+      "title": "Archive Restore icon",
+      "description": "2 colors: box and lid (primary), restore arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/archive-restore.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/archive-restore.tsx"
         }
       ]
     },
@@ -881,6 +1144,22 @@
       ]
     },
     {
+      "name": "audio-lines",
+      "type": "registry:component",
+      "title": "Audio Lines icon",
+      "description": "2 colors: quiet bars (primary), loudest bar (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/audio-lines.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/audio-lines.tsx"
+        }
+      ]
+    },
+    {
       "name": "award",
       "type": "registry:component",
       "title": "Award icon",
@@ -893,6 +1172,22 @@
           "path": "src/icons/award.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/award.tsx"
+        }
+      ]
+    },
+    {
+      "name": "axe",
+      "type": "registry:component",
+      "title": "Axe icon",
+      "description": "2 colors: handle (primary), head, chips and glint (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/axe.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/axe.tsx"
         }
       ]
     },
@@ -913,6 +1208,54 @@
       ]
     },
     {
+      "name": "baby",
+      "type": "registry:component",
+      "title": "Baby icon",
+      "description": "2 colors: head, ears and curl (primary), eyes and mouth (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/baby.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/baby.tsx"
+        }
+      ]
+    },
+    {
+      "name": "backpack",
+      "type": "registry:component",
+      "title": "Backpack icon",
+      "description": "2 colors: pack and handle (primary), pocket and zip (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/backpack.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/backpack.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge-alert",
+      "type": "registry:component",
+      "title": "Badge Alert icon",
+      "description": "2 colors: badge (primary), exclamation mark (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/badge-alert.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/badge-alert.tsx"
+        }
+      ]
+    },
+    {
       "name": "badge-check",
       "type": "registry:component",
       "title": "Badge Check icon",
@@ -929,6 +1272,22 @@
       ]
     },
     {
+      "name": "badge-dollar-sign",
+      "type": "registry:component",
+      "title": "Badge Dollar Sign icon",
+      "description": "2 colors: badge (primary), dollar sign (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/badge-dollar-sign.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/badge-dollar-sign.tsx"
+        }
+      ]
+    },
+    {
       "name": "badge-percent",
       "type": "registry:component",
       "title": "Badge Percent icon",
@@ -941,6 +1300,70 @@
           "path": "src/icons/badge-percent.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/badge-percent.tsx"
+        }
+      ]
+    },
+    {
+      "name": "balloon",
+      "type": "registry:component",
+      "title": "Balloon icon",
+      "description": "2 colors: string (primary), balloon and knot (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/balloon.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/balloon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ban",
+      "type": "registry:component",
+      "title": "Ban icon",
+      "description": "2 colors: ring (primary), slash (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/ban.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/ban.tsx"
+        }
+      ]
+    },
+    {
+      "name": "banana",
+      "type": "registry:component",
+      "title": "Banana icon",
+      "description": "2 colors: peel (primary), stem (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/banana.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/banana.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bandage",
+      "type": "registry:component",
+      "title": "Bandage icon",
+      "description": "2 colors: strip (primary), pad (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bandage.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bandage.tsx"
         }
       ]
     },
@@ -993,6 +1416,22 @@
       ]
     },
     {
+      "name": "bath",
+      "type": "registry:component",
+      "title": "Bath icon",
+      "description": "2 colors: tub and tap (primary), water, drip and bubbles (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bath.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bath.tsx"
+        }
+      ]
+    },
+    {
       "name": "battery-charging",
       "type": "registry:component",
       "title": "Battery Charging icon",
@@ -1021,6 +1460,70 @@
           "path": "src/icons/battery.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/battery.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bean",
+      "type": "registry:component",
+      "title": "Bean icon",
+      "description": "2 colors: bean (primary), seam (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bean.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bean.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bed",
+      "type": "registry:component",
+      "title": "Bed icon",
+      "description": "2 colors: frame and mattress (primary), pillow and Z (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bed.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bed.tsx"
+        }
+      ]
+    },
+    {
+      "name": "beer",
+      "type": "registry:component",
+      "title": "Beer icon",
+      "description": "2 colors: mug (primary), foam and bubbles (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/beer.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/beer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bell-dot",
+      "type": "registry:component",
+      "title": "Bell Dot icon",
+      "description": "2 colors: body (primary), notification dot and clapper (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bell-dot.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bell-dot.tsx"
         }
       ]
     },
@@ -1073,6 +1576,22 @@
       ]
     },
     {
+      "name": "biceps-flexed",
+      "type": "registry:component",
+      "title": "Biceps Flexed icon",
+      "description": "2 colors: arm (primary), bicep and power lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/biceps-flexed.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/biceps-flexed.tsx"
+        }
+      ]
+    },
+    {
       "name": "bike",
       "type": "registry:component",
       "title": "Bike icon",
@@ -1105,6 +1624,22 @@
       ]
     },
     {
+      "name": "binoculars",
+      "type": "registry:component",
+      "title": "Binoculars icon",
+      "description": "2 colors: barrels (primary), lenses and their glint (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/binoculars.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/binoculars.tsx"
+        }
+      ]
+    },
+    {
       "name": "bird",
       "type": "registry:component",
       "title": "Bird icon",
@@ -1117,6 +1652,22 @@
           "path": "src/icons/bird.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/bird.tsx"
+        }
+      ]
+    },
+    {
+      "name": "birdhouse",
+      "type": "registry:component",
+      "title": "Birdhouse icon",
+      "description": "2 colors: house, hole and pole (primary), roof (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/birdhouse.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/birdhouse.tsx"
         }
       ]
     },
@@ -1201,6 +1752,22 @@
       ]
     },
     {
+      "name": "bolt",
+      "type": "registry:component",
+      "title": "Bolt icon",
+      "description": "2 colors: nut (primary), threaded hole (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bolt.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bolt.tsx"
+        }
+      ]
+    },
+    {
       "name": "bomb",
       "type": "registry:component",
       "title": "Bomb icon",
@@ -1213,6 +1780,38 @@
           "path": "src/icons/bomb.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/bomb.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bone",
+      "type": "registry:component",
+      "title": "Bone icon",
+      "description": "2 colors: bone (primary), crack sparks (accent). The sparks only exist in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bone.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "book-marked",
+      "type": "registry:component",
+      "title": "Book Marked icon",
+      "description": "2 colors: book (primary), bookmark ribbon (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/book-marked.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/book-marked.tsx"
         }
       ]
     },
@@ -1261,6 +1860,22 @@
           "path": "src/icons/bookmark.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/bookmark.tsx"
+        }
+      ]
+    },
+    {
+      "name": "boom-box",
+      "type": "registry:component",
+      "title": "Boom Box icon",
+      "description": "2 colors: body + handle (primary), speakers (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/boom-box.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/boom-box.tsx"
         }
       ]
     },
@@ -1329,6 +1944,54 @@
       ]
     },
     {
+      "name": "brain",
+      "type": "registry:component",
+      "title": "Brain icon",
+      "description": "2 colors: hemispheres (primary), folds and spark (accent). The spark only exists in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/brain.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/brain.tsx"
+        }
+      ]
+    },
+    {
+      "name": "brick-wall",
+      "type": "registry:component",
+      "title": "Brick Wall icon",
+      "description": "2 colors: courses (primary), head joints (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/brick-wall.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/brick-wall.tsx"
+        }
+      ]
+    },
+    {
+      "name": "briefcase-business",
+      "type": "registry:component",
+      "title": "Briefcase Business icon",
+      "description": "2 colors: case, lid and handle (primary), clasp and side (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/briefcase-business.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/briefcase-business.tsx"
+        }
+      ]
+    },
+    {
       "name": "briefcase",
       "type": "registry:component",
       "title": "Briefcase icon",
@@ -1357,6 +2020,38 @@
           "path": "src/icons/brush.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/brush.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bubbles",
+      "type": "registry:component",
+      "title": "Bubbles icon",
+      "description": "2 colors: bubbles (primary), shine and droplets (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bubbles.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bubbles.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bug-play",
+      "type": "registry:component",
+      "title": "Bug Play icon",
+      "description": "2 colors: bug (primary), play button (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bug-play.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bug-play.tsx"
         }
       ]
     },
@@ -1393,6 +2088,22 @@
       ]
     },
     {
+      "name": "bus-front",
+      "type": "registry:component",
+      "title": "Bus Front icon",
+      "description": "2 colors: body, windscreen, mirrors and tyres (primary), headlights and route sign (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/bus-front.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/bus-front.tsx"
+        }
+      ]
+    },
+    {
       "name": "bus",
       "type": "registry:component",
       "title": "Bus icon",
@@ -1405,6 +2116,54 @@
           "path": "src/icons/bus.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/bus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cable-car",
+      "type": "registry:component",
+      "title": "Cable Car icon",
+      "description": "2 colors: cable and cabin (primary), windows (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cable-car.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cable-car.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cable",
+      "type": "registry:component",
+      "title": "Cable icon",
+      "description": "2 colors: lead (primary), plugs and signal (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cable.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cable.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cactus",
+      "type": "registry:component",
+      "title": "Cactus icon",
+      "description": "2 colors: cactus and ground (primary), flower (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cactus.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cactus.tsx"
         }
       ]
     },
@@ -1569,6 +2328,54 @@
       ]
     },
     {
+      "name": "candy-cane",
+      "type": "registry:component",
+      "title": "Candy Cane icon",
+      "description": "2 colors: cane (primary), stripes (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/candy-cane.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/candy-cane.tsx"
+        }
+      ]
+    },
+    {
+      "name": "candy",
+      "type": "registry:component",
+      "title": "Candy icon",
+      "description": "2 colors: wrapper ends (primary), sweet and stripe (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/candy.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/candy.tsx"
+        }
+      ]
+    },
+    {
+      "name": "car-front",
+      "type": "registry:component",
+      "title": "Car Front icon",
+      "description": "2 colors: body, windscreen and tyres (primary), headlights (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/car-front.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/car-front.tsx"
+        }
+      ]
+    },
+    {
       "name": "car",
       "type": "registry:component",
       "title": "Car icon",
@@ -1581,6 +2388,22 @@
           "path": "src/icons/car.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/car.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caravan",
+      "type": "registry:component",
+      "title": "Caravan icon",
+      "description": "2 colors: shell, wheel and hitch (primary), window and door (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/caravan.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/caravan.tsx"
         }
       ]
     },
@@ -1649,6 +2472,22 @@
       ]
     },
     {
+      "name": "castle",
+      "type": "registry:component",
+      "title": "Castle icon",
+      "description": "2 colors: walls and towers (primary), flag and gate (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/castle.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/castle.tsx"
+        }
+      ]
+    },
+    {
       "name": "cat",
       "type": "registry:component",
       "title": "Cat icon",
@@ -1661,6 +2500,22 @@
           "path": "src/icons/cat.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/cat.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cctv",
+      "type": "registry:component",
+      "title": "Cctv icon",
+      "description": "2 colors: housing + mount (primary), recording light (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cctv.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cctv.tsx"
         }
       ]
     },
@@ -1697,6 +2552,22 @@
       ]
     },
     {
+      "name": "chef-hat",
+      "type": "registry:component",
+      "title": "Chef Hat icon",
+      "description": "2 colors: puffed crown (primary), band (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/chef-hat.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/chef-hat.tsx"
+        }
+      ]
+    },
+    {
       "name": "cherry",
       "type": "registry:component",
       "title": "Cherry icon",
@@ -1709,6 +2580,22 @@
           "path": "src/icons/cherry.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/cherry.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chess-knight",
+      "type": "registry:component",
+      "title": "Chess Knight icon",
+      "description": "2 colors: piece (primary), eye (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/chess-knight.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/chess-knight.tsx"
         }
       ]
     },
@@ -1821,6 +2708,22 @@
           "path": "src/icons/chevrons-up-down.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/chevrons-up-down.tsx"
+        }
+      ]
+    },
+    {
+      "name": "church",
+      "type": "registry:component",
+      "title": "Church icon",
+      "description": "2 colors: church (primary), cross, bell and door (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/church.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/church.tsx"
         }
       ]
     },
@@ -2033,6 +2936,22 @@
       ]
     },
     {
+      "name": "clipboard-paste",
+      "type": "registry:component",
+      "title": "Clipboard Paste icon",
+      "description": "2 colors: board and clip (primary), arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/clipboard-paste.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/clipboard-paste.tsx"
+        }
+      ]
+    },
+    {
       "name": "clipboard-pen",
       "type": "registry:component",
       "title": "Clipboard Pen icon",
@@ -2093,6 +3012,22 @@
           "path": "src/icons/cloud-fog.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/cloud-fog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cloud-hail",
+      "type": "registry:component",
+      "title": "Cloud Hail icon",
+      "description": "2 colors: cloud (primary), hail (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cloud-hail.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cloud-hail.tsx"
         }
       ]
     },
@@ -2161,6 +3096,22 @@
       ]
     },
     {
+      "name": "cloud-sun-rain",
+      "type": "registry:component",
+      "title": "Cloud Sun Rain icon",
+      "description": "Cloud Sun Rain animated icon.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cloud-sun-rain.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cloud-sun-rain.tsx"
+        }
+      ]
+    },
+    {
       "name": "cloud-sun",
       "type": "registry:component",
       "title": "Cloud Sun icon",
@@ -2221,6 +3172,22 @@
           "path": "src/icons/clover.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/clover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "club",
+      "type": "registry:component",
+      "title": "Club icon",
+      "description": "2 colors: suit (primary), stem (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/club.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/club.tsx"
         }
       ]
     },
@@ -2353,6 +3320,22 @@
       ]
     },
     {
+      "name": "construction",
+      "type": "registry:component",
+      "title": "Construction icon",
+      "description": "2 colors: board and legs (primary), stripes and lamps (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/construction.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/construction.tsx"
+        }
+      ]
+    },
+    {
       "name": "container",
       "type": "registry:component",
       "title": "Container icon",
@@ -2397,6 +3380,22 @@
           "path": "src/icons/cookie.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/cookie.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cooking-pot",
+      "type": "registry:component",
+      "title": "Cooking Pot icon",
+      "description": "2 colors: pot (primary), lid and steam (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cooking-pot.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cooking-pot.tsx"
         }
       ]
     },
@@ -2449,6 +3448,22 @@
       ]
     },
     {
+      "name": "croissant",
+      "type": "registry:component",
+      "title": "Croissant icon",
+      "description": "2 colors: pastry (primary), layer seams (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/croissant.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/croissant.tsx"
+        }
+      ]
+    },
+    {
       "name": "crop",
       "type": "registry:component",
       "title": "Crop icon",
@@ -2461,6 +3476,38 @@
           "path": "src/icons/crop.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/crop.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cross",
+      "type": "registry:component",
+      "title": "Cross icon",
+      "description": "2 colors: cross (primary), fill and sparkles (accent). The fill and sparkles only exist in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cross.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cross.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crown",
+      "type": "registry:component",
+      "title": "Crown icon",
+      "description": "2 colors: crown and band (primary), jewel and glints (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/crown.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/crown.tsx"
         }
       ]
     },
@@ -2481,6 +3528,38 @@
       ]
     },
     {
+      "name": "cup-soda",
+      "type": "registry:component",
+      "title": "Cup Soda icon",
+      "description": "2 colors: cup and lid (primary), straw and soda (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/cup-soda.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/cup-soda.tsx"
+        }
+      ]
+    },
+    {
+      "name": "currency",
+      "type": "registry:component",
+      "title": "Currency icon",
+      "description": "2 colors: coin (primary), rays and rim (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/currency.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/currency.tsx"
+        }
+      ]
+    },
+    {
       "name": "cylinder",
       "type": "registry:component",
       "title": "Cylinder icon",
@@ -2497,6 +3576,22 @@
       ]
     },
     {
+      "name": "database-zap",
+      "type": "registry:component",
+      "title": "Database Zap icon",
+      "description": "2 colors: drum (primary), bolt and middle ring (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/database-zap.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/database-zap.tsx"
+        }
+      ]
+    },
+    {
       "name": "database",
       "type": "registry:component",
       "title": "Database icon",
@@ -2509,6 +3604,22 @@
           "path": "src/icons/database.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/database.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dessert",
+      "type": "registry:component",
+      "title": "Dessert icon",
+      "description": "2 colors: plate, pudding and sauce (primary), cherry (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/dessert.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/dessert.tsx"
         }
       ]
     },
@@ -2641,6 +3752,54 @@
       ]
     },
     {
+      "name": "drama",
+      "type": "registry:component",
+      "title": "Drama icon",
+      "description": "2 colors: comedy mask (primary), tragedy mask (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/drama.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/drama.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drill",
+      "type": "registry:component",
+      "title": "Drill icon",
+      "description": "2 colors: drill (primary), bit, chips and speed lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/drill.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/drill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drone",
+      "type": "registry:component",
+      "title": "Drone icon",
+      "description": "2 colors: body, arms and legs (primary), propellers and downdraft (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/drone.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/drone.tsx"
+        }
+      ]
+    },
+    {
       "name": "droplet",
       "type": "registry:component",
       "title": "Droplet icon",
@@ -2669,6 +3828,86 @@
           "path": "src/icons/drum.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/drum.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dumbbell",
+      "type": "registry:component",
+      "title": "Dumbbell icon",
+      "description": "2 colors: bar (primary), weight plates and dust (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/dumbbell.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/dumbbell.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ear",
+      "type": "registry:component",
+      "title": "Ear icon",
+      "description": "2 colors: ear (primary), inner fold and sound waves (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/ear.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/ear.tsx"
+        }
+      ]
+    },
+    {
+      "name": "earth",
+      "type": "registry:component",
+      "title": "Earth icon",
+      "description": "Earth animated icon.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/earth.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/earth.tsx"
+        }
+      ]
+    },
+    {
+      "name": "egg-fried",
+      "type": "registry:component",
+      "title": "Egg Fried icon",
+      "description": "2 colors: white (primary), yolk (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/egg-fried.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/egg-fried.tsx"
+        }
+      ]
+    },
+    {
+      "name": "egg",
+      "type": "registry:component",
+      "title": "Egg icon",
+      "description": "2 colors: shell (primary), speckles and the chick peeking out (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/egg.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/egg.tsx"
         }
       ]
     },
@@ -2721,6 +3960,22 @@
       ]
     },
     {
+      "name": "expand",
+      "type": "registry:component",
+      "title": "Expand icon",
+      "description": "1 color: four diagonal arrows pointing out to the corners.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/expand.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/expand.tsx"
+        }
+      ]
+    },
+    {
       "name": "external-link",
       "type": "registry:component",
       "title": "External Link icon",
@@ -2733,6 +3988,22 @@
           "path": "src/icons/external-link.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/external-link.tsx"
+        }
+      ]
+    },
+    {
+      "name": "eye-closed",
+      "type": "registry:component",
+      "title": "Eye Closed icon",
+      "description": "2 colors: lid (primary), lashes (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/eye-closed.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/eye-closed.tsx"
         }
       ]
     },
@@ -2785,6 +4056,22 @@
       ]
     },
     {
+      "name": "fan",
+      "type": "registry:component",
+      "title": "Fan icon",
+      "description": "2 colors: cage and stand (primary), blades (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/fan.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/fan.tsx"
+        }
+      ]
+    },
+    {
       "name": "fast-forward",
       "type": "registry:component",
       "title": "Fast Forward icon",
@@ -2813,6 +4100,38 @@
           "path": "src/icons/feather.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/feather.tsx"
+        }
+      ]
+    },
+    {
+      "name": "fence",
+      "type": "registry:component",
+      "title": "Fence icon",
+      "description": "2 colors: pickets (primary), rails (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/fence.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/fence.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ferris-wheel",
+      "type": "registry:component",
+      "title": "Ferris Wheel icon",
+      "description": "2 colors: wheel and stand (primary), cabins (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/ferris-wheel.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/ferris-wheel.tsx"
         }
       ]
     },
@@ -2909,6 +4228,22 @@
           "path": "src/icons/file-search.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/file-search.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file-spreadsheet",
+      "type": "registry:component",
+      "title": "File Spreadsheet icon",
+      "description": "2 colors: page (primary), cells (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/file-spreadsheet.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/file-spreadsheet.tsx"
         }
       ]
     },
@@ -3041,6 +4376,22 @@
       ]
     },
     {
+      "name": "fire-extinguisher",
+      "type": "registry:component",
+      "title": "Fire Extinguisher icon",
+      "description": "2 colors: tank and hose (primary), lever, nozzle and spray (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/fire-extinguisher.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/fire-extinguisher.tsx"
+        }
+      ]
+    },
+    {
       "name": "fish",
       "type": "registry:component",
       "title": "Fish icon",
@@ -3073,6 +4424,22 @@
       ]
     },
     {
+      "name": "flame-kindling",
+      "type": "registry:component",
+      "title": "Flame Kindling icon",
+      "description": "2 colors: logs (primary), flame and sparks (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/flame-kindling.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/flame-kindling.tsx"
+        }
+      ]
+    },
+    {
       "name": "flame",
       "type": "registry:component",
       "title": "Flame icon",
@@ -3085,6 +4452,22 @@
           "path": "src/icons/flame.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/flame.tsx"
+        }
+      ]
+    },
+    {
+      "name": "flashlight",
+      "type": "registry:component",
+      "title": "Flashlight icon",
+      "description": "2 colors: torch body (primary), switch, lens glow and beam (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/flashlight.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/flashlight.tsx"
         }
       ]
     },
@@ -3181,6 +4564,38 @@
           "path": "src/icons/folder.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/folder.tsx"
+        }
+      ]
+    },
+    {
+      "name": "footprints",
+      "type": "registry:component",
+      "title": "Footprints icon",
+      "description": "2 colors: back print (primary), front print (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/footprints.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/footprints.tsx"
+        }
+      ]
+    },
+    {
+      "name": "forklift",
+      "type": "registry:component",
+      "title": "Forklift icon",
+      "description": "2 colors: truck, mast and forks (primary), crate (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/forklift.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/forklift.tsx"
         }
       ]
     },
@@ -3345,6 +4760,22 @@
       ]
     },
     {
+      "name": "git-compare",
+      "type": "registry:component",
+      "title": "Git Compare icon",
+      "description": "2 colors: commits (primary), the two links between them (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/git-compare.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/git-compare.tsx"
+        }
+      ]
+    },
+    {
       "name": "git-fork",
       "type": "registry:component",
       "title": "Git Fork icon",
@@ -3393,6 +4824,22 @@
       ]
     },
     {
+      "name": "glasses",
+      "type": "registry:component",
+      "title": "Glasses icon",
+      "description": "2 colors: frame (primary), glint (accent). The glint only exists in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/glasses.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/glasses.tsx"
+        }
+      ]
+    },
+    {
       "name": "globe",
       "type": "registry:component",
       "title": "Globe icon",
@@ -3421,6 +4868,22 @@
           "path": "src/icons/graduation-cap.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/graduation-cap.tsx"
+        }
+      ]
+    },
+    {
+      "name": "grape",
+      "type": "registry:component",
+      "title": "Grape icon",
+      "description": "2 colors: stem and leaf (primary), grapes (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/grape.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/grape.tsx"
         }
       ]
     },
@@ -3489,6 +4952,38 @@
       ]
     },
     {
+      "name": "hand-heart",
+      "type": "registry:component",
+      "title": "Hand Heart icon",
+      "description": "2 colors: hand (primary), heart (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/hand-heart.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/hand-heart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hand-metal",
+      "type": "registry:component",
+      "title": "Hand Metal icon",
+      "description": "1 color: hand.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/hand-metal.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/hand-metal.tsx"
+        }
+      ]
+    },
+    {
       "name": "hand",
       "type": "registry:component",
       "title": "Hand icon",
@@ -3501,6 +4996,22 @@
           "path": "src/icons/hand.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/hand.tsx"
+        }
+      ]
+    },
+    {
+      "name": "handbag",
+      "type": "registry:component",
+      "title": "Handbag icon",
+      "description": "2 colors: bag (primary), handle and clasp (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/handbag.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/handbag.tsx"
         }
       ]
     },
@@ -3537,6 +5048,22 @@
       ]
     },
     {
+      "name": "hard-hat",
+      "type": "registry:component",
+      "title": "Hard Hat icon",
+      "description": "2 colors: shell and brim (primary), ridge, falling brick and impact marks (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/hard-hat.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/hard-hat.tsx"
+        }
+      ]
+    },
+    {
       "name": "hash",
       "type": "registry:component",
       "title": "Hash icon",
@@ -3553,6 +5080,22 @@
       ]
     },
     {
+      "name": "haze",
+      "type": "registry:component",
+      "title": "Haze icon",
+      "description": "2 colors: sun and horizon (primary), haze (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/haze.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/haze.tsx"
+        }
+      ]
+    },
+    {
       "name": "headphones",
       "type": "registry:component",
       "title": "Headphones icon",
@@ -3565,6 +5108,54 @@
           "path": "src/icons/headphones.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/headphones.tsx"
+        }
+      ]
+    },
+    {
+      "name": "headset",
+      "type": "registry:component",
+      "title": "Headset icon",
+      "description": "2 colors: headband + ear cups (primary), mic boom (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/headset.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/headset.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heart-handshake",
+      "type": "registry:component",
+      "title": "Heart Handshake icon",
+      "description": "2 colors: heart (primary), clasped hands (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/heart-handshake.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/heart-handshake.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heart-pulse",
+      "type": "registry:component",
+      "title": "Heart Pulse icon",
+      "description": "2 colors: heart (primary), trace (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/heart-pulse.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/heart-pulse.tsx"
         }
       ]
     },
@@ -3649,6 +5240,38 @@
       ]
     },
     {
+      "name": "hospital",
+      "type": "registry:component",
+      "title": "Hospital icon",
+      "description": "2 colors: building (primary), cross (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/hospital.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/hospital.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hotel",
+      "type": "registry:component",
+      "title": "Hotel icon",
+      "description": "2 colors: building and canopy (primary), lit rooms and door (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/hotel.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/hotel.tsx"
+        }
+      ]
+    },
+    {
       "name": "hourglass",
       "type": "registry:component",
       "title": "Hourglass icon",
@@ -3661,6 +5284,38 @@
           "path": "src/icons/hourglass.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/hourglass.tsx"
+        }
+      ]
+    },
+    {
+      "name": "house-plug",
+      "type": "registry:component",
+      "title": "House Plug icon",
+      "description": "2 colors: house (primary), plug and cord (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/house-plug.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/house-plug.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ice-cream-bowl",
+      "type": "registry:component",
+      "title": "Ice Cream Bowl icon",
+      "description": "2 colors: bowl (primary), scoops (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/ice-cream-bowl.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/ice-cream-bowl.tsx"
         }
       ]
     },
@@ -3713,6 +5368,22 @@
       ]
     },
     {
+      "name": "indian-rupee",
+      "type": "registry:component",
+      "title": "Indian Rupee icon",
+      "description": "2 colors: bowl and tail (primary), bars and rim (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/indian-rupee.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/indian-rupee.tsx"
+        }
+      ]
+    },
+    {
       "name": "info",
       "type": "registry:component",
       "title": "Info icon",
@@ -3725,6 +5396,54 @@
           "path": "src/icons/info.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/info.tsx"
+        }
+      ]
+    },
+    {
+      "name": "japanese-yen",
+      "type": "registry:component",
+      "title": "Japanese Yen icon",
+      "description": "2 colors: Y (primary), bars and rim (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/japanese-yen.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/japanese-yen.tsx"
+        }
+      ]
+    },
+    {
+      "name": "joystick",
+      "type": "registry:component",
+      "title": "Joystick icon",
+      "description": "2 colors: base and shaft (primary), knob, button and sparks (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/joystick.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/joystick.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kanban",
+      "type": "registry:component",
+      "title": "Kanban icon",
+      "description": "2 colors: side columns (primary), the card in progress (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/kanban.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/kanban.tsx"
         }
       ]
     },
@@ -3773,6 +5492,54 @@
           "path": "src/icons/keyboard.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/keyboard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lamp-desk",
+      "type": "registry:component",
+      "title": "Lamp Desk icon",
+      "description": "2 colors: base and arms (primary), shade and light (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/lamp-desk.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/lamp-desk.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lamp-floor",
+      "type": "registry:component",
+      "title": "Lamp Floor icon",
+      "description": "2 colors: pole and tripod (primary), shade and light (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/lamp-floor.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/lamp-floor.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lamp",
+      "type": "registry:component",
+      "title": "Lamp icon",
+      "description": "2 colors: shade, stem and base (primary), pull cord and light (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/lamp.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/lamp.tsx"
         }
       ]
     },
@@ -3889,6 +5656,22 @@
       ]
     },
     {
+      "name": "leafy-green",
+      "type": "registry:component",
+      "title": "Leafy Green icon",
+      "description": "2 colors: leaf (primary), stem and veins (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/leafy-green.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/leafy-green.tsx"
+        }
+      ]
+    },
+    {
       "name": "library",
       "type": "registry:component",
       "title": "Library icon",
@@ -3969,6 +5752,38 @@
       ]
     },
     {
+      "name": "list-music",
+      "type": "registry:component",
+      "title": "List Music icon",
+      "description": "2 colors: track rows (primary), note (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/list-music.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/list-music.tsx"
+        }
+      ]
+    },
+    {
+      "name": "list-todo",
+      "type": "registry:component",
+      "title": "List Todo icon",
+      "description": "2 colors: lines and the open box (primary), the done tick (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/list-todo.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/list-todo.tsx"
+        }
+      ]
+    },
+    {
       "name": "list",
       "type": "registry:component",
       "title": "List icon",
@@ -3981,6 +5796,22 @@
           "path": "src/icons/list.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/list.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loader-pinwheel",
+      "type": "registry:component",
+      "title": "Loader Pinwheel icon",
+      "description": "2 colors: rim (primary), vanes (accent). Loops forever with no rest by default, like every loader.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/loader-pinwheel.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/loader-pinwheel.tsx"
         }
       ]
     },
@@ -4081,6 +5912,54 @@
       ]
     },
     {
+      "name": "lollipop",
+      "type": "registry:component",
+      "title": "Lollipop icon",
+      "description": "2 colors: candy and stick (primary), swirl (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/lollipop.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/lollipop.tsx"
+        }
+      ]
+    },
+    {
+      "name": "luggage",
+      "type": "registry:component",
+      "title": "Luggage icon",
+      "description": "2 colors: case and wheels (primary), handle and straps (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/luggage.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/luggage.tsx"
+        }
+      ]
+    },
+    {
+      "name": "magnet",
+      "type": "registry:component",
+      "title": "Magnet icon",
+      "description": "2 colors: horseshoe (primary), poles and filings (accent). The filings only exist in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/magnet.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/magnet.tsx"
+        }
+      ]
+    },
+    {
       "name": "mail-check",
       "type": "registry:component",
       "title": "Mail Check icon",
@@ -4125,6 +6004,22 @@
           "path": "src/icons/mail.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/mail.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mailbox",
+      "type": "registry:component",
+      "title": "Mailbox icon",
+      "description": "2 colors: box and door (primary), flag and letter (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/mailbox.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/mailbox.tsx"
         }
       ]
     },
@@ -4177,6 +6072,22 @@
       ]
     },
     {
+      "name": "medal",
+      "type": "registry:component",
+      "title": "Medal icon",
+      "description": "3 colors: medal (primary), ribbon (secondary), star and sparkles (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/medal.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/medal.tsx"
+        }
+      ]
+    },
+    {
       "name": "megaphone",
       "type": "registry:component",
       "title": "Megaphone icon",
@@ -4189,6 +6100,22 @@
           "path": "src/icons/megaphone.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/megaphone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "memory-stick",
+      "type": "registry:component",
+      "title": "Memory Stick icon",
+      "description": "2 colors: board + pins (primary), chips (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/memory-stick.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/memory-stick.tsx"
         }
       ]
     },
@@ -4289,6 +6216,22 @@
       ]
     },
     {
+      "name": "mic-vocal",
+      "type": "registry:component",
+      "title": "Mic Vocal icon",
+      "description": "2 colors: handle + cable (primary), ball head + voice ticks (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/mic-vocal.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/mic-vocal.tsx"
+        }
+      ]
+    },
+    {
       "name": "mic",
       "type": "registry:component",
       "title": "Mic icon",
@@ -4317,6 +6260,38 @@
           "path": "src/icons/microscope.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/microscope.tsx"
+        }
+      ]
+    },
+    {
+      "name": "microwave",
+      "type": "registry:component",
+      "title": "Microwave icon",
+      "description": "2 colors: oven and door (primary), dish and buttons (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/microwave.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/microwave.tsx"
+        }
+      ]
+    },
+    {
+      "name": "milk",
+      "type": "registry:component",
+      "title": "Milk icon",
+      "description": "2 colors: bottle (primary), cap and milk (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/milk.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/milk.tsx"
         }
       ]
     },
@@ -4353,6 +6328,22 @@
       ]
     },
     {
+      "name": "monitor-speaker",
+      "type": "registry:component",
+      "title": "Monitor Speaker icon",
+      "description": "2 colors: monitor + speaker cabinet (primary), drivers and screen glow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/monitor-speaker.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/monitor-speaker.tsx"
+        }
+      ]
+    },
+    {
       "name": "monitor",
       "type": "registry:component",
       "title": "Monitor icon",
@@ -4369,6 +6360,22 @@
       ]
     },
     {
+      "name": "moon-star",
+      "type": "registry:component",
+      "title": "Moon Star icon",
+      "description": "2 colors: moon (primary), star (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/moon-star.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/moon-star.tsx"
+        }
+      ]
+    },
+    {
       "name": "moon",
       "type": "registry:component",
       "title": "Moon icon",
@@ -4381,6 +6388,22 @@
           "path": "src/icons/moon.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/moon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "motorbike",
+      "type": "registry:component",
+      "title": "Motorbike icon",
+      "description": "2 colors: frame and wheels (primary), headlight and speed lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/motorbike.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/motorbike.tsx"
         }
       ]
     },
@@ -4449,6 +6472,22 @@
       ]
     },
     {
+      "name": "move",
+      "type": "registry:component",
+      "title": "Move icon",
+      "description": "2 colors: four arrows (primary), centre hub (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/move.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/move.tsx"
+        }
+      ]
+    },
+    {
       "name": "music",
       "type": "registry:component",
       "title": "Music icon",
@@ -4481,6 +6520,22 @@
       ]
     },
     {
+      "name": "network",
+      "type": "registry:component",
+      "title": "Network icon",
+      "description": "2 colors: nodes (primary), links and packets (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/network.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/network.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper",
       "type": "registry:component",
       "title": "Newspaper icon",
@@ -4493,6 +6548,38 @@
           "path": "src/icons/newspaper.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/newspaper.tsx"
+        }
+      ]
+    },
+    {
+      "name": "nfc",
+      "type": "registry:component",
+      "title": "Nfc icon",
+      "description": "1 color: the waves.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/nfc.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/nfc.tsx"
+        }
+      ]
+    },
+    {
+      "name": "notebook-pen",
+      "type": "registry:component",
+      "title": "Notebook Pen icon",
+      "description": "2 colors: cover and rings (primary), pen and the line it writes (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/notebook-pen.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/notebook-pen.tsx"
         }
       ]
     },
@@ -4513,6 +6600,38 @@
       ]
     },
     {
+      "name": "nut",
+      "type": "registry:component",
+      "title": "Nut icon",
+      "description": "2 colors: nut (primary), cap and stem (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/nut.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/nut.tsx"
+        }
+      ]
+    },
+    {
+      "name": "octagon-alert",
+      "type": "registry:component",
+      "title": "Octagon Alert icon",
+      "description": "2 colors: octagon (primary), exclamation mark (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/octagon-alert.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/octagon-alert.tsx"
+        }
+      ]
+    },
+    {
       "name": "orbit",
       "type": "registry:component",
       "title": "Orbit icon",
@@ -4525,6 +6644,38 @@
           "path": "src/icons/orbit.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/orbit.tsx"
+        }
+      ]
+    },
+    {
+      "name": "origami",
+      "type": "registry:component",
+      "title": "Origami icon",
+      "description": "2 colors: body and far wing (primary), near wing (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/origami.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/origami.tsx"
+        }
+      ]
+    },
+    {
+      "name": "package-open",
+      "type": "registry:component",
+      "title": "Package Open icon",
+      "description": "2 colors: box (primary), flaps (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/package-open.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/package-open.tsx"
         }
       ]
     },
@@ -4577,6 +6728,22 @@
       ]
     },
     {
+      "name": "paintbrush",
+      "type": "registry:component",
+      "title": "Paintbrush icon",
+      "description": "2 colors: handle and ferrule (primary), bristles and paint (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/paintbrush.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/paintbrush.tsx"
+        }
+      ]
+    },
+    {
       "name": "palette",
       "type": "registry:component",
       "title": "Palette icon",
@@ -4593,6 +6760,22 @@
       ]
     },
     {
+      "name": "panda",
+      "type": "registry:component",
+      "title": "Panda icon",
+      "description": "2 colors: head, ears and nose (primary), eye patches (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/panda.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/panda.tsx"
+        }
+      ]
+    },
+    {
       "name": "paperclip",
       "type": "registry:component",
       "title": "Paperclip icon",
@@ -4605,6 +6788,22 @@
           "path": "src/icons/paperclip.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/paperclip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "parking-meter",
+      "type": "registry:component",
+      "title": "Parking Meter icon",
+      "description": "2 colors: meter and post (primary), time display and coin (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/parking-meter.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/parking-meter.tsx"
         }
       ]
     },
@@ -4673,6 +6872,22 @@
       ]
     },
     {
+      "name": "pencil-ruler",
+      "type": "registry:component",
+      "title": "Pencil Ruler icon",
+      "description": "2 colors: ruler and pencil body (primary), pencil tip (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pencil-ruler.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pencil-ruler.tsx"
+        }
+      ]
+    },
+    {
       "name": "pencil",
       "type": "registry:component",
       "title": "Pencil icon",
@@ -4721,6 +6936,38 @@
       ]
     },
     {
+      "name": "phone-incoming",
+      "type": "registry:component",
+      "title": "Phone Incoming icon",
+      "description": "2 colors: handset (primary), incoming arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/phone-incoming.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/phone-incoming.tsx"
+        }
+      ]
+    },
+    {
+      "name": "phone-missed",
+      "type": "registry:component",
+      "title": "Phone Missed icon",
+      "description": "2 colors: handset (primary), cross (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/phone-missed.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/phone-missed.tsx"
+        }
+      ]
+    },
+    {
       "name": "phone",
       "type": "registry:component",
       "title": "Phone icon",
@@ -4753,6 +7000,22 @@
       ]
     },
     {
+      "name": "pickaxe",
+      "type": "registry:component",
+      "title": "Pickaxe icon",
+      "description": "2 colors: handle (primary), head and sparks (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pickaxe.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pickaxe.tsx"
+        }
+      ]
+    },
+    {
       "name": "pie-chart",
       "type": "registry:component",
       "title": "Pie Chart icon",
@@ -4781,6 +7044,22 @@
           "path": "src/icons/piggy-bank.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/piggy-bank.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pill-bottle",
+      "type": "registry:component",
+      "title": "Pill Bottle icon",
+      "description": "2 colors: bottle and label (primary), cap and pills (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pill-bottle.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pill-bottle.tsx"
         }
       ]
     },
@@ -4865,6 +7144,38 @@
       ]
     },
     {
+      "name": "plane-landing",
+      "type": "registry:component",
+      "title": "Plane Landing icon",
+      "description": "2 colors: airliner (primary), runway markings (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/plane-landing.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/plane-landing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "plane-takeoff",
+      "type": "registry:component",
+      "title": "Plane Takeoff icon",
+      "description": "2 colors: airliner (primary), runway markings (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/plane-takeoff.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/plane-takeoff.tsx"
+        }
+      ]
+    },
+    {
       "name": "plane",
       "type": "registry:component",
       "title": "Plane icon",
@@ -4897,6 +7208,22 @@
       ]
     },
     {
+      "name": "plug",
+      "type": "registry:component",
+      "title": "Plug icon",
+      "description": "2 colors: body + cord (primary), prongs, glow and sparks (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/plug.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/plug.tsx"
+        }
+      ]
+    },
+    {
       "name": "plus",
       "type": "registry:component",
       "title": "Plus icon",
@@ -4925,6 +7252,86 @@
           "path": "src/icons/podcast.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/podcast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pointer",
+      "type": "registry:component",
+      "title": "Pointer icon",
+      "description": "2 colors: hand (primary), tap rays (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pointer.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pointer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popcorn",
+      "type": "registry:component",
+      "title": "Popcorn icon",
+      "description": "2 colors: bucket (primary), popcorn (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/popcorn.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/popcorn.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pound-sterling",
+      "type": "registry:component",
+      "title": "Pound Sterling icon",
+      "description": "2 colors: sign (primary), crossbar and rim (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/pound-sterling.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/pound-sterling.tsx"
+        }
+      ]
+    },
+    {
+      "name": "power",
+      "type": "registry:component",
+      "title": "Power icon",
+      "description": "2 colors: ring (primary), bar and glow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/power.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/power.tsx"
+        }
+      ]
+    },
+    {
+      "name": "presentation",
+      "type": "registry:component",
+      "title": "Presentation icon",
+      "description": "2 colors: board and stand (primary), chart (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/presentation.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/presentation.tsx"
         }
       ]
     },
@@ -5041,6 +7448,54 @@
       ]
     },
     {
+      "name": "radar",
+      "type": "registry:component",
+      "title": "Radar icon",
+      "description": "2 colors: scope (primary), sweep, trail and echoes (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/radar.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/radar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radiation",
+      "type": "registry:component",
+      "title": "Radiation icon",
+      "description": "2 colors: ring (primary), trefoil (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/radiation.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/radiation.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-receiver",
+      "type": "registry:component",
+      "title": "Radio Receiver icon",
+      "description": "2 colors: body, grille + feet (primary), antenna + tuning knob (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/radio-receiver.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/radio-receiver.tsx"
+        }
+      ]
+    },
+    {
       "name": "radio-tower",
       "type": "registry:component",
       "title": "Radio Tower icon",
@@ -5089,6 +7544,38 @@
       ]
     },
     {
+      "name": "rat",
+      "type": "registry:component",
+      "title": "Rat icon",
+      "description": "2 colors: body and ear (primary), eye and tail (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/rat.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/rat.tsx"
+        }
+      ]
+    },
+    {
+      "name": "receipt-text",
+      "type": "registry:component",
+      "title": "Receipt Text icon",
+      "description": "2 colors: paper (primary), printed lines (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/receipt-text.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/receipt-text.tsx"
+        }
+      ]
+    },
+    {
       "name": "receipt",
       "type": "registry:component",
       "title": "Receipt icon",
@@ -5105,6 +7592,22 @@
       ]
     },
     {
+      "name": "redo",
+      "type": "registry:component",
+      "title": "Redo icon",
+      "description": "1 color: a curved arrow turning forward on itself; the mirror image of `undo`.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/redo.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/redo.tsx"
+        }
+      ]
+    },
+    {
       "name": "refresh",
       "type": "registry:component",
       "title": "Refresh icon",
@@ -5117,6 +7620,38 @@
           "path": "src/icons/refresh.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/refresh.tsx"
+        }
+      ]
+    },
+    {
+      "name": "refrigerator",
+      "type": "registry:component",
+      "title": "Refrigerator icon",
+      "description": "2 colors: cabinet and doors (primary), handles and shelves (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/refrigerator.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/refrigerator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "regex",
+      "type": "registry:component",
+      "title": "Regex icon",
+      "description": "2 colors: dot (primary), asterisk (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/regex.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/regex.tsx"
         }
       ]
     },
@@ -5181,6 +7716,22 @@
           "path": "src/icons/rocket.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/rocket.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rocking-chair",
+      "type": "registry:component",
+      "title": "Rocking Chair icon",
+      "description": "2 colors: chair (primary), rocker and z (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/rocking-chair.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/rocking-chair.tsx"
         }
       ]
     },
@@ -5297,6 +7848,54 @@
       ]
     },
     {
+      "name": "salad",
+      "type": "registry:component",
+      "title": "Salad icon",
+      "description": "2 colors: bowl (primary), leaves and tomato (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/salad.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/salad.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sandwich",
+      "type": "registry:component",
+      "title": "Sandwich icon",
+      "description": "2 colors: bread (primary), lettuce (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/sandwich.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/sandwich.tsx"
+        }
+      ]
+    },
+    {
+      "name": "satellite-dish",
+      "type": "registry:component",
+      "title": "Satellite Dish icon",
+      "description": "2 colors: dish (primary), feed horn and signal (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/satellite-dish.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/satellite-dish.tsx"
+        }
+      ]
+    },
+    {
       "name": "satellite",
       "type": "registry:component",
       "title": "Satellite icon",
@@ -5345,6 +7944,38 @@
       ]
     },
     {
+      "name": "scan-barcode",
+      "type": "registry:component",
+      "title": "Scan Barcode icon",
+      "description": "2 colors: brackets and bars (primary), scanner laser (accent). The laser only exists in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/scan-barcode.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/scan-barcode.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scan-eye",
+      "type": "registry:component",
+      "title": "Scan Eye icon",
+      "description": "2 colors: viewfinder (primary), eye and scan beam (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/scan-eye.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/scan-eye.tsx"
+        }
+      ]
+    },
+    {
       "name": "scan-face",
       "type": "registry:component",
       "title": "Scan Face icon",
@@ -5357,6 +7988,22 @@
           "path": "src/icons/scan-face.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/scan-face.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scan-heart",
+      "type": "registry:component",
+      "title": "Scan Heart icon",
+      "description": "2 colors: viewfinder (primary), heart and scan beam (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/scan-heart.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/scan-heart.tsx"
         }
       ]
     },
@@ -5437,6 +8084,22 @@
           "path": "src/icons/send.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/send.tsx"
+        }
+      ]
+    },
+    {
+      "name": "server-cog",
+      "type": "registry:component",
+      "title": "Server Cog icon",
+      "description": "3 colors: rack units (primary), status lights (secondary), cog (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/server-cog.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/server-cog.tsx"
         }
       ]
     },
@@ -5537,6 +8200,22 @@
       ]
     },
     {
+      "name": "shield-ban",
+      "type": "registry:component",
+      "title": "Shield Ban icon",
+      "description": "2 colors: shield (primary), slash (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shield-ban.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shield-ban.tsx"
+        }
+      ]
+    },
+    {
       "name": "shield-check",
       "type": "registry:component",
       "title": "Shield Check icon",
@@ -5585,6 +8264,22 @@
       ]
     },
     {
+      "name": "ship-wheel",
+      "type": "registry:component",
+      "title": "Ship Wheel icon",
+      "description": "2 colors: rim and spokes (primary), hub and king spoke (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/ship-wheel.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/ship-wheel.tsx"
+        }
+      ]
+    },
+    {
       "name": "ship",
       "type": "registry:component",
       "title": "Ship icon",
@@ -5601,6 +8296,22 @@
       ]
     },
     {
+      "name": "shirt",
+      "type": "registry:component",
+      "title": "Shirt icon",
+      "description": "2 colors: shirt (primary), collar (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shirt.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shirt.tsx"
+        }
+      ]
+    },
+    {
       "name": "shopping-bag",
       "type": "registry:component",
       "title": "Shopping Bag icon",
@@ -5613,6 +8324,70 @@
           "path": "src/icons/shopping-bag.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/shopping-bag.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shopping-basket",
+      "type": "registry:component",
+      "title": "Shopping Basket icon",
+      "description": "2 colors: basket, rim and weave (primary), handle (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shopping-basket.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shopping-basket.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shovel",
+      "type": "registry:component",
+      "title": "Shovel icon",
+      "description": "2 colors: handle and grip (primary), blade and dirt (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shovel.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shovel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shrink",
+      "type": "registry:component",
+      "title": "Shrink icon",
+      "description": "1 color: four diagonal arrows pointing in from the corners.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shrink.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shrink.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shrub",
+      "type": "registry:component",
+      "title": "Shrub icon",
+      "description": "2 colors: bush and ground (primary), berries (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/shrub.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/shrub.tsx"
         }
       ]
     },
@@ -5665,6 +8440,38 @@
       ]
     },
     {
+      "name": "signature",
+      "type": "registry:component",
+      "title": "Signature icon",
+      "description": "2 colors: baseline (primary), autograph (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/signature.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/signature.tsx"
+        }
+      ]
+    },
+    {
+      "name": "signpost",
+      "type": "registry:component",
+      "title": "Signpost icon",
+      "description": "2 colors: post (primary), direction boards (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/signpost.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/signpost.tsx"
+        }
+      ]
+    },
+    {
       "name": "siren",
       "type": "registry:component",
       "title": "Siren icon",
@@ -5677,6 +8484,22 @@
           "path": "src/icons/siren.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/siren.tsx"
+        }
+      ]
+    },
+    {
+      "name": "skateboard",
+      "type": "registry:component",
+      "title": "Skateboard icon",
+      "description": "2 colors: deck and trucks (primary), wheels (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/skateboard.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/skateboard.tsx"
         }
       ]
     },
@@ -5761,6 +8584,22 @@
       ]
     },
     {
+      "name": "smile-plus",
+      "type": "registry:component",
+      "title": "Smile Plus icon",
+      "description": "2 colors: face, eyes and mouth (primary), plus (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/smile-plus.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/smile-plus.tsx"
+        }
+      ]
+    },
+    {
       "name": "smile",
       "type": "registry:component",
       "title": "Smile icon",
@@ -5805,6 +8644,54 @@
           "path": "src/icons/snowflake.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/snowflake.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sofa",
+      "type": "registry:component",
+      "title": "Sofa icon",
+      "description": "2 colors: sofa (primary), seat cushion (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/sofa.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/sofa.tsx"
+        }
+      ]
+    },
+    {
+      "name": "soup",
+      "type": "registry:component",
+      "title": "Soup icon",
+      "description": "2 colors: bowl and spoon (primary), steam (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/soup.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/soup.tsx"
+        }
+      ]
+    },
+    {
+      "name": "spade",
+      "type": "registry:component",
+      "title": "Spade icon",
+      "description": "2 colors: suit (primary), stem and dust (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/spade.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/spade.tsx"
         }
       ]
     },
@@ -5905,6 +8792,22 @@
       ]
     },
     {
+      "name": "squirrel",
+      "type": "registry:component",
+      "title": "Squirrel icon",
+      "description": "2 colors: body and tail (primary), eye and acorn (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/squirrel.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/squirrel.tsx"
+        }
+      ]
+    },
+    {
       "name": "stamp",
       "type": "registry:component",
       "title": "Stamp icon",
@@ -5949,6 +8852,22 @@
           "path": "src/icons/stethoscope.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/stethoscope.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sticker",
+      "type": "registry:component",
+      "title": "Sticker icon",
+      "description": "2 colors: sticker and face (primary), peeled corner (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/sticker.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/sticker.tsx"
         }
       ]
     },
@@ -6001,6 +8920,22 @@
       ]
     },
     {
+      "name": "sun-snow",
+      "type": "registry:component",
+      "title": "Sun Snow icon",
+      "description": "2 colors: sun (primary), snowflake (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/sun-snow.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/sun-snow.tsx"
+        }
+      ]
+    },
+    {
       "name": "sun",
       "type": "registry:component",
       "title": "Sun icon",
@@ -6045,6 +8980,38 @@
           "path": "src/icons/sunset.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/sunset.tsx"
+        }
+      ]
+    },
+    {
+      "name": "swords",
+      "type": "registry:component",
+      "title": "Swords icon",
+      "description": "2 colors: blades (primary), hilts and spark (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/swords.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/swords.tsx"
+        }
+      ]
+    },
+    {
+      "name": "syringe",
+      "type": "registry:component",
+      "title": "Syringe icon",
+      "description": "2 colors: barrel, needle and plunger (primary), dose and drop (accent). The drop only exists in motion.",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/syringe.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/syringe.tsx"
         }
       ]
     },
@@ -6097,6 +9064,22 @@
       ]
     },
     {
+      "name": "target",
+      "type": "registry:component",
+      "title": "Target icon",
+      "description": "2 colors: rings (primary), bullseye and arrow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/target.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/target.tsx"
+        }
+      ]
+    },
+    {
       "name": "telescope",
       "type": "registry:component",
       "title": "Telescope icon",
@@ -6109,6 +9092,22 @@
           "path": "src/icons/telescope.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/telescope.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tent-tree",
+      "type": "registry:component",
+      "title": "Tent Tree icon",
+      "description": "3 colors: tent and ground (primary), pine (secondary), sun and doorway (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/tent-tree.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/tent-tree.tsx"
         }
       ]
     },
@@ -6157,6 +9156,22 @@
           "path": "src/icons/test-tube.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/test-tube.tsx"
+        }
+      ]
+    },
+    {
+      "name": "thermometer-sun",
+      "type": "registry:component",
+      "title": "Thermometer Sun icon",
+      "description": "2 colors: glass (primary), sun and mercury (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/thermometer-sun.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/thermometer-sun.tsx"
         }
       ]
     },
@@ -6225,6 +9240,22 @@
       ]
     },
     {
+      "name": "tickets",
+      "type": "registry:component",
+      "title": "Tickets icon",
+      "description": "2 colors: tickets (primary), perforation (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/tickets.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/tickets.tsx"
+        }
+      ]
+    },
+    {
       "name": "timer",
       "type": "registry:component",
       "title": "Timer icon",
@@ -6237,6 +9268,22 @@
           "path": "src/icons/timer.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/timer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:component",
+      "title": "Toggle icon",
+      "description": "2 colors: track (primary), knob and on-glow (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/toggle.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/toggle.tsx"
         }
       ]
     },
@@ -6273,6 +9320,38 @@
       ]
     },
     {
+      "name": "tower-control",
+      "type": "registry:component",
+      "title": "Tower Control icon",
+      "description": "2 colors: tower (primary), window frames, glass and beacon (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/tower-control.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/tower-control.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toy-brick",
+      "type": "registry:component",
+      "title": "Toy Brick icon",
+      "description": "2 colors: brick (primary), studs (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/toy-brick.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/toy-brick.tsx"
+        }
+      ]
+    },
+    {
       "name": "tractor",
       "type": "registry:component",
       "title": "Tractor icon",
@@ -6301,6 +9380,22 @@
           "path": "src/icons/traffic-cone.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/traffic-cone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "train-track",
+      "type": "registry:component",
+      "title": "Train Track icon",
+      "description": "2 colors: rails (primary), sleepers (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/train-track.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/train-track.tsx"
         }
       ]
     },
@@ -6349,6 +9444,22 @@
           "path": "src/icons/trash.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/trash.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tree-palm",
+      "type": "registry:component",
+      "title": "Tree Palm icon",
+      "description": "2 colors: trunk and ground (primary), fronds (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/tree-palm.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/tree-palm.tsx"
         }
       ]
     },
@@ -6529,6 +9640,22 @@
       ]
     },
     {
+      "name": "university",
+      "type": "registry:component",
+      "title": "University icon",
+      "description": "2 colors: hall (primary), finial, door and caps (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/university.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/university.tsx"
+        }
+      ]
+    },
+    {
       "name": "upload",
       "type": "registry:component",
       "title": "Upload icon",
@@ -6557,6 +9684,22 @@
           "path": "src/icons/usb.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/usb.tsx"
+        }
+      ]
+    },
+    {
+      "name": "user-lock",
+      "type": "registry:component",
+      "title": "User Lock icon",
+      "description": "2 colors: user (primary), padlock (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/user-lock.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/user-lock.tsx"
         }
       ]
     },
@@ -6625,6 +9768,54 @@
       ]
     },
     {
+      "name": "utensils",
+      "type": "registry:component",
+      "title": "Utensils icon",
+      "description": "2 colors: fork (primary), knife (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/utensils.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/utensils.tsx"
+        }
+      ]
+    },
+    {
+      "name": "utility-pole",
+      "type": "registry:component",
+      "title": "Utility Pole icon",
+      "description": "2 colors: pole and crossarm (primary), insulators, sparks and bird (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/utility-pole.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/utility-pole.tsx"
+        }
+      ]
+    },
+    {
+      "name": "variable",
+      "type": "registry:component",
+      "title": "Variable icon",
+      "description": "2 colors: parentheses (primary), the x (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/variable.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/variable.tsx"
+        }
+      ]
+    },
+    {
       "name": "vault",
       "type": "registry:component",
       "title": "Vault icon",
@@ -6673,6 +9864,38 @@
       ]
     },
     {
+      "name": "voicemail",
+      "type": "registry:component",
+      "title": "Voicemail icon",
+      "description": "2 colors: reels + tape (primary), hubs (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/voicemail.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/voicemail.tsx"
+        }
+      ]
+    },
+    {
+      "name": "volleyball",
+      "type": "registry:component",
+      "title": "Volleyball icon",
+      "description": "2 colors: ball (primary), seams (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/volleyball.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/volleyball.tsx"
+        }
+      ]
+    },
+    {
       "name": "volume-x",
       "type": "registry:component",
       "title": "Volume X icon",
@@ -6705,6 +9928,38 @@
       ]
     },
     {
+      "name": "vote",
+      "type": "registry:component",
+      "title": "Vote icon",
+      "description": "2 colors: ballot box (primary), ballot and tick (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/vote.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/vote.tsx"
+        }
+      ]
+    },
+    {
+      "name": "wallet-cards",
+      "type": "registry:component",
+      "title": "Wallet Cards icon",
+      "description": "2 colors: wallet and flap (primary), cards (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/wallet-cards.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/wallet-cards.tsx"
+        }
+      ]
+    },
+    {
       "name": "wallet",
       "type": "registry:component",
       "title": "Wallet icon",
@@ -6721,6 +9976,22 @@
       ]
     },
     {
+      "name": "wand-sparkles",
+      "type": "registry:component",
+      "title": "Wand Sparkles icon",
+      "description": "3 colors: stick (primary), tip (secondary), sparkles (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/wand-sparkles.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/wand-sparkles.tsx"
+        }
+      ]
+    },
+    {
       "name": "wand",
       "type": "registry:component",
       "title": "Wand icon",
@@ -6733,6 +10004,38 @@
           "path": "src/icons/wand.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/wand.tsx"
+        }
+      ]
+    },
+    {
+      "name": "warehouse",
+      "type": "registry:component",
+      "title": "Warehouse icon",
+      "description": "2 colors: shed and door frame (primary), roller door and crate (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/warehouse.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/warehouse.tsx"
+        }
+      ]
+    },
+    {
+      "name": "washing-machine",
+      "type": "registry:component",
+      "title": "Washing Machine icon",
+      "description": "2 colors: cabinet and drum (primary), water and dial (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/washing-machine.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/washing-machine.tsx"
         }
       ]
     },
@@ -6801,6 +10104,38 @@
       ]
     },
     {
+      "name": "weight",
+      "type": "registry:component",
+      "title": "Weight icon",
+      "description": "2 colors: body (primary), handle and dust (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/weight.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/weight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "wheat",
+      "type": "registry:component",
+      "title": "Wheat icon",
+      "description": "2 colors: stalk (primary), grains (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/wheat.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/wheat.tsx"
+        }
+      ]
+    },
+    {
       "name": "wifi",
       "type": "registry:component",
       "title": "Wifi icon",
@@ -6829,6 +10164,54 @@
           "path": "src/icons/wind.tsx",
           "type": "registry:component",
           "target": "components/animated-icons/icons/wind.tsx"
+        }
+      ]
+    },
+    {
+      "name": "wine",
+      "type": "registry:component",
+      "title": "Wine icon",
+      "description": "2 colors: glass (primary), wine (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/wine.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/wine.tsx"
+        }
+      ]
+    },
+    {
+      "name": "workflow",
+      "type": "registry:component",
+      "title": "Workflow icon",
+      "description": "2 colors: steps (primary), connector and its packet (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/workflow.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/workflow.tsx"
+        }
+      ]
+    },
+    {
+      "name": "worm",
+      "type": "registry:component",
+      "title": "Worm icon",
+      "description": "2 colors: worm and ground (primary), body band and eye (accent).",
+      "registryDependencies": [
+        "https://animated-icons-nu.vercel.app/r/animated-icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/icons/worm.tsx",
+          "type": "registry:component",
+          "target": "components/animated-icons/icons/worm.tsx"
         }
       ]
     },

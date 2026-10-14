@@ -21,6 +21,7 @@ const EDGE_ON = [0, 0, 1, 0, 0, 1, 0, 0]
 /** 2 colors: drive (primary), activity lights (accent). */
 export const HardDrive = createAnimatedIcon({
   name: "hard-drive",
+  family: "hard",
   category: "devices",
   keywords: ["disk", "hdd", "ssd", "storage", "drive", "server", "backup", "data"],
   slots: { primary: "drive", accent: "activity lights" },
