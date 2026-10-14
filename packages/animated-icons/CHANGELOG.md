@@ -1,5 +1,15 @@
 # @kovenlabs/animated-icons
 
+## 0.1.0-alpha.8
+
+### Minor Changes
+
+- 1b5b26e: Seven new categories so the catalog is easier to browse: `food`, `home`, `health`, `sports`, `tools`, `animals` and `buildings`. 94 icons move into them from the categories they had been parked in (food from `commerce` and `nature`, tools from `development`, furniture from `navigation`, medical icons from `education`, and so on). If you filter by `meta.category`, check the icons you rely on.
+
+### Patch Changes
+
+- 1b5b26e: Every new icon was watched frame by frame, and about 75 got motion fixes: parts that left the frame (wine, fan, refrigerator, cactus, swords, sticker and more), parts that ran into each other (drama, variable, nfc, panda, grape, plug), a drone that vanished mid-turn, an earth that wobbled out of view, a notebook pen that never touched its line, and sharp-corner artifacts.
+
 ## 0.1.0-alpha.7
 
 ### Minor Changes
