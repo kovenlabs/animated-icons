@@ -12,6 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: cone (primary), scoop (accent). */
 export const IceCreamCone = createAnimatedIcon({
   name: "ice-cream-cone",
+  family: "ice",
   category: "commerce",
   keywords: ["ice cream", "gelato", "dessert", "summer", "sweet", "treat", "frozen", "scoop"],
   slots: { primary: "cone", accent: "scoop" },

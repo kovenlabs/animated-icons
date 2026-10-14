@@ -1,19 +1,29 @@
-"use client"
+"use client";
 
-import { createAnimatedIcon } from "../lib/create-icon"
-import { pivot, slot } from "../lib/motion"
+import { createAnimatedIcon } from "../lib/create-icon";
+import { pivot, slot } from "../lib/motion";
 
 declare module "../lib/types" {
   interface IconVariants {
-    "shopping-bag": "swing" | "drop" | "fill"
+    "shopping-bag": "swing" | "drop" | "fill";
   }
 }
 
 /** 2 colors: bag (primary), handle (accent). */
 export const ShoppingBag = createAnimatedIcon({
   name: "shopping-bag",
+  family: "shopping",
   category: "commerce",
-  keywords: ["shopping", "purchase", "buy", "retail", "checkout", "order", "boutique", "tote"],
+  keywords: [
+    "shopping",
+    "purchase",
+    "buy",
+    "retail",
+    "checkout",
+    "order",
+    "boutique",
+    "tote",
+  ],
   slots: { primary: "bag", accent: "handle" },
   defaultVariant: "swing",
   variants: {
@@ -21,7 +31,11 @@ export const ShoppingBag = createAnimatedIcon({
     swing: {
       duration: 850,
       run: ({ animate, seconds }) =>
-        animate("[data-part=carry]", { rotate: [0, 9, -7, 4, -1.5, 0] }, { duration: seconds, ease: "easeInOut" }),
+        animate(
+          "[data-part=carry]",
+          { rotate: [0, 9, -7, 4, -1.5, 0] },
+          { duration: seconds, ease: "easeInOut" },
+        ),
     },
     // set down from a small height: it lands with a squash
     drop: {
@@ -55,4 +69,4 @@ export const ShoppingBag = createAnimatedIcon({
       </g>
     </g>
   ),
-})
+});
