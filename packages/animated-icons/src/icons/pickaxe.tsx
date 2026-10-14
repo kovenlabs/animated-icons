@@ -25,7 +25,7 @@ const SPARKS = [
 /** 2 colors: handle (primary), head and sparks (accent). */
 export const Pickaxe = createAnimatedIcon({
   name: "pickaxe",
-  category: "development",
+  category: "tools",
   keywords: ["pick", "mining", "dig", "mine", "tool", "excavate", "rock", "craft"],
   slots: { primary: "handle", accent: "head + sparks" },
   defaultVariant: "swing",

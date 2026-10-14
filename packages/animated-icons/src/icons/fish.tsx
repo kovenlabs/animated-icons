@@ -15,7 +15,7 @@ const BODY = "M6 12l4-5 5-1 4 3 2 3-2 3-4 3-5-1z"
 /** 2 colors: body, gill and eye (primary), tail and bubbles (accent). */
 export const Fish = createAnimatedIcon({
   name: "fish",
-  category: "nature",
+  category: "animals",
   keywords: ["animal", "sea", "ocean", "aquarium", "seafood", "fishing", "pet fish", "goldfish"],
   slots: { primary: "body + gill + eye", accent: "tail + bubbles" },
   defaultVariant: "turn",

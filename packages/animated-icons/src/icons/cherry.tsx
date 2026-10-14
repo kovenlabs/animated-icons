@@ -33,7 +33,7 @@ const HOP = {
 /** 2 colors: stalks and leaf (primary), cherries (accent). */
 export const Cherry = createAnimatedIcon({
   name: "cherry",
-  category: "nature",
+  category: "food",
   keywords: ["cherries", "fruit", "berry", "food", "sweet", "summer", "dessert"],
   slots: { primary: "stalks + leaf", accent: "cherries" },
   defaultVariant: "dangle",

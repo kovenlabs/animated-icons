@@ -37,7 +37,7 @@ const SEAM_PIVOT = (() => {
 /** 2 colors: ball (primary), seams (accent). */
 export const Volleyball = createAnimatedIcon({
   name: "volleyball",
-  category: "gaming",
+  category: "sports",
   keywords: ["ball", "sport", "beach", "game", "spike", "serve", "team", "play"],
   slots: { primary: "ball", accent: "seams" },
   defaultVariant: "spike",

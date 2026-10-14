@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: building (primary), flag and door (accent). */
 export const School = createAnimatedIcon({
   name: "school",
-  category: "education",
+  category: "buildings",
   keywords: ["building", "campus", "education", "academy", "classroom", "institution", "college"],
   slots: { primary: "building", accent: "flag + door" },
   defaultVariant: "wave",

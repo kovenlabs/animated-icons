@@ -23,7 +23,7 @@ const SPARKS = [
 /** 2 colors: cross (primary), fill and sparkles (accent). The fill and sparkles only exist in motion. */
 export const Cross = createAnimatedIcon({
   name: "cross",
-  category: "education",
+  category: "health",
   keywords: ["first aid", "medical", "health", "hospital", "plus", "red cross", "church", "religion"],
   slots: { primary: "cross", accent: "fill + sparkles" },
   defaultVariant: "heal",

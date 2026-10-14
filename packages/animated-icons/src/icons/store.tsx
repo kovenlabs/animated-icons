@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: walls (primary), awning + door (accent). */
 export const Store = createAnimatedIcon({
   name: "store",
-  category: "commerce",
+  category: "buildings",
   keywords: ["shop", "storefront", "retail", "market", "boutique", "merchant", "business", "marketplace"],
   slots: { primary: "walls", accent: "awning + door" },
   defaultVariant: "flutter",

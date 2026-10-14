@@ -21,7 +21,7 @@ const TRACE = "M3 11.5h5l1.5-2.5 2.5 6 2-6 1.5 2.5H21"
 export const HeartPulse = createAnimatedIcon({
   name: "heart-pulse",
   family: "heart",
-  category: "education",
+  category: "health",
   keywords: ["heartbeat", "pulse", "cardio", "ecg", "health", "vitals", "heart rate", "medical"],
   slots: { primary: "heart", accent: "trace" },
   defaultVariant: "beat",

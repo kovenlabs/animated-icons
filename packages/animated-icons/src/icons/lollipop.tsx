@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: candy and stick (primary), swirl (accent). */
 export const Lollipop = createAnimatedIcon({
   name: "lollipop",
-  category: "commerce",
+  category: "food",
   keywords: ["candy", "sweet", "sugar", "dessert", "treat", "confectionery", "kids"],
   slots: { primary: "candy + stick", accent: "swirl" },
   defaultVariant: "spin",

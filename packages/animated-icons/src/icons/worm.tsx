@@ -18,7 +18,7 @@ const BODY = "M8 20v-8l5-7h3l3 3v2l-2 2h-3l-2 2v6"
 /** 2 colors: worm and ground (primary), body band and eye (accent). */
 export const Worm = createAnimatedIcon({
   name: "worm",
-  category: "nature",
+  category: "animals",
   keywords: ["earthworm", "garden", "soil", "bug", "bait", "fishing", "dirt", "compost"],
   slots: { primary: "worm + ground", accent: "band + eye" },
   defaultVariant: "pop",

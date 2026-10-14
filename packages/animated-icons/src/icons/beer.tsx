@@ -17,7 +17,7 @@ const BUBBLES = [6.5, 9.5, 12.5] as const
 /** 2 colors: mug (primary), foam and bubbles (accent). */
 export const Beer = createAnimatedIcon({
   name: "beer",
-  category: "commerce",
+  category: "food",
   keywords: ["mug", "pint", "drink", "alcohol", "bar", "pub", "cheers", "ale"],
   slots: { primary: "mug", accent: "foam + bubbles" },
   defaultVariant: "cheers",

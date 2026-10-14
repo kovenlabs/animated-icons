@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: shell (primary), filled half + granules (accent). The granules only exist in motion. */
 export const Pill = createAnimatedIcon({
   name: "pill",
-  category: "education",
+  category: "health",
   keywords: ["medicine", "capsule", "drug", "pharmacy", "tablet", "medication", "health", "prescription"],
   slots: { primary: "shell", accent: "filled half + granules" },
   defaultVariant: "tumble",

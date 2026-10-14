@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: frame and mattress (primary), pillow and Z (accent). */
 export const Bed = createAnimatedIcon({
   name: "bed",
-  category: "navigation",
+  category: "home",
   keywords: ["sleep", "bedroom", "hotel", "rest", "night", "accommodation", "lodging", "nap"],
   slots: { primary: "frame + mattress", accent: "pillow + Z" },
   defaultVariant: "sleep",

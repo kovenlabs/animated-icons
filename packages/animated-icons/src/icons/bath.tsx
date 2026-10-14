@@ -21,7 +21,7 @@ const BUBBLES = [
 /** 2 colors: tub and tap (primary), water, drip and bubbles (accent). */
 export const Bath = createAnimatedIcon({
   name: "bath",
-  category: "navigation",
+  category: "home",
   keywords: ["bathtub", "bathroom", "tub", "soak", "spa", "relax", "hotel", "amenities"],
   slots: { primary: "tub + tap", accent: "water + bubbles" },
   defaultVariant: "bubble",

@@ -53,7 +53,7 @@ const FLASH = { scale: [1, 1.5, 1, 1.5, 1], opacity: [1, 0.35, 1, 0.35, 1] }
 /** 2 colors: board and legs (primary), stripes and lamps (accent). */
 export const Construction = createAnimatedIcon({
   name: "construction",
-  category: "status",
+  category: "tools",
   keywords: ["barrier", "roadwork", "under construction", "work in progress", "roadblock", "maintenance", "wip", "detour"],
   slots: { primary: "board + legs", accent: "stripes + lamps" },
   defaultVariant: "blink",

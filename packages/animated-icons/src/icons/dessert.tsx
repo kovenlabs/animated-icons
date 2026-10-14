@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: plate, pudding and sauce (primary), cherry (accent). */
 export const Dessert = createAnimatedIcon({
   name: "dessert",
-  category: "commerce",
+  category: "food",
   keywords: ["pudding", "flan", "jelly", "cherry", "sweet", "treat", "cake", "dessert menu"],
   slots: { primary: "plate + pudding + sauce", accent: "cherry" },
   defaultVariant: "jiggle",

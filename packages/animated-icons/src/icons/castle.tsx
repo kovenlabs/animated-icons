@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: walls and towers (primary), flag and gate (accent). */
 export const Castle = createAnimatedIcon({
   name: "castle",
-  category: "gaming",
+  category: "buildings",
   keywords: ["fortress", "kingdom", "palace", "fort", "medieval", "chess", "tower", "fantasy"],
   slots: { primary: "walls + towers", accent: "flag + gate" },
   defaultVariant: "wave",

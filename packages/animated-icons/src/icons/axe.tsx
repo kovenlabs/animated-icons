@@ -25,7 +25,7 @@ const CHIPS = [
 /** 2 colors: handle (primary), head, chips and glint (accent). */
 export const Axe = createAnimatedIcon({
   name: "axe",
-  category: "development",
+  category: "tools",
   keywords: ["tool", "chop", "wood", "lumberjack", "hatchet", "cut", "firewood", "camping"],
   slots: { primary: "handle", accent: "head + chips + glint" },
   defaultVariant: "chop",

@@ -43,7 +43,7 @@ const turnEase: Easing[] = ["linear", snap, "linear", snap, "linear"]
 /** 2 colors: cookie (primary), chocolate chips (accent). */
 export const Cookie = createAnimatedIcon({
   name: "cookie",
-  category: "commerce",
+  category: "food",
   keywords: ["biscuit", "snack", "food", "dessert", "treat", "sweet", "consent", "tracking"],
   slots: { primary: "cookie + crumbs", accent: "chocolate chips" },
   defaultVariant: "bite",

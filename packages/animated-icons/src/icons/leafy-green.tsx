@@ -19,7 +19,7 @@ const TURN = spin(1, "inOut")
 /** 2 colors: leaf (primary), stem and veins (accent). */
 export const LeafyGreen = createAnimatedIcon({
   name: "leafy-green",
-  category: "nature",
+  category: "food",
   keywords: ["lettuce", "salad", "vegetable", "greens", "kale", "cabbage", "vegan", "healthy"],
   slots: { primary: "leaf", accent: "stem + veins" },
   defaultVariant: "unfurl",

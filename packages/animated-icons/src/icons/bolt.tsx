@@ -21,7 +21,7 @@ const SIDE = "M9.5 2h5v20h-5ZM9.5 7h5M9.5 17h5"
 /** 2 colors: nut (primary), threaded hole (accent). */
 export const Bolt = createAnimatedIcon({
   name: "bolt",
-  category: "development",
+  category: "tools",
   keywords: ["nut", "hex", "hardware", "screw", "fastener", "settings", "mechanic", "tighten"],
   slots: { primary: "nut", accent: "threaded hole" },
   defaultVariant: "tighten",

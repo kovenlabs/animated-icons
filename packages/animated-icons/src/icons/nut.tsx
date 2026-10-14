@@ -21,7 +21,7 @@ const TURN = spin(1, "inOut")
 /** 2 colors: nut (primary), cap and stem (accent). */
 export const Nut = createAnimatedIcon({
   name: "nut",
-  category: "nature",
+  category: "food",
   keywords: ["acorn", "oak", "hazelnut", "autumn", "fall", "squirrel", "seed", "forest"],
   slots: { primary: "nut", accent: "cap + stem" },
   defaultVariant: "drop",

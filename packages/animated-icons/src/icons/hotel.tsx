@@ -22,7 +22,7 @@ const WINDOWS = [
 /** 2 colors: building and canopy (primary), lit rooms and door (accent). */
 export const Hotel = createAnimatedIcon({
   name: "hotel",
-  category: "navigation",
+  category: "buildings",
   keywords: ["inn", "motel", "lodging", "stay", "booking", "travel", "accommodation", "resort"],
   slots: { primary: "building + canopy", accent: "rooms + door" },
   defaultVariant: "lights",

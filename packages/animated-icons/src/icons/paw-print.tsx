@@ -25,7 +25,7 @@ const TOES = [
 /** 2 colors: pad (primary), toe beans (accent). */
 export const PawPrint = createAnimatedIcon({
   name: "paw-print",
-  category: "nature",
+  category: "animals",
   keywords: ["paw", "pet", "dog", "cat", "footprint", "animal", "track", "pet friendly"],
   slots: { primary: "pad", accent: "toe beans" },
   defaultVariant: "step",

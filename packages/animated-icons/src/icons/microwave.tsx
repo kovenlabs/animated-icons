@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: oven and door (primary), dish and buttons (accent). */
 export const Microwave = createAnimatedIcon({
   name: "microwave",
-  category: "devices",
+  category: "home",
   keywords: ["oven", "kitchen", "appliance", "reheat", "cooking", "food", "defrost"],
   slots: { primary: "oven + door", accent: "dish + buttons" },
   defaultVariant: "heat",

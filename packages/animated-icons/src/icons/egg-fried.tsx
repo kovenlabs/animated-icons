@@ -13,7 +13,7 @@ declare module "../lib/types" {
 export const EggFried = createAnimatedIcon({
   name: "egg-fried",
   family: "egg",
-  category: "commerce",
+  category: "food",
   keywords: ["fried egg", "breakfast", "sunny side up", "brunch", "yolk", "cooking", "pan", "food"],
   slots: { primary: "white", accent: "yolk" },
   defaultVariant: "flip",

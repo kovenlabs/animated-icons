@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: barrel, needle and plunger (primary), dose and drop (accent). The drop only exists in motion. */
 export const Syringe = createAnimatedIcon({
   name: "syringe",
-  category: "education",
+  category: "health",
   keywords: ["injection", "vaccine", "needle", "shot", "dose", "immunization", "medicine", "health"],
   slots: { primary: "barrel + plunger", accent: "dose + drop" },
   defaultVariant: "inject",

@@ -27,7 +27,7 @@ const ACORN = "M18 16h4v1.5l-2 3-2-3z"
 /** 2 colors: body and tail (primary), eye and acorn (accent). */
 export const Squirrel = createAnimatedIcon({
   name: "squirrel",
-  category: "nature",
+  category: "animals",
   keywords: ["chipmunk", "rodent", "animal", "acorn", "forest", "park", "wildlife", "autumn"],
   slots: { primary: "body + tail", accent: "eye + acorn" },
   defaultVariant: "flick",

@@ -15,7 +15,7 @@ const SHELVES = { freezer: "M8 6h7", fridge: "M8 14h7M8 18h7" }
 /** 2 colors: cabinet and doors (primary), handles and shelves (accent). */
 export const Refrigerator = createAnimatedIcon({
   name: "refrigerator",
-  category: "devices",
+  category: "home",
   keywords: ["fridge", "freezer", "kitchen", "appliance", "cold", "food", "cooler"],
   slots: { primary: "cabinet + doors", accent: "handles + shelves" },
   defaultVariant: "open",

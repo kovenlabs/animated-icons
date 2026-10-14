@@ -21,7 +21,7 @@ const CAPS = [
 /** 2 colors: hall (primary), finial, door and caps (accent). */
 export const University = createAnimatedIcon({
   name: "university",
-  category: "education",
+  category: "buildings",
   keywords: ["college", "campus", "academy", "graduation", "faculty", "higher education", "institute", "alumni"],
   slots: { primary: "hall", accent: "finial + door + caps" },
   defaultVariant: "toss",

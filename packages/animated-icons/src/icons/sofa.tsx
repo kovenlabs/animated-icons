@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: sofa (primary), seat cushion (accent). */
 export const Sofa = createAnimatedIcon({
   name: "sofa",
-  category: "navigation",
+  category: "home",
   keywords: ["couch", "settee", "living room", "furniture", "lounge", "seat", "relax"],
   slots: { primary: "sofa", accent: "seat cushion" },
   defaultVariant: "plop",

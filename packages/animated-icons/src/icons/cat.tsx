@@ -18,7 +18,7 @@ const HEAD = "M4 11v5l4 5h8l4-5v-5l-3-3H7z"
 /** 2 colors: head and ears (primary), eyes and nose (accent). */
 export const Cat = createAnimatedIcon({
   name: "cat",
-  category: "nature",
+  category: "animals",
   keywords: ["kitten", "kitty", "pet", "animal", "feline", "meow", "cat face"],
   slots: { primary: "head + ears", accent: "eyes + nose" },
   defaultVariant: "turn",

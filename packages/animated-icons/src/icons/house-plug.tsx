@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: house (primary), plug and cord (accent). */
 export const HousePlug = createAnimatedIcon({
   name: "house-plug",
-  category: "devices",
+  category: "home",
   keywords: ["smart home", "energy", "electricity", "power", "home charging", "utility", "plug", "grid"],
   slots: { primary: "house", accent: "plug + cord" },
   defaultVariant: "unplug",

@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: bar (primary), weight plates and dust (accent). */
 export const Dumbbell = createAnimatedIcon({
   name: "dumbbell",
-  category: "gaming",
+  category: "sports",
   keywords: ["gym", "fitness", "workout", "weights", "exercise", "strength", "training", "sport"],
   slots: { primary: "bar", accent: "plates + dust" },
   defaultVariant: "lift",

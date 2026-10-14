@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: frame + floor (primary), door leaf + knob (accent). */
 export const DoorOpen = createAnimatedIcon({
   name: "door-open",
-  category: "navigation",
+  category: "home",
   keywords: ["entrance", "exit", "enter", "room", "doorway", "welcome", "leave", "access"],
   slots: { primary: "frame + floor", accent: "door leaf + knob" },
   defaultVariant: "swing",

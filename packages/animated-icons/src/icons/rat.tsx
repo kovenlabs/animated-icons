@@ -24,7 +24,7 @@ const TAIL = "M4.5 15 2 18h7l3 2"
 /** 2 colors: body and ear (primary), eye and tail (accent). */
 export const Rat = createAnimatedIcon({
   name: "rat",
-  category: "nature",
+  category: "animals",
   keywords: ["mouse", "rodent", "animal", "pest", "vermin", "pet", "sewer", "lab rat"],
   slots: { primary: "body + ear", accent: "eye + tail" },
   defaultVariant: "scurry",

@@ -42,7 +42,7 @@ const OFFSETS = [-6, -3, 3, 6] as const
 /** 2 colors: stem and leaf (primary), grapes (accent). */
 export const Grape = createAnimatedIcon({
   name: "grape",
-  category: "nature",
+  category: "food",
   keywords: ["grapes", "fruit", "bunch", "vine", "wine", "berry", "food"],
   slots: { primary: "stem + leaf", accent: "grapes" },
   defaultVariant: "twist",

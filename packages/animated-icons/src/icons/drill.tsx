@@ -23,7 +23,7 @@ const FLUTES = { scaleY: [1, -1, 1, -1, 1, -1, 1, -1, 1] }
 /** 2 colors: drill (primary), bit, chips and speed lines (accent). */
 export const Drill = createAnimatedIcon({
   name: "drill",
-  category: "development",
+  category: "tools",
   keywords: ["power drill", "tool", "diy", "construction", "screwdriver", "bore", "repair", "build"],
   slots: { primary: "drill", accent: "bit + chips" },
   defaultVariant: "spin",

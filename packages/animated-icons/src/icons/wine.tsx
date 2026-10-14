@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: glass (primary), wine (accent). */
 export const Wine = createAnimatedIcon({
   name: "wine",
-  category: "commerce",
+  category: "food",
   keywords: ["glass", "drink", "alcohol", "bar", "red wine", "toast", "celebrate", "restaurant"],
   slots: { primary: "glass", accent: "wine" },
   defaultVariant: "swirl",

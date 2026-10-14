@@ -20,7 +20,7 @@ const BEATS = [0, 0.18, 0.4, 0.55, 0.72, 1]
 /** 2 colors: arm (primary), bicep and power lines (accent). */
 export const BicepsFlexed = createAnimatedIcon({
   name: "biceps-flexed",
-  category: "gaming",
+  category: "sports",
   keywords: ["strong", "muscle", "flex", "gym", "fitness", "workout", "strength", "power"],
   slots: { primary: "arm", accent: "bicep + power lines" },
   defaultVariant: "flex",

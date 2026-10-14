@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: cup and lid (primary), straw and soda (accent). */
 export const CupSoda = createAnimatedIcon({
   name: "cup-soda",
-  category: "commerce",
+  category: "food",
   keywords: ["soda", "soft drink", "cola", "fountain drink", "straw", "beverage", "takeaway", "fast food"],
   slots: { primary: "cup + lid", accent: "straw + soda" },
   defaultVariant: "sip",

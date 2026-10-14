@@ -24,7 +24,7 @@ const HEART = "M12 17l-5-5v-2l2-2h1l2 2 2-2h1l2 2v2Z"
 export const ScanHeart = createAnimatedIcon({
   name: "scan-heart",
   family: "scan",
-  category: "education",
+  category: "health",
   keywords: ["health check", "heart rate", "cardio", "vitals", "monitor", "diagnosis", "fitness tracker", "pulse"],
   slots: { primary: "viewfinder", accent: "heart + scan beam" },
   defaultVariant: "scan",

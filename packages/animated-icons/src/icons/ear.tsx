@@ -17,7 +17,7 @@ const WAVE = "M2.5 13 4 15l-1.5 2"
 /** 2 colors: ear (primary), inner fold and sound waves (accent). */
 export const Ear = createAnimatedIcon({
   name: "ear",
-  category: "education",
+  category: "health",
   keywords: ["hearing", "listen", "sound", "audio", "deaf", "hear", "accessibility", "body"],
   slots: { primary: "ear", accent: "inner fold + sound waves" },
   defaultVariant: "listen",

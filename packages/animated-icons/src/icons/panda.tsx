@@ -22,7 +22,7 @@ const EAR_RIGHT = "M19 8l2-3-2-2h-3l-1 3"
 /** 2 colors: head, ears and nose (primary), eye patches (accent). */
 export const Panda = createAnimatedIcon({
   name: "panda",
-  category: "nature",
+  category: "animals",
   keywords: ["bear", "animal", "bamboo", "china", "cute", "wildlife", "zoo", "giant panda"],
   slots: { primary: "head + ears + nose", accent: "eye patches" },
   defaultVariant: "turn",

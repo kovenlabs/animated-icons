@@ -18,7 +18,7 @@ const HALF = 9.75
 /** 2 colors: peel (primary), stem (accent). */
 export const Banana = createAnimatedIcon({
   name: "banana",
-  category: "nature",
+  category: "food",
   keywords: ["fruit", "food", "snack", "tropical", "peel", "healthy", "potassium"],
   slots: { primary: "peel", accent: "stem" },
   defaultVariant: "flip",

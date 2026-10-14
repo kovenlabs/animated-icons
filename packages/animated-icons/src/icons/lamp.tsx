@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: shade, stem and base (primary), pull cord and light (accent). */
 export const Lamp = createAnimatedIcon({
   name: "lamp",
-  category: "devices",
+  category: "home",
   keywords: ["table lamp", "light", "lighting", "bedside", "desk lamp", "furniture", "interior"],
   slots: { primary: "shade + stand", accent: "pull cord + light" },
   defaultVariant: "click",

@@ -18,7 +18,7 @@ const SPARKLES = ["M3.5 10.5 5 12 3.5 13.5 2 12Z", "M20.5 10.5 22 12 20.5 13.5 1
 /** 3 colors: medal (primary), ribbon (secondary), star and sparkles (accent). */
 export const Medal = createAnimatedIcon({
   name: "medal",
-  category: "social",
+  category: "sports",
   keywords: ["prize", "winner", "gold", "olympics", "achievement", "first place", "champion", "sport"],
   slots: { primary: "medal", secondary: "ribbon", accent: "star + sparkles" },
   defaultVariant: "spin",

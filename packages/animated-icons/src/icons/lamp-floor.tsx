@@ -13,7 +13,7 @@ declare module "../lib/types" {
 export const LampFloor = createAnimatedIcon({
   name: "lamp-floor",
   family: "lamp",
-  category: "devices",
+  category: "home",
   keywords: ["floor lamp", "standing lamp", "light", "lighting", "living room", "furniture", "interior"],
   slots: { primary: "pole + tripod", accent: "shade + light" },
   defaultVariant: "click",

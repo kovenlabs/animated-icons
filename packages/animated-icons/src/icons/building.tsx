@@ -22,7 +22,7 @@ const WINDOWS = [
 /** 2 colors: block (primary), windows + door (accent). */
 export const Building = createAnimatedIcon({
   name: "building",
-  category: "navigation",
+  category: "buildings",
   keywords: ["office", "block", "tower", "campus", "headquarters", "company", "premises", "facility"],
   slots: { primary: "block", accent: "windows + door" },
   defaultVariant: "lights",

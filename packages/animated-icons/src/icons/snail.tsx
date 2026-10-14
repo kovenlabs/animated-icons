@@ -19,7 +19,7 @@ const SPIRAL = "M10 13a2.5 2.5 0 0 1 5 0a4.5 4.5 0 0 1-9 0"
 /** 2 colors: shell and body (primary), spiral and eye stalks (accent). */
 export const Snail = createAnimatedIcon({
   name: "snail",
-  category: "nature",
+  category: "animals",
   keywords: ["slow", "animal", "slug", "shell", "garden", "sluggish", "mollusc"],
   slots: { primary: "shell + body", accent: "spiral + eye stalks" },
   defaultVariant: "peek",

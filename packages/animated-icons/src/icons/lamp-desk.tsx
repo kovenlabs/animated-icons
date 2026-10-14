@@ -13,7 +13,7 @@ declare module "../lib/types" {
 export const LampDesk = createAnimatedIcon({
   name: "lamp-desk",
   family: "lamp",
-  category: "devices",
+  category: "home",
   keywords: ["desk lamp", "architect lamp", "anglepoise", "reading light", "task light", "study", "office", "lighting"],
   slots: { primary: "base + arms", accent: "shade + light" },
   defaultVariant: "click",

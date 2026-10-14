@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: fork (primary), knife (accent). */
 export const Utensils = createAnimatedIcon({
   name: "utensils",
-  category: "commerce",
+  category: "food",
   keywords: ["fork", "knife", "cutlery", "restaurant", "dining", "eat", "meal", "food"],
   slots: { primary: "fork", accent: "knife" },
   defaultVariant: "twirl",

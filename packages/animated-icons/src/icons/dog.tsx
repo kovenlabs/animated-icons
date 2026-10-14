@@ -19,7 +19,7 @@ const HEAD = "M7 5h10l2 4v7l-4 5H9l-4-5V9z"
 /** 2 colors: head and ears (primary), eyes and nose (accent). */
 export const Dog = createAnimatedIcon({
   name: "dog",
-  category: "nature",
+  category: "animals",
   keywords: ["puppy", "pet", "animal", "canine", "doggo", "woof", "pup"],
   slots: { primary: "head + ears", accent: "eyes + nose" },
   defaultVariant: "tilt",

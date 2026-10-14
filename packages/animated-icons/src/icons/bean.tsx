@@ -21,7 +21,7 @@ const TURN = spin(1, "inOut")
 /** 2 colors: bean (primary), seam (accent). */
 export const Bean = createAnimatedIcon({
   name: "bean",
-  category: "nature",
+  category: "food",
   keywords: ["legume", "kidney bean", "coffee bean", "seed", "vegetable", "pulse", "vegan", "protein"],
   slots: { primary: "bean", accent: "seam" },
   defaultVariant: "jelly",

@@ -15,7 +15,7 @@ const CROSS = "M11 6h2v2h2v2h-2v2h-2v-2H9V8h2Z"
 /** 2 colors: building (primary), cross (accent). */
 export const Hospital = createAnimatedIcon({
   name: "hospital",
-  category: "navigation",
+  category: "buildings",
   keywords: ["clinic", "medical", "emergency", "health", "care", "building", "doctor", "infirmary"],
   slots: { primary: "building", accent: "cross" },
   defaultVariant: "beacon",

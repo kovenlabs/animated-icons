@@ -22,7 +22,7 @@ const HUB = pivot("50% 55.12%")
 /** 2 colors: cage and stand (primary), blades (accent). */
 export const Fan = createAnimatedIcon({
   name: "fan",
-  category: "devices",
+  category: "home",
   keywords: ["cooling", "air", "breeze", "ventilation", "desk fan", "air conditioning", "blower"],
   slots: { primary: "cage + stand", accent: "blades" },
   defaultVariant: "spin",

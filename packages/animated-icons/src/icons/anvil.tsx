@@ -23,7 +23,7 @@ const SPARKS = [
 /** 2 colors: anvil (primary), sparks and dust (accent). */
 export const Anvil = createAnimatedIcon({
   name: "anvil",
-  category: "development",
+  category: "tools",
   keywords: ["blacksmith", "forge", "heavy", "metal", "smithing", "craft", "iron", "weight"],
   slots: { primary: "anvil", accent: "sparks + dust" },
   defaultVariant: "forge",

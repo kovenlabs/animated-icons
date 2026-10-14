@@ -31,7 +31,7 @@ const HALVES = [
 /** 2 colors: hemispheres (primary), folds and spark (accent). The spark only exists in motion. */
 export const Brain = createAnimatedIcon({
   name: "brain",
-  category: "education",
+  category: "health",
   keywords: ["mind", "think", "idea", "intelligence", "neuroscience", "smart", "memory", "psychology"],
   slots: { primary: "hemispheres", accent: "folds + spark" },
   defaultVariant: "think",

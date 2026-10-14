@@ -27,7 +27,7 @@ const CLODS = [
 /** 2 colors: handle and grip (primary), blade and dirt (accent). */
 export const Shovel = createAnimatedIcon({
   name: "shovel",
-  category: "development",
+  category: "tools",
   keywords: ["spade", "dig", "garden", "construction", "tool", "dirt", "excavate", "gardening"],
   slots: { primary: "handle + grip", accent: "blade + dirt" },
   defaultVariant: "dig",

@@ -25,7 +25,7 @@ const ORBIT = {
 /** 2 colors: mug (primary), steam (accent). */
 export const Coffee = createAnimatedIcon({
   name: "coffee",
-  category: "commerce",
+  category: "food",
   keywords: ["cup", "mug", "tea", "espresso", "cafe", "drink", "break", "hot drink"],
   slots: { primary: "mug", accent: "steam" },
   defaultVariant: "steam",
