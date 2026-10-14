@@ -92,7 +92,8 @@ export const PackageOpen = createAnimatedIcon({
         ]);
       },
     },
-    // rattled side to side on its base, the loose flaps whipping the opposite way
+    // rattled side to side on its base, the loose flaps whipping the opposite way (their skew leans
+    // against the tilt, which also keeps the flap tips inside the frame)
     shake: {
       duration: 900,
       run: ({ animate, seconds }) => {
@@ -100,17 +101,17 @@ export const PackageOpen = createAnimatedIcon({
         return Promise.all([
           animate(
             "[data-part=box]",
-            { rotate: [0, -9, 8, -6, 4, -1, 0] },
+            { rotate: [0, -8, 7, -5, 4, -1, 0] },
             options,
           ),
           animate(
             "[data-part=flap-left]",
-            { skewX: [0, 14, -12, 9, -5, 2, 0] },
+            { skewX: [0, -14, 12, -9, 5, -2, 0] },
             options,
           ),
           animate(
             "[data-part=flap-right]",
-            { skewX: [0, 14, -12, 9, -5, 2, 0] },
+            { skewX: [0, -14, 12, -9, 5, -2, 0] },
             options,
           ),
         ]);

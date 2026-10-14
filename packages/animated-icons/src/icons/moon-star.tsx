@@ -58,7 +58,8 @@ export const MoonStar = createAnimatedIcon({
               x: [0, -0.5, 8, 0, 0],
               y: [0, 0.5, -8, 0, 0],
               scale: [1, 1.1, 0.5, 0, 1],
-              opacity: [1, 1, 0, 0, 1],
+              // it stays lit all the way out (the clip hides it), so the throw reads as a flight, not a fade
+              opacity: [1, 1, 1, 0, 1],
             },
             {
               duration: seconds,

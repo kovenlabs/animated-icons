@@ -48,7 +48,7 @@ export const Microwave = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=microwave]",
-            { y: [0, 0, -2, 0, 0], scaleY: [1, 0.88, 1.08, 0.93, 1], scaleX: [1, 1.06, 0.96, 1.04, 1] },
+            { y: [0, 0, -1.4, 0, 0], scaleY: [1, 0.88, 1.06, 0.93, 1], scaleX: [1, 1.06, 0.96, 1.04, 1] },
             { duration: seconds, times: [0, 0.18, 0.45, 0.7, 1], ease: ["easeOut", "easeOut", ease.in, ease.overshoot] },
           ),
           animate(
@@ -63,14 +63,16 @@ export const Microwave = createAnimatedIcon({
           ),
         ]),
     },
-    // the door swings open toward you on its left hinge and bangs shut, rattling the oven
+    // the door swings open toward you on its left hinge and bangs shut, rattling the oven (the skew is
+    // taken on the door's full 14px width before it narrows, so it stays small to keep the free edge
+    // from dropping below the oven)
     open: {
       duration: 1200,
       run: ({ animate, seconds }) =>
         Promise.all([
           animate(
             "[data-part=door]",
-            { scaleX: [1, 0.12, 0.12, 1], skewY: [0, 16, 16, 0] },
+            { scaleX: [1, 0.12, 0.12, 1], skewY: [0, 6, 6, 0] },
             { duration: seconds * 0.8, times: [0, 0.35, 0.6, 1], ease: ["easeOut", "linear", ease.in] },
           ),
           animate(

@@ -77,7 +77,9 @@ export const PencilRuler = createAnimatedIcon({
         {/* a tall ruler standing on the left */}
         <path d="M4 2h6v20H4Z" />
         {TICKS.map((y) => (
-          <path key={y} data-part="tick" d={`M10 ${y}H8`} style={pivot("100% 50%")} />
+          // pinned at the ruler's outer edge (x 11, 1.5 widths right of the tick's box) so the
+          // stretched cap grows inward and never pokes out of the ruler
+          <path key={y} data-part="tick" d={`M10 ${y}H8`} style={pivot("150% 50%")} />
         ))}
       </g>
       <g data-part="pencil" style={pivot("50% 50%")}>

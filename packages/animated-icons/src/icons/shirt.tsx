@@ -38,17 +38,17 @@ export const Shirt = createAnimatedIcon({
         return Promise.all([
           animate(
             "[data-part=sleeve-left]",
-            { rotate: [0, 28, 6, 18, 0] },
+            { rotate: [0, 18, 4, 12, 0] },
             options,
           ),
           animate(
             "[data-part=sleeve-right]",
-            { rotate: [0, -28, -6, -18, 0] },
+            { rotate: [0, -18, -4, -12, 0] },
             options,
           ),
           animate(
             "[data-part=shirt]",
-            { y: [0, -2.5, 0.5, -1, 0], scaleY: [1, 1.06, 0.92, 1.03, 1] },
+            { y: [0, -1, 0.5, -0.5, 0], scaleY: [1, 1.03, 0.92, 1.02, 1] },
             options,
           ),
         ]);
@@ -72,7 +72,7 @@ export const Shirt = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=shirt]",
-            { scaleX: [1, -1, 1], y: [0, -2, 0] },
+            { scaleX: [1, -1, 1], y: [0, -1.5, 0] },
             { duration: seconds, ease: "easeInOut" },
           ),
           animate(

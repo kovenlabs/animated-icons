@@ -16,7 +16,7 @@ declare module "../lib/types" {
  */
 const SPARKS = [
   { d: "M9 6 7 3.5", origin: "100% 100%" },
-  { d: "M13 5.5v-3", origin: "50% 100%" },
+  { d: "M13 6v-3", origin: "50% 100%" },
   { d: "M17 6l2-2.5", origin: "0% 100%" },
 ]
 
@@ -45,7 +45,7 @@ export const Anvil = createAnimatedIcon({
           ),
           animate(
             "[data-part=spark]",
-            { opacity: [0, 1, 0], scale: [0.4, 1.3, 1], y: [0, -1.5] },
+            { opacity: [0, 1, 0], scale: [0.4, 1.3, 1], y: [0, -0.5] },
             { duration: seconds * 0.45, delay: stagger(seconds * 0.05, { startDelay: seconds * 0.3 }), ease: "easeOut" },
           ),
         ]),
@@ -72,12 +72,12 @@ export const Anvil = createAnimatedIcon({
           ),
           animate(
             "[data-part=puff-l]",
-            { opacity: [0, 1, 0], scale: [0.5, 1.3, 1], x: [0, -2], y: [0, -1.5] },
+            { opacity: [0, 1, 0], scale: [0.5, 1.3, 1], x: [0, -1], y: [0, -1.5] },
             { duration: seconds * 0.35, delay: seconds * 0.6, ease: "easeOut" },
           ),
           animate(
             "[data-part=puff-r]",
-            { opacity: [0, 1, 0], scale: [0.5, 1.3, 1], x: [0, 2], y: [0, -1.5] },
+            { opacity: [0, 1, 0], scale: [0.5, 1.3, 1], x: [0, 1], y: [0, -1.5] },
             { duration: seconds * 0.35, delay: seconds * 0.6, ease: "easeOut" },
           ),
         ]),

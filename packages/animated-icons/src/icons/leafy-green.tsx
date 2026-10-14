@@ -41,8 +41,9 @@ export const LeafyGreen = createAnimatedIcon({
             { pathLength: [0, 0, 1, 1], opacity: [0, 0, 1, 1] },
             { duration: seconds, times: [0, 0.3, 0.65, 1], ease: "easeOut" },
           ),
+          // both veins wait for the stem to reach them, so neither floats loose in the growing leaf
           animate(
-            "[data-part=vein]",
+            "[data-part=vein], [data-part=vein-side]",
             { scale: [0, 0, 1.5, 1] },
             { duration: seconds, times: [0, 0.6, 0.82, 1], ease: "easeOut" },
           ),

@@ -24,9 +24,9 @@ const GRAPES = [
 /**
  * The bunch twisting on its stem, as angles about the vertical axis through x = 12. A grape `dx` off the
  * axis slides to dx·cos θ, and comes towards you by dx·sin θ: it swells as it nears, shrinks and dims as
- * it turns away. The twist stays within ±40°, so no grape ever passes behind another.
+ * it turns away. The twist stays within ±32°, so no grape ever passes behind another or closes the gap to its neighbour.
  */
-const THETA = [0, 40, -34, 18, -6, 0]
+const THETA = [0, 32, -28, 15, -5, 0]
 const TWIST_TIMES = [0, 0.22, 0.5, 0.72, 0.88, 1]
 const rad = (deg: number) => (deg * Math.PI) / 180
 function twist(dx: number) {
@@ -79,7 +79,7 @@ export const Grape = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=grape]",
-            { scale: [1, 1.45, 0.8, 1.1, 1] },
+            { scale: [1, 1.22, 0.75, 1.08, 1] },
             {
               duration: seconds * 0.5,
               times: [0, 0.35, 0.6, 0.8, 1],

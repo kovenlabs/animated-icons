@@ -40,7 +40,7 @@ export const BadgeDollarSign = createAnimatedIcon({
           ),
           animate(
             "[data-part=dollar]",
-            { scale: [1, 1, 1.12, 0.9, 1], rotate: [0, 0, -12, 6, 0] },
+            { scale: [1, 1, 1.04, 0.9, 1], rotate: [0, 0, -10, 5, 0] },
             { duration: seconds, times: [0, 0.56, 0.7, 0.85, 1], ease: ["linear", ease.out, "easeInOut", "easeInOut"] },
           ),
         ]),
@@ -74,7 +74,7 @@ export const BadgeDollarSign = createAnimatedIcon({
           ),
           animate(
             "[data-part=dollar]",
-            { scale: [1, 0.76, 1.12, 0.86, 1.06, 0.97, 1], rotate: [0, -10, 8, -5, 3, -1, 0] },
+            { scale: [1, 0.76, 1.04, 0.86, 1.02, 0.97, 1], rotate: [0, -10, 8, -5, 3, -1, 0] },
             { duration: seconds, times: [0, 0.15, 0.32, 0.48, 0.64, 0.8, 1], ease: "easeInOut" },
           ),
         ]),

@@ -35,7 +35,7 @@ export const Castle = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=keep]",
-            { scaleY: [0, 1.14, 0.95, 1] },
+            { scaleY: [0, 1.05, 0.95, 1] },
             { duration: seconds * 0.55, times: [0, 0.6, 0.8, 1], ease: ["easeOut", "easeInOut", "easeInOut"] },
           ),
           animate(

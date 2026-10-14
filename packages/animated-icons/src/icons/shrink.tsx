@@ -49,14 +49,23 @@ export const Shrink = createAnimatedIcon({
           { duration: seconds, times: [0, 0.4, 0.7, 1], ease: "easeInOut" },
         ),
     },
-    // wrung a quarter turn as it sinks back into the distance, then springs forward. The arrows look the
-    // same a quarter turn back, so it starts there and comes to rest at 0 without a visible jump
+    // sinks back into the distance, is wrung a quarter turn there, then springs forward. The arrows look
+    // the same a quarter turn back, so it starts there and comes to rest at 0 without a visible jump. It
+    // only turns while shrunk: half-turned at full size, the corner arrows would reach out of the frame
     twist: {
       duration: 800,
       run: ({ animate, seconds }) =>
         Promise.all([
-          animate("[data-part=arrows]", { rotate: [-90, 0] }, { duration: seconds, ease: ease.overshoot }),
-          animate("[data-part=arrows]", { scale: [1, 0.65, 1] }, { duration: seconds, ease: "easeInOut" }),
+          animate(
+            "[data-part=arrows]",
+            { rotate: [-90, -90, 0, 0] },
+            { duration: seconds, times: [0, 0.2, 0.65, 1], ease: ["linear", "easeInOut", "linear"] },
+          ),
+          animate(
+            "[data-part=arrows]",
+            { scale: [1, 0.62, 0.62, 1] },
+            { duration: seconds, times: [0, 0.2, 0.6, 1], ease: ["easeInOut", "linear", ease.overshoot] },
+          ),
         ]),
     },
   },

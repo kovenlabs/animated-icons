@@ -1,5 +1,7 @@
 "use client"
 
+import type { Easing } from "motion/react"
+
 import { createAnimatedIcon } from "../lib/create-icon"
 import { ease, pivot, slot } from "../lib/motion"
 
@@ -22,15 +24,21 @@ export const Variable = createAnimatedIcon({
     assign: {
       duration: 1100,
       run: ({ animate, seconds }) => {
-        const timing = { duration: seconds, times: [0, 0.35, 0.45, 0.75, 1], ease: "easeInOut" as const }
+        // the brackets clamp only once the old x has shrunk away, and spring open and hold before the new
+        // x spins in, so its arms never cross them
+        const brackets = {
+          duration: seconds,
+          times: [0, 0.15, 0.4, 0.45, 0.58, 0.8, 1],
+          ease: ["linear", ease.in, "linear", "easeInOut", "linear", "easeInOut"] satisfies Easing[],
+        }
         return Promise.all([
           animate(
             "[data-part=glyph]",
             { scale: [1, 0, 0, 1.25, 1], rotate: [0, 180, 180, 360, 360] },
-            { ...timing, ease: [ease.in, "linear", ease.out, "easeInOut"] },
+            { duration: seconds, times: [0, 0.3, 0.55, 0.8, 1], ease: [ease.in, "linear", ease.out, "easeInOut"] },
           ),
-          animate("[data-part=left]", { x: [0, 2.5, 2.5, -1.5, 0] }, timing),
-          animate("[data-part=right]", { x: [0, -2.5, -2.5, 1.5, 0] }, timing),
+          animate("[data-part=left]", { x: [0, 0, 2.5, 2.5, -1.5, -1.5, 0] }, brackets),
+          animate("[data-part=right]", { x: [0, 0, -2.5, -2.5, 1.5, 1.5, 0] }, brackets),
         ])
       },
     },

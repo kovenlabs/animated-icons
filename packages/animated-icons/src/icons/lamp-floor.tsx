@@ -67,8 +67,9 @@ export const LampFloor = createAnimatedIcon({
         <path data-part="ray" d="M19 13l2 2" style={flash("0% 0%")} />
       </g>
       <g data-part="lamp" style={pivot("50% 100%")}>
-        {/* a tall pole on a tripod, the centre leg carrying straight on to the floor */}
-        <path d="M12 9v12M12 17l-4 4M12 17l4 4" />
+        {/* a tall pole on a tripod, the centre leg carrying straight on to the floor; the pole starts
+            inside the shade's rim stroke, so its cap stays hidden when the shade squashes or tips */}
+        <path d="M12 9.5V21M12 17l-4 4M12 17l4 4" />
         <path data-part="shade" d="M9 3h6l3 6H6z" stroke={slot.accent} style={pivot("50% 100%")} />
       </g>
     </>

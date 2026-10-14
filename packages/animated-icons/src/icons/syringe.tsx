@@ -27,7 +27,7 @@ export const Syringe = createAnimatedIcon({
       run: ({ animate, seconds }) => {
         const timing = { duration: seconds, times: [0, 0.4, 0.6, 1], ease: [ease.in, "linear", ease.overshoot] as Easing[] }
         return Promise.all([
-          animate("[data-part=plunger]", { x: [0, -3, -3, 0] }, timing),
+          animate("[data-part=plunger]", { x: [0, -2.5, -2.5, 0] }, timing),
           animate("[data-part=dose]", { scaleX: [1, 0.25, 0.25, 1] }, timing),
           animate(
             "[data-part=syringe]",

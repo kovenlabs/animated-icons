@@ -39,13 +39,14 @@ export const Sofa = createAnimatedIcon({
           ),
         ]),
     },
-    // shoved sideways: it drags on its feet, leaning into the slide, and skids back into place
+    // shoved sideways: it drags on its feet, leaning into the slide and bunching up, and skids back into
+    // place. The arms sit 1px from the frame, so the slide is short and the lean carries the shove
     shove: {
       duration: 1000,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=sofa]",
-          { x: [0, -1, 3, 3, -1, 0], skewX: [0, 6, -12, 4, 8, 0] },
+          { x: [0, 0, 1, 1, 0, 0], skewX: [0, 4, -4, 2, 4, 0], scaleX: [1, 0.95, 0.9, 0.95, 0.95, 1] },
           { duration: seconds, times: [0, 0.15, 0.4, 0.55, 0.8, 1], ease: "easeInOut" },
         ),
     },

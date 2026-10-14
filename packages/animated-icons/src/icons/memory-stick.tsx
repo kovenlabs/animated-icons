@@ -15,8 +15,9 @@ declare module "../lib/types" {
 /** Three memory chips across the board, left to right. */
 const CHIPS = [4.5, 10.5, 16.5]
 
-/** Contact pins under the board, either side of the key notch. */
-const PINS = "M4 16v3M8 16v3M16 16v3M20 16v3"
+/** Contact pins under the board, either side of the key notch. The notch sits off-centre, as on a real
+ * DIMM, so the board never reads as a face. */
+const PINS = "M4 16v3M8 16v3M12 16v3M20 16v3"
 
 /** 2 colors: board + pins (primary), chips (accent). */
 export const MemoryStick = createAnimatedIcon({
@@ -88,7 +89,7 @@ export const MemoryStick = createAnimatedIcon({
   render: () => (
     <g data-part="stick" style={pivot("50% 50%")}>
       {/* the board, with the key notch cut into its bottom edge */}
-      <path d="M2 5h20v11h-9v-2h-2v2H2Z" />
+      <path d="M2 5h20v11h-5v-2h-2v2H2Z" />
       <path d={PINS} />
       <g data-part="chips" fill={slot.accent} stroke="none">
         {CHIPS.map((x) => (

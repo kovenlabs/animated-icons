@@ -71,7 +71,8 @@ export const HousePlug = createAnimatedIcon({
             { scaleX: [1, 0.6, 1, 0.6, 1], skewY: [0, 8, 0, -8, 0] },
             { duration: seconds, ease: "easeInOut" },
           ),
-          animate("[data-part=plug]", { x: [0, -1, 0, 1, 0] }, { duration: seconds, ease: "easeInOut" }),
+          // a small parallax only: the plug is narrowed with the house, so a bigger slide would touch the walls
+          animate("[data-part=plug]", { x: [0, -0.6, 0, 0.6, 0] }, { duration: seconds, ease: "easeInOut" }),
         ]),
     },
   },

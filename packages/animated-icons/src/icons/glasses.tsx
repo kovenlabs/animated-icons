@@ -44,7 +44,7 @@ export const Glasses = createAnimatedIcon({
           ),
           animate(
             "[data-part=frame]",
-            { rotate: [0, -7, 3, 0], scale: [1, 1.06, 1, 1] },
+            { rotate: [0, -7, 3, 0], scale: [1, 0.97, 1, 1] },
             { duration: seconds, times: [0, 0.3, 0.7, 1], ease: "easeInOut" },
           ),
         ]),
@@ -62,15 +62,20 @@ export const Glasses = createAnimatedIcon({
         return Promise.all([
           animate(
             "[data-part=side-left]",
-            { scale: [1, 1.2, 0.8, 1] },
+            { scale: [1, 1.15, 0.85, 1] },
             options,
           ),
           animate(
             "[data-part=side-right]",
-            { scale: [1, 0.8, 1.2, 1] },
+            { scale: [1, 0.85, 1.15, 1] },
             options,
           ),
-          animate("[data-part=frame]", { skewY: [0, 5, -5, 0] }, options),
+          // the whole frame steps back while one lens looms, so the near lens stays inside the frame
+          animate(
+            "[data-part=frame]",
+            { skewY: [0, 5, -5, 0], scale: [1, 0.88, 0.88, 1] },
+            options,
+          ),
         ]);
       },
     },

@@ -53,7 +53,7 @@ export const PlaneLanding = createAnimatedIcon({
           "[data-part=plane]",
           {
             x: [0, 1, 1.5, 14, 0, 0],
-            y: [0, 4, 4, 4, 0, 0],
+            y: [0, 3, 3, 3, 0, 0],
             rotate: [0, -24, -24, -24, 0, 0],
             scaleX: [1, 1, 1.08, 1, 0.4, 1],
             scaleY: [1, 1, 0.84, 1, 0.4, 1],
@@ -90,10 +90,10 @@ export const PlaneLanding = createAnimatedIcon({
         ))}
         <path data-part="incoming" d="M24 22h4" style={flash()} />
       </g>
-      {/* descending at 1:2: a long body with a wedge nose, the far wing swept up above it, a tail fin */}
+      {/* descending at 1:2: a long body with a wedge nose, the far wing swept back above it, a tail fin */}
       <path
         data-part="plane"
-        d="M3.2 10.9 17.2 17.9 20.8 17.7 18.8 14.2 15.8 12.7 17.6 5.1 15.4 3 10.3 10 7.8 8.7 7.9 5.5 6.5 5.3Z"
+        d="M3.2 10.9 17.2 17.9 20.8 17.7 18.8 14.2 15.8 12.7 14.5 4.6 12.3 2.5 11.3 10.5 7.8 8.7 7.9 5.5 6.5 5.3Z"
         style={pivot("50% 100%")}
       />
     </>

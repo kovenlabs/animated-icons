@@ -30,7 +30,7 @@ export const Beer = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=mug]",
-            { y: [0, -3, -3, 0, 0], rotate: [0, 12, 7, -2, 0], scaleY: [1, 1, 1, 0.92, 1] },
+            { y: [0, -1.5, -1.5, 0, 0], rotate: [0, 12, 7, -2, 0], scaleY: [1, 1, 1, 0.92, 1] },
             {
               duration: seconds,
               times: [0, 0.3, 0.45, 0.75, 1],
@@ -39,7 +39,7 @@ export const Beer = createAnimatedIcon({
           ),
           animate(
             "[data-part=foam]",
-            { skewX: [0, -14, 12, -6, 0], scaleY: [1, 1, 1.25, 0.95, 1], scaleX: [1, 1, 1.06, 0.98, 1] },
+            { skewX: [0, -14, 12, -6, 0], scaleY: [1, 1, 1.1, 0.95, 1], scaleX: [1, 1, 1.06, 0.98, 1] },
             { duration: seconds, times: [0, 0.25, 0.4, 0.7, 1], ease: "easeInOut" },
           ),
         ]),

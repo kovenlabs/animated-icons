@@ -27,7 +27,9 @@ export const Refrigerator = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=fridge-door]",
-            { scaleX: [1, 0.15, 0.15, 1], skewY: [0, -14, -14, 0] },
+            // a gentle lean: the cabinet fills the frame's height, so a deeper skew drops the door's
+            // free corner out through the bottom edge
+            { scaleX: [1, 0.15, 0.15, 1], skewY: [0, -6, -6, 0] },
             { duration: seconds * 0.85, times: [0, 0.3, 0.7, 1], ease: ["easeOut", "linear", ease.in] },
           ),
           animate(
@@ -64,14 +66,15 @@ export const Refrigerator = createAnimatedIcon({
           ),
         ]),
     },
-    // it hops on the spot: a squash, a stretched leap and a landing, the handles rattling a beat late
+    // it hops on the spot: a squash, a leap away from you and a landing, the handles rattling a beat late
     hop: {
       duration: 900,
       run: ({ animate, seconds }) =>
         Promise.all([
           animate(
             "[data-part=fridge]",
-            { y: [0, 0, -3, 0, 0], scaleY: [1, 0.86, 1.08, 0.9, 1], scaleX: [1, 1.08, 0.95, 1.06, 1] },
+            // it fills the frame's height, so the leap goes up and away from you (shrinking) to stay inside
+            { y: [0, 0, -1.8, 0, 0], scaleY: [1, 0.86, 0.96, 0.9, 1], scaleX: [1, 1.08, 0.86, 1.06, 1] },
             { duration: seconds, times: [0, 0.2, 0.5, 0.75, 1], ease: ["easeOut", "easeOut", ease.in, ease.overshoot] },
           ),
           animate(

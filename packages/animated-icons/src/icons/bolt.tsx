@@ -49,14 +49,14 @@ export const Bolt = createAnimatedIcon({
         ]),
     },
     // flipped like a coin: it narrows to its edge, the slab of its side swings past, and its other
-    // face turns back to you at the top of a hop
+    // face turns back to you at the top of a hop that carries it away from you
     flip: {
       duration: 1000,
       run: ({ animate, seconds }) =>
         Promise.all([
           animate(
             "[data-part=bolt]",
-            { y: [0, -4, 0] },
+            { y: [0, -2.5, 0], scale: [1, 0.8, 1] },
             { duration: seconds, ease: ["easeOut", "easeIn"] },
           ),
           animate(
@@ -80,8 +80,8 @@ export const Bolt = createAnimatedIcon({
             "[data-part=nut]",
             {
               rotate: [0, -14, 12, -10, 8, -4, 0],
-              x: [0, -1.2, 1.2, -1, 0.8, -0.4, 0],
-              scale: [1, 1.08, 1.04, 1.08, 1.04, 1.02, 1],
+              x: [0, -0.8, 0.8, -0.7, 0.5, -0.3, 0],
+              scale: [1, 1.04, 1.02, 1.04, 1.02, 1.01, 1],
             },
             { duration: seconds, ease: "easeInOut" },
           ),
@@ -94,7 +94,7 @@ export const Bolt = createAnimatedIcon({
     },
   },
   render: () => (
-    <g data-part="bolt">
+    <g data-part="bolt" style={pivot("50% 50%")}>
       <path data-part="side" d={SIDE} style={flash()} />
       <g data-part="nut" style={pivot("50% 50%")}>
         <path d={NUT} />

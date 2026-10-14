@@ -50,7 +50,9 @@ export const Fan = createAnimatedIcon({
           animate("[data-part=blades]", { rotate: [0, 720] }, { duration: seconds, ease: ease.inOut }),
         ]),
     },
-    // full power: the blades blur through three turns, the fan shudders and hops on its base
+    // full power: the blades blur through three turns, the cage swells and the fan shudders on its
+    // base. The cage already runs to 1px from the top edge, so it swells about its own centre and the
+    // shudder only rattles it down and sideways, never up out of the frame
     turbo: {
       duration: 1200,
       run: ({ animate, seconds }) =>
@@ -58,15 +60,15 @@ export const Fan = createAnimatedIcon({
           animate("[data-part=blades]", { rotate: [0, 1080] }, { duration: seconds, ease: ease.inOut }),
           animate(
             "[data-part=head]",
-            { scale: [1, 0.92, 1.08, 1.06, 1.08, 1] },
+            { scale: [1, 0.92, 1.06, 1.03, 1.06, 1] },
             { duration: seconds, times: [0, 0.15, 0.35, 0.55, 0.75, 1], ease: "easeInOut" },
           ),
           animate(
             "[data-part=fan]",
             {
-              y: [0, 0, -1.5, 0, -1, 0, 0],
-              rotate: [0, -2, 2, -2, 2, -1, 0],
-              scaleY: [1, 0.95, 1.03, 0.96, 1.02, 0.98, 1],
+              y: [0, 0, -0.4, 0, -0.4, 0, 0],
+              rotate: [0, -3, 3, -3, 3, -1.5, 0],
+              scaleY: [1, 0.93, 1, 0.95, 1, 0.97, 1],
             },
             { duration: seconds, ease: "easeInOut" },
           ),
@@ -76,7 +78,7 @@ export const Fan = createAnimatedIcon({
   render: () => (
     <g data-part="fan" style={pivot("50% 100%")}>
       <path d="M12 18v3M7 21h10" />
-      <g data-part="head" style={pivot("50% 100%")}>
+      <g data-part="head" style={pivot("50% 50%")}>
         <circle cx="12" cy="10" r="8" />
         <g data-part="blades" fill={slot.accent} stroke="none" style={HUB}>
           {BLADES.map((d) => (

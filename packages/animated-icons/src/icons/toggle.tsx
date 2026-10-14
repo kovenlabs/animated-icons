@@ -78,7 +78,7 @@ export const Toggle = createAnimatedIcon({
           ),
           animate(
             "[data-part=toggle]",
-            { skewX: [0, 0, -10, 7, -3, 0], scaleY: [1, 1, 0.9, 1.06, 0.98, 1] },
+            { skewX: [0, 0, -8, 6, -3, 0], scaleX: [1, 1, 0.86, 0.9, 0.97, 1], scaleY: [1, 1, 0.9, 1.06, 0.98, 1] },
             { duration: seconds, times, ease: "easeInOut" },
           ),
           animate("[data-part=glow]", { opacity: [0, 0, 0.8, 0, 0, 0] }, { duration: seconds, times, ease: "easeOut" }),

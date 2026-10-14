@@ -34,7 +34,7 @@ export const PhoneIncoming = createAnimatedIcon({
           ),
           animate(
             "[data-part=handset]",
-            { rotate: [0, -14, 10, -6, 3, 0], scale: [1, 1.06, 0.96, 1.02, 1, 1] },
+            { rotate: [0, -10, 8, -5, 2, 0], scale: [1, 1.04, 0.96, 1.02, 1, 1] },
             { duration: seconds * 0.45, delay: seconds * 0.55, ease: "easeInOut" },
           ),
         ]),
@@ -63,7 +63,7 @@ export const PhoneIncoming = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=handset]",
-            { scale: [1, 1.1, 1.1, 0.97, 1], rotate: [0, -14, -14, 3, 0], y: [0, -1, -1, 0, 0] },
+            { scale: [1, 1.06, 1.06, 0.97, 1], rotate: [0, -8, -8, 3, 0], y: [0, -1, -1, 0, 0] },
             { duration: seconds, times: [0, 0.25, 0.6, 0.8, 1], ease: "easeInOut" },
           ),
           animate(

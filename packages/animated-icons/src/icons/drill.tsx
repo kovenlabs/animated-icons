@@ -36,7 +36,7 @@ export const Drill = createAnimatedIcon({
           animate("[data-part=bit]", FLUTES, { duration: seconds, ease: "linear" }),
           animate(
             "[data-part=drill]",
-            { x: [0, -1.5, -0.8, -1.5, -0.8, -1.5, 0], rotate: [0, -4, -3, -4, -3, -4, 0] },
+            { x: [0, -0.8, -0.4, -0.8, -0.4, -0.8, 0], rotate: [0, -4, -3, -4, -3, -4, 0] },
             { duration: seconds, ease: "easeInOut" },
           ),
           animate(
@@ -71,10 +71,13 @@ export const Drill = createAnimatedIcon({
       duration: 1000,
       run: ({ animate, seconds }) =>
         Promise.all([
+          animate("[data-part=drill-body]", { rotate: [0, -360] }, { duration: seconds, ease: ease.inOut }),
+          // shrunk before it swings off square and held small until it is square again, so no corner
+          // ever reaches past the frame
           animate(
             "[data-part=drill-body]",
-            { rotate: [0, -360], scale: [1, 0.72, 1] },
-            { duration: seconds, ease: ease.inOut },
+            { scale: [1, 0.7, 0.7, 1] },
+            { duration: seconds, times: [0, 0.25, 0.75, 1], ease: "easeInOut" },
           ),
           animate("[data-part=bit]", FLUTES, { duration: seconds, ease: "linear" }),
         ]),
@@ -91,8 +94,8 @@ export const Drill = createAnimatedIcon({
         <rect data-part="chip" x="20" y="13.5" width="2" height="2" style={flash()} />
       </g>
       <g data-part="drill-body" style={pivot("50% 50%")}>
-        {/* kicks back about the foot of the grip */}
-        <g data-part="drill" style={pivot("30% 100%")}>
+        {/* kicks back nose-up about the back of the housing, so nothing swings past the left edge */}
+        <g data-part="drill" style={pivot("0% 0%")}>
           {/* motor housing, chuck, slanted grip and battery */}
           <path d="M2 3h12v7H2Z" />
           <path d="M14 4.5h3v4h-3" />

@@ -55,7 +55,7 @@ export const PhoneMissed = createAnimatedIcon({
           ),
         ]),
     },
-    // the handset turns over in perspective and thuds back down; the cross flashes with the thud
+    // the handset turns over in perspective and thuds back down; the cross ducks out of its way and slams back in with the thud
     hangup: {
       duration: 1000,
       run: ({ animate, seconds }) =>
@@ -67,8 +67,8 @@ export const PhoneMissed = createAnimatedIcon({
           ),
           animate(
             "[data-part=cross]",
-            { opacity: [1, 1, 0.25, 1, 0.25, 1], scale: [1, 1, 1.2, 1, 1.15, 1] },
-            { duration: seconds, times: [0, 0.6, 0.7, 0.8, 0.9, 1], ease: "easeOut" },
+            { opacity: [1, 0, 0, 1, 1, 1], scale: [1, 0, 0, 1.3, 0.9, 1] },
+            { duration: seconds, times: [0, 0.14, 0.58, 0.72, 0.86, 1], ease: ["easeIn", "linear", ease.out, "easeInOut", "easeOut"] },
           ),
         ]),
     },

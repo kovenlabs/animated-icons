@@ -35,7 +35,7 @@ export const Banana = createAnimatedIcon({
             {
               scaleY,
               scaleX: [1, 1.1, 0.85, 0.85, 1.15, 0.98, 1],
-              y: [0, HALF * (1 - 0.82), -2.5, -2.5, HALF * (1 - 0.8), -0.3, 0],
+              y: [0, HALF * (1 - 0.82), -1.8, -1.8, HALF * (1 - 0.8), -0.3, 0],
             },
             {
               duration: seconds,
@@ -89,7 +89,7 @@ export const Banana = createAnimatedIcon({
     jelly: {
       duration: 1000,
       run: ({ animate, seconds }) => {
-        const scaleY = [1, 1.08, 0.85, 1.05, 0.97, 1]
+        const scaleY = [1, 1.04, 0.85, 1.03, 0.97, 1]
         return Promise.all([
           animate(
             "[data-part=banana]",

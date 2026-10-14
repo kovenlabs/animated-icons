@@ -11,7 +11,7 @@ declare module "../lib/types" {
   }
 }
 
-const puff = { ...blink, y: [0, -1] }
+const puff = { ...blink, y: [0, -0.5] }
 
 /** 2 colors: pot (primary), lid and steam (accent). */
 export const CookingPot = createAnimatedIcon({

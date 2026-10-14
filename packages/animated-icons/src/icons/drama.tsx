@@ -17,7 +17,7 @@ export const Drama = createAnimatedIcon({
   slots: { primary: "comedy mask", accent: "tragedy mask" },
   defaultVariant: "emote",
   variants: {
-    // comedy rocks with laughter while tragedy droops and sags with a sigh
+    // comedy rocks with laughter while tragedy droops away from it and sags with a sigh
     emote: {
       duration: 1200,
       run: ({ animate, seconds }) =>
@@ -29,7 +29,7 @@ export const Drama = createAnimatedIcon({
           ),
           animate(
             "[data-part=tragedy]",
-            { rotate: [0, -10, -10, 0], y: [0, 1.5, 1.5, 0], scaleY: [1, 0.92, 0.92, 1] },
+            { rotate: [0, 9, 9, 0], y: [0, 1.5, 1.5, 0], scaleY: [1, 0.92, 0.92, 1] },
             { duration: seconds, times: [0, 0.35, 0.75, 1], ease: "easeInOut" },
           ),
         ]),

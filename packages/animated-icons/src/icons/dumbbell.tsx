@@ -46,7 +46,7 @@ export const Dumbbell = createAnimatedIcon({
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=spin]",
-          { rotate: [0, 0, 180, 180, 0], scale: [1, 0.9, 1.18, 1, 1] },
+          { rotate: [0, 0, 180, 180, 0], scale: [1, 0.88, 1.06, 1, 1] },
           { duration: seconds, times: [0, 0.15, 0.75, 0.999, 1], ease: ["easeOut", ease.inOut, ease.overshoot, snap] },
         ),
     },

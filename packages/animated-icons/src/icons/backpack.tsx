@@ -40,8 +40,8 @@ export const Backpack = createAnimatedIcon({
           animate(
             "[data-part=pack]",
             {
-              y: [0, 1, -4, 0, 0],
-              scaleY: [1, 0.88, 1.1, 0.85, 1],
+              y: [0, 1, -1, 0, 0],
+              scaleY: [1, 0.88, 1.04, 0.85, 1],
               scaleX: [1, 1.08, 0.94, 1.12, 1],
             },
             options,
@@ -53,7 +53,7 @@ export const Backpack = createAnimatedIcon({
           ),
           animate(
             "[data-part=handle]",
-            { scaleY: [1, 0.7, 1.4, 0.8, 1] },
+            { scaleY: [1, 0.7, 1, 1.25, 1] },
             options,
           ),
         ]);
@@ -67,8 +67,8 @@ export const Backpack = createAnimatedIcon({
         const options = { duration: seconds, ease: "easeInOut" as const };
         return Promise.all([
           animate("[data-part=pack]", { scaleX: [1, 0.6, 1, 0.6, 1] }, options),
-          animate("[data-part=pocket]", { x: [0, -2.5, 0, 2.5, 0] }, options),
-          animate("[data-part=zip]", { x: [0, -1.5, 0, 1.5, 0] }, options),
+          animate("[data-part=pocket]", { x: [0, -1, 0, 1, 0], scaleX: [1, 0.7, 1, 0.7, 1] }, options),
+          animate("[data-part=zip]", { x: [0, -1, 0, 1, 0] }, options),
           animate("[data-part=handle]", { x: [0, 1, 0, -1, 0] }, options),
         ]);
       },

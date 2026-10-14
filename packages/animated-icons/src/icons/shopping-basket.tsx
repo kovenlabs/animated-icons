@@ -27,7 +27,7 @@ export const ShoppingBasket = createAnimatedIcon({
   slots: { primary: "basket + rim + weave", accent: "handle" },
   defaultVariant: "hop",
   variants: {
-    // crouches, springs up stretched with its handle whipping tall, and lands with a squash
+    // crouches, springs up stretched with its handle dragging low behind it, and lands with a squash
     hop: {
       duration: 900,
       run: ({ animate, seconds }) => {
@@ -40,15 +40,15 @@ export const ShoppingBasket = createAnimatedIcon({
           animate(
             "[data-part=basket]",
             {
-              y: [0, 1, -4, 0, 0, 0],
-              scaleY: [1, 0.84, 1.12, 0.8, 1.05, 1],
+              y: [0, 1, -1.5, 0, 0, 0],
+              scaleY: [1, 0.84, 1.04, 0.8, 1.05, 1],
               scaleX: [1, 1.1, 0.92, 1.16, 0.97, 1],
             },
             options,
           ),
           animate(
             "[data-part=handle]",
-            { scaleY: [1, 0.8, 1.22, 0.72, 1.1, 1] },
+            { scaleY: [1, 0.8, 0.88, 0.72, 1.1, 1] },
             options,
           ),
         ]);
@@ -71,12 +71,12 @@ export const ShoppingBasket = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=carry]",
-            { scaleX: [1, -1, 1], y: [0, -2, 0] },
+            { scaleX: [1, -1, 1], y: [0, -1, 0] },
             { duration: seconds, ease: "easeInOut" },
           ),
           animate(
             "[data-part=handle]",
-            { scaleY: [1, 1.2, 0.9, 1] },
+            { scaleY: [1, 1.1, 0.9, 1] },
             { duration: seconds, times: [0, 0.4, 0.8, 1], ease: "easeInOut" },
           ),
         ]),

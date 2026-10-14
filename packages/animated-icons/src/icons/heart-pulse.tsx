@@ -3,7 +3,7 @@
 import type { Easing } from "motion/react"
 
 import { createAnimatedIcon } from "../lib/create-icon"
-import { ease, pivot, slot } from "../lib/motion"
+import { ease, flash, pivot, slot } from "../lib/motion"
 
 declare module "../lib/types" {
   interface IconVariants {
@@ -70,7 +70,13 @@ export const HeartPulse = createAnimatedIcon({
         }
         return Promise.all([
           animate("[data-part=trace]", { scaleY: [1, 0.1, 0.1, 1.3, 0.9, 1] }, timing),
-          animate("[data-part=heart]", { scale: [1, 0.92, 0.92, 1.22, 0.97, 1], y: [0, 0.5, 0.5, -1.5, 0, 0] }, timing),
+          animate("[data-part=heart]", { scale: [1, 0.9, 0.9, 1.14, 0.97, 1], y: [0, 0.5, 0.5, -1, 0, 0] }, timing),
+          // the squashed trace thins to a hairline, so a full-weight flat line stands in for it while it is down
+          animate(
+            "[data-part=flatline]",
+            { opacity: [0, 0, 1, 1, 0, 0] },
+            { duration: seconds, times: [0, 0.08, 0.18, 0.45, 0.52, 1], ease: "linear" },
+          ),
         ])
       },
     },
@@ -80,6 +86,7 @@ export const HeartPulse = createAnimatedIcon({
       <path d={HEART} />
       {/* scales about its baseline (y 11.5 of its 9..15 box) */}
       <path data-part="trace" d={TRACE} stroke={slot.accent} style={pivot("50% 42%")} />
+      <path data-part="flatline" d="M3 11.5H21" stroke={slot.accent} style={flash()} />
     </g>
   ),
 })

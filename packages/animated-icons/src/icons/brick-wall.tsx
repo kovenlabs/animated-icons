@@ -13,12 +13,12 @@ declare module "../lib/types" {
  * The three courses, top to bottom. Each owns its sides and the bed line on top of it (the bottom course owns
  * the base too), so they move as rows without leaving a seam, and every head joint's ends are painted over by a
  * bed line drawn after it. The inner bed lines are separate strokes, so no corner gets rounded into the sides.
- * `drop` lifts a course to the same spot above the frame, `start` is when it falls: the bottom course is laid first.
+ * `drop` lifts a course just clear of the frame's top edge (stroke included), `start` is when it falls: the bottom course is laid first.
  */
 const COURSES = [
-  { d: "M3 9V3h18v6", joints: "M8 3v6M16 3v6", drop: 6, start: 0.6 },
-  { d: "M3 9h18M3 9v6M21 9v6", joints: "M12 9v6", drop: 12, start: 0.38 },
-  { d: "M3 15h18M3 15v6h18v-6", joints: "M8 15v6M16 15v6", drop: 18, start: 0.16 },
+  { d: "M3 9V3h18v6", joints: "M8 3v6M16 3v6", drop: 11, start: 0.6 },
+  { d: "M3 9h18M3 9v6M21 9v6", joints: "M12 9v6", drop: 17, start: 0.38 },
+  { d: "M3 15h18M3 15v6h18v-6", joints: "M8 15v6M16 15v6", drop: 23, start: 0.16 },
 ] as const
 
 const course = (i: number) => `[data-part=course]:nth-of-type(${i + 1})`

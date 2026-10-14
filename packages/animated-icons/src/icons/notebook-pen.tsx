@@ -21,37 +21,40 @@ export const NotebookPen = createAnimatedIcon({
   slots: { primary: "cover + rings", accent: "pen + written line" },
   defaultVariant: "write",
   variants: {
-    // the pen swishes back and forth from its top end, scribbling a line onto the page that then fades
+    // the pen dips onto the page and drags its nib along, writing a line that then fades as it lifts back
     write: {
+      clip: false,
       duration: 1100,
       run: ({ animate, seconds }) =>
         Promise.all([
+          // the nib (12, 12) travels to the line's start (9, 16), along it to (13, 16), and home
           animate(
             "[data-part=pen]",
-            { rotate: [0, 6, -8, 4, -5, 0] },
-            { duration: seconds * 0.85, times: [0, 0.2, 0.45, 0.65, 0.85, 1], ease: "easeInOut" },
+            { x: [0, -3, -3, -1.7, -0.3, 1, 1, 0], y: [0, 4, 4, 3.5, 4, 3.6, 4, 0] },
+            { duration: seconds, times: [0, 0.2, 0.25, 0.4, 0.55, 0.7, 0.78, 1], ease: "easeInOut" },
           ),
           // hidden until it has length: a square cap paints a dot at pathLength 0
           animate(
             "[data-part=line]",
             { opacity: [0, 0, 1, 1, 0] },
-            { duration: seconds, times: [0, 0.2, 0.21, 0.8, 1] },
+            { duration: seconds, times: [0, 0.25, 0.26, 0.85, 1] },
           ),
           animate(
             "[data-part=line]",
             { pathLength: [0, 0, 1, 1] },
-            { duration: seconds, times: [0, 0.2, 0.75, 1], ease: "easeInOut" },
+            { duration: seconds, times: [0, 0.25, 0.7, 1], ease: "linear" },
           ),
         ]),
     },
-    // the cover swings open on its rings, edge-on in perspective, while the pen lifts out of the way
+    // the cover swings open on its rings, edge-on in perspective, while the pen lifts out of the way (the
+    // skew is taken before the squeeze, on the cover's full width, so it stays small to keep the top corner in)
     flip: {
       duration: 1000,
       run: ({ animate, seconds }) =>
         Promise.all([
           animate(
             "[data-part=cover]",
-            { scaleX: [1, 0.15, 0.15, 1.04, 1], skewY: [0, -14, -14, 2, 0] },
+            { scaleX: [1, 0.15, 0.15, 1.04, 1], skewY: [0, -5, -5, 1, 0] },
             { duration: seconds, times: [0, 0.35, 0.55, 0.85, 1], ease: "easeInOut" },
           ),
           animate(
@@ -87,7 +90,7 @@ export const NotebookPen = createAnimatedIcon({
         <path d={RINGS} />
       </g>
       {/* the line the pen writes: only exists in motion */}
-      <path data-part="line" d="M11 18h5" stroke={slot.accent} style={flash("0% 50%")} />
+      <path data-part="line" d="M9 16h4" stroke={slot.accent} style={flash("0% 50%")} />
       {/* a slim 45° pen, pivoting on its top end */}
       <g data-part="pen" stroke={slot.accent} style={pivot("100% 0%")}>
         <path d="M13 9l6-6 2 2-6 6z" />

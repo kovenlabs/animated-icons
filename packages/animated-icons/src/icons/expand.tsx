@@ -25,7 +25,8 @@ export const Expand = createAnimatedIcon({
   slots: { primary: "corner arrows" },
   defaultVariant: "burst",
   variants: {
-    // all four arrows crouch toward the middle, then fire out to their corners and settle
+    // all four arrows crouch toward the middle, then fire out to their corners and settle. The crouch
+    // stops short of 1.5px, where the shafts would meet and the four arrows close into one block
     burst: {
       duration: 750,
       run: ({ animate, seconds }) =>
@@ -33,7 +34,7 @@ export const Expand = createAnimatedIcon({
           ARROWS.map(({ part, x, y }) =>
             animate(
               `[data-part=${part}]`,
-              { x: [0, -x * 1.5, x, 0], y: [0, -y * 1.5, y, 0] },
+              { x: [0, -x * 0.8, x * 1.2, 0], y: [0, -y * 0.8, y * 1.2, 0] },
               { duration: seconds, times: [0, 0.4, 0.62, 1], ease: ["easeOut", ease.in, ease.overshoot] },
             ),
           ),

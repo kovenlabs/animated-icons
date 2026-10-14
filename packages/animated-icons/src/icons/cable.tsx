@@ -1,7 +1,7 @@
 "use client"
 
 import { createAnimatedIcon } from "../lib/create-icon"
-import { ease, flash, pivot, slot } from "../lib/motion"
+import { flash, pivot, slot } from "../lib/motion"
 
 declare module "../lib/types" {
   interface IconVariants {
@@ -31,7 +31,7 @@ export const Cable = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=plug-in]",
-            { scaleY: [1, 0.7, 1.15, 1], scaleX: [1, 1.15, 0.95, 1] },
+            { scaleY: [1, 0.7, 1.1, 1], scaleX: [1, 1.15, 0.95, 1] },
             { duration: seconds * 0.35, ease: "easeOut" },
           ),
           animate(
@@ -47,7 +47,7 @@ export const Cable = createAnimatedIcon({
           ),
           animate(
             "[data-part=plug-out]",
-            { scaleY: [1, 1, 1.3, 0.85, 1], scaleX: [1, 1, 0.9, 1.1, 1] },
+            { scaleY: [1, 1, 1.1, 0.85, 1], scaleX: [1, 1, 0.94, 1.1, 1] },
             { duration: seconds, times: [0, 0.65, 0.75, 0.88, 1], ease: "easeOut" },
           ),
         ]),
@@ -59,23 +59,23 @@ export const Cable = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=cable]",
-            { scaleY: [1, 0.68, 1.15, 0.94, 1], scaleX: [1, 1.14, 0.92, 1.03, 1] },
-            { duration: seconds, times: [0, 0.3, 0.55, 0.78, 1], ease: ["easeIn", ease.overshoot, "easeInOut", "easeOut"] },
+            { scaleY: [1, 0.68, 1.03, 0.96, 1], scaleX: [1, 1.14, 0.92, 1.03, 1] },
+            { duration: seconds, times: [0, 0.3, 0.55, 0.78, 1], ease: ["easeIn", "easeOut", "easeInOut", "easeOut"] },
           ),
           animate(
             "[data-part=plug-in]",
-            { rotate: [0, 0, -12, 6, 0] },
+            { rotate: [0, 0, -10, 5, 0] },
             { duration: seconds, times: [0, 0.3, 0.55, 0.78, 1], ease: "easeInOut" },
           ),
           animate(
             "[data-part=plug-out]",
-            { rotate: [0, 0, -12, 6, 0] },
+            { rotate: [0, 0, -10, 5, 0] },
             { duration: seconds, times: [0, 0.3, 0.55, 0.78, 1], ease: "easeInOut" },
           ),
         ]),
     },
-    // held up and turned round: the cable spins a full face around its upright axis, leaning into the
-    // turn for perspective, and dips as it comes back to face you
+    // turned round: the cable spins a full face around its upright axis, leaning and shrinking into
+    // the turn for perspective, and dips as it comes back to face you
     turn: {
       duration: 1200,
       run: ({ animate, seconds }) => {
@@ -88,7 +88,7 @@ export const Cable = createAnimatedIcon({
           ),
           animate(
             "[data-part=cable]",
-            { y: [0, -1.5, -2.5, -2.5, -1.5, 1, 0], scaleY: [1, 1, 1.05, 1.05, 1, 0.92, 1] },
+            { y: [0, 0, 0, 0, 0, 0.8, 0], scaleY: [1, 1, 0.88, 1, 0.88, 0.92, 1] },
             { duration: seconds, times, ease: "easeInOut" },
           ),
         ])

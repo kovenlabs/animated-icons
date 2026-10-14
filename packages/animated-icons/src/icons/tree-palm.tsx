@@ -60,7 +60,12 @@ export const TreePalm = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=palm]",
-            { skewX: [0, -16, -13, -16, 6, -2, 0] },
+            {
+              // the bow also draws the crown in and down, so the windswept fronds stay inside the frame
+              skewX: [0, -10, -8, -10, 5, -2, 0],
+              scaleX: [1, 0.84, 0.87, 0.84, 0.95, 1, 1],
+              scaleY: [1, 0.92, 0.94, 0.92, 1, 1, 1],
+            },
             {
               duration: seconds,
               times: [0, 0.2, 0.32, 0.46, 0.66, 0.84, 1],
