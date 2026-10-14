@@ -82,9 +82,10 @@ export const Birdhouse = createAnimatedIcon({
       {/* the house sits on the top of the pole */}
       <g data-part="box" style={pivot("50% 100%")}>
         <g data-part="face" style={pivot("50% 50%")}>
-          <path data-part="roof" d="M4 12l8-8 8 8" stroke={slot.accent} style={pivot("50% 100%")} />
           <path d="M6 10v9M18 10v9M4 19h16" />
           <circle data-part="hole" cx="12" cy="13" r="2" style={pivot("50% 50%")} />
+          {/* drawn last so the eaves cover the tops of the walls */}
+          <path data-part="roof" d="M4 12l8-8 8 8" stroke={slot.accent} style={pivot("50% 100%")} />
         </g>
       </g>
     </g>

@@ -29,7 +29,9 @@ function Drawing() {
   const globe = `earth-${useId().replace(/[^\w-]/g, "")}`
   // drawn in its own component (for the clip id), so it shapes its corners from context
   return useShapedDrawing(
-    <g data-part="earth" style={pivot("50% 50%")}>
+    // pivots on the globe's centre. motion forces a fill-box, and this group's box also spans the map
+    // copy off to the west (x -16 to 22, y 2 to 22), so the centre (12, 12) sits 28px in and 10px down
+    <g data-part="earth" style={pivot("28px 10px")}>
       {/* the land is seen only through a window 2px inside the rim, so a strip of sea always rings it */}
       <clipPath id={globe}>
         <circle cx="12" cy="12" r="7" />

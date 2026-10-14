@@ -94,8 +94,9 @@ export const MicVocal = createAnimatedIcon({
         ))}
       </g>
       <g data-part="mic" style={pivot("50% 50%")}>
-        {/* a tapered grip angled up into the ball, open where it enters it */}
-        <path d="M11 8 5 16.5l2.5 2.5L15 12" />
+        {/* a tapered grip angled up into the ball, open where it enters it; its ends stop inside the rim's
+            stroke, so they stay hidden behind it while the ball throbs */}
+        <path d="M10.5 8.5 5 16.5l2.5 2.5L14 12.5" />
         {/* the cable kinks out of the butt and trails off along the floor */}
         <path d="M6.25 17.75 3.5 20.5 5 22h5l3-2 4 2" />
         {/* the ball is genuinely round, so it is a true circle */}

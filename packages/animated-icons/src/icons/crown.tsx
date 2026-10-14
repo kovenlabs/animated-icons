@@ -24,15 +24,14 @@ export const Crown = createAnimatedIcon({
   variants: {
     // the crown lifts off its band, turns over in the air, and drops back on with a squash
     coronate: {
-      clip: true,
       duration: 1200,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=crown]",
           {
-            y: [0, -5, -5, 0, 0, 0],
+            y: [0, -2.5, -2.5, 0, 0, 0],
             scaleX: [1, 0.95, -1, 1, 1.1, 1],
-            scaleY: [1, 1.05, 1.05, 1, 0.84, 1],
+            scaleY: [1, 1, 1, 1, 0.84, 1],
           },
           {
             duration: seconds,
@@ -66,7 +65,7 @@ export const Crown = createAnimatedIcon({
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=crown]",
-          { rotate: [0, -12, 10, -4, 0], skewX: [0, 6, -5, 2, 0], y: [0, -1.5, -1, -0.5, 0] },
+          { rotate: [0, -10, 9, -4, 0], skewX: [0, 2, -2, 1, 0], y: [0, -1.5, -1, -0.5, 0] },
           { duration: seconds, ease: "easeInOut" },
         ),
     },

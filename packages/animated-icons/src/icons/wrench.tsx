@@ -18,7 +18,7 @@ const WRENCH = "M2 10h8l2.5-2.5H20v2h-4v5h4v2h-7.5L10 14H2Z"
 /** 1 color: wrench (primary). */
 export const Wrench = createAnimatedIcon({
   name: "wrench",
-  category: "development",
+  category: "tools",
   keywords: ["tool", "repair", "fix", "spanner", "maintenance", "configure", "service"],
   slots: { primary: "wrench" },
   defaultVariant: "turn",

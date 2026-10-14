@@ -32,13 +32,14 @@ export const BookMarked = createAnimatedIcon({
           },
         ),
     },
-    // the ribbon swings from the top edge like a pendulum (skewed, so its top stays pinned), stretching as it goes
+    // the ribbon swings from the top edge like a pendulum (skewed, so its top stays pinned), stretching as it goes;
+    // it kicks out first toward the spine, where it has the most room before the cover's edge
     swing: {
       duration: 1100,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=ribbon]",
-          { skewX: [0, 20, -16, 10, -5, 0], scaleY: [1, 1.06, 1.04, 1.02, 1, 1] },
+          { skewX: [0, -20, 11, -7, 3, 0], scaleY: [1, 1.06, 1.04, 1.02, 1, 1] },
           { duration: seconds, ease: "easeInOut" },
         ),
     },

@@ -32,7 +32,12 @@ export const Handbag = createAnimatedIcon({
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=carry]",
-          { rotate: [0, 20, -15, 9, -4, 0], skewX: [0, -6, 5, -3, 1, 0] },
+          {
+            rotate: [0, 12, -8, 5, -2, 0],
+            skewX: [0, -3, 3, -2, 1, 0],
+            // the wide base would sweep out of the frame, so the bag swings out into depth as it goes
+            scale: [1, 0.78, 0.82, 0.92, 0.98, 1],
+          },
           { duration: seconds, ease: "easeInOut" },
         ),
     },
@@ -70,15 +75,15 @@ export const Handbag = createAnimatedIcon({
           animate(
             "[data-part=bag]",
             {
-              y: [0, -3, 0, 0, 0],
-              scaleY: [1, 1.05, 0.78, 1.06, 1],
-              scaleX: [1, 0.94, 1.18, 0.97, 1],
+              y: [0, -2, 0, 0, 0],
+              scaleY: [1, 1.02, 0.78, 1.06, 1],
+              scaleX: [1, 0.94, 1.08, 0.97, 1],
             },
             options,
           ),
           animate(
             "[data-part=handle]",
-            { scaleY: [1, 1.1, 0.7, 1.15, 1] },
+            { scaleY: [1, 1.05, 0.7, 1.15, 1] },
             options,
           ),
         ]);

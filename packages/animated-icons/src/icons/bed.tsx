@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: frame and mattress (primary), pillow and Z (accent). */
 export const Bed = createAnimatedIcon({
   name: "bed",
-  category: "navigation",
+  category: "home",
   keywords: ["sleep", "bedroom", "hotel", "rest", "night", "accommodation", "lodging", "nap"],
   slots: { primary: "frame + mattress", accent: "pillow + Z" },
   defaultVariant: "sleep",
@@ -30,7 +30,7 @@ export const Bed = createAnimatedIcon({
           ),
           animate(
             "[data-part=z]",
-            { opacity: [0, 1, 1, 0], y: [3, 0, -2, -5], x: [-3, -1, 0, 1], scale: [0.4, 0.8, 1.1, 1.4], rotate: [-15, 0, 8, 12] },
+            { opacity: [0, 1, 1, 0], y: [3, 1, 0, -2], x: [-3, -1, 0, 1], scale: [0.4, 0.8, 1, 1.2], rotate: [-15, 0, 8, 12] },
             { duration: seconds * 0.75, delay: seconds * 0.2, times: [0, 0.3, 0.7, 1], ease: "easeOut" },
           ),
         ]),

@@ -53,7 +53,7 @@ const FLASH = { scale: [1, 1.5, 1, 1.5, 1], opacity: [1, 0.35, 1, 0.35, 1] }
 /** 2 colors: board and legs (primary), stripes and lamps (accent). */
 export const Construction = createAnimatedIcon({
   name: "construction",
-  category: "status",
+  category: "tools",
   keywords: ["barrier", "roadwork", "under construction", "work in progress", "roadblock", "maintenance", "wip", "detour"],
   slots: { primary: "board + legs", accent: "stripes + lamps" },
   defaultVariant: "blink",
@@ -80,7 +80,7 @@ export const Construction = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=barrier]",
-            { scaleY: [1, 0.5, 1.08, 0.96, 1], scaleX: [1, 0.94, 1.02, 1, 1], skewX: [0, -8, 4, -1, 0] },
+            { scaleY: [1, 0.5, 1.04, 0.96, 1], scaleX: [1, 0.94, 1.02, 1, 1], skewX: [0, -8, 4, -1, 0] },
             {
               duration: seconds,
               times: [0, 0.4, 0.65, 0.82, 1],
@@ -89,7 +89,7 @@ export const Construction = createAnimatedIcon({
           ),
           animate(
             "[data-part=lamp-l], [data-part=lamp-r]",
-            { scale: [1, 1, 1.6, 1] },
+            { scale: [1, 1, 1.35, 1] },
             { duration: seconds * 0.5, times: [0, 0.6, 0.8, 1], delay: seconds * 0.3, ease: "easeOut" },
           ),
         ]),

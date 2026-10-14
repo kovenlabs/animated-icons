@@ -25,7 +25,7 @@ export const OctagonAlert = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=base]",
-            { scaleY: [1, 0.3, 1.04, 0.95, 1], skewX: [0, -10, 4, -2, 0] },
+            { scaleY: [1, 0.3, 1.04, 0.95, 1], skewX: [0, -7, 4, -2, 0] },
             { duration: seconds * 0.8, times: [0, 0.3, 0.55, 0.75, 1], ease: ["easeOut", ease.in, "easeOut", "easeInOut"] },
           ),
           animate(

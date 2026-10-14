@@ -92,9 +92,9 @@ export const Joystick = createAnimatedIcon({
         {/* the fire button, a solid block on the left of the deck */}
         <path data-part="button" d="M4 12.5h3V15H4Z" fill={slot.accent} stroke="none" style={pivot("50% 100%")} />
       </g>
-      {/* hinged at its foot in the deck */}
+      {/* hinged at its foot on the deck line, so its cap never pokes out under the deck as it tips */}
       <g data-part="stick" style={pivot("50% 100%")}>
-        <path d="M14 16V9.5" />
+        <path d="M14 15V9.5" />
         <circle data-part="knob" cx="14" cy="6.5" r="3" stroke={slot.accent} style={pivot("50% 50%")} />
       </g>
     </>

@@ -15,7 +15,7 @@ const WHEELS = [7, 17] as const
 /** 2 colors: deck and trucks (primary), wheels (accent). */
 export const Skateboard = createAnimatedIcon({
   name: "skateboard",
-  category: "transport",
+  category: "sports",
   keywords: ["skate", "skating", "board", "ollie", "trick", "street", "sport", "hobby"],
   slots: { primary: "deck + trucks", accent: "wheels" },
   defaultVariant: "ollie",

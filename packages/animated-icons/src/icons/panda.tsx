@@ -22,7 +22,7 @@ const EAR_RIGHT = "M19 8l2-3-2-2h-3l-1 3"
 /** 2 colors: head, ears and nose (primary), eye patches (accent). */
 export const Panda = createAnimatedIcon({
   name: "panda",
-  category: "nature",
+  category: "animals",
   keywords: ["bear", "animal", "bamboo", "china", "cute", "wildlife", "zoo", "giant panda"],
   slots: { primary: "head + ears + nose", accent: "eye patches" },
   defaultVariant: "turn",
@@ -34,7 +34,8 @@ export const Panda = createAnimatedIcon({
       run: ({ animate, seconds }) => {
         const look = { duration: seconds, times: [0, 0.18, 0.4, 0.58, 0.78, 1], ease: "easeInOut" as const }
         return Promise.all([
-          animate("[data-part=face]", { x: [0, -2, -2, 2, 2, 0] }, look),
+          // the face narrows as it turns away, so its patches keep clear of the cheek it slides toward
+          animate("[data-part=face]", { x: [0, -1.5, -1.5, 1.5, 1.5, 0], scaleX: [1, 0.8, 0.8, 0.8, 0.8, 1] }, look),
           animate("[data-part=head]", { scaleX: [1, 0.93, 0.93, 0.93, 0.93, 1] }, look),
           animate("[data-part=ears]", { x: [0, 0.6, 0.6, -0.6, -0.6, 0] }, look),
           animate("[data-part=ear-left]", { scaleX: [1, 0.6, 0.6, 1, 1, 1] }, look),
@@ -107,7 +108,7 @@ export const Panda = createAnimatedIcon({
         <path data-part="ear-left" d={EAR_LEFT} style={pivot("33.3% 100%")} />
         <path data-part="ear-right" d={EAR_RIGHT} style={pivot("66.7% 100%")} />
       </g>
-      <g data-part="face" stroke="none">
+      <g data-part="face" stroke="none" style={pivot("50% 50%")}>
         {/* slanted patches, 2px apart across the bridge of the nose */}
         <g fill={slot.accent}>
           <path data-part="patch" d="M7 10l3-1 1 3-2 3-2-1z" style={pivot("50% 50%")} />

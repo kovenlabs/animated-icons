@@ -29,12 +29,12 @@ export const Swords = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=sword-a]",
-            { rotate: [0, -18, 7, -2, 0] },
+            { rotate: [0, -10, 7, -2, 0] },
             { duration: seconds, times: [0, 0.35, 0.5, 0.75, 1], ease: ["easeOut", ease.in, "easeOut", "easeInOut"] },
           ),
           animate(
             "[data-part=sword-b]",
-            { rotate: [0, 18, -7, 2, 0] },
+            { rotate: [0, 10, -7, 2, 0] },
             { duration: seconds, times: [0, 0.35, 0.5, 0.75, 1], ease: ["easeOut", ease.in, "easeOut", "easeInOut"] },
           ),
           animate(
@@ -53,12 +53,12 @@ export const Swords = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=sword-a]",
-            { x: [0, 2.5, -2, 0], y: [0, 2.5, -2, 0] },
+            { x: [0, 1.5, -2, 0], y: [0, 1.5, -2, 0] },
             { duration: seconds, times: [0, 0.35, 0.7, 1], ease: "easeInOut" },
           ),
           animate(
             "[data-part=sword-b]",
-            { x: [0, 2, -2.5, 0], y: [0, -2, 2.5, 0] },
+            { x: [0, 2, -1.5, 0], y: [0, -2, 1.5, 0] },
             { duration: seconds, times: [0, 0.35, 0.7, 1], ease: "easeInOut" },
           ),
           animate(
@@ -75,8 +75,8 @@ export const Swords = createAnimatedIcon({
         animate(
           "[data-part=swords]",
           {
-            y: [0, -3, -3, 0, 0],
-            scale: [1, 1.12, 1.12, 1, 1],
+            y: [0, -0.8, -0.8, 0, 0],
+            scale: [1, 1.06, 1.06, 1, 1],
             scaleX: [1, 1, -1, 1, 1],
             scaleY: [1, 1, 1, 0.86, 1],
           },

@@ -26,7 +26,7 @@ const CONFETTI = radial(5, 9, -90)
 /** 2 colors: cake and candle (primary), flame, sprinkles and confetti (accent). */
 export const Cake = createAnimatedIcon({
   name: "cake",
-  category: "social",
+  category: "food",
   keywords: ["birthday", "celebration", "party", "anniversary", "dessert", "candle", "bakery"],
   slots: { primary: "cake + candle", accent: "flame + sprinkles" },
   defaultVariant: "blow",

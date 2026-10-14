@@ -41,15 +41,16 @@ export const Footprints = createAnimatedIcon({
   slots: { primary: "back print", accent: "front print" },
   defaultVariant: "walk",
   variants: {
-    // each foot lifts toward you, then stamps down flat with a squash, one after the other
+    // each foot lifts toward you, then stamps down flat with a squash, one after the other. A print
+    // grows from its toes (see render) so the lifted back print stays inside the top edge
     walk: {
       duration: 1100,
       run: ({ animate, seconds }) =>
         animate(
           "[data-part=print]",
           {
-            scale: [1, 1.3, 0.85, 1.05, 1],
-            y: [0, -2, 0, 0, 0],
+            scale: [1, 1.25, 0.85, 1.05, 1],
+            y: [0, -1.5, 0, 0, 0],
             opacity: [1, 0.55, 1, 1, 1],
           },
           {
@@ -113,7 +114,7 @@ export const Footprints = createAnimatedIcon({
           key={sole}
           data-part="print"
           stroke={stroke}
-          style={pivot("50% 50%")}
+          style={pivot("50% 0%")}
         >
           <path data-part="sole" d={sole} style={pivot("50% 0%")} />
           <path data-part="heel" d={heel} style={pivot("50% 50%")} />

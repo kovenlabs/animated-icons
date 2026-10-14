@@ -18,7 +18,7 @@ const PILLS = [9, 13] as const
 export const PillBottle = createAnimatedIcon({
   name: "pill-bottle",
   family: "pill",
-  category: "education",
+  category: "health",
   keywords: ["medicine", "prescription", "pharmacy", "pills", "vitamins", "supplements", "medication", "drug"],
   slots: { primary: "bottle + label", accent: "cap + pills" },
   defaultVariant: "pop",

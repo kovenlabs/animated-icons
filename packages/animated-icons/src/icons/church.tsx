@@ -15,7 +15,7 @@ const peal = { opacity: [0, 1, 0, 1, 0], scale: [0.5, 1, 1.15, 1, 1.25] }
 /** 2 colors: church (primary), cross, bell and door (accent). */
 export const Church = createAnimatedIcon({
   name: "church",
-  category: "navigation",
+  category: "buildings",
   keywords: ["chapel", "cathedral", "steeple", "worship", "religion", "wedding", "parish", "faith"],
   slots: { primary: "church", accent: "cross + bell + door" },
   defaultVariant: "toll",

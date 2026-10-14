@@ -48,7 +48,7 @@ const RIM = 11.5
 /** 2 colors: bucket (primary), popcorn (accent). */
 export const Popcorn = createAnimatedIcon({
   name: "popcorn",
-  category: "commerce",
+  category: "food",
   keywords: ["cinema", "movie", "snack", "theater", "film", "food", "corn"],
   slots: { primary: "bucket", accent: "popcorn" },
   defaultVariant: "pop",

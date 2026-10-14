@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: headset + tubing (primary), chest piece + heartbeat (accent). The heartbeat only exists in motion. */
 export const Stethoscope = createAnimatedIcon({
   name: "stethoscope",
-  category: "education",
+  category: "health",
   keywords: ["doctor", "medical", "health", "heartbeat", "checkup", "physician", "clinic", "diagnosis"],
   slots: { primary: "headset + tubing", accent: "chest piece + heartbeat" },
   defaultVariant: "listen",

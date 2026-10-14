@@ -62,15 +62,23 @@ export const GitCompare = createAnimatedIcon({
     swap: {
       duration: 1100,
       run: ({ animate, seconds }) =>
-        animate(
-          "[data-part=diagram]",
-          { rotate: [0, -12, 196, 180, 180, 0], scale: [1, 1, 0.72, 1.08, 1, 1] },
-          {
-            duration: seconds,
-            times: [0, 0.15, 0.62, 0.8, 0.999, 1],
-            ease: ["easeOut", ease.in, "easeOut", "easeInOut", snap],
-          },
-        ),
+        Promise.all([
+          animate(
+            "[data-part=diagram]",
+            { rotate: [0, -12, 196, 180, 180, 0] },
+            {
+              duration: seconds,
+              times: [0, 0.15, 0.62, 0.8, 0.999, 1],
+              ease: ["easeOut", ease.in, "easeOut", "easeInOut", snap],
+            },
+          ),
+          // the dip lands before the diagonal turns upright, or the commits would poke out of the frame
+          animate(
+            "[data-part=diagram]",
+            { scale: [1, 0.95, 0.72, 0.72, 1.08, 1] },
+            { duration: seconds, times: [0, 0.15, 0.42, 0.62, 0.8, 1], ease: "easeInOut" },
+          ),
+        ]),
     },
     // each commit tosses over like a coin, the far one a beat after the near one, and the links flicker
     // as the light catches them

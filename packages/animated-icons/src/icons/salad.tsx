@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: bowl (primary), leaves and tomato (accent). */
 export const Salad = createAnimatedIcon({
   name: "salad",
-  category: "commerce",
+  category: "food",
   keywords: ["bowl", "greens", "lettuce", "healthy", "vegan", "vegetarian", "diet", "food"],
   slots: { primary: "bowl", accent: "leaves + tomato" },
   defaultVariant: "toss",

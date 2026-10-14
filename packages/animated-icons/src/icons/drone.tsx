@@ -1,7 +1,7 @@
 "use client"
 
 import { createAnimatedIcon } from "../lib/create-icon"
-import { blink, flash, pivot, slot } from "../lib/motion"
+import { blink, flash, pivot, slot, snap } from "../lib/motion"
 
 declare module "../lib/types" {
   interface IconVariants {
@@ -78,8 +78,17 @@ export const Drone = createAnimatedIcon({
           }),
           animate(
             "[data-part=drone]",
-            { scaleX: [1, 0.2, -1, 0.2, 1], y: [0, -1, 0, -1, 0] },
-            { duration: seconds, ease: "easeInOut" },
+            // the drone is mirror-symmetric, so edge-on it jumps from 0.15 to -0.15 instead of squeezing
+            // through zero width, where it would vanish for a frame
+            {
+              scaleX: [1, 0.15, -0.15, -1, -0.15, 0.15, 1],
+              y: [0, -1, -1, 0, -1, -1, 0],
+            },
+            {
+              duration: seconds,
+              times: [0, 0.25, 0.251, 0.5, 0.75, 0.751, 1],
+              ease: ["easeIn", snap, "easeOut", "easeIn", snap, "easeOut"],
+            },
           ),
         ]),
     },

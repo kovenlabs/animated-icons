@@ -22,7 +22,7 @@ const SPARKS = [
 /** 2 colors: handle (primary), head and impact sparks (accent). */
 export const Hammer = createAnimatedIcon({
   name: "hammer",
-  category: "development",
+  category: "tools",
   keywords: ["tool", "build", "construction", "repair", "fix", "diy", "nail", "craft"],
   slots: { primary: "handle", accent: "head + sparks" },
   defaultVariant: "strike",

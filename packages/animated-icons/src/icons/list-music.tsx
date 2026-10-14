@@ -51,7 +51,9 @@ export const ListMusic = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=note]",
-            { scaleX: [1, 0, -1, 0, 1], skewY: [0, 10, 0, -10, 0] },
+            // turned about its head the stem would swing left through the top row, so the note drifts right
+            // while it shows its back
+            { scaleX: [1, 0, -1, 0, 1], skewY: [0, 10, 0, -10, 0], x: [0, 1.5, 3, 1.5, 0] },
             { duration: seconds * 0.8, times: [0, 0.25, 0.5, 0.75, 1], ease: ["easeIn", "easeOut", "easeIn", "easeOut"] },
           ),
           animate(

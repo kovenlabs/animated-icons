@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: bottle (primary), cap and milk (accent). */
 export const Milk = createAnimatedIcon({
   name: "milk",
-  category: "commerce",
+  category: "food",
   keywords: ["bottle", "dairy", "drink", "breakfast", "grocery", "beverage", "food"],
   slots: { primary: "bottle", accent: "cap + milk" },
   defaultVariant: "slosh",

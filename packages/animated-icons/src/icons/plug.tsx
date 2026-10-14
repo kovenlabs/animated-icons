@@ -18,8 +18,8 @@ const CORD = 6
 /** The cord stays anchored to the frame's bottom edge: it stretches from its top by the plug's rise. */
 const stretch = (ys: number[]) => ys.map((y) => (CORD - y) / CORD)
 
-/** Sparks crackling round the prongs: one between them, one off each shoulder. */
-const SPARKS = ["M12 2v2.5", "M4.5 4.5 3 3", "M19.5 4.5 21 3"]
+/** Sparks crackling off each shoulder (the 3px between the prongs is too tight for one). */
+const SPARKS = ["M4.5 4.5 3 3", "M19.5 4.5 21 3"]
 
 /** 2 colors: body + cord (primary), prongs, glow and sparks (accent). */
 export const Plug = createAnimatedIcon({
@@ -62,7 +62,7 @@ export const Plug = createAnimatedIcon({
           ),
           animate(
             "[data-part=prong]",
-            { scaleY: [1, 1.3, 0.8, 1.25, 0.85, 1] },
+            { scaleY: [1, 1.2, 0.8, 1.15, 0.85, 1] },
             { duration: seconds * 0.8, delay: stagger(seconds * 0.05), ease: "easeInOut" },
           ),
           animate("[data-part=spark]", { ...blink, scale: [0.4, 1.3, 1.5] }, { duration: seconds * 0.35, delay: stagger(seconds * 0.12), ease: "easeOut" }),

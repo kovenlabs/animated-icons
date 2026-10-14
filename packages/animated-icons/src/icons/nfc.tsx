@@ -36,12 +36,13 @@ export const Nfc = createAnimatedIcon({
   defaultVariant: "pulse",
   variants: {
     // a ripple runs outward: each wave dims, then surges forward taller and snaps back, one after another
+    // (it dims in place rather than stepping back, and surges only as far as keeps it clear of the next wave)
     pulse: {
       duration: 1000,
       run: ({ animate, seconds }) =>
         animate(
           ALL,
-          { opacity: [1, 0.25, 1, 1], x: [0, -0.5, 1.5, 0], scaleY: [1, 0.85, 1.12, 1] },
+          { opacity: [1, 0.25, 1, 1], x: [0, 0, 0.8, 0], scaleY: [1, 0.92, 1.12, 1] },
           { duration: seconds * 0.6, times: [0, 0.3, 0.65, 1], delay: stagger(seconds * 0.12), ease: "easeInOut" },
         ),
     },

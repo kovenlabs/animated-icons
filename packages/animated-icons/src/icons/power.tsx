@@ -36,8 +36,8 @@ export const Power = createAnimatedIcon({
       run: ({ animate, seconds }) => {
         const timing = { duration: seconds, times: [0, 0.25, 0.55, 0.78, 1], ease: ["easeIn", ease.overshoot, "easeInOut", "easeOut"] satisfies Easing[] }
         return Promise.all([
-          animate("[data-part=power]", { scaleX: [1, 1.1, 0.95, 1.02, 1], scaleY: [1, 0.78, 1.08, 0.98, 1] }, timing),
-          animate("[data-part=bar]", { y: [0, 3, -1.5, 0.5, 0] }, timing),
+          animate("[data-part=power]", { scaleX: [1, 1.1, 0.97, 1.01, 1], scaleY: [1, 0.78, 1.03, 0.99, 1] }, timing),
+          animate("[data-part=bar]", { y: [0, 3, 0, 0.5, 0] }, timing),
           animate(
             "[data-part=glow]",
             { opacity: [0, 0, 1, 0], scale: [0.3, 0.3, 1, 1.15] },
@@ -76,7 +76,7 @@ export const Power = createAnimatedIcon({
           ),
         ]),
     },
-    // tossed like a coin: it hops, turns a full face around its upright axis with the bar sliding
+    // tossed like a coin: it hops away from you (shrinking, so the bar stays in the frame), turns a full face around its upright axis with the bar sliding
     // ahead of the ring for depth, and lands with a squash
     flip: {
       duration: 1100,
@@ -84,7 +84,7 @@ export const Power = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=power]",
-            { y: [0, 1, -3, 0, 0], scaleY: [1, 0.85, 1.08, 0.85, 1] },
+            { y: [0, 1, -1.5, 0, 0], scaleY: [1, 0.85, 0.95, 0.85, 1], scaleX: [1, 1.04, 0.95, 1.06, 1] },
             { duration: seconds, times: [0, 0.12, 0.5, 0.82, 1], ease: ["easeOut", "easeOut", "easeIn", ease.overshoot] },
           ),
           animate(

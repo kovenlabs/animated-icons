@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: bread (primary), lettuce (accent). */
 export const Sandwich = createAnimatedIcon({
   name: "sandwich",
-  category: "commerce",
+  category: "food",
   keywords: ["bread", "lunch", "snack", "sub", "toast", "deli", "meal", "food"],
   slots: { primary: "bread", accent: "lettuce" },
   defaultVariant: "stack",

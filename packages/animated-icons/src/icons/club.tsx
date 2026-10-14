@@ -62,8 +62,9 @@ export const Club = createAnimatedIcon({
     <g data-part="club" style={pivot("50% 50%")}>
       {/* three round leaves, true arcs, closed by a flat bridge between the lower two */}
       <path d="M8.33 8.59A4 4 0 1 1 15.67 8.59 4 4 0 1 1 13.67 15.33H10.33A4 4 0 1 1 8.33 8.59Z" />
-      {/* the stem, a solid flared triangle hanging from the bridge */}
-      <path data-part="stem" d="M12 15.5l3.5 5.5h-7Z" fill={slot.accent} stroke="none" style={pivot("50% 0%")} />
+      {/* the stem, a solid flared triangle hanging from the bridge; its rounded tip starts inside the
+          bridge's stroke so it stays joined when the club turns */}
+      <path data-part="stem" d="M12 14.5l3.5 6.5h-7Z" fill={slot.accent} stroke="none" style={pivot("50% 0%")} />
     </g>
   ),
 })

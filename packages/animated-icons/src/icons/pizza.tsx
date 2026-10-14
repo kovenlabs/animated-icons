@@ -21,7 +21,7 @@ const PEPPERONI = [
 /** 2 colors: slice and crust (primary), pepperoni (accent). */
 export const Pizza = createAnimatedIcon({
   name: "pizza",
-  category: "commerce",
+  category: "food",
   keywords: ["slice", "food", "pepperoni", "italian", "takeaway", "delivery", "restaurant", "lunch"],
   slots: { primary: "slice + crust", accent: "pepperoni" },
   defaultVariant: "lift",

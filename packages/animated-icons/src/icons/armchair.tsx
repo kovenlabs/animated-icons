@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: chair (primary), seat cushion (accent). */
 export const Armchair = createAnimatedIcon({
   name: "armchair",
-  category: "navigation",
+  category: "home",
   keywords: ["chair", "seat", "furniture", "lounge", "sofa", "waiting room", "comfort"],
   slots: { primary: "chair", accent: "seat cushion" },
   defaultVariant: "sit",

@@ -21,7 +21,7 @@ const BUBBLES = [
 /** 2 colors: tub and tap (primary), water, drip and bubbles (accent). */
 export const Bath = createAnimatedIcon({
   name: "bath",
-  category: "navigation",
+  category: "home",
   keywords: ["bathtub", "bathroom", "tub", "soak", "spa", "relax", "hotel", "amenities"],
   slots: { primary: "tub + tap", accent: "water + bubbles" },
   defaultVariant: "bubble",
@@ -51,12 +51,12 @@ export const Bath = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=drip]",
-            { opacity: [0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0], y: [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1], scaleY: [0.4, 1, 1.5, 1.5, 0.4, 1, 1.5, 1.5, 0.4, 1, 1.5, 1.5] },
+            { opacity: [0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0], y: [0, 0, 0.3, 0.3, 0, 0, 0.3, 0.3, 0, 0, 0.3, 0.3], scaleY: [0.4, 1, 1.3, 1.3, 0.4, 1, 1.3, 1.3, 0.4, 1, 1.3, 1.3] },
             { duration: seconds * 0.8, ease: "easeIn" },
           ),
           animate(
             "[data-part=water]",
-            { y: [0, -0.4, -0.7, -1, 0.3, 0], scaleX: [1, 1.04, 1.08, 1.12, 0.96, 1] },
+            { y: [0, -0.25, -0.4, -0.5, 0.3, 0], scaleX: [1, 1.04, 1.08, 1.12, 0.96, 1] },
             { duration: seconds, times: [0, 0.27, 0.54, 0.8, 0.9, 1], ease: "easeOut" },
           ),
           animate("[data-part=tap]", { scaleY: [1, 0.9, 1] }, { duration: seconds * 0.3, ease: "easeOut" }),
@@ -74,7 +74,7 @@ export const Bath = createAnimatedIcon({
           ),
           animate(
             "[data-part=water]",
-            { rotate: [0, 12, -10, 6, -2, 0], x: [0, 1.5, -1.5, 1, -0.4, 0] },
+            { rotate: [0, 10, -9, 5, -2, 0], x: [0, 0.8, -0.8, 0.5, -0.2, 0], scaleX: [1, 0.85, 0.85, 0.92, 0.98, 1] },
             { duration: seconds, delay: seconds * 0.05, ease: "easeInOut" },
           ),
         ]),

@@ -1,7 +1,5 @@
 "use client"
 
-import { stagger } from "motion/react"
-
 import { createAnimatedIcon } from "../lib/create-icon"
 import { ease, flash, pivot, slot } from "../lib/motion"
 
@@ -36,10 +34,19 @@ export const Target = createAnimatedIcon({
             { scale: [1, 1, 0.88, 1.04, 1], skewX: [0, 0, -6, 3, 0] },
             { duration: seconds * 0.7, times: [0, 0.43, 0.55, 0.8, 1], ease: "easeOut" },
           ),
-          animate(
-            "[data-part=ring]",
-            { scale: [1, 1.14, 1] },
-            { duration: seconds * 0.35, delay: stagger(seconds * 0.08, { startDelay: seconds * 0.32 }), ease: "easeOut" },
+          // each ring swells less than the one inside it, so the outer ring stays inside the frame
+          ...(
+            [
+              ["eye", 1.3],
+              ["mid", 1.14],
+              ["outer", 1.08],
+            ] as const
+          ).map(([part, swell], i) =>
+            animate(
+              `[data-part=${part}]`,
+              { scale: [1, swell, 1] },
+              { duration: seconds * 0.35, delay: seconds * (0.32 + 0.08 * i), ease: "easeOut" },
+            ),
           ),
         ]),
     },
@@ -80,15 +87,9 @@ export const Target = createAnimatedIcon({
   render: () => (
     <g data-part="board" style={pivot("50% 50%")}>
       {/* a target is round, so it gets true circles: the bullseye and rings, listed centre out */}
-      <g data-part="ring" style={pivot("50% 50%")}>
-        <circle data-part="eye" cx="12" cy="12" r="1.5" stroke={slot.accent} style={pivot("50% 50%")} />
-      </g>
-      <g data-part="ring" style={pivot("50% 50%")}>
-        <circle data-part="mid" cx="12" cy="12" r="6" style={pivot("50% 50%")} />
-      </g>
-      <g data-part="ring" style={pivot("50% 50%")}>
-        <circle data-part="outer" cx="12" cy="12" r="10" style={pivot("50% 50%")} />
-      </g>
+      <circle data-part="eye" cx="12" cy="12" r="1.5" stroke={slot.accent} style={pivot("50% 50%")} />
+      <circle data-part="mid" cx="12" cy="12" r="6" style={pivot("50% 50%")} />
+      <circle data-part="outer" cx="12" cy="12" r="10" style={pivot("50% 50%")} />
       {/* an arrow stuck in the bullseye: a shaft out to the top right, fletched with two corners */}
       <g data-part="arrow" stroke={slot.accent} style={flash("0% 100%")}>
         <path d="M12 12l6-6" />

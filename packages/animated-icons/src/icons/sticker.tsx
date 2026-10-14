@@ -82,8 +82,9 @@ export const Sticker = createAnimatedIcon({
       </g>
       <path data-part="mouth" d="M6.5 16.5l1.5 1.5h4l1.5-1.5" style={pivot("50% 0%")} />
       <g transform={`rotate(45 ${HINGE})`}>
+        {/* the flap drawn already turned level, hanging below its hinge, so its box's top edge is the hinge */}
         <g data-part="peel" style={pivot("50% 0%")}>
-          <path d="M15 2v7h7" stroke={slot.accent} transform={`rotate(-45 ${HINGE})`} />
+          <path d="M13.55 5.5 18.5 10.45 23.45 5.5" stroke={slot.accent} />
         </g>
       </g>
     </g>

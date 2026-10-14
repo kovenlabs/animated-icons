@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: chair (primary), rocker and z (accent). */
 export const RockingChair = createAnimatedIcon({
   name: "rocking-chair",
-  category: "navigation",
+  category: "home",
   keywords: ["chair", "rocker", "relax", "furniture", "porch", "rest", "nursery", "home"],
   slots: { primary: "chair", accent: "rocker + z" },
   defaultVariant: "rock",

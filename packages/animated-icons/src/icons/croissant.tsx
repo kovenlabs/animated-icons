@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: pastry (primary), layer seams (accent). */
 export const Croissant = createAnimatedIcon({
   name: "croissant",
-  category: "commerce",
+  category: "food",
   keywords: ["pastry", "bakery", "breakfast", "bread", "french", "food", "brunch"],
   slots: { primary: "pastry", accent: "layer seams" },
   defaultVariant: "rise",

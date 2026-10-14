@@ -26,7 +26,7 @@ export const BoomBox = createAnimatedIcon({
       run: ({ animate, seconds }) => {
         const timing = { duration: seconds, times: [0, 0.15, 0.4, 0.55, 0.8, 1], ease: "easeOut" as const }
         return Promise.all([
-          animate("[data-part=speaker]", { scale: [1, 1.35, 0.9, 1.3, 0.95, 1] }, timing),
+          animate("[data-part=speaker]", { scale: [1, 1.15, 0.9, 1.12, 0.95, 1] }, timing),
           animate("[data-part=box]", { scaleY: [1, 0.9, 1.04, 0.92, 1.02, 1], scaleX: [1, 1.02, 0.98, 1.02, 0.99, 1] }, timing),
           animate(
             "[data-part=handle]",
@@ -67,7 +67,7 @@ export const BoomBox = createAnimatedIcon({
           ...SPEAKERS.map((x, i) =>
             animate(
               `[data-part=speaker][data-x="${x}"]`,
-              { scale: [1, 0, 0, 1.45, 1, 1] },
+              { scale: [1, 0, 0, 1.2, 1, 1] },
               {
                 duration: seconds,
                 times: [0, 0.15, 0.35 + i * 0.2, 0.55 + i * 0.2, 0.75 + i * 0.2, 1],

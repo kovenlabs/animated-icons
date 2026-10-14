@@ -17,7 +17,7 @@ const WINDOWS = [6, 11, 16] as const
 /** 2 colors: factory (primary), windows + smoke (accent). The smoke only exists in motion. */
 export const Factory = createAnimatedIcon({
   name: "factory",
-  category: "navigation",
+  category: "buildings",
   keywords: ["industry", "manufacturing", "plant", "production", "industrial", "mill", "works", "warehouse"],
   slots: { primary: "factory", accent: "windows + smoke" },
   defaultVariant: "smoke",

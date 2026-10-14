@@ -55,8 +55,9 @@ export const Cactus = createAnimatedIcon({
           ),
         ]),
     },
-    // it crouches, springs off the ground with its arms flung up and stretched tall, lands on a fat
-    // squash and wobbles back to its height
+    // it crouches, springs off the ground with its arms flung out and its body narrowed (it already
+    // stands as tall as the frame, so the leap is in the gap under it), lands on a fat squash and wobbles
+    // back to its height
     hop: {
       duration: 1200,
       clip: false,
@@ -66,8 +67,8 @@ export const Cactus = createAnimatedIcon({
           animate(
             "[data-part=cactus]",
             {
-              y: [0, 0.5, -4, 0, 0, 0],
-              scaleY: [1, 0.8, 1.12, 0.82, 1.05, 1],
+              y: [0, 0.5, -2.5, 0, 0, 0],
+              scaleY: [1, 0.8, 0.97, 0.82, 1.05, 1],
               scaleX: [1, 1.14, 0.92, 1.16, 0.97, 1],
             },
             { duration: seconds, times, ease: ["easeInOut", ease.out, ease.in, "easeOut", "easeInOut"] },
@@ -98,7 +99,7 @@ export const Cactus = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=flower]",
-            { scale: [1, 0, 0, 1.7, 0.85, 1], rotate: [0, 0, 0, 270, 380, 360] },
+            { scale: [1, 0, 0, 1.4, 0.85, 1], rotate: [0, 0, 0, 270, 380, 360] },
             {
               duration: seconds,
               times: [0, 0.16, 0.34, 0.62, 0.82, 1],
@@ -107,7 +108,7 @@ export const Cactus = createAnimatedIcon({
           ),
           animate(
             "[data-part=cactus]",
-            { scaleY: [1, 1, 0.9, 1.1, 0.97, 1], scaleX: [1, 1, 1.08, 0.95, 1.02, 1] },
+            { scaleY: [1, 1, 0.9, 1.06, 0.97, 1], scaleX: [1, 1, 1.08, 0.95, 1.02, 1] },
             {
               duration: seconds,
               times: [0, 0.16, 0.34, 0.56, 0.78, 1],

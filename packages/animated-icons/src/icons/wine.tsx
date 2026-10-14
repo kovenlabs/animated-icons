@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: glass (primary), wine (accent). */
 export const Wine = createAnimatedIcon({
   name: "wine",
-  category: "commerce",
+  category: "food",
   keywords: ["glass", "drink", "alcohol", "bar", "red wine", "toast", "celebrate", "restaurant"],
   slots: { primary: "glass", accent: "wine" },
   defaultVariant: "swirl",
@@ -43,7 +43,8 @@ export const Wine = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=glass]",
-            { y: [0, -3, -3, -3, 0, 0], rotate: [0, 12, 8, 10, -2, 0] },
+            // raised away from you, it shrinks a little, so the tipped rim stays inside the frame
+            { y: [0, -2, -2, -2, 0, 0], rotate: [0, 12, 8, 10, -2, 0], scale: [1, 0.88, 0.88, 0.88, 1, 1] },
             {
               duration: seconds,
               times: [0, 0.3, 0.4, 0.5, 0.8, 1],
@@ -65,7 +66,8 @@ export const Wine = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=glass]",
-            { y: [0, -2, -2, 0, 0], rotate: [0, -15, -15, 0, 0] },
+            // lifted away to the lips, it shrinks a little, so the tipped rim stays inside the frame
+            { y: [0, -1.5, -1.5, 0, 0], rotate: [0, -15, -15, 0, 0], scale: [1, 0.88, 0.88, 1, 1] },
             { duration: seconds, times: [0, 0.2, 0.4, 0.55, 1], ease: ["easeOut", "linear", "easeInOut", "linear"] },
           ),
           animate(

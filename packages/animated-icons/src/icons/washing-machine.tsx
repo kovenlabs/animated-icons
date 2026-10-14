@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: cabinet and drum (primary), water and dial (accent). */
 export const WashingMachine = createAnimatedIcon({
   name: "washing-machine",
-  category: "devices",
+  category: "home",
   keywords: ["washer", "laundry", "clothes", "appliance", "wash", "laundromat", "spin cycle"],
   slots: { primary: "cabinet + drum", accent: "water + dial" },
   defaultVariant: "wash",

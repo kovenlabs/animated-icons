@@ -15,7 +15,7 @@ const HEAD = "M4 15l3-4h10l3 4v3l-3 3H7l-3-3z"
 /** 2 colors: head and ears (primary), eyes and nose (accent). */
 export const Rabbit = createAnimatedIcon({
   name: "rabbit",
-  category: "nature",
+  category: "animals",
   keywords: ["bunny", "hare", "animal", "pet", "easter", "fast", "bunny ears"],
   slots: { primary: "head + ears", accent: "eyes + nose" },
   defaultVariant: "hop",

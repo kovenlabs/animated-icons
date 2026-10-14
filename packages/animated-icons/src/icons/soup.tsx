@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: bowl and spoon (primary), steam (accent). */
 export const Soup = createAnimatedIcon({
   name: "soup",
-  category: "commerce",
+  category: "food",
   keywords: ["bowl", "stew", "broth", "ramen", "hot", "meal", "food", "lunch"],
   slots: { primary: "bowl + spoon", accent: "steam" },
   defaultVariant: "steam",

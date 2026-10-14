@@ -23,7 +23,7 @@ const HALVES = [
 /** 2 colors: bone (primary), crack sparks (accent). The sparks only exist in motion. */
 export const Bone = createAnimatedIcon({
   name: "bone",
-  category: "education",
+  category: "health",
   keywords: ["skeleton", "fracture", "x-ray", "orthopedic", "dog", "treat", "anatomy", "calcium"],
   slots: { primary: "bone", accent: "crack sparks" },
   defaultVariant: "toss",

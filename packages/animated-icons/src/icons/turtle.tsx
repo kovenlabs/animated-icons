@@ -20,7 +20,7 @@ const SHELL = "M2 15a8 8 0 0 1 16 0z"
 /** 2 colors: shell (primary), head and legs (accent). */
 export const Turtle = createAnimatedIcon({
   name: "turtle",
-  category: "nature",
+  category: "animals",
   keywords: ["tortoise", "animal", "slow", "reptile", "shell", "sea turtle", "patience"],
   slots: { primary: "shell", accent: "head + legs" },
   defaultVariant: "hide",

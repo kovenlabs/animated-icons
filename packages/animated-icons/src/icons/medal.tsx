@@ -18,7 +18,7 @@ const SPARKLES = ["M3.5 10.5 5 12 3.5 13.5 2 12Z", "M20.5 10.5 22 12 20.5 13.5 1
 /** 3 colors: medal (primary), ribbon (secondary), star and sparkles (accent). */
 export const Medal = createAnimatedIcon({
   name: "medal",
-  category: "social",
+  category: "sports",
   keywords: ["prize", "winner", "gold", "olympics", "achievement", "first place", "champion", "sport"],
   slots: { primary: "medal", secondary: "ribbon", accent: "star + sparkles" },
   defaultVariant: "spin",
@@ -40,14 +40,21 @@ export const Medal = createAnimatedIcon({
           ),
         ]),
     },
-    // swings from the neck like a pendulum, the star rocking a beat behind the swing
+    // swings from the neck like a pendulum: the straps lean from where they hang (their tops stay put, so
+    // nothing lifts out of the frame), the disc rides their ends, and the star rocks a beat behind
     swing: {
       duration: 1200,
       run: ({ animate, seconds }) =>
         Promise.all([
           animate(
-            "[data-part=medal]",
-            { rotate: [0, 16, -12, 7, -3, 0] },
+            "[data-part=ribbon]",
+            { skewX: [0, 24, -18, 10, -4, 0] },
+            { duration: seconds, ease: "easeInOut" },
+          ),
+          // the straps' ends sit 8.3 below the neck, so each lean carries them 8.3 × tan(angle) across
+          animate(
+            "[data-part=disc]",
+            { x: [0, 3.7, -2.7, 1.46, -0.58, 0] },
             { duration: seconds, ease: "easeInOut" },
           ),
           animate(

@@ -76,7 +76,7 @@ export const Forklift = createAnimatedIcon({
           ),
           animate(
             "[data-part=carriage]",
-            { y: [0, 0, 1.5, -0.5, 0] },
+            { y: [0, 0, 1, -0.5, 0] },
             { duration: seconds, times: [0, 0.4, 0.52, 0.7, 1], ease: "easeOut" },
           ),
         ]),
@@ -84,13 +84,14 @@ export const Forklift = createAnimatedIcon({
   },
   render: () => (
     <g data-part="truck" style={pivot("10% 100%")}>
-      {/* the cab: counterweight at the back, a raked pillar up to the overhead guard, walls ending on the wheels */}
-      <path d="M2 19v-7h3l2-6h5v13M5 12h7M6 19h2" />
+      {/* the cab: counterweight at the back, a raked pillar up to the overhead guard, which runs into the mast */}
+      <path d="M2 19v-7h3l2-6h7M5 12h9M6 19h2" />
       <circle cx="4" cy="19" r="2" />
       <circle cx="10" cy="19" r="2" />
       <path d="M14 3v16" />
       <g data-part="carriage">
-        <path d="M16 11v8h6" />
+        {/* the forks slide up and down the mast itself, so the crate stands 2 clear of it */}
+        <path d="M14 19h8" />
         <path data-part="crate" d="M18 14h4v5h-4Z" stroke={slot.accent} style={pivot("50% 100%")} />
       </g>
     </g>

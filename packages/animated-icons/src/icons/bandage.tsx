@@ -17,7 +17,7 @@ const STRIP = "M5 8h14l2 2v4l-2 2H5l-2-2v-4Z"
 /** 2 colors: strip (primary), pad (accent). */
 export const Bandage = createAnimatedIcon({
   name: "bandage",
-  category: "education",
+  category: "health",
   keywords: ["band-aid", "plaster", "first aid", "wound", "heal", "injury", "medical", "health"],
   slots: { primary: "strip", accent: "pad" },
   defaultVariant: "stick",

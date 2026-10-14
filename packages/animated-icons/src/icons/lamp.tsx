@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: shade, stem and base (primary), pull cord and light (accent). */
 export const Lamp = createAnimatedIcon({
   name: "lamp",
-  category: "devices",
+  category: "home",
   keywords: ["table lamp", "light", "lighting", "bedside", "desk lamp", "furniture", "interior"],
   slots: { primary: "shade + stand", accent: "pull cord + light" },
   defaultVariant: "click",
@@ -29,7 +29,7 @@ export const Lamp = createAnimatedIcon({
           ),
           animate(
             "[data-part=shade]",
-            { y: [0, 0, -1.5, 0, 0], scaleX: [1, 1, 0.92, 1.06, 1], scaleY: [1, 1, 1.1, 0.94, 1] },
+            { y: [0, 0, -1, 0, 0], scaleX: [1, 1, 0.92, 1.06, 1], scaleY: [1, 1, 1.06, 0.94, 1] },
             { duration: seconds * 0.7, times: [0, 0.2, 0.45, 0.75, 1], ease: "easeOut" },
           ),
           animate(
@@ -64,7 +64,7 @@ export const Lamp = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=lamp]",
-            { scaleY: [1, 0.86, 1.1, 0.97, 1], scaleX: [1, 1.1, 0.94, 1.02, 1] },
+            { scaleY: [1, 0.86, 1.06, 0.97, 1], scaleX: [1, 1.1, 0.94, 1.02, 1] },
             { duration: seconds * 0.7, times: [0, 0.25, 0.55, 0.8, 1], ease: "easeInOut" },
           ),
           animate(
@@ -74,7 +74,7 @@ export const Lamp = createAnimatedIcon({
           ),
           animate(
             "[data-part=shade]",
-            { y: [0, 0, -1, 0.4, 0] },
+            { y: [0, 0, -0.6, 0.4, 0] },
             { duration: seconds * 0.7, delay: seconds * 0.1, ease: ease.overshoot },
           ),
         ]),
@@ -86,7 +86,8 @@ export const Lamp = createAnimatedIcon({
         <path data-part="ray" d="M5 14l-2 3" style={flash("100% 0%")} />
         <path data-part="ray" d="M19 14l2 3" style={flash("0% 0%")} />
       </g>
-      <path d="M12 11v10M8 21h8" />
+      {/* the stem starts inside the shade's rim stroke, so its cap stays hidden as the shade hops */}
+      <path d="M12 11.5V21M8 21h8" />
       <g data-part="shade" style={pivot("50% 100%")}>
         {/* a flat-topped trapezoid shade, the cord hanging from its lip */}
         <path d="M8 3h8l3 8H5Z" />

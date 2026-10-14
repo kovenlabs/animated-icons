@@ -20,7 +20,7 @@ const BEATS = [0, 0.18, 0.4, 0.55, 0.72, 1]
 /** 2 colors: arm (primary), bicep and power lines (accent). */
 export const BicepsFlexed = createAnimatedIcon({
   name: "biceps-flexed",
-  category: "gaming",
+  category: "sports",
   keywords: ["strong", "muscle", "flex", "gym", "fitness", "workout", "strength", "power"],
   slots: { primary: "arm", accent: "bicep + power lines" },
   defaultVariant: "flex",
@@ -102,12 +102,14 @@ export const BicepsFlexed = createAnimatedIcon({
   },
   render: () => (
     <>
-      <g stroke={slot.accent}>
-        {RAYS.map((d) => (
-          <path key={d} data-part="ray" d={d} style={flash("0% 100%")} />
-        ))}
-      </g>
-      <g data-part="spin" style={pivot("50% 50%")}>
+      {/* the rays turn with the arm, so they stay off the bicep when it shows its other side; the
+          pivot keeps the turn centred on the arm (x 12 in a 3.5..22 box that includes the rays) */}
+      <g data-part="spin" style={pivot("45.95% 50%")}>
+        <g stroke={slot.accent}>
+          {RAYS.map((d) => (
+            <path key={d} data-part="ray" d={d} style={flash("0% 100%")} />
+          ))}
+        </g>
         <g data-part="arm" style={pivot("0% 100%")}>
           {/* the bicep bulging up off the upper arm; it swells from where it meets the arm */}
           <path data-part="bicep" d="M14 11.5l1.5-1H18l2.5 2.5v3.5l-3 3" stroke={slot.accent} style={pivot("53.85% 100%")} />

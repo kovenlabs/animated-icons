@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: wrapper ends (primary), sweet and stripe (accent). */
 export const Candy = createAnimatedIcon({
   name: "candy",
-  category: "commerce",
+  category: "food",
   keywords: ["sweet", "sweets", "bonbon", "treat", "halloween", "sugar", "kids", "confectionery"],
   slots: { primary: "wrapper ends", accent: "sweet + stripe" },
   defaultVariant: "twist",

@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: plate, pudding and sauce (primary), cherry (accent). */
 export const Dessert = createAnimatedIcon({
   name: "dessert",
-  category: "commerce",
+  category: "food",
   keywords: ["pudding", "flan", "jelly", "cherry", "sweet", "treat", "cake", "dessert menu"],
   slots: { primary: "plate + pudding + sauce", accent: "cherry" },
   defaultVariant: "jiggle",
@@ -56,7 +56,7 @@ export const Dessert = createAnimatedIcon({
           ),
         ]),
     },
-    // the whole dessert hops; the cherry is thrown higher, spins a full turn and lands back on top
+    // the whole dessert hops; the cherry is thrown clean out of view, spinning, and lands back on top
     hop: {
       duration: 1300,
       clip: true,
@@ -73,7 +73,7 @@ export const Dessert = createAnimatedIcon({
           ),
           animate(
             "[data-part=cherry]",
-            { y: [0, 0, -7, 0, 0] },
+            { y: [0, 0, -11, 0, 0] },
             { duration: seconds, times: [0, 0.18, 0.5, 0.82, 1], ease: ["linear", ease.out, ease.in, "linear"] },
           ),
           animate(

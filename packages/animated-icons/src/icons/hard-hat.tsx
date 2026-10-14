@@ -13,7 +13,7 @@ declare module "../lib/types" {
 export const HardHat = createAnimatedIcon({
   name: "hard-hat",
   family: "hard",
-  category: "development",
+  category: "tools",
   keywords: ["helmet", "safety", "construction", "builder", "worker", "engineer", "protection", "site"],
   slots: { primary: "shell + brim", accent: "ridge + brick" },
   defaultVariant: "bonk",

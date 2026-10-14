@@ -14,7 +14,7 @@ declare module "../lib/types" {
 /** 2 colors: root (primary), leaves (accent). */
 export const Carrot = createAnimatedIcon({
   name: "carrot",
-  category: "nature",
+  category: "food",
   keywords: ["vegetable", "veggie", "food", "healthy", "garden", "harvest", "vegan", "rabbit"],
   slots: { primary: "root", accent: "leaves" },
   defaultVariant: "pluck",

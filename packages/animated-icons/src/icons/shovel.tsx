@@ -27,7 +27,7 @@ const CLODS = [
 /** 2 colors: handle and grip (primary), blade and dirt (accent). */
 export const Shovel = createAnimatedIcon({
   name: "shovel",
-  category: "development",
+  category: "tools",
   keywords: ["spade", "dig", "garden", "construction", "tool", "dirt", "excavate", "gardening"],
   slots: { primary: "handle + grip", accent: "blade + dirt" },
   defaultVariant: "dig",
@@ -40,7 +40,7 @@ export const Shovel = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=shovel]",
-            { x: [0, -2, -2, 0, 0], y: [0, 2, 2, 0, 0], rotate: [0, 0, 12, -8, 0] },
+            { y: [0, 2, 2, 0, 0], rotate: [0, 0, 12, -8, 0] },
             {
               duration: seconds,
               times: [0, 0.2, 0.45, 0.62, 1],

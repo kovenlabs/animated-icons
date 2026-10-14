@@ -21,28 +21,28 @@ const CORNERS = [
     part: "top-left",
     d: "M3 8V3h5",
     origin: "0% 0%",
-    inward: { x: 2, y: 2 },
+    inward: { x: 1, y: 1.5 },
     tilt: { ...LEFT, y: [0, -1.5, 1.5, 0] },
   },
   {
     part: "top-right",
     d: "M16 3h5v5",
     origin: "100% 0%",
-    inward: { x: -2, y: 2 },
+    inward: { x: -1, y: 1.5 },
     tilt: { ...RIGHT, y: [0, 1.5, -1.5, 0] },
   },
   {
     part: "bottom-right",
     d: "M21 16v5h-5",
     origin: "100% 100%",
-    inward: { x: -2, y: -2 },
+    inward: { x: -1, y: -1.5 },
     tilt: { ...RIGHT, y: [0, -1.5, 1.5, 0] },
   },
   {
     part: "bottom-left",
     d: "M8 21H3v-5",
     origin: "0% 100%",
-    inward: { x: 2, y: -2 },
+    inward: { x: 1, y: -1.5 },
     tilt: { ...LEFT, y: [0, 1.5, -1.5, 0] },
   },
 ];
@@ -136,7 +136,8 @@ export const ScanBarcode = createAnimatedIcon({
         ]),
     },
     // swings round its vertical axis in perspective: the brackets loom and recede while the code,
-    // further back, slides the other way, then it springs flat
+    // further back, narrows and drifts toward the near side (clear of the receding brackets), then it
+    // springs flat
     tilt: {
       duration: 1300,
       run: ({ animate, seconds }) => {
@@ -151,7 +152,7 @@ export const ScanBarcode = createAnimatedIcon({
           ),
           animate(
             "[data-part=code]",
-            { x: [0, 1.5, -1.5, 0], scaleX: [1, 0.82, 0.82, 1] },
+            { x: [0, -1, 1, 0], scaleX: [1, 0.82, 0.82, 1] },
             options,
           ),
         ]);

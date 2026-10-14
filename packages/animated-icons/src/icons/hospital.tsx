@@ -15,7 +15,7 @@ const CROSS = "M11 6h2v2h2v2h-2v2h-2v-2H9V8h2Z"
 /** 2 colors: building (primary), cross (accent). */
 export const Hospital = createAnimatedIcon({
   name: "hospital",
-  category: "navigation",
+  category: "buildings",
   keywords: ["clinic", "medical", "emergency", "health", "care", "building", "doctor", "infirmary"],
   slots: { primary: "building", accent: "cross" },
   defaultVariant: "beacon",
@@ -27,7 +27,7 @@ export const Hospital = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=cross]",
-            { scale: [1, 1.4, 1.05, 1.3, 1] },
+            { scale: [1, 1.3, 1.05, 1.22, 1] },
             { duration: seconds, times: [0, 0.15, 0.35, 0.5, 1], ease: "easeOut" },
           ),
           animate(
@@ -66,7 +66,7 @@ export const Hospital = createAnimatedIcon({
         Promise.all([
           animate(
             "[data-part=building]",
-            { scaleY: [0, 1.1, 0.96, 1, 1] },
+            { scaleY: [0, 1.06, 0.96, 1, 1] },
             { duration: seconds, times: [0, 0.4, 0.55, 0.7, 1], ease: [ease.out, "easeInOut", "easeInOut", "linear"] },
           ),
           animate(

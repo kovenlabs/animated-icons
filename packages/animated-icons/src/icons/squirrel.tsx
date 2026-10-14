@@ -27,7 +27,7 @@ const ACORN = "M18 16h4v1.5l-2 3-2-3z"
 /** 2 colors: body and tail (primary), eye and acorn (accent). */
 export const Squirrel = createAnimatedIcon({
   name: "squirrel",
-  category: "nature",
+  category: "animals",
   keywords: ["chipmunk", "rodent", "animal", "acorn", "forest", "park", "wildlife", "autumn"],
   slots: { primary: "body + tail", accent: "eye + acorn" },
   defaultVariant: "flick",
@@ -89,15 +89,15 @@ export const Squirrel = createAnimatedIcon({
           animate(
             "[data-part=squirrel]",
             {
-              y: [0, 0.5, -4, 0, 0, 0],
-              scaleY: [1, 0.86, 1.08, 0.86, 1.03, 1],
+              y: [0, 0.5, -1.5, 0, 0, 0],
+              scaleY: [1, 0.86, 1.04, 0.86, 1.03, 1],
               scaleX: [1, 1.08, 0.95, 1.1, 0.98, 1],
             },
             { duration: seconds, times, ease: ["easeInOut", ease.out, ease.in, "easeOut", "easeInOut"] },
           ),
           animate(
             "[data-part=tail]",
-            { rotate: [0, 3, -16, 4, -5, 0] },
+            { rotate: [0, 3, -10, 4, -5, 0] },
             { duration: seconds, times: [0, 0.18, 0.46, 0.68, 0.84, 1], ease: "easeInOut" },
           ),
         ])

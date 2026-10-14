@@ -63,11 +63,11 @@ export const Balloon = createAnimatedIcon({
           ),
           animate(
             "[data-part=balloon]",
-            { scale: [1, 1, 0, 1.12, 1] },
+            { scale: [1, 1, 0, 1.05, 1] },
             {
               duration: seconds,
-              times: [0, 0.45, 0.46, 0.85, 1],
-              ease: ["linear", snap, ease.overshoot, "easeInOut"],
+              times: [0, 0.45, 0.46, 0.8, 1],
+              ease: ["linear", snap, ease.out, "easeInOut"],
             },
           ),
           animate(

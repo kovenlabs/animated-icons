@@ -18,7 +18,7 @@ const DUST = [
 /** 2 colors: body (primary), handle and dust (accent). */
 export const Weight = createAnimatedIcon({
   name: "weight",
-  category: "gaming",
+  category: "sports",
   keywords: ["kettlebell", "heavy", "mass", "kilogram", "scale", "gym", "fitness", "load"],
   slots: { primary: "body", accent: "handle + dust" },
   defaultVariant: "drop",

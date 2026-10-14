@@ -15,7 +15,7 @@ const BODY = "M12 8 9 6.5H6L3.5 9 3 14l2 5 3 3h2l2-1 2 1h2l3-3 2-5-.5-5L18 6.5h-
 /** 2 colors: apple and stem (primary), leaf (accent). */
 export const Apple = createAnimatedIcon({
   name: "apple",
-  category: "nature",
+  category: "food",
   keywords: ["fruit", "food", "healthy", "snack", "diet", "nutrition", "orchard", "teacher"],
   slots: { primary: "apple + stem", accent: "leaf" },
   defaultVariant: "toss",

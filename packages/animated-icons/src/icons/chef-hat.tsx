@@ -12,7 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: puffed crown (primary), band (accent). */
 export const ChefHat = createAnimatedIcon({
   name: "chef-hat",
-  category: "commerce",
+  category: "food",
   keywords: ["chef", "cook", "kitchen", "cooking", "restaurant", "recipe", "toque", "food"],
   slots: { primary: "crown", accent: "band" },
   defaultVariant: "puff",

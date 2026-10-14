@@ -18,7 +18,7 @@ const SLATS = [
 /** 2 colors: shed and door frame (primary), roller door and crate (accent). */
 export const Warehouse = createAnimatedIcon({
   name: "warehouse",
-  category: "commerce",
+  category: "buildings",
   keywords: ["storage", "depot", "inventory", "stock", "logistics", "distribution", "shed", "fulfillment"],
   slots: { primary: "shed + door frame", accent: "roller door + crate" },
   defaultVariant: "roll",

@@ -16,7 +16,7 @@ const STRIPES = ["M15 17.5l4-2", "M15 13l4-2", "M14.12 7.88 16.95 5.05", "M9.88 
 export const CandyCane = createAnimatedIcon({
   name: "candy-cane",
   family: "candy",
-  category: "commerce",
+  category: "food",
   keywords: ["christmas", "xmas", "holiday", "peppermint", "sweet", "treat", "festive", "winter"],
   slots: { primary: "cane", accent: "stripes" },
   defaultVariant: "spin",

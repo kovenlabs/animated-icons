@@ -24,7 +24,7 @@ const halfWidth = (y: number) => 3 + (y - 2) * 0.3
  */
 const STOPS = [0, 2, 5, 9, 14, 20, 27, 35] as const
 const TIES = [2, 3, 4, 5] as const
-/** Incoming sleepers, drawn hidden over the first two and fed in from two stops further up. */
+/** Incoming sleepers, drawn hidden two stops above the first two drawn sleepers and fed down onto them. */
 const LEADS = [2, 3] as const
 
 const sleeper = (y: number) => `M${+(12 - halfWidth(y)).toFixed(2)} ${y}H${+(12 + halfWidth(y)).toFixed(2)}`
@@ -102,7 +102,7 @@ export const TrainTrack = createAnimatedIcon({
           </g>
         ))}
         {LEADS.map((stop) => (
-          <path key={stop} data-part={`lead-${stop}`} d={sleeper(STOPS[stop]!)} style={flash()} />
+          <path key={stop} data-part={`lead-${stop}`} d={sleeper(STOPS[stop - 2]!)} style={flash()} />
         ))}
       </g>
     </g>

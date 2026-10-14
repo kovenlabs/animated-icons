@@ -18,7 +18,7 @@ const BODY = "M2 20l6-5 3-8 3-3h4l1 2v6l-4 6H9z"
 /** 2 colors: body and legs (primary), wing and beak (accent). */
 export const Bird = createAnimatedIcon({
   name: "bird",
-  category: "nature",
+  category: "animals",
   keywords: ["animal", "sparrow", "robin", "tweet", "wildlife", "birdwatching", "pet bird"],
   slots: { primary: "body + legs", accent: "wing + beak" },
   defaultVariant: "flutter",

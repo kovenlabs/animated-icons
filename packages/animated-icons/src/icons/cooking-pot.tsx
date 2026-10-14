@@ -11,12 +11,12 @@ declare module "../lib/types" {
   }
 }
 
-const puff = { ...blink, y: [0, -1] }
+const puff = { ...blink, y: [0, -0.5] }
 
 /** 2 colors: pot (primary), lid and steam (accent). */
 export const CookingPot = createAnimatedIcon({
   name: "cooking-pot",
-  category: "commerce",
+  category: "food",
   keywords: ["pot", "cook", "kitchen", "boil", "stew", "saucepan", "simmer", "food"],
   slots: { primary: "pot", accent: "lid + steam" },
   defaultVariant: "rattle",
