@@ -2,6 +2,7 @@ import type {
   Behavior,
   ColorSlot,
   Corners,
+  HoverTarget,
   IconColors,
   IconConfig,
   IconDefaults,
@@ -13,6 +14,7 @@ import type {
 
 export const BUILT_IN: Behavior = {
   trigger: "hover",
+  hoverTarget: "icon",
   interval: 1000,
   speed: 1,
   reducedMotion: "respect",
@@ -22,7 +24,17 @@ export const BUILT_IN: Behavior = {
   strokeWidth: 2,
 }
 
-const BEHAVIOR_KEYS = ["trigger", "interval", "speed", "reducedMotion", "corners", "cornerRadius", "size", "strokeWidth"] as const
+const BEHAVIOR_KEYS = [
+  "trigger",
+  "hoverTarget",
+  "interval",
+  "speed",
+  "reducedMotion",
+  "corners",
+  "cornerRadius",
+  "size",
+  "strokeWidth",
+] as const
 
 function defined<T extends object>(value: T): Partial<T> {
   return Object.fromEntries(Object.entries(value).filter(([, v]) => v !== undefined)) as Partial<T>
@@ -70,6 +82,7 @@ interface InstanceProps extends Partial<Behavior> {
 
 export interface ResolvedIconOptions {
   trigger: Trigger
+  hoverTarget: HoverTarget
   interval: number
   reducedMotion: ReducedMotion
   corners: Corners
@@ -93,6 +106,7 @@ export function resolveIconOptions(icon: IconMeta, config: ResolvedConfig, props
 
   return {
     trigger: pick("trigger"),
+    hoverTarget: pick("hoverTarget"),
     interval: pick("interval"),
     reducedMotion: pick("reducedMotion"),
     corners: pick("corners"),

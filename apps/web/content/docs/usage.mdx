@@ -10,12 +10,13 @@ icon: mouse-pointer-click
 | --------------- | ------------------------------------------------------ | --------------- | -------------------------------------------------------- |
 | `variant`       | per-icon union, e.g. `"ring" \| "shake" \| "jump"`     | icon's default  | Typed per icon                                           |
 | `trigger`       | `"hover" \| "auto" \| "click" \| "inView" \| "manual" \| "none"` | `"hover"` | `inView` loops while half the icon is visible; `none` is static |
+| `hoverTarget`   | `"icon" \| "control"`                                  | `"icon"`        | `control`: hovering or keyboard-focusing the surrounding control plays it |
 | `duration`      | `number` (ms)                                          | icon's tuning   | Absolute: beats `speed`                                  |
 | `speed`         | `number`                                               | `1`             | Multiplier on the icon's tuned duration                  |
 | `interval`      | `number` (ms)                                          | `1000`          | Rest **between** loops                                   |
 | `animate`       | `boolean`                                              | –               | Controlled mode: `true` loops, `false` stops             |
 | `colors`        | `{ primary?, secondary?, accent? }`                    | theme           | See [Colors](/docs/colors)                               |
-| `reducedMotion` | `"respect" \| "ignore"`                                | `"respect"`     |                                                          |
+| `reducedMotion` | `"respect" \| "ignore" \| "always"`                    | `"respect"`     | `always` stays still regardless of the system setting    |
 | `corners`       | `"round" \| "bevel" \| "sharp"`                        | `"round"`       | Corner geometry, see below                               |
 | `cornerRadius`  | `number`                                               | `2`             | How far each corner reaches, in grid units               |
 | `size`          | `number \| string`                                     | `24`            | Also settable globally (provider / `config.ts`); a `className` size wins |
@@ -47,7 +48,20 @@ stop where they are and the new cycle starts from there, so a fast hover in-out-
 
 ## Hovering a parent
 
-Use `trigger="manual"` and the ref, so a whole button plays the icon:
+Set `hoverTarget="control"` and the nearest control around the icon plays it: hovering anywhere on a
+button, link, menu item, tab or option, or reaching it with the keyboard. A tap on a touch screen doesn't
+count as a hover. An icon outside any control falls back to its own hover, and `data-icon-control` marks
+any other element as the control. Set it once on the root provider to make it the app's default:
+
+```tsx
+<AnimatedIconsProvider hoverTarget="control">{children}</AnimatedIconsProvider>
+
+<Button>
+  <Bell /> Notifications
+</Button>
+```
+
+For anything else, use `trigger="manual"` and the ref:
 
 ```tsx
 const bell = useRef<AnimatedIconHandle>(null);

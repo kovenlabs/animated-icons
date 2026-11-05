@@ -49,6 +49,74 @@ describe("createAnimatedIcon", () => {
     expect(ring).toHaveBeenCalledTimes(1)
   })
 
+  describe('hoverTarget "control": the control around the icon plays it', () => {
+    it("plays when the pointer enters anywhere on the control, once per hover", async () => {
+      const { Icon, ring } = stubIcon()
+      render(
+        <button type="button" data-testid="control">
+          <Icon data-testid="icon" hoverTarget="control" /> Save
+        </button>,
+      )
+      fireEvent.pointerEnter(screen.getByTestId("control"), { pointerType: "mouse" })
+      await flush()
+      expect(ring).toHaveBeenCalledTimes(1)
+      // the icon's own pointerenter is the same hover, not a second one
+      fireEvent.pointerEnter(svg(), { pointerType: "mouse" })
+      await flush()
+      expect(ring).toHaveBeenCalledTimes(1)
+    })
+
+    it("ignores a touch, which is a tap rather than a hover", async () => {
+      const { Icon, ring } = stubIcon()
+      render(
+        <a href="/inbox" data-testid="control">
+          <Icon hoverTarget="control" /> Inbox
+        </a>,
+      )
+      fireEvent.pointerEnter(screen.getByTestId("control"), { pointerType: "touch" })
+      await flush()
+      expect(ring).not.toHaveBeenCalled()
+    })
+
+    it("plays on keyboard focus of the control", async () => {
+      const { Icon, ring } = stubIcon()
+      render(
+        <div role="menuitem" tabIndex={0} data-testid="control">
+          <Icon hoverTarget="control" /> Rename
+        </div>,
+      )
+      const control = screen.getByTestId("control")
+      vi.spyOn(control, "matches").mockImplementation((selector) => selector === ":focus-visible")
+      fireEvent.focusIn(control)
+      await flush()
+      expect(ring).toHaveBeenCalledTimes(1)
+    })
+
+    it("falls back to the icon itself outside any control, and can be set globally", async () => {
+      const { Icon, ring } = stubIcon()
+      render(
+        <AnimatedIconsProvider hoverTarget="control">
+          <p>
+            <Icon data-testid="icon" /> Saved
+          </p>
+        </AnimatedIconsProvider>,
+      )
+      expect(svg().dataset.trigger).toBe("hover")
+      fireEvent.pointerEnter(svg())
+      await flush()
+      expect(ring).toHaveBeenCalledTimes(1)
+    })
+  })
+
+  it('stays still with reducedMotion "always", whatever the system asks', async () => {
+    const { Icon, ring } = stubIcon()
+    const ref = createRef<AnimatedIconHandle>()
+    render(<Icon data-testid="icon" ref={ref} reducedMotion="always" />)
+    fireEvent.pointerEnter(svg())
+    await act(() => ref.current!.play())
+    expect(ring).not.toHaveBeenCalled()
+  })
+
   describe('trigger "none": a static icon', () => {
     it("ignores hover and click", async () => {
       const { Icon, ring } = stubIcon()

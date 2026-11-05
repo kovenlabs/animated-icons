@@ -68,7 +68,7 @@
     "check:package": "rm -rf .pack && pnpm pack --pack-destination .pack >/dev/null && publint --pack pnpm && attw .pack/*.tgz --profile esm-only"
   },
   "peerDependencies": {
-    "motion": "^13.0.0",
+    "motion": "^13.0.0 || ^14.0.0",
     "react": ">=19",
     "react-dom": ">=19"
   },

@@ -70,7 +70,7 @@ The default is `hover`, which plays one cycle per pointer enter. Choose by where
 
 | Context                                                     | Use                                                              |
 | ----------------------------------------------------------- | ---------------------------------------------------------------- |
-| Icon inside a button, link or menu item                     | `trigger="manual"` + `ref.play()` on the **parent's** `onMouseEnter`, so the whole control plays it (snippet below) |
+| Icon inside a button, link or menu item                     | `hoverTarget="control"` (or set it once on the root provider), so hovering or keyboard-focusing the whole control plays it. `trigger="manual"` + `ref.play()` only for a custom target |
 | Standalone icon button                                      | default `hover`                                                  |
 | Feedback after an action (copied, liked, saved)             | `trigger="manual"`, then call `ref.current?.play()` when the action **succeeds** (not on click, which comes before the outcome) |
 | A state that needs attention (unread, recording, live)      | controlled: `animate={hasUnread}` loops while true               |
@@ -78,7 +78,8 @@ The default is `hover`, which plays one cycle per pointer enter. Choose by where
 | Marketing page, feature grid, empty state                   | `trigger="inView"`, which loops while the icon is on screen      |
 | Event from elsewhere (message received, upload finished)    | `trigger="manual"` + `ref.play()` in the handler                 |
 | Plays once when it appears (toast, dialog, inline error)    | `trigger="manual"` + `ref.current?.play()` in a mount effect. `auto`, `inView` and `animate` all loop |
-| Dense tables, long lists, print, a "reduce motion" setting  | `trigger="none"` (static), or keep `hover`                       |
+| Dense tables, long lists, print                             | `trigger="none"` (static), or keep `hover`                       |
+| The app has its own "reduce motion" setting                 | `reducedMotion="always"` on the root provider while it is on     |
 
 `animate` (controlled) overrides `trigger`. Use `interval` (ms, default 1000) to set the rest between loops,
 and `speed`/`duration` to change the timing. `play()` returns a promise that resolves when the cycle ends.

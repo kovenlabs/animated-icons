@@ -8,7 +8,18 @@ export type IconColors = Partial<Record<ColorSlot, string>>
 /** What starts an animation. `none` keeps the icon static: nothing plays it, not even the ref or `animate`. */
 export type Trigger = "hover" | "auto" | "click" | "inView" | "manual" | "none"
 
-export type ReducedMotion = "respect" | "ignore"
+/**
+ * `respect` stays still when the operating system asks for reduced motion, `ignore` always moves, and `always`
+ * stays still regardless: for an app that keeps its own reduce-motion setting and passes it through a provider.
+ */
+export type ReducedMotion = "respect" | "ignore" | "always"
+
+/**
+ * What a `hover` trigger listens to. `icon`: the icon itself. `control`: the nearest interactive element around the
+ * icon (a button, link, menu item, tab...), so hovering anywhere on the control plays it, and so does keyboard focus.
+ * An icon outside any control falls back to itself.
+ */
+export type HoverTarget = "icon" | "control"
 
 /** Corner geometry: `round` curves every corner (default), `bevel` cuts it, `sharp` keeps it as drawn. */
 export type Corners = "sharp" | "bevel" | "round"
@@ -16,6 +27,8 @@ export type Corners = "sharp" | "bevel" | "round"
 /** Behaviour every icon shares. Timings are in milliseconds. */
 export interface Behavior {
   trigger: Trigger
+  /** Where a `hover` trigger listens: the icon itself, or the control it sits in. */
+  hoverTarget: HoverTarget
   /** Rest time between loops (auto / inView / controlled). */
   interval: number
   /** Multiplier on each icon's own tuned duration. 2 = twice as fast. */

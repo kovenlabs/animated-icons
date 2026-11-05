@@ -16,6 +16,25 @@ const STROKE: Record<Corners, { cap: "square" | "round"; join: "miter" | "bevel"
   round: { cap: "round", join: "round" },
 }
 
+/** The interactive elements a `hoverTarget: "control"` icon plays from: hovering or keyboard-focusing one plays it. */
+const CONTROL = [
+  "a[href]",
+  "button",
+  "summary",
+  "label",
+  "[role=button]",
+  "[role=link]",
+  "[role=menuitem]",
+  "[role=menuitemcheckbox]",
+  "[role=menuitemradio]",
+  "[role=option]",
+  "[role=tab]",
+  "[role=switch]",
+  "[role=checkbox]",
+  "[role=radio]",
+  "[data-icon-control]",
+].join(",")
+
 const toPascal = (name: string) => name.replace(/(^|-)(\w)/g, (_, __, c: string) => c.toUpperCase())
 
 type Keyframes = Record<string, unknown>
@@ -118,6 +137,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
   function AnimatedIcon({
     variant,
     trigger,
+    hoverTarget,
     interval,
     speed,
     reducedMotion,
@@ -138,6 +158,7 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
     const options = resolveIconOptions(definition, config, {
       variant,
       trigger,
+      hoverTarget,
       interval,
       speed,
       reducedMotion,
@@ -152,7 +173,10 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
     const inView = useInView(scope, { amount: 0.5 })
     const prefersReducedMotion = Boolean(useReducedMotion())
     // static by request (`none`) or by the user's reduced-motion setting: the player never runs
-    const disabled = options.trigger === "none" || (options.reducedMotion === "respect" && prefersReducedMotion)
+    const disabled =
+      options.trigger === "none" ||
+      options.reducedMotion === "always" ||
+      (options.reducedMotion === "respect" && prefersReducedMotion)
 
     // The player lives across renders; it reads the latest options through this ref.
     const latest = useRef({ options, disabled, animate, scope })
@@ -222,6 +246,32 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
       else player.stop()
     }, [shouldLoop, disabled, player])
 
+    // `hoverTarget: "control"`: the control around the icon plays it, on hover and on keyboard focus. It is found
+    // after mount, since the icon can't know its ancestors while rendering; until then (and with no control around
+    // it) the icon's own pointerenter below plays it.
+    const playsFromControl = !isControlled && options.trigger === "hover" && options.hoverTarget === "control"
+    const control = useRef<Element | null>(null)
+    useEffect(() => {
+      const host = playsFromControl ? scope.current?.parentElement?.closest(CONTROL) : null
+      control.current = host ?? null
+      if (!host) return
+      const onPointerEnter = (event: Event) => {
+        // a tap is not a hover: on touch screens the tap itself does the work
+        if ((event as PointerEvent).pointerType !== "touch") void player.play()
+      }
+      const onFocusIn = (event: Event) => {
+        // keyboard focus only: a click also focuses the control, and the hover has already played
+        if ((event.target as Element).matches(":focus-visible")) void player.play()
+      }
+      host.addEventListener("pointerenter", onPointerEnter)
+      host.addEventListener("focusin", onFocusIn)
+      return () => {
+        host.removeEventListener("pointerenter", onPointerEnter)
+        host.removeEventListener("focusin", onFocusIn)
+        control.current = null
+      }
+    }, [playsFromControl, player, scope])
+
     // Hard stop on unmount: the cycle in flight is interrupted, never left hanging.
     useEffect(() => () => player.cancel(), [player])
 
@@ -256,7 +306,8 @@ export function createAnimatedIcon<const V extends string>(definition: IconDefin
           style={{ ...colorVars({ ...config.icons[definition.name]?.colors, ...colors }), ...style }}
           onPointerEnter={(event) => {
             onPointerEnter?.(event)
-            if (!isControlled && options.trigger === "hover") void player.play()
+            // a control around the icon already plays it on the same hover
+            if (!isControlled && options.trigger === "hover" && !control.current) void player.play()
           }}
           onClick={(event) => {
             onClick?.(event)
