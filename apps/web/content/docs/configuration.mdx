@@ -14,7 +14,7 @@ props  >  per-icon config  >  icon's own defaults  >  global config  >  built-in
 
 | Level               | Where                                                     | Example                                        |
 | ------------------- | --------------------------------------------------------- | ---------------------------------------------- |
-| Built-ins           | the library                                               | `trigger: "hover"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2`, `size: 24`, `strokeWidth: 2` |
+| Built-ins           | the library                                               | `trigger: "hover"`, `hoverTarget: "icon"`, `interval: 1000`, `speed: 1`, `corners: "round"`, `cornerRadius: 2`, `size: 24`, `strokeWidth: 2` |
 | Global config       | `config.ts` (registry) or the root provider (npm)         | `trigger: "click"`                             |
 | Icon's own defaults | the icon definition                                       | loader: `auto`, `interval: 0`                  |
 | Per-icon config     | `icons.<name>` in `config.ts` or a provider               | `icons: { loader: { trigger: "hover" } }`      |
@@ -29,6 +29,7 @@ Setting `trigger: "hover"` globally shouldn't break them. If you really want it,
 ```ts title="components/animated-icons/config.ts"
 export default defineIconConfig({
   trigger: 'hover',
+  hoverTarget: 'icon', // "control": the button or link around the icon plays it
   interval: 1000,
   speed: 1,
   reducedMotion: 'respect',
@@ -87,3 +88,6 @@ It works in a server `layout.tsx`. The [Next.js guide](/docs/nextjs) walks throu
 By default, icons don't animate when the user prefers reduced motion. They stay in their finished, still
 drawing. Opt out per level with `reducedMotion: "ignore"`, for example on a loader that has to show
 progress.
+
+If your app has its own reduce-motion setting, pass it through the root provider with
+`reducedMotion: "always"`: every icon below stays still, whatever the operating system says.

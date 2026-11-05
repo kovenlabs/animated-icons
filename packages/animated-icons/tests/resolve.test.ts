@@ -35,6 +35,7 @@ describe("resolveIconOptions", () => {
   it("falls back to built-ins and the icon's own tuning", () => {
     expect(resolveIconOptions(bell, root, {})).toEqual({
       trigger: "hover",
+      hoverTarget: "icon",
       interval: 1000,
       reducedMotion: "respect",
       corners: "round",

@@ -49,6 +49,7 @@ function shuffle(index: number) {
 /** 2 colors: tiles (primary), the lead tile (accent). */
 export const LayoutGrid = createAnimatedIcon({
   name: "layout-grid",
+  family: "layout",
   category: "layout",
   keywords: ["grid", "tiles", "dashboard", "gallery", "apps", "blocks", "layout", "view"],
   slots: { primary: "tiles", accent: "lead tile" },

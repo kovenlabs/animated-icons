@@ -17,6 +17,8 @@ export function defineIconConfig(config: IconConfig): IconConfig {
 
 export default defineIconConfig({
   trigger: "hover",
+  // what a hover listens to: "icon" (the icon itself) or "control" (the button, link or menu item around it)
+  hoverTarget: "icon",
   interval: 1000,
   speed: 1,
   reducedMotion: "respect",

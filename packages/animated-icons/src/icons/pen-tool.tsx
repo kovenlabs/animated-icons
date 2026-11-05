@@ -12,6 +12,7 @@ declare module "../lib/types" {
 /** 2 colors: nib and holder (primary), slit and anchor hole (accent). */
 export const PenTool = createAnimatedIcon({
   name: "pen-tool",
+  family: "pen",
   category: "design",
   keywords: ["vector", "bezier", "path", "anchor point", "illustrator", "nib", "draw"],
   slots: { primary: "nib + holder", accent: "slit + anchor hole" },
